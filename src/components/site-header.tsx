@@ -11,7 +11,7 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <a href="#inicio" className="flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-sm font-semibold text-white shadow-soft">
-            L
+            LE
           </span>
           <span>
             <span className="block text-sm font-semibold tracking-[0.22em] text-ink-900 uppercase">
@@ -37,7 +37,7 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
 
         <details className="relative lg:hidden">
           <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full border border-ink-200 bg-white px-4 py-2 text-sm font-semibold text-ink-800">
-            Menu
+            Menú
           </summary>
           <div className="absolute right-0 top-14 w-64 rounded-3xl border border-white/70 bg-white p-4 shadow-soft">
             <div className="flex flex-col gap-2">
