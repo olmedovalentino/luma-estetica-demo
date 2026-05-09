@@ -26,7 +26,7 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href={whatsappUrl} target="_blank" rel="noreferrer">
+          <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             Reservar turno
           </ButtonLink>
         </div>
@@ -48,7 +48,7 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
               ))}
             </div>
             <div className="mt-4">
-              <ButtonLink href={whatsappUrl} target="_blank" rel="noreferrer" className="w-full">
+              <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="w-full">
                 Reservar turno
               </ButtonLink>
             </div>

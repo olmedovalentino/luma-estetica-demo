@@ -13,8 +13,8 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
             Luma Estética
           </p>
           <p className="mt-4 max-w-md text-sm leading-7 text-white/75">
-            Cuidado facial, corporal y belleza integral en un espacio cálido, íntimo y
-            pensado para vos.
+            Cuidado facial, corporal y belleza integral en un espacio cálido, íntimo y pensado
+            para vos.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
           <div className="mt-4 space-y-3 text-sm text-white/75">
             <p>{site.address}</p>
             <p>{site.hours}</p>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="block">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
               WhatsApp: Pedir turno
             </a>
           </div>

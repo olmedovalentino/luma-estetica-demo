@@ -27,8 +27,8 @@ export default function HomePage() {
                   Cuidado facial, corporal y belleza integral en Córdoba
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-ink-600">
-                  Un espacio cálido y profesional para regalarte un momento de bienestar.
-                  Reservá tu turno por WhatsApp de forma simple.
+                  Un espacio cálido y profesional para regalarte un momento de bienestar. Reservá
+                  tu turno por WhatsApp de forma simple.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -66,7 +66,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Servicios"
               title="Tratamientos pensados para realzar tu belleza natural y acompañar tu bienestar"
-              description="Opciones claras, cuidadas y con una presentación visual más liviana."
+              description="Tratamientos cuidados para acompañar tu bienestar y realzar tu belleza natural."
             />
 
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -223,22 +223,29 @@ export default function HomePage() {
                 </div>
 
                 <div id="contacto" className="mt-6 flex flex-wrap gap-3">
-                  <ButtonLink href={whatsappUrl} target="_blank" rel="noreferrer">
+                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     Consultar por WhatsApp
                   </ButtonLink>
-                  <ButtonLink href={site.mapsUrl} target="_blank" rel="noreferrer" variant="secondary">
+                  <ButtonLink href={site.locationUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
                     Ver mapa
                   </ButtonLink>
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[2.25rem] border border-white/80 bg-white/90 shadow-soft">
+              <a
+                href={site.locationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver ubicación en Google Maps"
+                className="overflow-hidden rounded-[2.25rem] border border-white/80 bg-white/90 shadow-soft"
+              >
                 <div className="grid md:grid-cols-[1fr_0.85fr]">
                   <div className="min-h-[340px]">
                     <iframe
                       title="Mapa de Luma Estética"
-                      src="https://www.google.com/maps?q=Nueva+Cordoba,+Cordoba+Capital&output=embed"
+                      src={site.locationUrl}
                       className="h-full min-h-[340px] w-full border-0"
+                      style={{ pointerEvents: "none" }}
                       loading="lazy"
                     />
                   </div>
@@ -266,7 +273,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </section>
@@ -286,7 +293,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div>
-                <ButtonLink href={whatsappUrl} target="_blank" rel="noreferrer">
+                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   Pedir turno por WhatsApp
                 </ButtonLink>
               </div>
