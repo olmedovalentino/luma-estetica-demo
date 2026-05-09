@@ -14,58 +14,58 @@ export const site = {
     { label: "Servicios", href: "#servicios" },
     { label: "Sobre Luma", href: "#sobre" },
     { label: "Galería", href: "#galeria" },
+    { label: "Preguntas", href: "#faq" },
     { label: "Ubicación", href: "#ubicacion" },
-    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
 export const services = [
   {
     title: "Limpieza facial profunda",
-    description:
-      "Renová la piel con un tratamiento suave, pensado para limpiar, equilibrar e iluminar el rostro.",
+    description: "Renová la piel con un tratamiento suave que limpia, equilibra e ilumina.",
     accent: "bg-[#f5ebe4]",
-    icon: "✦",
+    image:
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Depilación",
-    description:
-      "Servicios prolijos y cómodos para una piel suave, con atención cuidadosa en cada detalle.",
+    description: "Servicios prolijos y cómodos para una piel suave y cuidada.",
     accent: "bg-[#efe5dc]",
-    icon: "◌",
+    image:
+      "https://images.unsplash.com/photo-1620916566395-1fcb4b0a5f2f?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Perfilado de cejas",
-    description:
-      "Definí la mirada con un diseño natural que respeta tus facciones y realza tu expresión.",
+    description: "Definí la mirada con un diseño natural que respeta tus facciones.",
     accent: "bg-[#f7f1ec]",
-    icon: "⌁",
+    image:
+      "https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Lifting de pestañas",
-    description:
-      "Un efecto sutil y elegante para levantar la mirada sin necesidad de maquillaje diario.",
+    description: "Un efecto sutil y elegante para levantar la mirada sin maquillaje diario.",
     accent: "bg-[#eadfd8]",
-    icon: "◠",
+    image:
+      "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Tratamientos corporales",
-    description:
-      "Opciones para acompañar tu cuidado corporal con protocolos orientados al bienestar.",
+    description: "Opciones para acompañar tu cuidado corporal con foco en bienestar.",
     accent: "bg-[#f3e9e2]",
-    icon: "✺",
+    image:
+      "https://images.unsplash.com/photo-1544161515-4ab6ce6f0d6d?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Belleza de manos",
-    description:
-      "Manicuría prolija, limpia y delicada para acompañarte con un acabado cuidado.",
+    description: "Manicuría prolija y delicada para un acabado cuidado y natural.",
     accent: "bg-[#eee8e4]",
-    icon: "⋄",
+    image:
+      "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&q=80",
   },
 ] as const;
 
 export const aboutText =
-  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos técnica, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
+  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos atención personalizada, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
 
 export const confidencePoints = [
   "Atención personalizada",
@@ -74,42 +74,24 @@ export const confidencePoints = [
   "Resultados naturales",
 ] as const;
 
-export const reserveSteps = [
-  {
-    step: "1",
-    title: "Elegí el tratamiento",
-    description: "Explorá los servicios y elegí la opción que mejor se adapte a lo que querés.",
-  },
-  {
-    step: "2",
-    title: "Escribinos por WhatsApp",
-    description: "Consultamos disponibilidad y te orientamos con cualquier duda antes de reservar.",
-  },
-  {
-    step: "3",
-    title: "Coordinamos tu turno",
-    description: "Te confirmamos el horario y queda listo tu momento de cuidado.",
-  },
-] as const;
-
 export const gallery = [
   {
     title: "Cabina facial",
-    description: "Un espacio sereno para tratamientos de limpieza e hidratación facial.",
+    description: "Luz suave, orden y una atmósfera serena para tratamientos faciales.",
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
     title: "Tratamientos corporales",
-    description: "Ambiente cómodo y ordenado para rutinas orientadas al bienestar.",
+    description: "Un entorno cómodo y cuidado para rutinas de bienestar.",
     image:
       "https://images.unsplash.com/photo-1544161515-4ab6ce6f0d6d?auto=format&fit=crop&w=900&q=80",
     span: "",
   },
   {
-    title: "Cuidado de cejas y pestañas",
-    description: "Detalles prolijos que acompañan una mirada más definida y natural.",
+    title: "Cejas y pestañas",
+    description: "Detalles prolijos que acompañan una mirada más definida.",
     image:
       "https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=900&q=80",
     span: "",
@@ -123,24 +105,6 @@ export const gallery = [
   },
 ] as const;
 
-export const testimonials = [
-  {
-    quote: "Me encantó la atención, súper cálida y profesional. El lugar transmite mucha paz.",
-    name: "Julieta M.",
-    note: "Tratamiento facial",
-  },
-  {
-    quote: "Fui por cejas y salí feliz. Se nota que cuidan mucho cada detalle.",
-    name: "Camila R.",
-    note: "Perfilado de cejas",
-  },
-  {
-    quote: "Coordinar el turno por WhatsApp fue fácil y me atendieron puntual.",
-    name: "Micaela S.",
-    note: "Lifting de pestañas",
-  },
-] as const;
-
 export const faqs = [
   {
     question: "¿Cómo reservo un turno?",
@@ -149,12 +113,7 @@ export const faqs = [
   {
     question: "¿Dónde están ubicadas?",
     answer:
-      "Estamos en Nueva Córdoba, Córdoba Capital. Si querés, también te enviamos la ubicación exacta por WhatsApp.",
-  },
-  {
-    question: "¿Con cuánto tiempo debo reservar?",
-    answer:
-      "Recomendamos reservar con anticipación, sobre todo si querés horario de tarde o sábado.",
+      "Estamos en Nueva Córdoba, Córdoba Capital. También podemos enviarte la ubicación exacta por WhatsApp.",
   },
   {
     question: "¿Qué tratamiento me conviene si es mi primera vez?",
@@ -164,10 +123,6 @@ export const faqs = [
   {
     question: "¿Aceptan efectivo o transferencia?",
     answer: "Sí, podés consultar por los medios de pago disponibles antes de reservar tu turno.",
-  },
-  {
-    question: "¿Puedo consultar por WhatsApp antes de reservar?",
-    answer: "Sí, claro. Es la mejor forma de resolver dudas antes de elegir el servicio ideal para vos.",
   },
 ] as const;
 

@@ -7,21 +7,21 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/70 bg-[rgba(253,249,244,0.86)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/70 bg-[rgba(253,249,244,0.88)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-ink-900 text-sm font-semibold text-white shadow-soft">
-            LE
-          </span>
-          <span>
-            <span className="block text-sm font-semibold tracking-[0.22em] text-ink-900 uppercase">
-              {site.businessName}
+        <a href="#inicio" className="group inline-flex items-center gap-3">
+          <span className="relative flex items-center gap-3">
+            <span className="text-[1.05rem] font-semibold tracking-[0.24em] text-ink-900">
+              Luma
             </span>
-            <span className="block text-xs text-ink-500">Belleza integral</span>
+            <span className="h-px w-8 bg-sand-300 transition group-hover:w-10" />
+            <span className="text-xs font-medium tracking-[0.28em] text-ink-500">
+              Estética
+            </span>
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium text-ink-700 lg:flex">
+        <nav className="hidden items-center gap-5 text-sm font-medium text-ink-700 lg:flex">
           {site.navigation.map((item) => (
             <a key={item.href} href={item.href} className="transition hover:text-ink-950">
               {item.label}
