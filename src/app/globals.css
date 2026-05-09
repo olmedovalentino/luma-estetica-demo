@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand-50 text-ink-800 antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(242, 204, 172, 0.28), transparent 34%),
+    radial-gradient(circle at right, rgba(201, 138, 91, 0.12), transparent 24%),
+    linear-gradient(180deg, #fdf9f4 0%, #fbf6f1 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(201, 138, 91, 0.22);
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
