@@ -243,7 +243,7 @@ export default function HomePage() {
                   <div className="min-h-[340px]">
                     <iframe
                       title="Mapa de Luma Estética"
-                      src={site.locationUrl}
+                      src={site.locationEmbedUrl}
                       className="h-full min-h-[340px] w-full border-0"
                       style={{ pointerEvents: "none" }}
                       loading="lazy"

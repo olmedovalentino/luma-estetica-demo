@@ -10,6 +10,8 @@ export const site = {
   hours: "Lunes a viernes de 9:00 a 19:00 | Sábados de 9:00 a 13:00",
   locationUrl:
     "https://www.google.com/maps/search/?api=1&query=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
+  locationEmbedUrl:
+    "https://www.google.com/maps?q=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
