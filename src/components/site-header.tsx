@@ -9,15 +9,11 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-white/70 bg-[rgba(253,249,244,0.88)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="group inline-flex items-center gap-3">
-          <span className="relative flex items-center gap-3">
-            <span className="text-[1.05rem] font-semibold tracking-[0.24em] text-ink-900">
-              Luma
-            </span>
-            <span className="h-px w-8 bg-sand-300 transition group-hover:w-10" />
-            <span className="text-xs font-medium tracking-[0.28em] text-ink-500">
-              Estética
-            </span>
+        <a href="#inicio" className="inline-flex items-center gap-3 text-ink-900">
+          <span className="text-[1.05rem] font-semibold tracking-[0.2em]">Luma</span>
+          <span className="h-px w-7 bg-sand-300" aria-hidden="true" />
+          <span className="text-xs font-medium tracking-[0.26em] text-ink-500">
+            Estética
           </span>
         </a>
 

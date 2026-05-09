@@ -47,7 +47,7 @@ export default function HomePage() {
                 </div>
                 <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/80 shadow-soft">
                   <Image
-                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80"
                     alt="Cabina de estética luminosa"
                     width={1400}
                     height={900}
@@ -139,8 +139,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Galería"
-              title="Un espacio cálido, luminoso y preparado para que disfrutes cada visita"
-              description="Detalles visuales suaves que acompañan la identidad de la marca."
+              title="Un espacio cálido para tu momento de cuidado"
+              description="Ambientes tranquilos, detalles cuidados y una experiencia pensada para que te sientas cómoda desde que llegás."
             />
 
             <div className="mt-8 grid gap-5 lg:grid-cols-4">
@@ -163,6 +163,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,12,10,0.02),rgba(16,12,10,0.34))]" />
                     <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                       <h3 className="text-lg font-semibold">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-6 text-white/85">{item.description}</p>
                     </div>
                   </div>
                 </article>
@@ -178,13 +179,13 @@ export default function HomePage() {
             description="Respuestas claras para que la experiencia sea simple desde el primer mensaje."
           />
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <div className="mt-8 columns-1 gap-4 lg:columns-2">
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-[1.5rem] border border-white/80 bg-white/90 p-5 shadow-soft"
+                className="group mb-4 break-inside-avoid rounded-[1.5rem] border border-white/80 bg-white/90 p-5 shadow-soft"
               >
-                <summary className="flex cursor-pointer items-center justify-between gap-4 text-left text-base font-semibold text-ink-900">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-semibold text-ink-900">
                   <span>{faq.question}</span>
                   <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-sand-200 bg-sand-50 text-sand-700 transition group-open:rotate-45">
                     +
