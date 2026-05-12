@@ -117,7 +117,7 @@ export const services = [
     image: "/images/cliente/servicio-masajes.jpg",
     alt: "Masaje relajante en un espacio de bienestar",
     accent: "bg-[#e8dccb]",
-    imagePosition: "object-center [object-position:center_16%]",
+    imagePosition: "object-center [object-position:center_8%]",
   },
 ] as const;
 
@@ -128,7 +128,7 @@ export const gallery = [
     image: "/images/cliente/galeria-cabina.jpg",
     alt: "Cabina de atención de Kōra Studio Beauty",
     span: "lg:col-span-2 lg:row-span-2",
-    imagePosition: "object-center [object-position:center_30%]",
+    imagePosition: "object-center [object-position:center_62%]",
   },
   {
     title: "Cuidado facial",
