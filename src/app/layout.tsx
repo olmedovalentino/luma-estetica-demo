@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Luma Estética | Córdoba Capital",
+  title: "Kōra Studio Beauty | Nueva Córdoba",
   description:
-    "Luma Estética en Córdoba Capital: tratamientos faciales, corporales, depilación, cejas, pestañas y belleza integral.",
+    "Kōra Studio Beauty en Nueva Córdoba: cosmetología, cosmiatría, limpiezas faciales, cejas, pestañas y masajes con atención personalizada.",
 };
 
 export default function RootLayout({

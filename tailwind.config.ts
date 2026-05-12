@@ -5,17 +5,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        sand: {
-          50: "#fdf9f4",
-          100: "#fbf2e8",
-          200: "#f6e2cf",
-          300: "#edc7aa",
-          400: "#dfaa80",
-          500: "#c98a5b",
-          600: "#a76341",
-          700: "#844d34",
-          800: "#603a2d",
-          900: "#3c241d",
+        sage: {
+          50: "#f5f7f1",
+          100: "#e8ede1",
+          200: "#d6dec9",
+          300: "#becaa9",
+          400: "#a3b083",
+          500: "#8c9b69",
+          600: "#758063",
+          700: "#5d664f",
+          800: "#454b3b",
+          900: "#2f3627",
+        },
+        beige: {
+          50: "#fbf7f1",
+          100: "#f7f3ec",
+          200: "#eee3d6",
+          300: "#e0cfbb",
+          400: "#cfb697",
+          500: "#b7a58a",
+          600: "#9d8b71",
+          700: "#7f6f5a",
+          800: "#635648",
+          900: "#4c4035",
         },
         ink: {
           50: "#f4f1ef",
@@ -31,11 +43,11 @@ const config: Config = {
         },
       },
       boxShadow: {
-        soft: "0 20px 60px -28px rgba(61, 38, 28, 0.35)",
+        soft: "0 20px 60px -28px rgba(55, 65, 38, 0.28)",
       },
       backgroundImage: {
         "hero-glow":
-          "radial-gradient(circle at top, rgba(242, 204, 172, 0.45), transparent 45%), radial-gradient(circle at right, rgba(201, 138, 91, 0.18), transparent 35%)",
+          "radial-gradient(circle at top, rgba(111, 122, 90, 0.35), transparent 45%), radial-gradient(circle at right, rgba(183, 165, 138, 0.2), transparent 35%)",
       },
     },
   },

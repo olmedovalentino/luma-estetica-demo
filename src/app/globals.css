@@ -11,11 +11,11 @@ html {
 }
 
 body {
-  @apply bg-sand-50 text-ink-800 antialiased;
+  @apply text-[#171717] antialiased;
   background-image:
-    radial-gradient(circle at top, rgba(242, 204, 172, 0.28), transparent 34%),
-    radial-gradient(circle at right, rgba(201, 138, 91, 0.12), transparent 24%),
-    linear-gradient(180deg, #fdf9f4 0%, #fbf6f1 100%);
+    radial-gradient(circle at top, rgba(111, 122, 90, 0.18), transparent 32%),
+    radial-gradient(circle at right, rgba(183, 165, 138, 0.15), transparent 24%),
+    linear-gradient(180deg, #f7f3ec 0%, #fbf7f1 100%);
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-  background: rgba(201, 138, 91, 0.22);
+  background: rgba(111, 122, 90, 0.22);
 }
 
 details > summary {
