@@ -35,8 +35,8 @@ export const site = {
   mapsEmbedUrl:
     "https://www.google.com/maps?q=Obispo%20Oro%20351%20oficina%203%2C%20Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
   address: "Obispo Oro 351, oficina 3. Nueva Córdoba, Córdoba Capital, Argentina.",
-  addressShort: "Nueva Córdoba, Córdoba Capital",
-  locationLabel: "Nueva Córdoba · Córdoba Capital",
+  addressShort: "Obispo Oro 351, oficina 3.",
+  locationLabel: "Nueva Córdoba, Córdoba Capital",
   availability: "Atención con cita previa",
   bookingNote: "Coordiná por WhatsApp",
   navigation: [
@@ -62,6 +62,11 @@ export const site = {
     "Obispo Oro 351, oficina 3",
     "Nueva Córdoba, Córdoba Capital",
     "Atención con cita previa",
+  ],
+  socialLinks: [
+    { label: "WhatsApp", href: "https://wa.me/543517657141?text=Hola%2C%20quiero%20consultar%20por%20un%20turno.", icon: "whatsapp" },
+    { label: "Instagram", href: "https://www.instagram.com/kora.studioks", icon: "instagram" },
+    { label: "TikTok", href: "https://www.tiktok.com/@kora.beautystudio", icon: "tiktok" },
   ],
 } as const;
 

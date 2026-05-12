@@ -5,6 +5,7 @@ import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SocialIconLink } from "@/components/social-icon-link";
 import { faqs, gallery, services, site } from "@/lib/site";
 
 export default function HomePage() {
@@ -21,15 +22,16 @@ export default function HomePage() {
             <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-10">
               <div className="flex flex-col justify-center">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#758063]">
-                  {site.addressShort}
+                  {site.locationLabel}
                 </p>
                 <h1 className="mt-4 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#171717] sm:text-5xl">
-                  {site.heroTitle}
+                  Cuidado facial, cejas, pestañas y relax
                 </h1>
                 <p className="mt-4 max-w-xl text-base leading-7 text-[#4a4a44]">
                   {site.heroSubtitle}
                 </p>
-                <p className="mt-3 text-sm text-[#6c675f]">{site.heroNote}</p>
+
+                <div className="mt-4 text-sm text-[#6c675f]">{site.heroNote}</div>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -193,47 +195,28 @@ export default function HomePage() {
                   description={site.contactDescription}
                 />
 
-                <div className="mt-5 space-y-3 text-sm text-[#4a4a44]">
-                  <p>{site.address}</p>
+                <div className="mt-5 space-y-2 text-sm text-[#4a4a44]">
+                  <p>{site.addressShort}</p>
+                  <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="block">
+                    {site.address}
+                  </a>
                   <p>{site.availability}</p>
                 </div>
 
-                <div id="contacto" className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    Consultar por WhatsApp
-                  </ButtonLink>
-                  <ButtonLink href={site.mapsUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
-                    Ver mapa
-                  </ButtonLink>
-                </div>
-
-                <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#4a4a44]">
-                  <a
-                    href={site.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-[#e8dccb] bg-white px-4 py-2 transition hover:bg-[#f7f3ec]"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href={site.tiktokUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-[#e8dccb] bg-white px-4 py-2 transition hover:bg-[#f7f3ec]"
-                  >
-                    TikTok
-                  </a>
+                <div className="mt-6 flex items-center gap-3">
+                  {site.socialLinks.map((link) => (
+                    <SocialIconLink
+                      key={link.label}
+                      href={link.href}
+                      label={link.label}
+                      icon={link.icon}
+                      tone="light"
+                    />
+                  ))}
                 </div>
               </div>
 
-              <a
-                href={site.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver ubicación en Google Maps"
-                className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft"
-              >
+              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft">
                 <div className="grid md:grid-cols-[1fr_0.88fr]">
                   <div className="min-h-[300px]">
                     <iframe
@@ -265,31 +248,13 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 pb-12 pt-2 sm:px-6 lg:px-8">
-          <div className="rounded-[2rem] border border-white/80 bg-gradient-to-br from-[#3e4634] to-[#2f3627] px-6 py-6 text-white shadow-soft">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#e8dccb]">
-                  Reservas
-                </p>
-                <h2 className="mt-2 font-serif text-xl font-semibold tracking-tight">
-                  ¿Querés reservar tu turno?
-                </h2>
               </div>
-              <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Pedir turno por WhatsApp
-              </ButtonLink>
             </div>
           </div>
         </section>
       </main>
 
-      <SiteFooter whatsappUrl={whatsappUrl} />
+      <SiteFooter />
       <FloatingWhatsAppButton href={whatsappUrl} label="WhatsApp" />
     </>
   );
