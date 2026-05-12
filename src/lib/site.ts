@@ -101,7 +101,7 @@ export const services = [
     image: "/images/cliente/servicio-cejas.jpg",
     alt: "Servicio de cejas con perfilado y diseño",
     accent: "bg-[#3e4634]",
-    imagePosition: "object-center object-top",
+    imagePosition: "object-center [object-position:center_18%]",
   },
   {
     title: "Pestañas",
@@ -117,7 +117,7 @@ export const services = [
     image: "/images/cliente/servicio-masajes.jpg",
     alt: "Masaje relajante en un espacio de bienestar",
     accent: "bg-[#e8dccb]",
-    imagePosition: "object-center object-top",
+    imagePosition: "object-center [object-position:center_22%]",
   },
 ] as const;
 
