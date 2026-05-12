@@ -77,6 +77,7 @@ export const services = [
     image: "/images/cliente/servicio-limpieza-facial.jpg",
     alt: "Tratamiento de limpieza facial en Kōra Studio Beauty",
     accent: "bg-[#6f7a5a]",
+    imagePosition: "object-center",
   },
   {
     title: "Limpieza Glass Skin",
@@ -84,6 +85,7 @@ export const services = [
     image: "/images/cliente/servicio-glass-skin.jpg",
     alt: "Tratamiento Glass Skin para una piel luminosa",
     accent: "bg-[#758063]",
+    imagePosition: "object-center object-top",
   },
   {
     title: "Hydralips",
@@ -91,6 +93,7 @@ export const services = [
     image: "/images/cliente/servicio-hydralips.jpg",
     alt: "Tratamiento Hydralips para labios hidratados",
     accent: "bg-[#b7a58a]",
+    imagePosition: "object-center",
   },
   {
     title: "Cejas",
@@ -98,6 +101,7 @@ export const services = [
     image: "/images/cliente/servicio-cejas.jpg",
     alt: "Servicio de cejas con perfilado y diseño",
     accent: "bg-[#3e4634]",
+    imagePosition: "object-center object-top",
   },
   {
     title: "Pestañas",
@@ -105,6 +109,7 @@ export const services = [
     image: "/images/cliente/servicio-pestanas.jpg",
     alt: "Lifting y tinte de pestañas",
     accent: "bg-[#6f7a5a]",
+    imagePosition: "object-center",
   },
   {
     title: "Masajes relajantes",
@@ -112,6 +117,7 @@ export const services = [
     image: "/images/cliente/servicio-masajes.jpg",
     alt: "Masaje relajante en un espacio de bienestar",
     accent: "bg-[#e8dccb]",
+    imagePosition: "object-center object-top",
   },
 ] as const;
 
@@ -122,13 +128,15 @@ export const gallery = [
     image: "/images/cliente/galeria-cabina.jpg",
     alt: "Cabina de atención de Kōra Studio Beauty",
     span: "lg:col-span-2 lg:row-span-2",
+    imagePosition: "object-center",
   },
   {
     title: "Cuidado facial",
     description: "Detalle y limpieza en primer plano.",
-    image: "/images/cliente/galeria-espacio.jpg",
-    alt: "Espacio de cuidado facial y relax",
+    image: "/images/cliente/servicio-limpieza-facial.jpg",
+    alt: "Cuidado facial en Kōra Studio Beauty",
     span: "",
+    imagePosition: "object-center",
   },
   {
     title: "Productos",
@@ -136,6 +144,7 @@ export const gallery = [
     image: "/images/cliente/galeria-productos.jpg",
     alt: "Productos de belleza y cuidado en Kōra Studio Beauty",
     span: "",
+    imagePosition: "object-center",
   },
   {
     title: "Relax",
@@ -143,6 +152,7 @@ export const gallery = [
     image: "/images/cliente/galeria-detalles.jpg",
     alt: "Detalles decorativos y de ambiente en Kōra Studio Beauty",
     span: "lg:col-span-2",
+    imagePosition: "object-center object-top",
   },
 ] as const;
 

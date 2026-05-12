@@ -74,19 +74,19 @@ export default function HomePage() {
                   key={service.title}
                   className="group overflow-hidden rounded-[1.4rem] border border-white/80 bg-white/92 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-28px_rgba(61,65,38,0.22)]"
                 >
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-[228px] overflow-hidden sm:h-[236px] lg:h-[230px]">
                     <Image
                       src={service.image}
                       alt={service.alt}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      className={`object-cover transition duration-500 group-hover:scale-[1.03] ${service.imagePosition}`}
                     />
                   </div>
-                  <div className="p-4">
-                    <div className={`mb-3 h-1.5 w-12 rounded-full ${service.accent}`} />
+                  <div className="px-4 pb-4 pt-3">
+                    <div className={`mb-2.5 h-1.5 w-12 rounded-full ${service.accent}`} />
                     <h3 className="text-base font-semibold text-[#171717]">{service.title}</h3>
-                    <p className="mt-1.5 text-sm leading-6 text-[#4a4a44]">{service.description}</p>
+                    <p className="mt-1 text-sm leading-5 text-[#4a4a44]">{service.description}</p>
                   </div>
                 </article>
               ))}
@@ -97,13 +97,15 @@ export default function HomePage() {
         <section id="sobre" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-3 shadow-soft">
-              <Image
-                src="/images/cliente/galeria-espacio.jpg"
-                alt="Detalle del espacio cálido y relajado de Kōra Studio Beauty"
-                width={1400}
-                height={900}
-                className="h-[330px] w-full rounded-[1.4rem] object-cover"
-              />
+              <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
+                <Image
+                  src="/images/cliente/galeria-cabina.jpg"
+                  alt="Cabina de Kōra Studio Beauty"
+                  fill
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="object-cover object-center"
+                />
+              </div>
             </div>
 
             <div>
@@ -135,22 +137,22 @@ export default function HomePage() {
               description={site.galleryDescription}
             />
 
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-7 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[220px]">
               {gallery.map((item) => (
                 <article
                   key={item.title}
                   className={[
-                    "group overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft",
+                    "group h-full overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft",
                     item.span,
                   ].join(" ")}
                 >
-                  <div className="relative min-h-[220px]">
+                  <div className="relative h-full min-h-[220px] overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       fill
                       sizes="(min-width: 1024px) 25vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      className={`object-cover transition duration-500 group-hover:scale-[1.03] ${item.imagePosition}`}
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,12,10,0.02),rgba(16,12,10,0.32))]" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
