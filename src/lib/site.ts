@@ -149,8 +149,8 @@ export const gallery = [
   {
     title: "Relax",
     description: "Calma, luz y una estética natural.",
-    image: "/images/cliente/galeria-detalles.jpg",
-    alt: "Detalles decorativos y de ambiente en Kōra Studio Beauty",
+    image: "/images/cliente/galeria-espacio.jpg",
+    alt: "Espacio de relax y ambiente cálido en Kōra Studio Beauty",
     span: "lg:col-span-2",
     imagePosition: "object-center object-top",
   },

@@ -96,17 +96,17 @@ export default function HomePage() {
 
         <section id="sobre" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-3 shadow-soft">
-              <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
-                <Image
-                  src="/images/cliente/galeria-cabina.jpg"
-                  alt="Cabina de Kōra Studio Beauty"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-center"
-                />
+              <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 p-3 shadow-soft">
+                <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
+                  <Image
+                    src="/images/cliente/galeria-velas.jpg"
+                    alt="Detalles cálidos de Kōra Studio Beauty"
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    className="object-cover object-center"
+                  />
+                </div>
               </div>
-            </div>
 
             <div>
               <SectionHeading
