@@ -20,26 +20,29 @@ export default function HomePage() {
           <div className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,252,248,0.98),rgba(247,243,236,0.96))] shadow-soft">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(111,122,90,0.11),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(183,165,138,0.1),transparent_28%)]" />
             <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-10">
-              <div className="flex flex-col justify-center">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#758063]">
+              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[420px]">
+                <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#758063]">
                   {site.locationLabel}
                 </p>
-                <h1 className="mt-4 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#171717] sm:text-5xl">
-                  Cuidado facial, cejas, pestañas y relax
-                </h1>
-                <p className="mt-4 max-w-xl text-base leading-7 text-[#4a4a44]">
-                  {site.heroSubtitle}
-                </p>
 
-                <div className="mt-4 text-sm text-[#6c675f]">{site.heroNote}</div>
+                <div className="py-4 lg:py-6">
+                  <h1 className="max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#171717] sm:text-5xl">
+                    Cuidado facial, cejas, pestañas y relax
+                  </h1>
+                </div>
 
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    {site.heroCtaPrimary}
-                  </ButtonLink>
-                  <ButtonLink href="#servicios" variant="secondary">
-                    {site.heroCtaSecondary}
-                  </ButtonLink>
+                <div className="max-w-xl pt-6">
+                  <p className="text-base leading-7 text-[#4a4a44]">{site.heroSubtitle}</p>
+                  <p className="mt-4 text-sm text-[#6c675f]">{site.heroNote}</p>
+
+                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                    <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      {site.heroCtaPrimary}
+                    </ButtonLink>
+                    <ButtonLink href="#servicios" variant="secondary">
+                      {site.heroCtaSecondary}
+                    </ButtonLink>
+                  </div>
                 </div>
               </div>
 
@@ -161,27 +164,29 @@ export default function HomePage() {
         </section>
 
         <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow={site.faqEyebrow}
-            title={site.faqTitle}
-            description={site.faqDescription}
-          />
+          <div className="mx-auto max-w-[900px]">
+            <SectionHeading
+              eyebrow={site.faqEyebrow}
+              title={site.faqTitle}
+              description={site.faqDescription}
+            />
 
-          <div className="mt-7 grid gap-3 lg:grid-cols-2">
-            {faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-[1.35rem] border border-white/80 bg-white/90 p-4 shadow-soft"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#171717] sm:text-base">
-                  <span>{faq.question}</span>
-                  <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#e8dccb] bg-[#f7f3ec] text-[#758063] transition group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 text-sm leading-6 text-[#4a4a44]">{faq.answer}</p>
-              </details>
-            ))}
+            <div className="mt-7 flex flex-col gap-3">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group self-start w-full rounded-[1.35rem] border border-white/80 bg-white/90 p-4 shadow-soft"
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#171717] sm:text-base">
+                    <span>{faq.question}</span>
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#e8dccb] bg-[#f7f3ec] text-[#758063] transition group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm leading-6 text-[#4a4a44]">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -189,17 +194,15 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
               <div className="rounded-[2rem] border border-white/80 bg-white/92 p-6 shadow-soft sm:p-7">
-                <SectionHeading
-                  eyebrow={site.contactEyebrow}
-                  title={site.contactTitle}
-                  description={site.contactDescription}
-                />
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#758063]">
+                  {site.contactEyebrow}
+                </p>
+                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#171717] sm:text-3xl">
+                  {site.contactTitle}
+                </h2>
 
                 <div className="mt-5 space-y-2 text-sm text-[#4a4a44]">
-                  <p>{site.addressShort}</p>
-                  <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="block">
-                    {site.address}
-                  </a>
+                  <p>Obispo Oro 351, oficina 3.</p>
                   <p>{site.availability}</p>
                 </div>
 
@@ -216,39 +219,21 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft">
-                <div className="grid md:grid-cols-[1fr_0.88fr]">
-                  <div className="min-h-[300px]">
-                    <iframe
-                      title="Mapa de Kōra Studio Beauty"
-                      src={site.mapsEmbedUrl}
-                      className="h-full min-h-[300px] w-full border-0"
-                      style={{ pointerEvents: "none" }}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between gap-4 bg-[#3e4634] p-6 text-white">
-                    <div>
-                      <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#e8dccb]">
-                        Cómo encontrarnos
-                      </p>
-                      <h3 className="mt-3 font-serif text-xl font-semibold tracking-tight">
-                        Nueva Córdoba
-                      </h3>
-                      <p className="mt-3 text-sm leading-6 text-white/75">
-                        Obispo Oro 351, oficina 3.
-                      </p>
-                    </div>
-                    <div className="grid gap-2">
-                      {site.contactPoints.map((item) => (
-                        <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                          <p className="text-sm font-medium text-white/90">{item}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <a
+                href={site.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver ubicación en Google Maps"
+                className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft"
+              >
+                <iframe
+                  title="Mapa de Kōra Studio Beauty"
+                  src={site.mapsEmbedUrl}
+                  className="h-full min-h-[340px] w-full border-0"
+                  style={{ pointerEvents: "none" }}
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
         </section>
