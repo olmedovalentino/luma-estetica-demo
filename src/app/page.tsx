@@ -16,7 +16,7 @@ export default function HomePage() {
       <SiteHeader whatsappUrl={whatsappUrl} />
 
       <main className="relative overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.25rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,253,248,0.98),rgba(248,243,236,0.96))] shadow-soft">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(184,121,95,0.14),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(126,135,104,0.12),transparent_28%)]" />
             <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-10">
@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="servicios" className="bg-[#F8F3EC]">
+        <section id="servicios" className="scroll-mt-20 bg-[#F8F3EC]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow={site.servicesEyebrow}
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="sobre" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section id="sobre" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 p-3 shadow-soft">
               <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
@@ -142,7 +142,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="galeria" className="bg-[#F8F3EC]">
+        <section id="galeria" className="scroll-mt-20 bg-[#F8F3EC]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow={site.galleryEyebrow}
@@ -178,7 +178,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="faq" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section id="faq" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[900px]">
             <SectionHeading
               eyebrow={site.faqEyebrow}
@@ -205,7 +205,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="ubicacion" className="bg-[#F8F3EC]">
+        <section id="ubicacion" className="scroll-mt-20 bg-[#F8F3EC]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
               <div className="rounded-[2rem] border border-white/80 bg-[#FFFDF8] p-6 shadow-soft sm:p-7">
@@ -229,15 +229,6 @@ export default function HomePage() {
                       tone="light"
                     />
                   ))}
-                </div>
-
-                <div className="mt-4 flex flex-wrap gap-4 text-sm text-[#6A554A]">
-                  <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#2C211B]">
-                    WhatsApp
-                  </a>
-                  <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-[#2C211B]">
-                    Instagram
-                  </a>
                 </div>
               </div>
 
