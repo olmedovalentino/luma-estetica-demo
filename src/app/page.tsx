@@ -47,12 +47,12 @@ export default function HomePage() {
 
               <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
                 <Image
-                  src="/images/belleza-mediterranea/hero.svg"
+                  src="/images/belleza-mediterranea/hero.jpg"
                   alt="Espacio cálido de Belleza Mediterránea"
                   width={1400}
                   height={900}
                   priority
-                  className="h-[360px] w-full object-cover sm:h-[420px]"
+                  className="h-[360px] w-full object-cover object-center [object-position:center_38%] sm:h-[420px]"
                 />
               </div>
             </div>
@@ -112,11 +112,11 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 p-3 shadow-soft">
               <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
                 <Image
-                  src="/images/belleza-mediterranea/galeria-espacio.svg"
+                  src="/images/belleza-mediterranea/galeria-productos.jpg"
                   alt="Ambiente integral de Belleza Mediterránea"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-center"
+                  className="object-cover object-center [object-position:center_44%]"
                 />
               </div>
             </div>
