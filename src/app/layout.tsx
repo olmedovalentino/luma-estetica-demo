@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kōra Studio Beauty | Nueva Córdoba",
+  title: "Belleza Mediterránea | Centro de Córdoba",
   description:
-    "Kōra Studio Beauty en Nueva Córdoba: cosmetología, cosmiatría, limpiezas faciales, cejas, pestañas y masajes con atención personalizada.",
+    "Belleza Mediterránea en el Centro de Córdoba: estética facial y corporal, masajes, depilación, Terapia Postural Activa y bienestar con atención personalizada.",
 };
 
 export default function RootLayout({

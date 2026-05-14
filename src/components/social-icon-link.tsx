@@ -1,7 +1,7 @@
 type SocialIconLinkProps = {
   href: string;
   label: string;
-  icon: "instagram" | "tiktok" | "whatsapp";
+  icon: "instagram" | "whatsapp";
   tone?: "light" | "dark";
 };
 
@@ -13,12 +13,6 @@ function SocialIcon({ icon }: { icon: SocialIconLinkProps["icon"] }) {
           <rect x="4" y="4" width="16" height="16" rx="4" />
           <circle cx="12" cy="12" r="3.5" />
           <circle cx="17" cy="7" r="1" fill="currentColor" stroke="none" />
-        </svg>
-      );
-    case "tiktok":
-      return (
-        <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current stroke-[1.8]">
-          <path d="M14 5c.7 2.7 2.4 4.3 5 4.7v3.1c-1.7 0-3.2-.5-4.5-1.4V16a4.8 4.8 0 1 1-4.8-4.8c.3 0 .6 0 .8.1v3.1a1.8 1.8 0 1 0 1.5 1.8V5h2z" />
         </svg>
       );
     case "whatsapp":
@@ -34,7 +28,7 @@ function SocialIcon({ icon }: { icon: SocialIconLinkProps["icon"] }) {
 export function SocialIconLink({ href, label, icon, tone = "light" }: SocialIconLinkProps) {
   const classes =
     tone === "light"
-      ? "border border-[#e4d8c9] bg-white text-[#3e4634] hover:bg-[#f7f3ec]"
+      ? "border border-[#E7D6C3] bg-white text-[#7E8768] hover:bg-[#F8F3EC]"
       : "border border-white/12 bg-white/6 text-white hover:bg-white/12";
 
   return (
