@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Belleza Mediterránea | Centro de Córdoba",
+  title: "Urani Studio | Nails & Lashes en Córdoba",
   description:
-    "Belleza Mediterránea en el Centro de Córdoba: estética facial y corporal, masajes, depilación, Terapia Postural Activa y bienestar con atención personalizada.",
+    "Urani Studio en el Centro de Córdoba: uñas, soft gel, esculpidas, nail art y pestañas con atención personalizada y reserva previa.",
 };
 
 export default function RootLayout({
