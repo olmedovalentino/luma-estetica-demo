@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Belleza Mediterránea | Centro de Córdoba",
+  title: "Estudio Sens | Pilates, postura y bienestar en Cordoba",
   description:
-    "Belleza Mediterránea en el Centro de Córdoba: estética facial y corporal, masajes, depilación, Terapia Postural Activa y bienestar con atención personalizada.",
+    "Estudio Sens en Cordoba Capital: pilates postural, pilates mix, kinesiopilates, formacion y movimiento consciente con acompanamiento profesional.",
 };
 
 export default function RootLayout({

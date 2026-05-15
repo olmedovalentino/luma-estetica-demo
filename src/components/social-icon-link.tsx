@@ -26,16 +26,17 @@ function SocialIcon({ icon }: { icon: SocialIconLinkProps["icon"] }) {
 }
 
 export function SocialIconLink({ href, label, icon, tone = "light" }: SocialIconLinkProps) {
+  const isExternal = href !== "#";
   const classes =
     tone === "light"
-      ? "border border-[#E7D6C3] bg-white text-[#7E8768] hover:bg-[#F8F3EC]"
+      ? "border border-[#D8CEBF] bg-white text-[#6F7C61] hover:bg-[#F7F4EE]"
       : "border border-white/12 bg-white/6 text-white hover:bg-white/12";
 
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       aria-label={label}
       title={label}
       className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition ${classes}`}
