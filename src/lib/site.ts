@@ -1,5 +1,5 @@
-export const whatsappNumber = "";
-export const whatsappUrl = "#";
+export const whatsappNumber = "3515292156";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 export const instagramUrl = "https://www.instagram.com/estudiosens";
 export const mapsUrl = "";
 
@@ -92,10 +92,10 @@ export const services = [
     title: "Pilates Postural",
     description:
       "Clases orientadas a mejorar postura, fuerza, control corporal y bienestar general.",
-    image: "https://images.pexels.com/photos/18499514/pexels-photo-18499514.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/31509822/pexels-photo-31509822.jpeg?cs=srgb&fm=jpg",
     alt: "Pilates postural en Estudio Sens",
     accent: "bg-[#6F7C61]",
-    imagePosition: "object-center [object-position:center_50%]",
+    imagePosition: "object-center [object-position:center_46%]",
   },
   {
     title: "Pilates MiX",

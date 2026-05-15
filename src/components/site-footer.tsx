@@ -1,7 +1,7 @@
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
-  const whatsappIsAvailable = site.whatsappUrl !== "#";
+  const whatsappIsAvailable = Boolean(site.whatsappNumber);
 
   return (
     <footer className="border-t border-white/70 bg-[#303B2C] text-white">
