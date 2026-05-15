@@ -1,13 +1,9 @@
-const whatsappNumber = "";
+export const whatsappNumber = "3518508218";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
 export function createWhatsAppUrl(message: string) {
   const encodedMessage = encodeURIComponent(message);
-
-  if (!whatsappNumber) {
-    return `https://wa.me/?text=${encodedMessage}`;
-  }
-
-  return `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  return `${whatsappUrl}?text=${encodedMessage}`;
 }
 
 export const site = {
@@ -50,9 +46,8 @@ export const site = {
   contactDescription:
     "Alvear 53. Centro de Córdoba. Atención con reserva previa.",
   footerDescription: "Nails & Lashes",
-  // Replace with the confirmed WhatsApp number, for example: "5493510000000".
   whatsappNumber,
-  whatsappUrl: createWhatsAppUrl("Hola! Quiero consultar disponibilidad en Urani Studio."),
+  whatsappUrl,
   instagramUrl: "https://www.instagram.com/urani.studio",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Alvear%2053%2C%20Centro%2C%20C%C3%B3rdoba%2C%20Argentina",
@@ -85,7 +80,11 @@ export const site = {
     "Centro de Córdoba",
   ],
   socialLinks: [
-    { label: "WhatsApp", href: createWhatsAppUrl("Hola! Quiero consultar disponibilidad en Urani Studio."), icon: "whatsapp" },
+    {
+      label: "WhatsApp",
+      href: createWhatsAppUrl("Hola! Quiero consultar disponibilidad en Urani Studio."),
+      icon: "whatsapp",
+    },
     { label: "Instagram", href: "https://www.instagram.com/urani.studio", icon: "instagram" },
   ],
 } as const;
@@ -155,18 +154,7 @@ export const bookingServices = [
   "Anime Lash",
 ] as const;
 
-export const bookingDayOptions = [
-  "Hoy",
-  "Mañana",
-  "Esta semana",
-  "Próxima semana",
-] as const;
-
-export const bookingTimeOptions = [
-  "Mañana",
-  "Tarde",
-  "Último horario disponible",
-] as const;
+export const bookingTimeOptions = ["10:00", "11:30", "14:00", "16:00", "18:00"] as const;
 
 export const gallery = [
   {

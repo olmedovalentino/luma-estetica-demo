@@ -4,18 +4,11 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 
 import { ButtonLink } from "@/components/button-link";
-import {
-  bookingDayOptions,
-  bookingServices,
-  bookingTimeOptions,
-  createWhatsAppUrl,
-  services,
-  site,
-} from "@/lib/site";
+import { bookingServices, bookingTimeOptions, createWhatsAppUrl, services, site } from "@/lib/site";
 
 type BookingFormState = {
   service: string;
-  day: string;
+  date: string;
   time: string;
   name: string;
   phone: string;
@@ -24,18 +17,25 @@ type BookingFormState = {
 
 const initialFormState: BookingFormState = {
   service: "",
-  day: "",
+  date: "",
   time: "",
   name: "",
   phone: "",
   comment: "",
 };
 
+function getTodayDate() {
+  const now = new Date();
+  const offset = now.getTimezoneOffset();
+  const localDate = new Date(now.getTime() - offset * 60_000);
+  return localDate.toISOString().split("T")[0];
+}
+
 function buildBookingMessage(form: BookingFormState) {
   const lines = [
     "Hola! Quiero solicitar un turno en Urani Studio.",
     `Servicio: ${form.service || "-"}`,
-    `Día: ${form.day || "-"}`,
+    `Fecha: ${form.date || "-"}`,
     `Horario: ${form.time || "-"}`,
     `Nombre: ${form.name || "-"}`,
     `Teléfono: ${form.phone || "-"}`,
@@ -52,12 +52,12 @@ export function BookingRequestSection() {
   const [form, setForm] = useState<BookingFormState>(initialFormState);
 
   const selectedService = services.find((service) => service.title === form.service);
-
+  const minDate = useMemo(() => getTodayDate(), []);
   const whatsappHref = useMemo(() => createWhatsAppUrl(buildBookingMessage(form)), [form]);
 
   const isComplete =
     Boolean(form.service) &&
-    Boolean(form.day) &&
+    Boolean(form.date) &&
     Boolean(form.time) &&
     Boolean(form.name.trim()) &&
     Boolean(form.phone.trim());
@@ -65,6 +65,11 @@ export function BookingRequestSection() {
   function updateField<K extends keyof BookingFormState>(field: K, value: BookingFormState[K]) {
     setForm((current) => ({ ...current, [field]: value }));
   }
+
+  const selectedServiceImageClassName =
+    selectedService?.title === "Soft Gel"
+      ? "object-cover [object-position:center_35%]"
+      : selectedService?.imagePosition ?? "object-cover object-center";
 
   return (
     <div className="grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
@@ -106,30 +111,21 @@ export function BookingRequestSection() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-[#2F2624]">2. Elegí un día tentativo</p>
-            <div className="mt-3 flex flex-wrap gap-2.5">
-              {bookingDayOptions.map((option) => {
-                const isSelected = form.day === option;
-                return (
-                  <button
-                    key={option}
-                    type="button"
-                    onClick={() => updateField("day", option)}
-                    className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                      isSelected
-                        ? "border-[#C98E95] bg-[#F7E5E7] text-[#2F2624]"
-                        : "border-[#E9D6CE] bg-white text-[#6C5852] hover:border-[#D8B6A4] hover:bg-[#FCF4F1]"
-                    }`}
-                  >
-                    {option}
-                  </button>
-                );
-              })}
-            </div>
+            <p className="text-sm font-semibold text-[#2F2624]">2. Elegí una fecha</p>
+            <label className="mt-3 block">
+              <span className="mb-2 block text-sm text-[#6C5852]">Día tentativo</span>
+              <input
+                type="date"
+                min={minDate}
+                value={form.date}
+                onChange={(event) => updateField("date", event.target.value)}
+                className="w-full rounded-[1rem] border border-[#E9D6CE] bg-white px-4 py-3 text-sm text-[#2F2624] outline-none transition focus:border-[#C98E95] focus:ring-2 focus:ring-[#F2D5D9]"
+              />
+            </label>
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-[#2F2624]">3. Elegí una franja horaria</p>
+            <p className="text-sm font-semibold text-[#2F2624]">3. Elegí un horario</p>
             <div className="mt-3 flex flex-wrap gap-2.5">
               {bookingTimeOptions.map((option) => {
                 const isSelected = form.time === option;
@@ -197,7 +193,7 @@ export function BookingRequestSection() {
               alt={selectedService?.alt ?? "Detalle de Urani Studio"}
               fill
               sizes="(min-width: 1024px) 32vw, 100vw"
-              className="object-cover object-center"
+              className={selectedServiceImageClassName}
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(47,38,36,0.02),rgba(47,38,36,0.34))]" />
             <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
@@ -218,19 +214,25 @@ export function BookingRequestSection() {
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[#9E7277]">
                 Servicio
               </p>
-              <p className="mt-1 text-sm text-[#2F2624]">{form.service || "Seleccioná una opción"}</p>
+              <p className="mt-1 text-sm text-[#2F2624]">
+                {form.service || "Seleccioná una opción"}
+              </p>
             </div>
             <div className="rounded-[1rem] bg-[#FCF4F1] px-4 py-3">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[#9E7277]">
-                Día
+                Fecha
               </p>
-              <p className="mt-1 text-sm text-[#2F2624]">{form.day || "Elegí una opción tentativo"}</p>
+              <p className="mt-1 text-sm text-[#2F2624]">
+                {form.date || "Elegí una fecha específica"}
+              </p>
             </div>
             <div className="rounded-[1rem] bg-[#FCF4F1] px-4 py-3">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[#9E7277]">
                 Horario
               </p>
-              <p className="mt-1 text-sm text-[#2F2624]">{form.time || "Elegí una franja horaria"}</p>
+              <p className="mt-1 text-sm text-[#2F2624]">
+                {form.time || "Elegí un horario específico"}
+              </p>
             </div>
           </div>
 
@@ -249,7 +251,7 @@ export function BookingRequestSection() {
           </div>
 
           <p className="mt-3 text-xs leading-5 text-[#7A6661]">
-            Completá servicio, día, horario, nombre y teléfono. Te respondemos para confirmar.
+            Completá servicio, fecha, horario, nombre y teléfono. Te respondemos para confirmar.
           </p>
         </div>
       </div>
