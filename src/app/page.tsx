@@ -1,12 +1,13 @@
 import Image from "next/image";
 
+import { BookingRequestSection } from "@/components/booking-request-section";
 import { ButtonLink } from "@/components/button-link";
 import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SocialIconLink } from "@/components/social-icon-link";
-import { bookingOptions, faqs, gallery, services, site } from "@/lib/site";
+import { faqs, gallery, services, site } from "@/lib/site";
 
 export default function HomePage() {
   const whatsappUrl = site.whatsappUrl;
@@ -46,11 +47,11 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
                 <Image
                   src="/images/urani/hero.jpg"
-                  alt="Detalle de beauty studio en Urani Studio"
+                  alt="Aplicación de uñas en Urani Studio"
                   width={1400}
                   height={900}
                   priority
-                  className="h-[360px] w-full object-cover object-center [object-position:center_28%] sm:h-[420px]"
+                  className="h-[360px] w-full object-cover object-center [object-position:center_46%] sm:h-[420px]"
                 />
               </div>
             </div>
@@ -100,7 +101,7 @@ export default function HomePage() {
                   alt="Espacio de atención de Urani Studio"
                   fill
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-center [object-position:center_45%]"
+                  className="object-cover object-center [object-position:center_52%]"
                 />
               </div>
             </div>
@@ -128,55 +129,7 @@ export default function HomePage() {
 
         <section id="turnos" className="scroll-mt-20 bg-[#FFF7F3]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-[2rem] border border-white/80 bg-[#FFFDFC] p-6 shadow-soft sm:p-7">
-                <SectionHeading
-                  eyebrow={site.bookingEyebrow}
-                  title={site.bookingTitle}
-                  description={site.bookingDescription}
-                />
-
-                <div className="mt-6 flex flex-wrap gap-2.5">
-                  {bookingOptions.map((option) => (
-                    <span
-                      key={option}
-                      className="rounded-full border border-[#E9D6CE] bg-[#F8F0EC] px-3 py-2 text-xs font-medium text-[#6C5852] sm:text-sm"
-                    >
-                      {option}
-                    </span>
-                  ))}
-                </div>
-
-                <p className="mt-6 max-w-md text-sm leading-6 text-[#5B4B47]">{site.bookingNote}</p>
-
-                <div className="mt-6">
-                  <ButtonLink href={whatsappUrl}>Consultar turno por WhatsApp</ButtonLink>
-                </div>
-              </div>
-
-              <div className="rounded-[2rem] border border-white/80 bg-[#FDF6F3] p-6 shadow-soft sm:p-7">
-                <div className="grid gap-3">
-                  {site.bookingFields.map((field) => (
-                    <div
-                      key={field.label}
-                      className="rounded-[1.2rem] border border-[#EAD8CF] bg-white/90 px-4 py-4"
-                    >
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#9E7277]">
-                        {field.label}
-                      </p>
-                      <p className="mt-2 text-sm text-[#5B4B47]">{field.value}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-3 rounded-[1.2rem] border border-dashed border-[#D9B6BC] bg-white/70 px-4 py-4">
-                  <p className="text-sm text-[#6C5852]">
-                    Podés contarnos qué servicio querés y coordinamos tu visita según
-                    disponibilidad.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <BookingRequestSection />
           </div>
         </section>
 

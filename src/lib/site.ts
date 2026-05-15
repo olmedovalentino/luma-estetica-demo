@@ -1,3 +1,15 @@
+const whatsappNumber = "";
+
+export function createWhatsAppUrl(message: string) {
+  const encodedMessage = encodeURIComponent(message);
+
+  if (!whatsappNumber) {
+    return `https://wa.me/?text=${encodedMessage}`;
+  }
+
+  return `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+}
+
 export const site = {
   businessName: "Urani Studio",
   logoLineOne: "Urani",
@@ -22,9 +34,9 @@ export const site = {
   bookingEyebrow: "Turnos",
   bookingTitle: "Solicitá tu turno",
   bookingDescription:
-    "Elegí el servicio que te interesa y escribinos para coordinar día y horario.",
+    "Elegí el servicio que te interesa, dejá tus datos y coordinamos por WhatsApp.",
   bookingNote:
-    "Podés consultar disponibilidad por WhatsApp y coordinamos el servicio, día y horario.",
+    "Podés consultar disponibilidad por WhatsApp y te respondemos para confirmar día y horario.",
   galleryEyebrow: "Galería",
   galleryTitle: "Diseños, detalles y mirada",
   galleryDescription:
@@ -38,8 +50,9 @@ export const site = {
   contactDescription:
     "Alvear 53. Centro de Córdoba. Atención con reserva previa.",
   footerDescription: "Nails & Lashes",
-  // Replace with the real WhatsApp URL when the number is confirmed.
-  whatsappUrl: "#",
+  // Replace with the confirmed WhatsApp number, for example: "5493510000000".
+  whatsappNumber,
+  whatsappUrl: createWhatsAppUrl("Hola! Quiero consultar disponibilidad en Urani Studio."),
   instagramUrl: "https://www.instagram.com/urani.studio",
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Alvear%2053%2C%20Centro%2C%20C%C3%B3rdoba%2C%20Argentina",
@@ -71,13 +84,8 @@ export const site = {
     "Atención con reserva previa",
     "Centro de Córdoba",
   ],
-  bookingFields: [
-    { label: "Servicio", value: "Uñas, soft gel, esculpidas o pestañas" },
-    { label: "Día preferido", value: "Contanos qué día te queda mejor" },
-    { label: "Horario", value: "Mañana o tarde, según disponibilidad" },
-  ],
   socialLinks: [
-    { label: "WhatsApp", href: "#", icon: "whatsapp" },
+    { label: "WhatsApp", href: createWhatsAppUrl("Hola! Quiero consultar disponibilidad en Urani Studio."), icon: "whatsapp" },
     { label: "Instagram", href: "https://www.instagram.com/urani.studio", icon: "instagram" },
   ],
 } as const;
@@ -90,7 +98,7 @@ export const services = [
     image: "/images/urani/servicio-unas.jpg",
     alt: "Servicio de uñas en Urani Studio",
     accent: "bg-[#C98E95]",
-    imagePosition: "object-center [object-position:center_28%]",
+    imagePosition: "object-center [object-position:center_45%]",
   },
   {
     title: "Soft Gel",
@@ -99,7 +107,7 @@ export const services = [
     image: "/images/urani/servicio-soft-gel.jpg",
     alt: "Servicio de soft gel en Urani Studio",
     accent: "bg-[#D8B6A4]",
-    imagePosition: "object-center [object-position:center_36%]",
+    imagePosition: "object-center [object-position:center_40%]",
   },
   {
     title: "Esculpidas",
@@ -107,7 +115,7 @@ export const services = [
     image: "/images/urani/servicio-esculpidas.jpg",
     alt: "Servicio de uñas esculpidas en Urani Studio",
     accent: "bg-[#B77B84]",
-    imagePosition: "object-center [object-position:center_32%]",
+    imagePosition: "object-center [object-position:center_44%]",
   },
   {
     title: "Nail Art",
@@ -116,7 +124,7 @@ export const services = [
     image: "/images/urani/servicio-nail-art.jpg",
     alt: "Servicio de nail art en Urani Studio",
     accent: "bg-[#8B736B]",
-    imagePosition: "object-center [object-position:center_30%]",
+    imagePosition: "object-center [object-position:center_44%]",
   },
   {
     title: "Pestañas",
@@ -125,7 +133,7 @@ export const services = [
     image: "/images/urani/servicio-pestanas.jpg",
     alt: "Servicio de pestañas en Urani Studio",
     accent: "bg-[#A87A78]",
-    imagePosition: "object-center [object-position:center_30%]",
+    imagePosition: "object-center [object-position:center_38%]",
   },
   {
     title: "Anime Lash",
@@ -134,17 +142,30 @@ export const services = [
     image: "/images/urani/servicio-anime-lash.jpg",
     alt: "Servicio de anime lash en Urani Studio",
     accent: "bg-[#7F6762]",
-    imagePosition: "object-center [object-position:center_32%]",
+    imagePosition: "object-center [object-position:center_54%]",
   },
 ] as const;
 
-export const bookingOptions = [
+export const bookingServices = [
   "Uñas",
   "Soft Gel",
   "Esculpidas",
   "Nail Art",
   "Pestañas",
   "Anime Lash",
+] as const;
+
+export const bookingDayOptions = [
+  "Hoy",
+  "Mañana",
+  "Esta semana",
+  "Próxima semana",
+] as const;
+
+export const bookingTimeOptions = [
+  "Mañana",
+  "Tarde",
+  "Último horario disponible",
 ] as const;
 
 export const gallery = [
@@ -154,15 +175,15 @@ export const gallery = [
     image: "/images/urani/galeria-unas.jpg",
     alt: "Detalles de uñas en Urani Studio",
     span: "lg:col-span-2 lg:row-span-2",
-    imagePosition: "object-center [object-position:center_30%]",
+    imagePosition: "object-center [object-position:center_44%]",
   },
   {
-    title: "Soft Gel",
-    description: "Acabados prolijos y visuales limpios.",
-    image: "/images/urani/galeria-soft-gel.jpg",
-    alt: "Trabajo de soft gel en Urani Studio",
+    title: "Espacio",
+    description: "Un rincón prolijo, cálido y visual.",
+    image: "/images/urani/galeria-espacio.jpg",
+    alt: "Espacio de atención de Urani Studio",
     span: "",
-    imagePosition: "object-center [object-position:center_35%]",
+    imagePosition: "object-center [object-position:center_52%]",
   },
   {
     title: "Pestañas",
@@ -170,15 +191,15 @@ export const gallery = [
     image: "/images/urani/galeria-pestanas.jpg",
     alt: "Trabajo de pestañas en Urani Studio",
     span: "",
-    imagePosition: "object-center [object-position:center_26%]",
+    imagePosition: "object-center [object-position:center_42%]",
   },
   {
     title: "Detalles",
-    description: "Texturas, ambiente y estética del estudio.",
+    description: "Texturas y estética del estudio.",
     image: "/images/urani/galeria-detalles.jpg",
     alt: "Detalles visuales de Urani Studio",
     span: "lg:col-span-2",
-    imagePosition: "object-center [object-position:center_60%]",
+    imagePosition: "object-center [object-position:center_40%]",
   },
 ] as const;
 
