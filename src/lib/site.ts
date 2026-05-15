@@ -32,7 +32,7 @@ export const site = {
   heroImage:
     "https://images.pexels.com/photos/33360215/pexels-photo-33360215.jpeg?cs=srgb&fm=jpg",
   aboutImage:
-    "https://images.pexels.com/photos/36833355/pexels-photo-36833355.jpeg?cs=srgb&fm=jpg",
+    "https://images.pexels.com/photos/11036673/pexels-photo-11036673.jpeg?cs=srgb&fm=jpg",
   galleryEyebrow: "Galeria",
   galleryTitle: "Movimiento, espacio y bienestar",
   galleryDescription:
@@ -92,55 +92,55 @@ export const services = [
     title: "Pilates Postural",
     description:
       "Clases orientadas a mejorar postura, fuerza, control corporal y bienestar general.",
-    image: "https://images.pexels.com/photos/33360215/pexels-photo-33360215.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/18499514/pexels-photo-18499514.jpeg?cs=srgb&fm=jpg",
     alt: "Pilates postural en Estudio Sens",
     accent: "bg-[#6F7C61]",
-    imagePosition: "object-center [object-position:center_46%]",
+    imagePosition: "object-center [object-position:center_50%]",
   },
   {
     title: "Pilates MiX",
     description:
       "Una propuesta dinamica de circuito para trabajar movilidad, estabilidad y tonificacion.",
-    image: "https://images.pexels.com/photos/31509824/pexels-photo-31509824.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/33360086/pexels-photo-33360086.jpeg?cs=srgb&fm=jpg",
     alt: "Pilates mix en Estudio Sens",
     accent: "bg-[#87947A]",
-    imagePosition: "object-center [object-position:center_44%]",
+    imagePosition: "object-center [object-position:center_46%]",
   },
   {
     title: "Kinesiopilates",
     description:
       "Trabajo personalizado que combina principios de pilates con una mirada profesional del movimiento.",
-    image: "https://images.pexels.com/photos/31509832/pexels-photo-31509832.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/20860621/pexels-photo-20860621.jpeg?cs=srgb&fm=jpg",
     alt: "Kinesiopilates en Estudio Sens",
     accent: "bg-[#4E5B46]",
-    imagePosition: "object-center [object-position:center_52%]",
+    imagePosition: "object-center [object-position:center_38%]",
   },
   {
     title: "Clases personalizadas",
     description:
       "Acompanamiento adaptado a cada persona, objetivo y necesidad fisica.",
-    image: "https://images.pexels.com/photos/33360215/pexels-photo-33360215.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/31509828/pexels-photo-31509828.jpeg?cs=srgb&fm=jpg",
     alt: "Clases personalizadas en Estudio Sens",
     accent: "bg-[#B5A28D]",
-    imagePosition: "object-center [object-position:center_54%]",
+    imagePosition: "object-center [object-position:center_46%]",
   },
   {
     title: "Formacion Sens",
     description:
       "Espacios de formacion para profesionales interesados en movimiento, postura y bienestar.",
-    image: "https://images.pexels.com/photos/36833354/pexels-photo-36833354.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/4662336/pexels-photo-4662336.jpeg?cs=srgb&fm=jpg",
     alt: "Formacion Sens en Estudio Sens",
     accent: "bg-[#7C756D]",
-    imagePosition: "object-center [object-position:center_50%]",
+    imagePosition: "object-center [object-position:center_28%]",
   },
   {
     title: "Movimiento consciente",
     description:
       "Una forma de entrenar con control, respiracion y atencion al cuerpo.",
-    image: "https://images.pexels.com/photos/31509824/pexels-photo-31509824.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/4056724/pexels-photo-4056724.jpeg?cs=srgb&fm=jpg",
     alt: "Movimiento consciente en Estudio Sens",
     accent: "bg-[#303B2C]",
-    imagePosition: "object-center [object-position:center_48%]",
+    imagePosition: "object-center [object-position:center_40%]",
   },
 ] as const;
 
@@ -156,34 +156,34 @@ export const gallery = [
   {
     title: "Espacio",
     description: "Un lugar cuidado para entrenar con calma y foco.",
-    image: "https://images.pexels.com/photos/36833355/pexels-photo-36833355.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/36833354/pexels-photo-36833354.jpeg?cs=srgb&fm=jpg",
     alt: "Espacio de Estudio Sens",
     span: "lg:col-span-2 lg:row-span-2",
-    imagePosition: "object-center [object-position:center_52%]",
+    imagePosition: "object-center [object-position:center_50%]",
   },
   {
     title: "Clases",
     description: "Trabajo guiado, tecnico y cercano.",
-    image: "https://images.pexels.com/photos/33360215/pexels-photo-33360215.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/35341629/pexels-photo-35341629.jpeg?cs=srgb&fm=jpg",
     alt: "Clases en Estudio Sens",
     span: "",
-    imagePosition: "object-center [object-position:center_54%]",
+    imagePosition: "object-center [object-position:center_52%]",
   },
   {
     title: "Equipamiento",
     description: "Elementos y herramientas para acompanar cada proceso.",
-    image: "https://images.pexels.com/photos/36833354/pexels-photo-36833354.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/25596767/pexels-photo-25596767.jpeg?cs=srgb&fm=jpg",
     alt: "Equipamiento de Estudio Sens",
     span: "",
-    imagePosition: "object-center [object-position:center_48%]",
+    imagePosition: "object-center [object-position:center_44%]",
   },
   {
     title: "Movimiento",
     description: "Cuerpo, control y bienestar en una misma practica.",
-    image: "https://images.pexels.com/photos/31509832/pexels-photo-31509832.jpeg?cs=srgb&fm=jpg",
+    image: "https://images.pexels.com/photos/5473896/pexels-photo-5473896.jpeg?cs=srgb&fm=jpg",
     alt: "Movimiento en Estudio Sens",
     span: "lg:col-span-2",
-    imagePosition: "object-center [object-position:center_56%]",
+    imagePosition: "object-center [object-position:center_46%]",
   },
 ] as const;
 
