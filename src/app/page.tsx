@@ -44,11 +44,11 @@ export default function HomePage() {
 
               <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
                 <StudioImage
-                  src="/images/estudio-sens/hero.jpg"
+                  src={site.heroImage}
                   alt="Movimiento consciente en Estudio Sens"
                   fallbackLabel="Estudio Sens"
                   className="h-[360px] w-full sm:h-[420px]"
-                  imageClassName="object-cover object-center [object-position:center_52%]"
+                  imageClassName="object-cover object-center [object-position:center_48%]"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 p-3 shadow-soft">
               <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
                 <StudioImage
-                  src="/images/estudio-sens/galeria-espacio.jpg"
+                  src={site.aboutImage}
                   alt="Espacio de Estudio Sens"
                   fallbackLabel="Espacio"
                   className="h-full w-full"
