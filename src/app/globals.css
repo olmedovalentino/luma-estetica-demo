@@ -12,11 +12,8 @@ html {
 }
 
 body {
-  @apply text-[#0B2744] antialiased;
-  background-image:
-    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 30%),
-    radial-gradient(circle at right, rgba(15, 93, 168, 0.12), transparent 24%),
-    linear-gradient(180deg, #f5fbff 0%, #ffffff 100%);
+  @apply text-[#111111] antialiased;
+  background-color: #ffffff;
 }
 
 * {
@@ -24,7 +21,7 @@ body {
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.28);
+  background: rgba(228, 49, 37, 0.22);
 }
 
 details > summary {

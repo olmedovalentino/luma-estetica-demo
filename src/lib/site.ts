@@ -148,7 +148,7 @@ export const services = [
       "Instalación profesional de equipos split para hogares y comercios, con asesoramiento y trabajo prolijo.",
     image: site.media.services.instalacion,
     alt: "Instalación de aire acondicionado",
-    accent: "from-[#0F5DA8] to-[#38BDF8]",
+    accent: "bg-[#E43125]",
     placeholderLabel: "Instalaciones",
   },
   {
@@ -157,7 +157,7 @@ export const services = [
       "Revisión, limpieza y mantenimiento para mejorar el rendimiento y prolongar la vida útil del equipo.",
     image: site.media.services.service,
     alt: "Service y mantenimiento de aire acondicionado",
-    accent: "from-[#114A87] to-[#60A5FA]",
+    accent: "bg-[#111111]",
     placeholderLabel: "Service",
   },
   {
@@ -166,7 +166,7 @@ export const services = [
       "Venta de aires acondicionados con posibilidad de incluir instalación en el servicio.",
     image: site.media.services.ventaEquipos,
     alt: "Venta de equipos de aire acondicionado",
-    accent: "from-[#0A3A6A] to-[#22C1F1]",
+    accent: "bg-[#E43125]",
     placeholderLabel: "Equipos",
   },
   {
@@ -174,7 +174,7 @@ export const services = [
     description: "Service y mantenimiento de calderas durante temporada de invierno.",
     image: site.media.services.calderas,
     alt: "Service de calderas",
-    accent: "from-[#1E3A5F] to-[#5EA9FF]",
+    accent: "bg-[#111111]",
     placeholderLabel: "Calderas",
   },
   {
@@ -183,7 +183,7 @@ export const services = [
       "Carga y revisión del sistema para equipos con bajo rendimiento o problemas de refrigeración.",
     image: site.media.services.recargaGas,
     alt: "Recarga de gas para aire acondicionado",
-    accent: "from-[#155E75] to-[#67E8F9]",
+    accent: "bg-[#E43125]",
     placeholderLabel: "Gas",
   },
   {
@@ -192,7 +192,7 @@ export const services = [
       "Revisión de fallas, pérdidas, bajo rendimiento o problemas de funcionamiento.",
     image: site.media.services.mantenimiento,
     alt: "Diagnóstico técnico de climatización",
-    accent: "from-[#0F3F73] to-[#7DD3FC]",
+    accent: "bg-[#111111]",
     placeholderLabel: "Diagnóstico",
   },
 ] as const;

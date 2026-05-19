@@ -28,8 +28,8 @@ function SocialIcon({ icon }: { icon: SocialIconLinkProps["icon"] }) {
 export function SocialIconLink({ href, label, icon, tone = "light" }: SocialIconLinkProps) {
   const classes =
     tone === "light"
-      ? "border border-[#CBE5F9] bg-white text-[#0F5DA8] hover:bg-[#EFF8FF]"
-      : "border border-white/12 bg-white/6 text-white hover:bg-white/12";
+      ? "border border-[#D2D2D2] bg-white text-[#111111] hover:border-[#E43125] hover:text-[#E43125]"
+      : "border border-white/15 bg-white/5 text-white hover:border-[#E43125] hover:text-white hover:bg-[#E43125]";
 
   return (
     <a

@@ -18,22 +18,18 @@ function PlaceholderVisual({
   className?: string;
 }) {
   return (
-    <div
-      className={[
-        "relative overflow-hidden bg-[linear-gradient(145deg,#0B2744_0%,#114A87_48%,#E0F2FE_100%)]",
-        className,
-      ].join(" ")}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(125,211,252,0.28),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.16),transparent_30%)]" />
-      <div className="absolute left-6 top-6 h-14 w-14 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm" />
-      <div className="absolute bottom-8 right-8 h-24 w-24 rounded-full border border-white/15 bg-white/10" />
-      <div className="absolute bottom-16 left-8 h-2 w-24 rounded-full bg-white/45" />
-      <div className="absolute bottom-10 left-8 h-2 w-36 rounded-full bg-white/20" />
-      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-white">
-        <span className="w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em]">
+    <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(244,244,244,0.92))]" />
+      <div className="absolute left-6 top-6 h-10 w-10 rounded-xl border border-[#D6D6D6] bg-white" />
+      <div className="absolute right-8 top-8 h-px w-24 bg-[#E43125]" />
+      <div className="absolute left-8 bottom-16 h-px w-28 bg-[#111111]" />
+      <div className="absolute left-8 bottom-10 h-px w-40 bg-[#C8C8C8]" />
+      <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full border border-[#D6D6D6] bg-white/70" />
+      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-[#111111]">
+        <span className="w-fit rounded-full border border-[#D6D6D6] bg-white px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#E43125]">
           {label}
         </span>
-        <p className="max-w-[16rem] text-lg font-semibold leading-tight text-white/95">{title}</p>
+        <p className="max-w-[17rem] text-lg font-semibold leading-tight text-[#111111]">{title}</p>
       </div>
     </div>
   );
@@ -74,22 +70,23 @@ export default function HomePage() {
 
       <main className="relative overflow-hidden">
         <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-[linear-gradient(180deg,rgba(248,252,255,0.98),rgba(233,245,255,0.94))] shadow-soft">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.20),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(15,93,168,0.12),transparent_30%)]" />
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-[#E8E8E8] bg-white shadow-soft">
+            <div className="absolute inset-x-0 top-0 h-1 bg-[#E43125]" />
             <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-10">
               <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[430px]">
                 <div>
-                  <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#0F5DA8]">
+                  <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
                     {site.heroEyebrow}
                   </p>
-                  <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#0B2744] sm:text-5xl">
+                  <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
                     {site.heroTitle}
                   </h1>
+                  <div className="mt-4 h-1 w-20 rounded-full bg-[#E43125]" />
                 </div>
 
                 <div className="max-w-xl pt-6">
-                  <p className="text-base leading-7 text-[#24425F]">{site.heroSubtitle}</p>
-                  <p className="mt-4 text-sm text-[#4B6B8C]">{site.heroNote}</p>
+                  <p className="text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
+                  <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
 
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -104,7 +101,7 @@ export default function HomePage() {
                     {site.serviceHighlights.map((point) => (
                       <div
                         key={point}
-                        className="rounded-2xl border border-[#C9E4FB] bg-white/75 px-4 py-3 text-sm font-medium text-[#163A5C]"
+                        className="rounded-2xl border border-[#E5E5E5] bg-[#F4F4F4] px-4 py-3 text-sm font-medium text-[#111111]"
                       >
                         {point}
                       </div>
@@ -113,7 +110,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
+              <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
                 <MediaBlock
                   image={site.media.hero}
                   alt="Trabajos de climatización de Farías Aires"
@@ -127,7 +124,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="servicios" className="scroll-mt-20 bg-[#EDF6FD]">
+        <section id="servicios" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow={site.servicesEyebrow}
@@ -139,7 +136,7 @@ export default function HomePage() {
               {services.map((service) => (
                 <article
                   key={service.title}
-                  className="group overflow-hidden rounded-[1.5rem] border border-white/80 bg-[#FDFEFF] shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-30px_rgba(11,39,68,0.35)]"
+                  className="group overflow-hidden rounded-[1.5rem] border border-[#E6E6E6] bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-32px_rgba(17,17,17,0.24)]"
                 >
                   {service.image ? (
                     <div className="relative h-[228px] overflow-hidden sm:h-[236px] lg:h-[230px]">
@@ -159,9 +156,9 @@ export default function HomePage() {
                     />
                   )}
                   <div className="px-4 pb-4 pt-3">
-                    <div className={`mb-2.5 h-1.5 w-12 rounded-full bg-gradient-to-r ${service.accent}`} />
-                    <h3 className="text-base font-semibold text-[#0B2744]">{service.title}</h3>
-                    <p className="mt-1 text-sm leading-5 text-[#35516C]">{service.description}</p>
+                    <div className={`mb-2.5 h-1.5 w-12 rounded-full ${service.accent}`} />
+                    <h3 className="text-base font-semibold text-[#111111]">{service.title}</h3>
+                    <p className="mt-1 text-sm leading-5 text-[#5F5F5F]">{service.description}</p>
                   </div>
                 </article>
               ))}
@@ -171,7 +168,7 @@ export default function HomePage() {
 
         <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="rounded-[2rem] border border-[#D7EAF9] bg-white/90 p-6 shadow-soft sm:p-7">
+            <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
               <SectionHeading
                 eyebrow={site.equipmentEyebrow}
                 title={site.equipmentTitle}
@@ -182,7 +179,7 @@ export default function HomePage() {
                 {site.equipmentPoints.map((point) => (
                   <div
                     key={point}
-                    className="rounded-2xl border border-[#DCECFB] bg-[#F3FAFF] px-4 py-4 text-sm font-semibold text-[#163A5C]"
+                    className="rounded-2xl border border-[#E5E5E5] bg-[#F4F4F4] px-4 py-4 text-sm font-semibold text-[#111111]"
                   >
                     {point}
                   </div>
@@ -196,7 +193,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
+            <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={site.media.services.ventaEquipos}
                 alt="Venta de equipos con instalación"
@@ -209,9 +206,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="sobre" className="scroll-mt-20 bg-[#EDF6FD]">
+        <section id="sobre" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 p-3 shadow-soft">
+            <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white p-3 shadow-soft">
               <MediaBlock
                 image={site.media.about}
                 alt="Farías Aires Acondicionados"
@@ -233,9 +230,9 @@ export default function HomePage() {
                 {site.trustPoints.map((point) => (
                   <div
                     key={point}
-                    className="rounded-2xl border border-white/80 bg-white px-4 py-4 shadow-soft"
+                    className="rounded-2xl border border-[#E6E6E6] bg-white px-4 py-4 shadow-soft"
                   >
-                    <p className="text-sm font-semibold text-[#0B2744]">{point}</p>
+                    <p className="text-sm font-semibold text-[#111111]">{point}</p>
                   </div>
                 ))}
               </div>
@@ -255,7 +252,7 @@ export default function HomePage() {
               <article
                 key={item.title}
                 className={[
-                  "group h-full overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft",
+                  "group h-full overflow-hidden rounded-[1.8rem] border border-[#E8E8E8] bg-white shadow-soft",
                   item.span,
                 ].join(" ")}
               >
@@ -269,7 +266,7 @@ export default function HomePage() {
                         sizes="(min-width: 1024px) 25vw, 100vw"
                         className="object-cover transition duration-500 group-hover:scale-[1.03]"
                       />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,39,68,0.06),rgba(11,39,68,0.52))]" />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.08),rgba(17,17,17,0.58))]" />
                     </>
                   ) : (
                     <PlaceholderVisual
@@ -287,9 +284,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="zonas" className="scroll-mt-20 bg-[#EDF6FD]">
+        <section id="zonas" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="rounded-[2rem] border border-white/80 bg-white/88 p-6 shadow-soft sm:p-7">
+            <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
               <SectionHeading
                 eyebrow={site.zonesEyebrow}
                 title={site.zonesTitle}
@@ -300,7 +297,7 @@ export default function HomePage() {
                 {site.zones.map((zone) => (
                   <span
                     key={zone}
-                    className="rounded-full border border-[#CBE5F9] bg-[#F3FAFF] px-4 py-2 text-sm font-medium text-[#163A5C]"
+                    className="rounded-full border border-[#D6D6D6] bg-[#F4F4F4] px-4 py-2 text-sm font-medium text-[#111111]"
                   >
                     {zone}
                   </span>
@@ -328,32 +325,32 @@ export default function HomePage() {
               {faqs.map((faq) => (
                 <details
                   key={faq.question}
-                  className="group w-full self-start rounded-[1.35rem] border border-[#D7EAF9] bg-white p-4 shadow-soft"
+                  className="group w-full self-start rounded-[1.35rem] border border-[#E5E5E5] bg-white p-4 shadow-soft"
                 >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#0B2744] sm:text-base">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#111111] sm:text-base">
                     <span>{faq.question}</span>
-                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#CBE5F9] bg-[#F3FAFF] text-[#0F5DA8] transition group-open:rotate-45">
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#D6D6D6] bg-[#F4F4F4] text-[#E43125] transition group-open:rotate-45">
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 text-sm leading-6 text-[#35516C]">{faq.answer}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#5F5F5F]">{faq.answer}</p>
                 </details>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="contacto" className="scroll-mt-20 bg-[#EDF6FD]">
+        <section id="contacto" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-              <div className="rounded-[2rem] border border-white/80 bg-[#FDFEFF] p-6 shadow-soft sm:p-7">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0F5DA8]">
+              <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
                   {site.contactEyebrow}
                 </p>
-                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#0B2744] sm:text-3xl">
+                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
                   {site.contactTitle}
                 </h2>
-                <p className="mt-4 max-w-md text-sm leading-6 text-[#35516C]">
+                <p className="mt-4 max-w-md text-sm leading-6 text-[#5F5F5F]">
                   {site.contactDescription}
                 </p>
 
@@ -361,7 +358,7 @@ export default function HomePage() {
                   {site.contactPoints.map((point) => (
                     <div
                       key={point}
-                      className="rounded-2xl border border-[#DCECFB] bg-[#F3FAFF] px-4 py-4 text-sm font-semibold text-[#163A5C]"
+                      className="rounded-2xl border border-[#E5E5E5] bg-[#F4F4F4] px-4 py-4 text-sm font-semibold text-[#111111]"
                     >
                       {point}
                     </div>
@@ -387,7 +384,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft">
+              <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
                 <PlaceholderVisual
                   label={site.contactVisualLabel}
                   title={site.contactVisualTitle}
