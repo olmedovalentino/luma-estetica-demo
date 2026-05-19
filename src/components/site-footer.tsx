@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import { SocialIconLink } from "@/components/social-icon-link";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -41,11 +40,7 @@ export function SiteFooter() {
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#E43125]">
             Contacto
           </p>
-          <div className="mt-3 flex flex-col gap-3 text-sm text-white/72">
-            <div className="flex items-center gap-3">
-              <SocialIconLink href={site.whatsappUrl} label="WhatsApp" icon="whatsapp" tone="dark" />
-              <SocialIconLink href={site.instagramUrl} label="Instagram" icon="instagram" tone="dark" />
-            </div>
+          <div className="mt-3 flex flex-col gap-2 text-sm text-white/72">
             <a
               href={site.whatsappUrl}
               target="_blank"

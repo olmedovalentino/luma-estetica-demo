@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Farías Aires Acondicionados | Córdoba y alrededores",
+  title: "Farías Aires Acondicionados | Córdoba, Argentina",
   description:
     "Instalación, service, mantenimiento, recarga de gas, venta de equipos y calderas en Córdoba Capital y alrededores.",
 };

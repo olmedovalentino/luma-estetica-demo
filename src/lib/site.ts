@@ -4,13 +4,13 @@ export const site = {
   shortName: "Farías Aires",
   tagline: "Climatización · Service · Instalación",
   shortDescription:
-    "Instalación, service, mantenimiento y venta de aires acondicionados en Córdoba y alrededores.",
-  heroEyebrow: "Córdoba y alrededores · Más de 8 años en climatización",
+    "Instalación, service, mantenimiento y venta de aires acondicionados en Córdoba, Argentina.",
+  heroEyebrow: "Córdoba, Argentina · Más de 8 años en climatización",
   heroTitle: "Instalación, service y venta de aires acondicionados",
   heroSubtitle:
     "Soluciones en climatización para hogares y comercios: instalación de equipos, mantenimiento, recarga de gas, service y calderas.",
   heroNote:
-    "Atención en Córdoba Capital, Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
+    "Atendemos Córdoba Capital, Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
   heroCtaPrimary: "Pedir presupuesto",
   heroCtaSecondary: "Ver servicios",
   heroVisualLabel: "Climatización",
@@ -22,24 +22,24 @@ export const site = {
   equipmentEyebrow: "Venta de equipos",
   equipmentTitle: "Equipos + instalación en un solo lugar",
   equipmentDescription:
-    "Además del service y mantenimiento, Farías Aires ofrece venta de equipos de aire acondicionado con instalación incluida, para que puedas resolver todo el proceso con un mismo equipo de trabajo.",
+    "En Farías Aires ofrecemos venta de equipos de aire acondicionado con instalación incluida para que puedas resolver todo el proceso con un mismo equipo de trabajo.",
   equipmentCtaLabel: "Consultar por un equipo",
   equipmentVisualLabel: "Equipos",
   equipmentVisualTitle: "Asesoramiento, venta e instalación dentro del mismo servicio",
   aboutEyebrow: "Sobre Farías Aires",
   aboutTitle: "Más de 8 años trabajando en climatización",
   aboutText:
-    "Farías Aires Acondicionados es un emprendimiento local especializado en climatización. Comenzaron con instalación y service de equipos split, y con el tiempo sumaron venta de equipos, mantenimiento, recarga de gas y service de calderas.",
+    "En Farías Aires Acondicionados trabajamos en climatización desde hace más de 8 años. Comenzamos con instalación y service de equipos split, y con el tiempo sumamos venta de equipos, mantenimiento, recarga de gas y service de calderas.",
   aboutVisualLabel: "Farías Aires",
   aboutVisualTitle: "Más de 8 años de trabajo sostenido en climatización",
   galleryEyebrow: "Trabajos realizados",
   galleryTitle: "Trabajos realizados",
   galleryDescription:
-    "Instalaciones, mantenimiento y soluciones de climatización en distintos puntos de Córdoba y alrededores.",
+    "Instalaciones, mantenimiento y soluciones de climatización en distintos puntos de Córdoba y zonas cercanas.",
   zonesEyebrow: "Cobertura",
   zonesTitle: "Zonas de atención",
   zonesDescription:
-    "Trabajamos en Córdoba Capital y alrededores, incluyendo Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
+    "Realizamos trabajos en Córdoba Capital y alrededores, incluyendo Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
   zonesCtaLabel: "Consultar disponibilidad por WhatsApp",
   faqEyebrow: "Preguntas frecuentes",
   faqTitle: "Preguntas frecuentes",
@@ -59,7 +59,7 @@ export const site = {
   instagramUrl: "https://www.instagram.com/fariasairesac/",
   instagramHandle: "@fariasairesac",
   availability: "Horario comercial",
-  locationLabel: "Córdoba y alrededores",
+  locationLabel: "Córdoba, Argentina",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
@@ -79,7 +79,7 @@ export const site = {
     { label: "Contacto", href: "#contacto" },
   ],
   trustPoints: [
-    "Atención en Córdoba y alrededores",
+    "Atención en Córdoba, Argentina",
     "Instalación, service y mantenimiento",
     "Venta de equipos con instalación",
     "Presupuestos por WhatsApp",
@@ -90,11 +90,25 @@ export const site = {
     "Instalación incluida",
     "Presupuesto por WhatsApp",
   ],
-  contactPoints: [
-    "WhatsApp: +54 9 3517 34-5516",
-    "Instagram: @fariasairesac",
-    "Córdoba y alrededores",
-    "Horario comercial",
+  contactDetails: [
+    {
+      label: "WhatsApp",
+      value: "+54 9 3517 34-5516",
+      href: "https://wa.me/5493517345516?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto.",
+    },
+    {
+      label: "Instagram",
+      value: "@fariasairesac",
+      href: "https://www.instagram.com/fariasairesac/",
+    },
+    {
+      label: "Zona de atención",
+      value: "Córdoba, Argentina",
+    },
+    {
+      label: "Horario",
+      value: "Horario comercial",
+    },
   ],
   zones: [
     "Córdoba Capital",
@@ -154,7 +168,7 @@ export const services = [
   {
     title: "Venta de equipos con instalación",
     description:
-      "Venta de aires acondicionados con posibilidad de incluir instalación en el servicio.",
+      "Ofrecemos venta de aires acondicionados con posibilidad de incluir instalación en el servicio.",
     image: site.media.services.ventaEquipos,
     alt: "Venta de equipos de aire acondicionado",
     accent: "bg-[#E43125]",
@@ -162,7 +176,7 @@ export const services = [
   },
   {
     title: "Calderas",
-    description: "Service y mantenimiento de calderas durante temporada de invierno.",
+    description: "Realizamos service y mantenimiento de calderas durante temporada de invierno.",
     image: site.media.services.calderas,
     alt: "Service de calderas",
     accent: "bg-[#111111]",
@@ -171,7 +185,7 @@ export const services = [
   {
     title: "Recarga de gas",
     description:
-      "Carga y revisión del sistema para equipos con bajo rendimiento o problemas de refrigeración.",
+      "Hacemos carga y revisión del sistema para equipos con bajo rendimiento o problemas de refrigeración.",
     image: site.media.services.recargaGas,
     alt: "Recarga de gas para aire acondicionado",
     accent: "bg-[#E43125]",
@@ -180,7 +194,7 @@ export const services = [
   {
     title: "Diagnóstico técnico",
     description:
-      "Revisión de fallas, pérdidas, bajo rendimiento o problemas de funcionamiento.",
+      "Revisamos fallas, pérdidas, bajo rendimiento o problemas de funcionamiento.",
     image: site.media.services.mantenimiento,
     alt: "Diagnóstico técnico de climatización",
     accent: "bg-[#111111]",
@@ -223,21 +237,21 @@ export const faqs = [
   {
     question: "¿Trabajan solo en Córdoba Capital?",
     answer:
-      "No, también realizan trabajos en Córdoba y alrededores, incluyendo Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
+      "No, también realizamos trabajos en Córdoba y alrededores, incluyendo Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
   },
   {
     question: "¿Hacen venta de equipos?",
     answer:
-      "Sí, además del service e instalación, ofrecen venta de equipos con posibilidad de instalación incluida.",
+      "Sí, además del service e instalación, ofrecemos venta de equipos con posibilidad de instalación incluida.",
   },
   {
     question: "¿Realizan mantenimiento de calderas?",
     answer:
-      "Sí, también trabajan con service y mantenimiento de calderas, especialmente en temporada de invierno.",
+      "Sí, también trabajamos con service y mantenimiento de calderas, especialmente en temporada de invierno.",
   },
   {
     question: "¿Cómo pido un presupuesto?",
     answer:
-      "Podés escribir por WhatsApp contando qué necesitás, la zona y, si es posible, enviando fotos del equipo o del espacio.",
+      "Podés escribirnos por WhatsApp contando qué necesitás, la zona y, si es posible, enviando fotos del equipo o del espacio.",
   },
 ] as const;

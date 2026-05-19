@@ -68,27 +68,35 @@ export default function HomePage() {
       <SiteHeader whatsappUrl={whatsappUrl} />
 
       <main className="relative overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-8 pt-6 sm:px-6 lg:px-8">
+        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.25rem] border border-[#E8E8E8] bg-white shadow-soft">
             <div className="absolute inset-x-0 top-0 h-1 bg-[#E43125]" />
-            <div className="relative grid items-center gap-6 px-5 py-7 lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-9">
-              <div className="max-w-xl">
-                <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                  {site.heroEyebrow}
-                </p>
-                <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
-                  {site.heroTitle}
-                </h1>
-                <p className="mt-5 text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
-                <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
+            <div className="relative grid items-stretch gap-8 px-5 py-8 lg:min-h-[500px] lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-10">
+              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[420px]">
+                <div className="pt-2">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                    {site.heroEyebrow}
+                  </p>
+                </div>
 
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    {site.heroCtaPrimary}
-                  </ButtonLink>
-                  <ButtonLink href="#servicios" variant="secondary">
-                    {site.heroCtaSecondary}
-                  </ButtonLink>
+                <div className="py-6 lg:py-8">
+                  <h1 className="max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
+                    {site.heroTitle}
+                  </h1>
+                </div>
+
+                <div className="max-w-xl pb-2">
+                  <p className="text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
+                  <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
+
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      {site.heroCtaPrimary}
+                    </ButtonLink>
+                    <ButtonLink href="#servicios" variant="secondary">
+                      {site.heroCtaSecondary}
+                    </ButtonLink>
+                  </div>
                 </div>
               </div>
 
@@ -98,7 +106,7 @@ export default function HomePage() {
                   alt="Trabajos de climatización de Farías Aires"
                   label={site.heroVisualLabel}
                   title={site.heroVisualTitle}
-                  className="h-[300px] sm:h-[360px] lg:h-[390px]"
+                  className="h-[320px] sm:h-[380px] lg:h-full lg:min-h-[420px]"
                   sizes="(min-width: 1024px) 44vw, 100vw"
                 />
               </div>
@@ -325,7 +333,7 @@ export default function HomePage() {
         <section id="contacto" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-8">
-              <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+              <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
                 <div className="max-w-xl">
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
                     {site.contactEyebrow}
@@ -356,15 +364,31 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {site.contactPoints.map((point) => (
-                    <div
-                      key={point}
-                      className="rounded-2xl border border-[#E5E5E5] bg-[#F4F4F4] px-4 py-4 text-sm font-semibold text-[#111111]"
-                    >
-                      {point}
-                    </div>
-                  ))}
+                <div className="rounded-[1.75rem] border border-[#E5E5E5] bg-[#F4F4F4] p-5 sm:p-6">
+                  <div className="space-y-4">
+                    {site.contactDetails.map((item) => (
+                      <div
+                        key={item.label}
+                        className="border-b border-[#DFDFDF] pb-4 last:border-b-0 last:pb-0"
+                      >
+                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                          {item.label}
+                        </p>
+                        {"href" in item ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-1 block text-sm font-medium text-[#111111] transition hover:text-[#E43125]"
+                          >
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="mt-1 text-sm font-medium text-[#111111]">{item.value}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
