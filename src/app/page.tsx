@@ -6,7 +6,64 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SocialIconLink } from "@/components/social-icon-link";
-import { faqs, gallery, secondaryServices, services, site } from "@/lib/site";
+import { faqs, gallery, services, site } from "@/lib/site";
+
+function PlaceholderVisual({
+  label,
+  title,
+  className = "",
+}: {
+  label: string;
+  title: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={[
+        "relative overflow-hidden bg-[linear-gradient(145deg,#0B2744_0%,#114A87_48%,#E0F2FE_100%)]",
+        className,
+      ].join(" ")}
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(125,211,252,0.28),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.16),transparent_30%)]" />
+      <div className="absolute left-6 top-6 h-14 w-14 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-sm" />
+      <div className="absolute bottom-8 right-8 h-24 w-24 rounded-full border border-white/15 bg-white/10" />
+      <div className="absolute bottom-16 left-8 h-2 w-24 rounded-full bg-white/45" />
+      <div className="absolute bottom-10 left-8 h-2 w-36 rounded-full bg-white/20" />
+      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-white">
+        <span className="w-fit rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em]">
+          {label}
+        </span>
+        <p className="max-w-[16rem] text-lg font-semibold leading-tight text-white/95">{title}</p>
+      </div>
+    </div>
+  );
+}
+
+function MediaBlock({
+  image,
+  alt,
+  label,
+  title,
+  className = "",
+  sizes,
+}: {
+  image: string | null;
+  alt: string;
+  label: string;
+  title: string;
+  className?: string;
+  sizes: string;
+}) {
+  if (!image) {
+    return <PlaceholderVisual label={label} title={title} className={className} />;
+  }
+
+  return (
+    <div className={["relative overflow-hidden", className].join(" ")}>
+      <Image src={image} alt={alt} fill sizes={sizes} className="object-cover" />
+    </div>
+  );
+}
 
 export default function HomePage() {
   const whatsappUrl = site.whatsappUrl;
@@ -17,22 +74,22 @@ export default function HomePage() {
 
       <main className="relative overflow-hidden">
         <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,253,248,0.98),rgba(248,243,236,0.96))] shadow-soft">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(184,121,95,0.14),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(126,135,104,0.12),transparent_28%)]" />
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-[linear-gradient(180deg,rgba(248,252,255,0.98),rgba(233,245,255,0.94))] shadow-soft">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.20),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(15,93,168,0.12),transparent_30%)]" />
             <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-10">
-              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[420px]">
+              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[430px]">
                 <div>
-                  <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#7E8768]">
+                  <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#0F5DA8]">
                     {site.heroEyebrow}
                   </p>
-                  <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#2C211B] sm:text-5xl">
+                  <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#0B2744] sm:text-5xl">
                     {site.heroTitle}
                   </h1>
                 </div>
 
                 <div className="max-w-xl pt-6">
-                  <p className="text-base leading-7 text-[#5B463C]">{site.heroSubtitle}</p>
-                  <p className="mt-4 text-sm text-[#7A665B]">{site.heroNote}</p>
+                  <p className="text-base leading-7 text-[#24425F]">{site.heroSubtitle}</p>
+                  <p className="mt-4 text-sm text-[#4B6B8C]">{site.heroNote}</p>
 
                   <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                     <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -42,24 +99,35 @@ export default function HomePage() {
                       {site.heroCtaSecondary}
                     </ButtonLink>
                   </div>
+
+                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                    {site.serviceHighlights.map((point) => (
+                      <div
+                        key={point}
+                        className="rounded-2xl border border-[#C9E4FB] bg-white/75 px-4 py-3 text-sm font-medium text-[#163A5C]"
+                      >
+                        {point}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
-                <Image
-                  src="/images/belleza-mediterranea/hero.jpg"
-                  alt="Espacio cálido de Belleza Mediterránea"
-                  width={1400}
-                  height={900}
-                  priority
-                  className="h-[360px] w-full object-cover object-center [object-position:center_38%] sm:h-[420px]"
+                <MediaBlock
+                  image={site.media.hero}
+                  alt="Trabajos de climatización de Farías Aires"
+                  label={site.heroVisualLabel}
+                  title={site.heroVisualTitle}
+                  className="h-[360px] sm:h-[430px]"
+                  sizes="(min-width: 1024px) 46vw, 100vw"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        <section id="servicios" className="scroll-mt-20 bg-[#F8F3EC]">
+        <section id="servicios" className="scroll-mt-20 bg-[#EDF6FD]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow={site.servicesEyebrow}
@@ -71,54 +139,87 @@ export default function HomePage() {
               {services.map((service) => (
                 <article
                   key={service.title}
-                  className="group overflow-hidden rounded-[1.5rem] border border-white/80 bg-[#FFFDF8] shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-28px_rgba(79,56,42,0.25)]"
+                  className="group overflow-hidden rounded-[1.5rem] border border-white/80 bg-[#FDFEFF] shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-30px_rgba(11,39,68,0.35)]"
                 >
-                  <div className="relative h-[228px] overflow-hidden sm:h-[236px] lg:h-[230px]">
-                    <Image
-                      src={service.image}
-                      alt={service.alt}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className={`object-cover transition duration-500 group-hover:scale-[1.03] ${service.imagePosition}`}
+                  {service.image ? (
+                    <div className="relative h-[228px] overflow-hidden sm:h-[236px] lg:h-[230px]">
+                      <Image
+                        src={service.image}
+                        alt={service.alt}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  ) : (
+                    <PlaceholderVisual
+                      label={service.placeholderLabel}
+                      title={service.title}
+                      className="h-[228px] sm:h-[236px] lg:h-[230px]"
                     />
-                  </div>
+                  )}
                   <div className="px-4 pb-4 pt-3">
-                    <div className={`mb-2.5 h-1.5 w-12 rounded-full ${service.accent}`} />
-                    <h3 className="text-base font-semibold text-[#2C211B]">{service.title}</h3>
-                    <p className="mt-1 text-sm leading-5 text-[#5B463C]">{service.description}</p>
+                    <div className={`mb-2.5 h-1.5 w-12 rounded-full bg-gradient-to-r ${service.accent}`} />
+                    <h3 className="text-base font-semibold text-[#0B2744]">{service.title}</h3>
+                    <p className="mt-1 text-sm leading-5 text-[#35516C]">{service.description}</p>
                   </div>
                 </article>
               ))}
             </div>
+          </div>
+        </section>
 
-            <div className="mt-8 rounded-[1.75rem] border border-white/80 bg-[#FFFDF8] px-5 py-5 shadow-soft">
-              <p className="text-sm font-semibold text-[#2C211B]">{site.servicesListTitle}</p>
-              <div className="mt-3 flex flex-wrap gap-2.5">
-                {secondaryServices.map((service) => (
-                  <span
-                    key={service}
-                    className="rounded-full border border-[#E7D6C3] bg-[#F8F3EC] px-3 py-2 text-xs font-medium text-[#6A554A] sm:text-sm"
+        <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
+            <div className="rounded-[2rem] border border-[#D7EAF9] bg-white/90 p-6 shadow-soft sm:p-7">
+              <SectionHeading
+                eyebrow={site.equipmentEyebrow}
+                title={site.equipmentTitle}
+                description={site.equipmentDescription}
+              />
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {site.equipmentPoints.map((point) => (
+                  <div
+                    key={point}
+                    className="rounded-2xl border border-[#DCECFB] bg-[#F3FAFF] px-4 py-4 text-sm font-semibold text-[#163A5C]"
                   >
-                    {service}
-                  </span>
+                    {point}
+                  </div>
                 ))}
               </div>
+
+              <div className="mt-6">
+                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {site.equipmentCtaLabel}
+                </ButtonLink>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 shadow-soft">
+              <MediaBlock
+                image={site.media.services.ventaEquipos}
+                alt="Venta de equipos con instalación"
+                label={site.equipmentVisualLabel}
+                title={site.equipmentVisualTitle}
+                className="h-full min-h-[320px]"
+                sizes="(min-width: 1024px) 42vw, 100vw"
+              />
             </div>
           </div>
         </section>
 
-        <section id="sobre" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <section id="sobre" className="scroll-mt-20 bg-[#EDF6FD]">
+          <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
             <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/85 p-3 shadow-soft">
-              <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[360px]">
-                <Image
-                  src="/images/belleza-mediterranea/galeria-productos.jpg"
-                  alt="Ambiente integral de Belleza Mediterránea"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="object-cover object-center [object-position:center_44%]"
-                />
-              </div>
+              <MediaBlock
+                image={site.media.about}
+                alt="Farías Aires Acondicionados"
+                label={site.aboutVisualLabel}
+                title={site.aboutVisualTitle}
+                className="h-[330px] rounded-[1.4rem] sm:h-[360px]"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
             </div>
 
             <div>
@@ -132,9 +233,9 @@ export default function HomePage() {
                 {site.trustPoints.map((point) => (
                   <div
                     key={point}
-                    className="rounded-2xl border border-white/80 bg-[#FFFDF8] px-4 py-4 shadow-soft"
+                    className="rounded-2xl border border-white/80 bg-white px-4 py-4 shadow-soft"
                   >
-                    <p className="text-sm font-semibold text-[#2C211B]">{point}</p>
+                    <p className="text-sm font-semibold text-[#0B2744]">{point}</p>
                   </div>
                 ))}
               </div>
@@ -142,38 +243,75 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="galeria" className="scroll-mt-20 bg-[#F8F3EC]">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <SectionHeading
-              eyebrow={site.galleryEyebrow}
-              title={site.galleryTitle}
-              description={site.galleryDescription}
-            />
+        <section id="trabajos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow={site.galleryEyebrow}
+            title={site.galleryTitle}
+            description={site.galleryDescription}
+          />
 
-            <div className="mt-7 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[220px]">
-              {gallery.map((item) => (
-                <article
-                  key={item.title}
-                  className={[
-                    "group h-full overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft",
-                    item.span,
-                  ].join(" ")}
-                >
-                  <div className="relative h-full min-h-[220px] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 100vw"
-                      className={`object-cover transition duration-500 group-hover:scale-[1.03] ${item.imagePosition}`}
+          <div className="mt-7 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[220px]">
+            {gallery.map((item) => (
+              <article
+                key={item.title}
+                className={[
+                  "group h-full overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft",
+                  item.span,
+                ].join(" ")}
+              >
+                <div className="relative h-full min-h-[220px] overflow-hidden">
+                  {item.image ? (
+                    <>
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, 100vw"
+                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,39,68,0.06),rgba(11,39,68,0.52))]" />
+                    </>
+                  ) : (
+                    <PlaceholderVisual
+                      label={item.title}
+                      title={item.description}
+                      className="h-full min-h-[220px]"
                     />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(44,33,27,0.02),rgba(44,33,27,0.4))]" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <h3 className="text-base font-semibold">{item.title}</h3>
-                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h3 className="text-base font-semibold">{item.title}</h3>
                   </div>
-                </article>
-              ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="zonas" className="scroll-mt-20 bg-[#EDF6FD]">
+          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="rounded-[2rem] border border-white/80 bg-white/88 p-6 shadow-soft sm:p-7">
+              <SectionHeading
+                eyebrow={site.zonesEyebrow}
+                title={site.zonesTitle}
+                description={site.zonesDescription}
+              />
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {site.zones.map((zone) => (
+                  <span
+                    key={zone}
+                    className="rounded-full border border-[#CBE5F9] bg-[#F3FAFF] px-4 py-2 text-sm font-medium text-[#163A5C]"
+                  >
+                    {zone}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6">
+                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {site.zonesCtaLabel}
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </section>
@@ -190,34 +328,45 @@ export default function HomePage() {
               {faqs.map((faq) => (
                 <details
                   key={faq.question}
-                  className="group w-full self-start rounded-[1.35rem] border border-white/80 bg-[#FFFDF8] p-4 shadow-soft"
+                  className="group w-full self-start rounded-[1.35rem] border border-[#D7EAF9] bg-white p-4 shadow-soft"
                 >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#2C211B] sm:text-base">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#0B2744] sm:text-base">
                     <span>{faq.question}</span>
-                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#E7D6C3] bg-[#F8F3EC] text-[#B8795F] transition group-open:rotate-45">
+                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-[#CBE5F9] bg-[#F3FAFF] text-[#0F5DA8] transition group-open:rotate-45">
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 text-sm leading-6 text-[#5B463C]">{faq.answer}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#35516C]">{faq.answer}</p>
                 </details>
               ))}
             </div>
           </div>
         </section>
 
-        <section id="ubicacion" className="scroll-mt-20 bg-[#F8F3EC]">
+        <section id="contacto" className="scroll-mt-20 bg-[#EDF6FD]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-              <div className="rounded-[2rem] border border-white/80 bg-[#FFFDF8] p-6 shadow-soft sm:p-7">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#7E8768]">
+              <div className="rounded-[2rem] border border-white/80 bg-[#FDFEFF] p-6 shadow-soft sm:p-7">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0F5DA8]">
                   {site.contactEyebrow}
                 </p>
-                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#2C211B] sm:text-3xl">
+                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#0B2744] sm:text-3xl">
                   {site.contactTitle}
                 </h2>
-                <p className="mt-4 max-w-md text-sm leading-6 text-[#5B463C]">
+                <p className="mt-4 max-w-md text-sm leading-6 text-[#35516C]">
                   {site.contactDescription}
                 </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {site.contactPoints.map((point) => (
+                    <div
+                      key={point}
+                      className="rounded-2xl border border-[#DCECFB] bg-[#F3FAFF] px-4 py-4 text-sm font-semibold text-[#163A5C]"
+                    >
+                      {point}
+                    </div>
+                  ))}
+                </div>
 
                 <div className="mt-6 flex items-center gap-3">
                   {site.socialLinks.map((link) => (
@@ -230,23 +379,21 @@ export default function HomePage() {
                     />
                   ))}
                 </div>
+
+                <div className="mt-6">
+                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    {site.contactCtaLabel}
+                  </ButtonLink>
+                </div>
               </div>
 
-              <a
-                href={site.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver ubicación en Google Maps"
-                className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft"
-              >
-                <iframe
-                  title="Mapa de Belleza Mediterránea"
-                  src={site.mapsEmbedUrl}
-                  className="h-full min-h-[340px] w-full border-0"
-                  style={{ pointerEvents: "none" }}
-                  loading="lazy"
+              <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/90 shadow-soft">
+                <PlaceholderVisual
+                  label={site.contactVisualLabel}
+                  title={site.contactVisualTitle}
+                  className="h-full min-h-[340px]"
                 />
-              </a>
+              </div>
             </div>
           </div>
         </section>

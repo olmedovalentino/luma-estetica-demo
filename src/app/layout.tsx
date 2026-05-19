@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Belleza Mediterránea | Centro de Córdoba",
+  title: "Farías Aires Acondicionados | Córdoba y alrededores",
   description:
-    "Belleza Mediterránea en el Centro de Córdoba: estética facial y corporal, masajes, depilación, Terapia Postural Activa y bienestar con atención personalizada.",
+    "Instalación, service, mantenimiento, recarga de gas, venta de equipos y calderas en Córdoba Capital y alrededores.",
 };
 
 export default function RootLayout({

@@ -28,7 +28,7 @@ function SocialIcon({ icon }: { icon: SocialIconLinkProps["icon"] }) {
 export function SocialIconLink({ href, label, icon, tone = "light" }: SocialIconLinkProps) {
   const classes =
     tone === "light"
-      ? "border border-[#E7D6C3] bg-white text-[#7E8768] hover:bg-[#F8F3EC]"
+      ? "border border-[#CBE5F9] bg-white text-[#0F5DA8] hover:bg-[#EFF8FF]"
       : "border border-white/12 bg-white/6 text-white hover:bg-white/12";
 
   return (
