@@ -9,32 +9,26 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
   return (
-    <header className="sticky top-0 z-40 border-b border-[#E8E8E8] bg-[rgba(255,255,255,0.94)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="inline-flex items-center gap-3 text-[#111111]">
+    <header className="sticky top-0 z-40 border-b border-[#E8E8E8] bg-[rgba(255,255,255,0.96)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <a href="#inicio" className="inline-flex min-w-0 items-center gap-3 text-[#111111]">
           {site.media.logo ? (
             <Image
               src={site.media.logo}
-              alt={site.shortName}
-              width={190}
-              height={58}
-              className="h-11 w-auto object-contain sm:h-12"
+              alt={site.brandName}
+              width={64}
+              height={64}
+              priority
+              className="h-12 w-12 flex-shrink-0 rounded-xl object-contain bg-white sm:h-14 sm:w-14"
             />
           ) : (
-            <>
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#DADADA] bg-white text-sm font-bold text-[#E43125]">
-                FA
-              </span>
-              <span className="flex flex-col">
-                <span className="font-serif text-[1.02rem] font-semibold leading-tight tracking-[0.06em] text-[#111111]">
-                  {site.shortName}
-                </span>
-                <span className="text-[0.68rem] font-medium uppercase tracking-[0.22em] text-[#5F5F5F]">
-                  Aires acondicionados
-                </span>
-              </span>
-            </>
+            <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-[#DADADA] bg-white text-sm font-bold text-[#E43125] sm:h-14 sm:w-14">
+              FA
+            </span>
           )}
+          <span className="truncate text-sm font-semibold tracking-[0.02em] text-[#111111] sm:text-base">
+            {site.brandName}
+          </span>
         </a>
 
         <nav className="hidden items-center gap-5 text-sm font-medium text-[#5F5F5F] lg:flex">

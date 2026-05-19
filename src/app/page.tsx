@@ -19,12 +19,11 @@ function PlaceholderVisual({
 }) {
   return (
     <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(244,244,244,0.92))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(244,244,244,0.96))]" />
       <div className="absolute left-6 top-6 h-10 w-10 rounded-xl border border-[#D6D6D6] bg-white" />
       <div className="absolute right-8 top-8 h-px w-24 bg-[#E43125]" />
       <div className="absolute left-8 bottom-16 h-px w-28 bg-[#111111]" />
       <div className="absolute left-8 bottom-10 h-px w-40 bg-[#C8C8C8]" />
-      <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full border border-[#D6D6D6] bg-white/70" />
       <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-[#111111]">
         <span className="w-fit rounded-full border border-[#D6D6D6] bg-white px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#E43125]">
           {label}
@@ -55,7 +54,7 @@ function MediaBlock({
   }
 
   return (
-    <div className={["relative overflow-hidden", className].join(" ")}>
+    <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
       <Image src={image} alt={alt} fill sizes={sizes} className="object-cover" />
     </div>
   );
@@ -69,44 +68,27 @@ export default function HomePage() {
       <SiteHeader whatsappUrl={whatsappUrl} />
 
       <main className="relative overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-8 pt-6 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.25rem] border border-[#E8E8E8] bg-white shadow-soft">
             <div className="absolute inset-x-0 top-0 h-1 bg-[#E43125]" />
-            <div className="relative grid gap-8 px-5 py-7 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-10">
-              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[430px]">
-                <div>
-                  <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                    {site.heroEyebrow}
-                  </p>
-                  <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
-                    {site.heroTitle}
-                  </h1>
-                  <div className="mt-4 h-1 w-20 rounded-full bg-[#E43125]" />
-                </div>
+            <div className="relative grid items-center gap-6 px-5 py-7 lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-9">
+              <div className="max-w-xl">
+                <p className="pt-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                  {site.heroEyebrow}
+                </p>
+                <h1 className="mt-5 max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
+                  {site.heroTitle}
+                </h1>
+                <p className="mt-5 text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
+                <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
 
-                <div className="max-w-xl pt-6">
-                  <p className="text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
-                  <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
-
-                  <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                    <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      {site.heroCtaPrimary}
-                    </ButtonLink>
-                    <ButtonLink href="#servicios" variant="secondary">
-                      {site.heroCtaSecondary}
-                    </ButtonLink>
-                  </div>
-
-                  <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                    {site.serviceHighlights.map((point) => (
-                      <div
-                        key={point}
-                        className="rounded-2xl border border-[#E5E5E5] bg-[#F4F4F4] px-4 py-3 text-sm font-medium text-[#111111]"
-                      >
-                        {point}
-                      </div>
-                    ))}
-                  </div>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    {site.heroCtaPrimary}
+                  </ButtonLink>
+                  <ButtonLink href="#servicios" variant="secondary">
+                    {site.heroCtaSecondary}
+                  </ButtonLink>
                 </div>
               </div>
 
@@ -116,8 +98,8 @@ export default function HomePage() {
                   alt="Trabajos de climatización de Farías Aires"
                   label={site.heroVisualLabel}
                   title={site.heroVisualTitle}
-                  className="h-[360px] sm:h-[430px]"
-                  sizes="(min-width: 1024px) 46vw, 100vw"
+                  className="h-[300px] sm:h-[360px] lg:h-[390px]"
+                  sizes="(min-width: 1024px) 44vw, 100vw"
                 />
               </div>
             </div>
@@ -139,7 +121,7 @@ export default function HomePage() {
                   className="group overflow-hidden rounded-[1.5rem] border border-[#E6E6E6] bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-32px_rgba(17,17,17,0.24)]"
                 >
                   {service.image ? (
-                    <div className="relative h-[228px] overflow-hidden sm:h-[236px] lg:h-[230px]">
+                    <div className="relative h-[220px] overflow-hidden">
                       <Image
                         src={service.image}
                         alt={service.alt}
@@ -152,13 +134,13 @@ export default function HomePage() {
                     <PlaceholderVisual
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[228px] sm:h-[236px] lg:h-[230px]"
+                      className="h-[220px]"
                     />
                   )}
-                  <div className="px-4 pb-4 pt-3">
-                    <div className={`mb-2.5 h-1.5 w-12 rounded-full ${service.accent}`} />
+                  <div className="px-4 pb-5 pt-4">
+                    <div className={`mb-3 h-1.5 w-12 rounded-full ${service.accent}`} />
                     <h3 className="text-base font-semibold text-[#111111]">{service.title}</h3>
-                    <p className="mt-1 text-sm leading-5 text-[#5F5F5F]">{service.description}</p>
+                    <p className="mt-2 text-sm leading-6 text-[#5F5F5F]">{service.description}</p>
                   </div>
                 </article>
               ))}
@@ -199,7 +181,7 @@ export default function HomePage() {
                 alt="Venta de equipos con instalación"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
-                className="h-full min-h-[320px]"
+                className="h-full min-h-[300px]"
                 sizes="(min-width: 1024px) 42vw, 100vw"
               />
             </div>
@@ -214,7 +196,7 @@ export default function HomePage() {
                 alt="Farías Aires Acondicionados"
                 label={site.aboutVisualLabel}
                 title={site.aboutVisualTitle}
-                className="h-[330px] rounded-[1.4rem] sm:h-[360px]"
+                className="h-[310px] rounded-[1.4rem] sm:h-[340px]"
                 sizes="(min-width: 1024px) 40vw, 100vw"
               />
             </div>
@@ -247,7 +229,7 @@ export default function HomePage() {
             description={site.galleryDescription}
           />
 
-          <div className="mt-7 grid auto-rows-[220px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[220px]">
+          <div className="mt-7 grid auto-rows-[210px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[210px]">
             {gallery.map((item) => (
               <article
                 key={item.title}
@@ -256,7 +238,7 @@ export default function HomePage() {
                   item.span,
                 ].join(" ")}
               >
-                <div className="relative h-full min-h-[220px] overflow-hidden">
+                <div className="relative h-full min-h-[210px] overflow-hidden">
                   {item.image ? (
                     <>
                       <Image
@@ -272,7 +254,7 @@ export default function HomePage() {
                     <PlaceholderVisual
                       label={item.title}
                       title={item.description}
-                      className="h-full min-h-[220px]"
+                      className="h-full min-h-[210px]"
                     />
                   )}
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
@@ -325,7 +307,7 @@ export default function HomePage() {
               {faqs.map((faq) => (
                 <details
                   key={faq.question}
-                  className="group w-full self-start rounded-[1.35rem] border border-[#E5E5E5] bg-white p-4 shadow-soft"
+                  className="group rounded-[1.35rem] border border-[#E5E5E5] bg-white p-4 shadow-soft"
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-sm font-semibold text-[#111111] sm:text-base">
                     <span>{faq.question}</span>
@@ -342,19 +324,39 @@ export default function HomePage() {
 
         <section id="contacto" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-              <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                  {site.contactEyebrow}
-                </p>
-                <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
-                  {site.contactTitle}
-                </h2>
-                <p className="mt-4 max-w-md text-sm leading-6 text-[#5F5F5F]">
-                  {site.contactDescription}
-                </p>
+            <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-8">
+              <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+                <div className="max-w-xl">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                    {site.contactEyebrow}
+                  </p>
+                  <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
+                    {site.contactTitle}
+                  </h2>
+                  <p className="mt-4 text-sm leading-6 text-[#5F5F5F]">
+                    {site.contactDescription}
+                  </p>
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-6 flex items-center gap-3">
+                    {site.socialLinks.map((link) => (
+                      <SocialIconLink
+                        key={link.label}
+                        href={link.href}
+                        label={link.label}
+                        icon={link.icon}
+                        tone="light"
+                      />
+                    ))}
+                  </div>
+
+                  <div className="mt-6">
+                    <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                      {site.contactCtaLabel}
+                    </ButtonLink>
+                  </div>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2">
                   {site.contactPoints.map((point) => (
                     <div
                       key={point}
@@ -364,32 +366,6 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-6 flex items-center gap-3">
-                  {site.socialLinks.map((link) => (
-                    <SocialIconLink
-                      key={link.label}
-                      href={link.href}
-                      label={link.label}
-                      icon={link.icon}
-                      tone="light"
-                    />
-                  ))}
-                </div>
-
-                <div className="mt-6">
-                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    {site.contactCtaLabel}
-                  </ButtonLink>
-                </div>
-              </div>
-
-              <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
-                <PlaceholderVisual
-                  label={site.contactVisualLabel}
-                  title={site.contactVisualTitle}
-                  className="h-full min-h-[340px]"
-                />
               </div>
             </div>
           </div>

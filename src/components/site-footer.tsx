@@ -8,19 +8,18 @@ export function SiteFooter() {
     <footer className="border-t border-[#1C1C1C] bg-[#111111] text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.75fr_0.9fr] lg:px-8">
         <div>
-          {site.media.logo ? (
-            <div className="inline-flex rounded-2xl bg-white px-3 py-2">
+          <div className="inline-flex items-center gap-3">
+            {site.media.logo ? (
               <Image
                 src={site.media.logo}
-                alt={site.businessName}
-                width={170}
-                height={54}
-                className="h-12 w-auto object-contain"
+                alt={site.brandName}
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-xl bg-white object-contain"
               />
-            </div>
-          ) : (
-            <p className="font-serif text-lg font-semibold text-white">{site.businessName}</p>
-          )}
+            ) : null}
+            <p className="text-base font-semibold text-white sm:text-lg">{site.brandName}</p>
+          </div>
           <p className="mt-3 text-sm text-white/72">{site.footerDescription}</p>
           <p className="mt-4 text-sm text-white/72">{site.locationLabel}</p>
         </div>

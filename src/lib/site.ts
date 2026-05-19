@@ -1,5 +1,6 @@
 export const site = {
   businessName: "FARIAS AIRES ACONDICIONADOS",
+  brandName: "Farías Aires Acondicionados",
   shortName: "Farías Aires",
   tagline: "Climatización · Service · Instalación",
   shortDescription:
@@ -48,10 +49,7 @@ export const site = {
   contactTitle: "Pedí tu presupuesto por WhatsApp",
   contactDescription:
     "Contanos qué servicio necesitás, en qué zona estás y te orientamos con la mejor opción.",
-  contactCtaLabel: "Pedir presupuesto",
-  contactVisualLabel: "WhatsApp directo",
-  contactVisualTitle:
-    "Contanos qué servicio necesitás, tu zona y si querés sumar fotos del equipo o del espacio",
+  contactCtaLabel: "Pedir presupuesto por WhatsApp",
   footerDescription: "Climatización · Service · Instalación",
   whatsappNumber: "5493517345516",
   whatsappDisplay: "+54 9 3517 34-5516",
@@ -60,9 +58,8 @@ export const site = {
     "https://wa.me/5493517345516?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto.",
   instagramUrl: "https://www.instagram.com/fariasairesac/",
   instagramHandle: "@fariasairesac",
-  availability: "Servicios en horario comercial",
+  availability: "Horario comercial",
   locationLabel: "Córdoba y alrededores",
-  yearsLabel: "Más de 8 años en climatización",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
@@ -94,16 +91,10 @@ export const site = {
     "Presupuesto por WhatsApp",
   ],
   contactPoints: [
-    "+54 9 3517 34-5516",
-    "@fariasairesac",
-    "Horario comercial",
+    "WhatsApp: +54 9 3517 34-5516",
+    "Instagram: @fariasairesac",
     "Córdoba y alrededores",
-  ],
-  serviceHighlights: [
-    "Aires split para hogares y comercios",
-    "Mantenimiento preventivo",
-    "Recarga de gas y diagnóstico",
-    "Calderas en temporada de invierno",
+    "Horario comercial",
   ],
   zones: [
     "Córdoba Capital",
@@ -126,7 +117,7 @@ export const site = {
     },
   ],
   media: {
-    logo: null,
+    logo: "/images/farias-aires/logo.jpg",
     hero: null,
     about: null,
     services: {
