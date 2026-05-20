@@ -227,9 +227,19 @@ export const services = [
     objectPosition: "center 42%",
   },
   {
+    title: "Reparación de equipos",
+    description:
+      "Diagnóstico y reparación de fallas en equipos de aire acondicionado para recuperar su funcionamiento correctamente.",
+    image: site.media.gallery[1],
+    alt: "Reparación de equipos de aire acondicionado",
+    accent: "bg-[#E43125]",
+    placeholderLabel: "Reparación",
+    objectPosition: "center 42%",
+  },
+  {
     title: "Calderas, calefactores y calefones",
     description:
-      "Mantenimiento, service y reparación de sistemas de calefacción para temporada de invierno.",
+      "Servicio, mantenimiento y reparación de calderas, calefactores y calefones.",
     image: site.media.services.calderas,
     alt: "Calderas, calefactores y calefones",
     accent: "bg-[#E43125]",

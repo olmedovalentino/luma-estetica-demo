@@ -155,7 +155,7 @@ export default function HomePage() {
               description={site.servicesIntro}
             />
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <article
                   key={service.title}
@@ -189,11 +189,11 @@ export default function HomePage() {
         <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Servicios especiales"
-            title="Servicios especiales"
-            description="Opciones puntuales para mudanzas y equipos disponibles, presentadas de forma clara y equilibrada."
+            title="Promociones y opciones disponibles"
+            description="Servicios puntuales y equipos disponibles para resolver necesidades específicas de climatización."
           />
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <div className="mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
             {specialServices.map((item) => (
               <article
                 key={item.title}
@@ -204,8 +204,8 @@ export default function HomePage() {
                   alt={item.alt}
                   label={item.title}
                   title={item.title}
-                  className="h-[230px] border-b border-[#ECECEC] sm:h-[240px]"
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="h-[300px] border-b border-[#ECECEC] sm:h-[340px]"
+                  sizes="(min-width: 768px) 40vw, 100vw"
                   frame={{
                     variant: item.variant,
                     objectPosition: item.objectPosition,
