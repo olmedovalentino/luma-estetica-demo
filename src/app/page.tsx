@@ -161,26 +161,18 @@ export default function HomePage() {
                   key={service.title}
                   className="flex h-full flex-col overflow-hidden rounded-[1.55rem] border border-[#E6E6E6] bg-white shadow-soft"
                 >
-                  {service.image ? (
-                    <MediaBlock
-                      image={service.image}
-                      alt={service.alt}
-                      label={service.placeholderLabel}
-                      title={service.title}
-                      className="h-[228px] border-b border-[#ECECEC]"
-                      sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
-                      frame={{
-                        variant: "cover",
-                        objectPosition: service.objectPosition,
-                      }}
-                    />
-                  ) : (
-                    <PlaceholderVisual
-                      label={service.placeholderLabel}
-                      title={service.title}
-                      className="h-[228px]"
-                    />
-                  )}
+                  <MediaBlock
+                    image={service.image}
+                    alt={service.alt}
+                    label={service.placeholderLabel}
+                    title={service.title}
+                    className="h-[228px] border-b border-[#ECECEC]"
+                    sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    frame={{
+                      variant: "cover",
+                      objectPosition: service.objectPosition,
+                    }}
+                  />
                   <div className="flex flex-1 flex-col px-5 pb-6 pt-5">
                     <div className={`mb-3 h-1.5 w-12 rounded-full ${service.accent}`} />
                     <h3 className="text-[1.02rem] font-semibold leading-snug text-[#111111]">
