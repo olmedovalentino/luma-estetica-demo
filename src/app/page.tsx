@@ -5,7 +5,7 @@ import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs, gallery, mediaFrames, services, site, specialServices } from "@/lib/site";
+import { faqs, gallery, mediaFrames, services, site } from "@/lib/site";
 
 type MediaVariant = "cover" | "contain";
 
@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
                 <MediaBlock
                   image={site.media.hero}
-                  alt="Trabajos de climatización de Farías Aires"
+                  alt="Trabajos de climatizaciÃ³n de FarÃ­as Aires"
                   label={site.heroVisualLabel}
                   title={site.heroVisualTitle}
                   className="h-[340px] sm:h-[400px] lg:h-full lg:min-h-[420px]"
@@ -186,40 +186,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Servicios especiales"
-            title="Promociones y opciones disponibles"
-            description="Servicios puntuales y equipos disponibles para resolver necesidades específicas de climatización."
-          />
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
-              {specialServices.map((item, index) => (
-                <article
-                  key={item.title}
-                  className={[
-                    "overflow-hidden rounded-[1.55rem] border border-[#E6E6E6] bg-white shadow-soft",
-                    "lg:col-span-2",
-                    index === 0 ? "lg:col-start-2" : "lg:col-start-4",
-                  ].join(" ")}
-                >
-                  <MediaBlock
-                    image={item.image}
-                    alt={item.alt}
-                    label={item.title}
-                    title={item.title}
-                    className="h-[228px]"
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    frame={{
-                      variant: item.variant,
-                      objectPosition: item.objectPosition,
-                    }}
-                  />
-                </article>
-              ))}
-            </div>
-        </section>
-
         <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
             <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
@@ -250,7 +216,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={mediaFrames.equipment.image}
-                alt="Venta de equipos con instalación"
+                alt="Venta de equipos con instalaciÃ³n"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
                 className="h-full min-h-[320px]"
@@ -266,7 +232,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={site.media.about}
-                alt="Farías Aires Acondicionados"
+                alt="FarÃ­as Aires Acondicionados"
                 label={site.aboutVisualLabel}
                 title={site.aboutVisualTitle}
                 className="h-[320px] sm:h-[360px]"
@@ -281,17 +247,6 @@ export default function HomePage() {
                 title={site.aboutTitle}
                 description={site.aboutText}
               />
-
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {site.trustPoints.map((point) => (
-                  <div
-                    key={point}
-                    className="rounded-2xl border border-[#E6E6E6] bg-white px-4 py-4 shadow-soft"
-                  >
-                    <p className="text-sm font-semibold text-[#111111]">{point}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -304,9 +259,9 @@ export default function HomePage() {
           />
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((item) => (
+            {gallery.map((item, index) => (
               <article
-                key={item.title}
+                key={`${item.title}-${index}`}
                 className="group overflow-hidden rounded-[1.7rem] border border-[#E8E8E8] bg-white shadow-soft"
               >
                 <div className="relative h-[290px] overflow-hidden">
@@ -314,7 +269,7 @@ export default function HomePage() {
                     image={item.image}
                     alt={item.alt}
                     label={item.title}
-                    title={item.description}
+                    title={item.title}
                     className="h-full"
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     frame={{ variant: "cover", objectPosition: item.objectPosition }}
@@ -322,9 +277,6 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.08),rgba(17,17,17,0.68))]" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
                     <h3 className="text-[1.02rem] font-semibold">{item.title}</h3>
-                    <p className="mt-2 max-w-[18rem] text-sm leading-6 text-white/84">
-                      {item.description}
-                    </p>
                   </div>
                 </div>
               </article>
@@ -341,7 +293,7 @@ export default function HomePage() {
                     {site.zonesEyebrow}
                   </p>
                   <h2 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-3xl">
-                    Trabajamos en Córdoba y zonas cercanas
+                    Trabajamos en CÃ³rdoba y zonas cercanas
                   </h2>
                   <p className="mt-4 text-sm leading-6 text-[#5F5F5F] sm:text-base">
                     {site.zonesDescription}

@@ -85,9 +85,7 @@ export const site = {
   ],
   equipmentPoints: [
     "Asesoramiento según el ambiente",
-    "Venta de equipos",
     "Instalación incluida",
-    "Presupuesto por WhatsApp",
   ],
   contactDetails: [
     {
@@ -145,6 +143,8 @@ export const site = {
       "/images/farias-aires/trabajo-2.jpg",
       "/images/farias-aires/trabajo-3.jpg",
       "/images/farias-aires/trabajo-4.jpg",
+      "/images/farias-aires/trabajo-5.jpg",
+      "/images/farias-aires/trabajo-6.jpg",
     ],
   },
 } as const;
@@ -244,52 +244,46 @@ export const services = [
 
 export const gallery = [
   {
-    title: "Instalaciones reales",
-    description: "Montaje prolijo de equipos en hogares y comercios.",
+    title: "Nueva Córdoba",
+    description: "",
     image: site.media.gallery[0],
     alt: "Instalaciones realizadas por Farías Aires",
     objectPosition: "center 47%",
   },
   {
-    title: "Trabajo técnico",
-    description: "Resoluciones en campo con terminaciones cuidadas.",
+    title: "Villa Allende",
+    description: "",
     image: site.media.gallery[1],
     alt: "Trabajo técnico realizado por Farías Aires",
     objectPosition: "center 42%",
   },
   {
-    title: "Mantenimiento y mejoras",
-    description: "Puesta a punto y mejoras sobre instalaciones existentes.",
+    title: "Siquiman",
+    description: "",
     image: site.media.gallery[2],
     alt: "Mantenimiento de climatización",
     objectPosition: "center 48%",
   },
   {
-    title: "Trabajos finalizados",
-    description: "Equipos instalados y trabajos entregados en distintas zonas.",
+    title: "Carlos Paz",
+    description: "",
     image: site.media.gallery[3],
     alt: "Trabajos finalizados por Farías Aires",
     objectPosition: "center 44%",
   },
-] as const;
-
-export const specialServices = [
   {
-    title: "Promo mudanza",
-    description:
-      "Desinstalación, traslado y reconexión del equipo para que puedas mudarlo de forma segura y prolija.",
-    image: mediaFrames.promos.mudanza.image,
-    alt: "Promo mudanza de aire acondicionado",
-    variant: mediaFrames.promos.mudanza.variant,
-    objectPosition: mediaFrames.promos.mudanza.objectPosition,
+    title: "Nueva Córdoba",
+    description: "",
+    image: site.media.gallery[4],
+    alt: "Trabajo realizado por Farías Aires en Nueva Córdoba",
+    objectPosition: "center 46%",
   },
   {
-    title: "Equipos a la venta",
-    description: "Consultá por equipos disponibles con opción de instalación incluida.",
-    image: mediaFrames.promos.flyer.image,
-    alt: "Equipos de aire acondicionado a la venta",
-    variant: mediaFrames.promos.flyer.variant,
-    objectPosition: mediaFrames.promos.flyer.objectPosition,
+    title: "Villa Allende",
+    description: "",
+    image: site.media.gallery[5],
+    alt: "Trabajo realizado por Farías Aires en Villa Allende",
+    objectPosition: "center 43%",
   },
 ] as const;
 
