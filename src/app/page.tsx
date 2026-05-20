@@ -193,28 +193,33 @@ export default function HomePage() {
             description="Servicios puntuales y equipos disponibles para resolver necesidades específicas de climatización."
           />
 
-          <div className="mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
-            {specialServices.map((item) => (
-              <article
-                key={item.title}
-                className="overflow-hidden rounded-[1.7rem] border border-[#E6E6E6] bg-white shadow-soft"
-              >
-                <MediaBlock
-                  image={item.image}
-                  alt={item.alt}
-                  label={item.title}
-                  title={item.title}
-                  className="h-[300px] border-b border-[#ECECEC] sm:h-[340px]"
-                  sizes="(min-width: 768px) 40vw, 100vw"
-                  frame={{
-                    variant: item.variant,
-                    objectPosition: item.objectPosition,
-                    background: "background" in item ? item.background : undefined,
-                    imageClassName: "imageClassName" in item ? item.imageClassName : undefined,
-                  }}
-                />
-                <div className="px-5 pb-6 pt-5">
-                  <h3 className="text-[1.02rem] font-semibold text-[#111111]">{item.title}</h3>
+            <div className="mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
+              {specialServices.map((item) => (
+                <article
+                  key={item.title}
+                  className="overflow-hidden rounded-[1.7rem] border border-[#E6E6E6] bg-white shadow-soft"
+                >
+                  <div className="border-b border-[#ECECEC] bg-[linear-gradient(180deg,#FFFFFF,#F7F7F7)] p-4 sm:p-5">
+                    <div className="overflow-hidden rounded-[1.35rem] border border-[#E8E8E8] bg-[#FAFAFA]">
+                      <MediaBlock
+                        image={item.image}
+                        alt={item.alt}
+                        label={item.title}
+                        title={item.title}
+                        className="h-[360px] sm:h-[420px]"
+                        sizes="(min-width: 768px) 40vw, 100vw"
+                        frame={{
+                          variant: "contain",
+                          objectPosition: "center center",
+                          background: "bg-[#FAFAFA]",
+                          imageClassName:
+                            item.title === "Equipos a la venta" ? "p-5 sm:p-6" : "p-4 sm:p-5",
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="px-5 pb-6 pt-5">
+                    <h3 className="text-[1.02rem] font-semibold text-[#111111]">{item.title}</h3>
                   <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
                     {item.description}
                   </p>
