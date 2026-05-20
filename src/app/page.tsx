@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
                 <MediaBlock
                   image={site.media.hero}
-                  alt="Trabajos de climatizaciÃ³n de FarÃ­as Aires"
+                  alt="Trabajos de climatización de Farías Aires"
                   label={site.heroVisualLabel}
                   title={site.heroVisualTitle}
                   className="h-[340px] sm:h-[400px] lg:h-full lg:min-h-[420px]"
@@ -216,7 +216,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={mediaFrames.equipment.image}
-                alt="Venta de equipos con instalaciÃ³n"
+                alt="Venta de equipos con instalación"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
                 className="h-full min-h-[320px]"
@@ -232,7 +232,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={site.media.about}
-                alt="FarÃ­as Aires Acondicionados"
+                alt="Farías Aires Acondicionados"
                 label={site.aboutVisualLabel}
                 title={site.aboutVisualTitle}
                 className="h-[320px] sm:h-[360px]"
@@ -293,7 +293,7 @@ export default function HomePage() {
                     {site.zonesEyebrow}
                   </p>
                   <h2 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-3xl">
-                    Trabajamos en CÃ³rdoba y zonas cercanas
+                    Trabajamos en Córdoba y zonas cercanas
                   </h2>
                   <p className="mt-4 text-sm leading-6 text-[#5F5F5F] sm:text-base">
                     {site.zonesDescription}
