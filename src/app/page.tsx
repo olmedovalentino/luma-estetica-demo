@@ -19,42 +19,32 @@ type MediaConfig = {
 
 const mediaConfig: Record<string, MediaConfig> = {
   "/images/farias-aires/hero.jpg": {
-    variant: "contain",
-    position: "center center",
-    background:
-      "bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,244,244,0.96))]",
-    imageClassName: "p-4 sm:p-6 lg:p-8",
-    frameClassName: "rounded-[1.7rem]",
+    variant: "cover",
+    position: "center 42%",
   },
   "/images/farias-aires/instalacion-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F6F6F6]",
-    imageClassName: "p-4",
+    variant: "cover",
+    position: "center 46%",
   },
   "/images/farias-aires/service-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F6F6F6]",
-    imageClassName: "p-4",
+    variant: "cover",
+    position: "center 44%",
   },
   "/images/farias-aires/mantenimiento-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-4",
+    variant: "cover",
+    position: "center 45%",
   },
   "/images/farias-aires/recarga-gas-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F6F6F6]",
-    imageClassName: "p-4",
+    variant: "cover",
+    position: "center 48%",
   },
   "/images/farias-aires/equipo-venta-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F6F6F6]",
-    imageClassName: "p-5",
+    variant: "cover",
+    position: "center 42%",
   },
   "/images/farias-aires/equipo-piso-techo.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-5 sm:p-6",
+    variant: "cover",
+    position: "center 50%",
   },
   "/images/farias-aires/instalacion-altura.jpg": {
     variant: "cover",
@@ -66,34 +56,29 @@ const mediaConfig: Record<string, MediaConfig> = {
     imageClassName: "p-4 sm:p-5",
   },
   "/images/farias-aires/promo-mudanza.jpg": {
-    variant: "contain",
-    background: "bg-[#FAFAFA]",
-    imageClassName: "p-3 sm:p-4",
+    variant: "cover",
+    position: "center 46%",
   },
   "/images/farias-aires/flyer-promo.jpg": {
     variant: "contain",
     background: "bg-[#FAFAFA]",
-    imageClassName: "p-3 sm:p-4",
+    imageClassName: "p-2 sm:p-3",
   },
   "/images/farias-aires/trabajo-1.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-3 sm:p-4",
+    variant: "cover",
+    position: "center 47%",
   },
   "/images/farias-aires/trabajo-2.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-3 sm:p-4",
+    variant: "cover",
+    position: "center 42%",
   },
   "/images/farias-aires/trabajo-3.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-3 sm:p-4",
+    variant: "cover",
+    position: "center 48%",
   },
   "/images/farias-aires/trabajo-4.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-3 sm:p-4",
+    variant: "cover",
+    position: "center 44%",
   },
 };
 
@@ -253,7 +238,7 @@ export default function HomePage() {
                   title={site.heroVisualTitle}
                   className="h-[340px] sm:h-[400px] lg:h-full lg:min-h-[420px]"
                   sizes="(min-width: 1024px) 44vw, 100vw"
-                  variant="contain"
+                  variant="cover"
                 />
               </div>
             </div>
@@ -280,14 +265,15 @@ export default function HomePage() {
                       alt={service.alt}
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[248px] border-b border-[#ECECEC] sm:h-[260px]"
+                      className="h-[220px] border-b border-[#ECECEC] sm:h-[240px]"
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      variant="cover"
                     />
                   ) : (
                     <PlaceholderVisual
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[248px] sm:h-[260px]"
+                      className="h-[220px] sm:h-[240px]"
                     />
                   )}
                   <div className="px-4 pb-5 pt-4">
@@ -319,9 +305,9 @@ export default function HomePage() {
                   alt={item.alt}
                   label={item.title}
                   title={item.title}
-                  className="h-[260px] border-b border-[#ECECEC] sm:h-[300px]"
+                  className="h-[220px] border-b border-[#ECECEC] sm:h-[240px]"
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  variant="contain"
+                  variant={item.image.includes("flyer") ? "contain" : "cover"}
                 />
                 <div className="px-5 pb-6 pt-5">
                   <h3 className="text-lg font-semibold text-[#111111]">{item.title}</h3>
@@ -434,7 +420,7 @@ export default function HomePage() {
                     title={item.description}
                     className="h-full"
                     sizes="(min-width: 1024px) 25vw, 100vw"
-                    variant="contain"
+                    variant="cover"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(17,17,17,0),rgba(17,17,17,0.72))] p-4 text-white">
                     <h3 className="text-base font-semibold">{item.title}</h3>
