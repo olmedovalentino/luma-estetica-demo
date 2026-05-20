@@ -193,36 +193,33 @@ export default function HomePage() {
             description="Servicios puntuales y equipos disponibles para resolver necesidades específicas de climatización."
           />
 
-            <div className="mt-8 grid max-w-6xl gap-6 md:grid-cols-2">
+            <div className="mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
               {specialServices.map((item) => (
                 <article
                   key={item.title}
-                  className="overflow-hidden rounded-[1.8rem] border border-[#E6E6E6] bg-white shadow-soft"
+                  className="overflow-hidden rounded-[1.7rem] border border-[#E6E6E6] bg-white shadow-soft"
                 >
                   <MediaBlock
                     image={item.image}
                     alt={item.alt}
                     label={item.title}
                     title={item.title}
-                    className="aspect-[4/5] min-h-[500px] border-b border-[#ECECEC] bg-[linear-gradient(180deg,#FFFFFF,#F8F8F8)] md:min-h-[560px] lg:min-h-[620px]"
-                    sizes="(min-width: 1024px) 36vw, (min-width: 768px) 44vw, 100vw"
+                    className="h-[260px] border-b border-[#ECECEC] sm:h-[300px]"
+                    sizes="(min-width: 768px) 40vw, 100vw"
                     frame={{
-                      variant: "contain",
-                      objectPosition: "center center",
-                      background: "bg-[linear-gradient(180deg,#FFFFFF,#F8F8F8)]",
-                      imageClassName:
-                        item.title === "Equipos a la venta" ? "p-3 sm:p-4" : "p-2 sm:p-3",
+                      variant: item.variant,
+                      objectPosition: item.objectPosition,
                     }}
                   />
                   <div className="px-5 pb-6 pt-5">
                     <h3 className="text-[1.02rem] font-semibold text-[#111111]">{item.title}</h3>
-                  <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+                    <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
+                      {item.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
         </section>
 
         <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8">

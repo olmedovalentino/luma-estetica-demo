@@ -57,7 +57,7 @@ export const site = {
     "https://wa.me/5493517345516?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto.",
   instagramUrl: "https://www.instagram.com/fariasairesac/",
   instagramHandle: "@fariasairesac",
-  availability: "Horario comercial",
+  availability: "Lunes a viernes de 9:00 a 18:00 hs",
   locationLabel: "Córdoba, Argentina",
   navigation: [
     { label: "Inicio", href: "#inicio" },
@@ -106,7 +106,7 @@ export const site = {
     },
     {
       label: "Horario",
-      value: "Horario comercial",
+      value: "Lunes a viernes de 9:00 a 18:00 hs",
     },
   ],
   zones: [
@@ -177,10 +177,8 @@ export const mediaFrames = {
     },
     flyer: {
       image: "/images/farias-aires/flyer-promo.jpg",
-      variant: "contain",
-      objectPosition: "center center",
-      background: "bg-[#FAFAFA]",
-      imageClassName: "p-3 sm:p-4",
+      variant: "cover",
+      objectPosition: "center 20%",
     },
   },
 } as const;
@@ -296,8 +294,6 @@ export const specialServices = [
     alt: "Equipos de aire acondicionado a la venta",
     variant: mediaFrames.promos.flyer.variant,
     objectPosition: mediaFrames.promos.flyer.objectPosition,
-    background: mediaFrames.promos.flyer.background,
-    imageClassName: mediaFrames.promos.flyer.imageClassName,
   },
 ] as const;
 
