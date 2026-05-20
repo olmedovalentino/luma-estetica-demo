@@ -104,17 +104,21 @@ export default function HomePage() {
         >
           <div className="relative overflow-hidden rounded-[2.25rem] border border-[#E8E8E8] bg-white shadow-soft">
             <div className="absolute inset-x-0 top-0 h-1 bg-[#E43125]" />
-            <div className="relative grid items-stretch gap-8 px-5 py-8 lg:min-h-[500px] lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-10">
-              <div className="flex min-h-[360px] flex-col justify-center lg:min-h-[420px]">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                  {site.heroEyebrow}
-                </p>
+            <div className="relative grid items-stretch gap-8 px-5 py-8 lg:min-h-[540px] lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-12">
+              <div className="flex min-h-[380px] flex-col justify-between lg:min-h-[456px]">
+                <div className="pt-2">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                    {site.heroEyebrow}
+                  </p>
+                </div>
 
-                <h1 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight tracking-[-0.02em] text-[#111111] sm:text-5xl">
-                  {site.heroTitle}
-                </h1>
+                <div className="py-8 lg:py-10">
+                  <h1 className="max-w-2xl font-display text-4xl font-semibold leading-tight tracking-[-0.02em] text-[#111111] sm:text-5xl">
+                    {site.heroTitle}
+                  </h1>
+                </div>
 
-                <div className="mt-6 max-w-xl">
+                <div className="max-w-xl pb-2">
                   <p className="text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
