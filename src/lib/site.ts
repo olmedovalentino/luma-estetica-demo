@@ -157,17 +157,13 @@ export const mediaFrames = {
   },
   about: {
     image: site.media.about,
-    variant: "contain",
-    objectPosition: "center center",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-4 sm:p-5",
+    variant: "cover",
+    objectPosition: "center 42%",
   },
   equipment: {
     image: "/images/farias-aires/equipo-piso-techo.jpg",
-    variant: "contain",
-    objectPosition: "center center",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-5 sm:p-6",
+    variant: "cover",
+    objectPosition: "center 44%",
   },
   promos: {
     mudanza: {

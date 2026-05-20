@@ -263,13 +263,13 @@ export default function HomePage() {
 
         <section id="sobre" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-            <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white p-3 shadow-soft">
+            <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
                 image={site.media.about}
                 alt="Farías Aires Acondicionados"
                 label={site.aboutVisualLabel}
                 title={site.aboutVisualTitle}
-                className="h-[320px] rounded-[1.4rem] sm:h-[360px]"
+                className="h-[320px] sm:h-[360px]"
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 frame={mediaFrames.about}
               />
