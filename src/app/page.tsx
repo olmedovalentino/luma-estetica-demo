@@ -5,25 +5,96 @@ import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { SocialIconLink } from "@/components/social-icon-link";
 import { faqs, gallery, services, site } from "@/lib/site";
 
-const imagePositions: Record<string, string> = {
-  "/images/farias-aires/hero.jpg": "center 38%",
-  "/images/farias-aires/instalacion-1.jpg": "center center",
-  "/images/farias-aires/service-1.jpg": "center 42%",
-  "/images/farias-aires/mantenimiento-1.jpg": "center center",
-  "/images/farias-aires/recarga-gas-1.jpg": "center center",
-  "/images/farias-aires/equipo-venta-1.jpg": "center 42%",
-  "/images/farias-aires/equipo-piso-techo.jpg": "center center",
-  "/images/farias-aires/instalacion-altura.jpg": "center 30%",
-  "/images/farias-aires/sobre-nosotros.jpg": "center 36%",
-  "/images/farias-aires/promo-mudanza.jpg": "center center",
-  "/images/farias-aires/flyer-promo.jpg": "center 32%",
-  "/images/farias-aires/trabajo-1.jpg": "center center",
-  "/images/farias-aires/trabajo-2.jpg": "center center",
-  "/images/farias-aires/trabajo-3.jpg": "center center",
-  "/images/farias-aires/trabajo-4.jpg": "center 35%",
+type MediaVariant = "cover" | "contain";
+
+type MediaConfig = {
+  variant: MediaVariant;
+  position?: string;
+  background?: string;
+  imageClassName?: string;
+  frameClassName?: string;
+};
+
+const mediaConfig: Record<string, MediaConfig> = {
+  "/images/farias-aires/hero.jpg": {
+    variant: "contain",
+    position: "center center",
+    background:
+      "bg-[linear-gradient(135deg,rgba(255,255,255,0.98),rgba(244,244,244,0.96))]",
+    imageClassName: "p-4 sm:p-6 lg:p-8",
+    frameClassName: "rounded-[1.7rem]",
+  },
+  "/images/farias-aires/instalacion-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F6F6F6]",
+    imageClassName: "p-4",
+  },
+  "/images/farias-aires/service-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F6F6F6]",
+    imageClassName: "p-4",
+  },
+  "/images/farias-aires/mantenimiento-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-4",
+  },
+  "/images/farias-aires/recarga-gas-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F6F6F6]",
+    imageClassName: "p-4",
+  },
+  "/images/farias-aires/equipo-venta-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F6F6F6]",
+    imageClassName: "p-5",
+  },
+  "/images/farias-aires/equipo-piso-techo.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-5 sm:p-6",
+  },
+  "/images/farias-aires/instalacion-altura.jpg": {
+    variant: "cover",
+    position: "center 24%",
+  },
+  "/images/farias-aires/sobre-nosotros.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-4 sm:p-5",
+  },
+  "/images/farias-aires/promo-mudanza.jpg": {
+    variant: "contain",
+    background: "bg-[#FAFAFA]",
+    imageClassName: "p-3 sm:p-4",
+  },
+  "/images/farias-aires/flyer-promo.jpg": {
+    variant: "contain",
+    background: "bg-[#FAFAFA]",
+    imageClassName: "p-3 sm:p-4",
+  },
+  "/images/farias-aires/trabajo-1.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-3 sm:p-4",
+  },
+  "/images/farias-aires/trabajo-2.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-3 sm:p-4",
+  },
+  "/images/farias-aires/trabajo-3.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-3 sm:p-4",
+  },
+  "/images/farias-aires/trabajo-4.jpg": {
+    variant: "contain",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-3 sm:p-4",
+  },
 };
 
 const specialServices = [
@@ -42,12 +113,24 @@ const specialServices = [
   },
 ] as const;
 
-function getObjectPosition(image: string | null) {
-  if (!image) {
-    return "center";
-  }
+const coverageZones = [
+  "Córdoba Capital",
+  "Villa Carlos Paz",
+  "Río Ceballos",
+  "Siquiman",
+  "Zonas cercanas",
+] as const;
 
-  return imagePositions[image] ?? "center";
+function getMediaConfig(image: string | null, variant?: MediaVariant): MediaConfig {
+  const config = image ? mediaConfig[image] : undefined;
+
+  return {
+    variant: variant ?? config?.variant ?? "cover",
+    position: config?.position ?? "center",
+    background: config?.background ?? "bg-[#F4F4F4]",
+    imageClassName: config?.imageClassName ?? "",
+    frameClassName: config?.frameClassName ?? "",
+  };
 }
 
 function PlaceholderVisual({
@@ -87,6 +170,7 @@ function MediaBlock({
   title,
   className = "",
   sizes,
+  variant,
 }: {
   image: string | null;
   alt: string;
@@ -94,21 +178,29 @@ function MediaBlock({
   title: string;
   className?: string;
   sizes: string;
+  variant?: MediaVariant;
 }) {
   if (!image) {
     return <PlaceholderVisual label={label} title={title} className={className} />;
   }
 
+  const config = getMediaConfig(image, variant);
+
   return (
-    <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        sizes={sizes}
-        className="object-cover"
-        style={{ objectPosition: getObjectPosition(image) }}
-      />
+    <div className={["relative overflow-hidden", config.background, className].join(" ")}>
+      <div className={["absolute inset-0", config.frameClassName].join(" ")}>
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          sizes={sizes}
+          className={[
+            config.variant === "contain" ? "object-contain" : "object-cover",
+            config.imageClassName,
+          ].join(" ")}
+          style={{ objectPosition: config.position }}
+        />
+      </div>
     </div>
   );
 }
@@ -159,8 +251,9 @@ export default function HomePage() {
                   alt="Trabajos de climatización de Farías Aires"
                   label={site.heroVisualLabel}
                   title={site.heroVisualTitle}
-                  className="h-[320px] sm:h-[380px] lg:h-full lg:min-h-[420px]"
+                  className="h-[340px] sm:h-[400px] lg:h-full lg:min-h-[420px]"
                   sizes="(min-width: 1024px) 44vw, 100vw"
+                  variant="contain"
                 />
               </div>
             </div>
@@ -182,21 +275,19 @@ export default function HomePage() {
                   className="group overflow-hidden rounded-[1.5rem] border border-[#E6E6E6] bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-32px_rgba(17,17,17,0.24)]"
                 >
                   {service.image ? (
-                    <div className="relative h-[220px] overflow-hidden">
-                      <Image
-                        src={service.image}
-                        alt={service.alt}
-                        fill
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                        style={{ objectPosition: getObjectPosition(service.image) }}
-                      />
-                    </div>
+                    <MediaBlock
+                      image={service.image}
+                      alt={service.alt}
+                      label={service.placeholderLabel}
+                      title={service.title}
+                      className="h-[248px] border-b border-[#ECECEC] sm:h-[260px]"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
                   ) : (
                     <PlaceholderVisual
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[220px]"
+                      className="h-[248px] sm:h-[260px]"
                     />
                   )}
                   <div className="px-4 pb-5 pt-4">
@@ -223,16 +314,15 @@ export default function HomePage() {
                 key={item.title}
                 className="overflow-hidden rounded-[1.8rem] border border-[#E6E6E6] bg-white shadow-soft"
               >
-                <div className="relative h-[240px] overflow-hidden sm:h-[280px]">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover"
-                    style={{ objectPosition: getObjectPosition(item.image) }}
-                  />
-                </div>
+                <MediaBlock
+                  image={item.image}
+                  alt={item.alt}
+                  label={item.title}
+                  title={item.title}
+                  className="h-[260px] border-b border-[#ECECEC] sm:h-[300px]"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  variant="contain"
+                />
                 <div className="px-5 pb-6 pt-5">
                   <h3 className="text-lg font-semibold text-[#111111]">{item.title}</h3>
                   <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
@@ -277,8 +367,9 @@ export default function HomePage() {
                 alt="Venta de equipos con instalación"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
-                className="h-full min-h-[300px]"
+                className="h-full min-h-[320px]"
                 sizes="(min-width: 1024px) 42vw, 100vw"
+                variant="contain"
               />
             </div>
           </div>
@@ -292,8 +383,9 @@ export default function HomePage() {
                 alt="Farías Aires Acondicionados"
                 label={site.aboutVisualLabel}
                 title={site.aboutVisualTitle}
-                className="h-[310px] rounded-[1.4rem] sm:h-[340px]"
+                className="h-[320px] rounded-[1.4rem] sm:h-[360px]"
                 sizes="(min-width: 1024px) 40vw, 100vw"
+                variant="contain"
               />
             </div>
 
@@ -325,7 +417,7 @@ export default function HomePage() {
             description={site.galleryDescription}
           />
 
-          <div className="mt-7 grid auto-rows-[210px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[210px]">
+          <div className="mt-7 grid auto-rows-[250px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[260px]">
             {gallery.map((item) => (
               <article
                 key={item.title}
@@ -334,17 +426,17 @@ export default function HomePage() {
                   item.span,
                 ].join(" ")}
               >
-                <div className="relative h-full min-h-[210px] overflow-hidden">
-                  <Image
-                    src={item.image}
+                <div className="relative h-full min-h-[250px] overflow-hidden">
+                  <MediaBlock
+                    image={item.image}
                     alt={item.alt}
-                    fill
+                    label={item.title}
+                    title={item.description}
+                    className="h-full"
                     sizes="(min-width: 1024px) 25vw, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    style={{ objectPosition: getObjectPosition(item.image) }}
+                    variant="contain"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.06),rgba(17,17,17,0.62))]" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(17,17,17,0),rgba(17,17,17,0.72))] p-4 text-white">
                     <h3 className="text-base font-semibold">{item.title}</h3>
                     <p className="mt-1 max-w-xs text-sm text-white/85">{item.description}</p>
                   </div>
@@ -357,27 +449,36 @@ export default function HomePage() {
         <section id="zonas" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
-              <SectionHeading
-                eyebrow={site.zonesEyebrow}
-                title={site.zonesTitle}
-                description={site.zonesDescription}
-              />
+              <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+                <div className="max-w-2xl">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                    Cobertura
+                  </p>
+                  <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
+                    Trabajamos en Córdoba y zonas cercanas
+                  </h2>
+                  <p className="mt-4 text-sm leading-6 text-[#5F5F5F] sm:text-base">
+                    Trabajamos en Córdoba Capital y distintas zonas cercanas. Consultanos por
+                    WhatsApp y te confirmamos disponibilidad según el servicio y la ubicación.
+                  </p>
+                </div>
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                {site.zones.map((zone) => (
-                  <span
-                    key={zone}
-                    className="rounded-full border border-[#D6D6D6] bg-[#F4F4F4] px-4 py-2 text-sm font-medium text-[#111111]"
-                  >
-                    {zone}
-                  </span>
-                ))}
+                <div className="lg:justify-self-end">
+                  <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    Consultar disponibilidad
+                  </ButtonLink>
+                </div>
               </div>
 
-              <div className="mt-6">
-                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  {site.zonesCtaLabel}
-                </ButtonLink>
+              <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                {coverageZones.map((zone) => (
+                  <div
+                    key={zone}
+                    className="rounded-2xl border border-[#E6E6E6] bg-[#F7F7F7] px-4 py-4 text-sm font-semibold text-[#111111]"
+                  >
+                    {zone}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -412,62 +513,74 @@ export default function HomePage() {
 
         <section id="contacto" className="scroll-mt-20 bg-[#F4F4F4]">
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-8">
-              <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-                <div className="max-w-xl">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                    {site.contactEyebrow}
+            <div className="overflow-hidden rounded-[2rem] border border-[#E5E5E5] bg-white shadow-soft">
+              <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+                <div className="border-b border-[#ECECEC] px-6 py-8 sm:px-8 lg:border-b-0 lg:border-r">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                    Contacto
                   </p>
                   <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
-                    {site.contactTitle}
+                    Pedí tu presupuesto por WhatsApp
                   </h2>
-                  <p className="mt-4 text-sm leading-6 text-[#5F5F5F]">
-                    {site.contactDescription}
+                  <p className="mt-4 max-w-xl text-sm leading-6 text-[#5F5F5F] sm:text-base">
+                    Contanos qué servicio necesitás y en qué zona estás. Te respondemos con una
+                    orientación clara para coordinar instalación, service o mantenimiento.
                   </p>
 
-                  <div className="mt-6 flex items-center gap-3">
-                    {site.socialLinks.map((link) => (
-                      <SocialIconLink
-                        key={link.label}
-                        href={link.href}
-                        label={link.label}
-                        icon={link.icon}
-                        tone="light"
-                      />
-                    ))}
-                  </div>
-
-                  <div className="mt-6">
+                  <div className="mt-7">
                     <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      {site.contactCtaLabel}
+                      Pedir presupuesto por WhatsApp
                     </ButtonLink>
                   </div>
                 </div>
 
-                <div className="rounded-[1.75rem] border border-[#E5E5E5] bg-[#F4F4F4] p-5 sm:p-6">
-                  <div className="space-y-4">
-                    {site.contactDetails.map((item) => (
-                      <div
-                        key={item.label}
-                        className="border-b border-[#DFDFDF] pb-4 last:border-b-0 last:pb-0"
+                <div className="bg-[#FAFAFA] px-6 py-8 sm:px-8">
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                        WhatsApp
+                      </p>
+                      <a
+                        href={site.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 block text-sm font-semibold text-[#111111] transition hover:text-[#E43125] sm:text-base"
                       >
-                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
-                          {item.label}
-                        </p>
-                        {"href" in item ? (
-                          <a
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-1 block text-sm font-medium text-[#111111] transition hover:text-[#E43125]"
-                          >
-                            {item.value}
-                          </a>
-                        ) : (
-                          <p className="mt-1 text-sm font-medium text-[#111111]">{item.value}</p>
-                        )}
-                      </div>
-                    ))}
+                        {site.whatsappDisplay}
+                      </a>
+                    </div>
+
+                    <div>
+                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                        Instagram
+                      </p>
+                      <a
+                        href={site.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 block text-sm font-semibold text-[#111111] transition hover:text-[#E43125] sm:text-base"
+                      >
+                        {site.instagramHandle}
+                      </a>
+                    </div>
+
+                    <div>
+                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                        Ubicación
+                      </p>
+                      <p className="mt-2 text-sm font-semibold text-[#111111] sm:text-base">
+                        Córdoba, Argentina
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                        Horario
+                      </p>
+                      <p className="mt-2 text-sm font-semibold text-[#111111] sm:text-base">
+                        Horario comercial
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
