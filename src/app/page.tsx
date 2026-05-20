@@ -193,19 +193,19 @@ export default function HomePage() {
             description="Servicios puntuales y equipos disponibles para resolver necesidades específicas de climatización."
           />
 
-            <div className="mt-8 grid max-w-5xl gap-5 md:grid-cols-2">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2">
               {specialServices.map((item) => (
                 <article
                   key={item.title}
-                  className="overflow-hidden rounded-[1.7rem] border border-[#E6E6E6] bg-white shadow-soft"
+                  className="overflow-hidden rounded-[1.55rem] border border-[#E6E6E6] bg-white shadow-soft"
                 >
                   <MediaBlock
                     image={item.image}
                     alt={item.alt}
                     label={item.title}
                     title={item.title}
-                    className="h-[320px] sm:h-[380px] lg:h-[420px]"
-                    sizes="(min-width: 768px) 40vw, 100vw"
+                    className="h-[228px]"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     frame={{
                       variant: item.variant,
                       objectPosition: item.objectPosition,
