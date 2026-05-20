@@ -8,6 +8,48 @@ import { SiteHeader } from "@/components/site-header";
 import { SocialIconLink } from "@/components/social-icon-link";
 import { faqs, gallery, services, site } from "@/lib/site";
 
+const imagePositions: Record<string, string> = {
+  "/images/farias-aires/hero.jpg": "center 38%",
+  "/images/farias-aires/instalacion-1.jpg": "center center",
+  "/images/farias-aires/service-1.jpg": "center 42%",
+  "/images/farias-aires/mantenimiento-1.jpg": "center center",
+  "/images/farias-aires/recarga-gas-1.jpg": "center center",
+  "/images/farias-aires/equipo-venta-1.jpg": "center 42%",
+  "/images/farias-aires/equipo-piso-techo.jpg": "center center",
+  "/images/farias-aires/instalacion-altura.jpg": "center 30%",
+  "/images/farias-aires/sobre-nosotros.jpg": "center 36%",
+  "/images/farias-aires/promo-mudanza.jpg": "center center",
+  "/images/farias-aires/flyer-promo.jpg": "center 32%",
+  "/images/farias-aires/trabajo-1.jpg": "center center",
+  "/images/farias-aires/trabajo-2.jpg": "center center",
+  "/images/farias-aires/trabajo-3.jpg": "center center",
+  "/images/farias-aires/trabajo-4.jpg": "center 35%",
+};
+
+const specialServices = [
+  {
+    title: "Promo mudanza",
+    description:
+      "Desinstalación, traslado y reconexión del equipo para que puedas mudarlo de forma segura y prolija.",
+    image: "/images/farias-aires/promo-mudanza.jpg",
+    alt: "Promo mudanza de aire acondicionado",
+  },
+  {
+    title: "Equipos a la venta",
+    description: "Consultá por equipos disponibles con opción de instalación incluida.",
+    image: "/images/farias-aires/flyer-promo.jpg",
+    alt: "Equipos de aire acondicionado a la venta",
+  },
+] as const;
+
+function getObjectPosition(image: string | null) {
+  if (!image) {
+    return "center";
+  }
+
+  return imagePositions[image] ?? "center";
+}
+
 function PlaceholderVisual({
   label,
   title,
@@ -18,17 +60,21 @@ function PlaceholderVisual({
   className?: string;
 }) {
   return (
-    <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.82),rgba(244,244,244,0.96))]" />
-      <div className="absolute left-6 top-6 h-10 w-10 rounded-xl border border-[#D6D6D6] bg-white" />
-      <div className="absolute right-8 top-8 h-px w-24 bg-[#E43125]" />
-      <div className="absolute left-8 bottom-16 h-px w-28 bg-[#111111]" />
-      <div className="absolute left-8 bottom-10 h-px w-40 bg-[#C8C8C8]" />
-      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-[#111111]">
-        <span className="w-fit rounded-full border border-[#D6D6D6] bg-white px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#E43125]">
+    <div
+      className={[
+        "relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(228,49,37,0.16),_transparent_44%),linear-gradient(160deg,#1A1A1A,#2A2A2A)]",
+        className,
+      ].join(" ")}
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]" />
+      <div className="absolute -right-10 top-5 h-32 w-32 rounded-full border border-white/10" />
+      <div className="absolute bottom-6 left-6 right-6 h-px bg-white/10" />
+      <div className="absolute left-6 top-6 h-10 w-10 rounded-2xl border border-white/15 bg-white/8" />
+      <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-white">
+        <span className="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/80">
           {label}
         </span>
-        <p className="max-w-[17rem] text-lg font-semibold leading-tight text-[#111111]">{title}</p>
+        <p className="max-w-[17rem] text-lg font-semibold leading-tight text-white">{title}</p>
       </div>
     </div>
   );
@@ -55,7 +101,14 @@ function MediaBlock({
 
   return (
     <div className={["relative overflow-hidden bg-[#F4F4F4]", className].join(" ")}>
-      <Image src={image} alt={alt} fill sizes={sizes} className="object-cover" />
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        sizes={sizes}
+        className="object-cover"
+        style={{ objectPosition: getObjectPosition(image) }}
+      />
     </div>
   );
 }
@@ -136,6 +189,7 @@ export default function HomePage() {
                         fill
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                        style={{ objectPosition: getObjectPosition(service.image) }}
                       />
                     </div>
                   ) : (
@@ -153,6 +207,40 @@ export default function HomePage() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Servicios especiales"
+            title="Servicios especiales"
+            description="Opciones puntuales para mudanzas y equipos disponibles, con una presentación simple y clara."
+          />
+
+          <div className="mt-7 grid gap-4 lg:grid-cols-2">
+            {specialServices.map((item) => (
+              <article
+                key={item.title}
+                className="overflow-hidden rounded-[1.8rem] border border-[#E6E6E6] bg-white shadow-soft"
+              >
+                <div className="relative h-[240px] overflow-hidden sm:h-[280px]">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                    style={{ objectPosition: getObjectPosition(item.image) }}
+                  />
+                </div>
+                <div className="px-5 pb-6 pt-5">
+                  <h3 className="text-lg font-semibold text-[#111111]">{item.title}</h3>
+                  <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -185,7 +273,7 @@ export default function HomePage() {
 
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
-                image={site.media.services.ventaEquipos}
+                image="/images/farias-aires/equipo-piso-techo.jpg"
                 alt="Venta de equipos con instalación"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
@@ -247,26 +335,18 @@ export default function HomePage() {
                 ].join(" ")}
               >
                 <div className="relative h-full min-h-[210px] overflow-hidden">
-                  {item.image ? (
-                    <>
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                        fill
-                        sizes="(min-width: 1024px) 25vw, 100vw"
-                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                      />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.08),rgba(17,17,17,0.58))]" />
-                    </>
-                  ) : (
-                    <PlaceholderVisual
-                      label={item.title}
-                      title={item.description}
-                      className="h-full min-h-[210px]"
-                    />
-                  )}
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    style={{ objectPosition: getObjectPosition(item.image) }}
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.06),rgba(17,17,17,0.62))]" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                     <h3 className="text-base font-semibold">{item.title}</h3>
+                    <p className="mt-1 max-w-xs text-sm text-white/85">{item.description}</p>
                   </div>
                 </div>
               </article>

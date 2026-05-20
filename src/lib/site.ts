@@ -132,17 +132,22 @@ export const site = {
   ],
   media: {
     logo: "/images/farias-aires/logo.jpg",
-    hero: null,
-    about: null,
+    hero: "/images/farias-aires/hero.jpg",
+    about: "/images/farias-aires/sobre-nosotros.jpg",
     services: {
-      instalacion: null,
-      service: null,
-      ventaEquipos: null,
+      instalacion: "/images/farias-aires/instalacion-1.jpg",
+      service: "/images/farias-aires/service-1.jpg",
+      ventaEquipos: "/images/farias-aires/equipo-venta-1.jpg",
       calderas: null,
-      mantenimiento: null,
-      recargaGas: null,
+      mantenimiento: "/images/farias-aires/mantenimiento-1.jpg",
+      recargaGas: "/images/farias-aires/recarga-gas-1.jpg",
     },
-    gallery: [null, null, null, null],
+    gallery: [
+      "/images/farias-aires/trabajo-1.jpg",
+      "/images/farias-aires/trabajo-2.jpg",
+      "/images/farias-aires/trabajo-3.jpg",
+      "/images/farias-aires/trabajo-4.jpg",
+    ],
   },
 } as const;
 
@@ -166,6 +171,24 @@ export const services = [
     placeholderLabel: "Service",
   },
   {
+    title: "Mantenimiento preventivo",
+    description:
+      "Limpieza, control y puesta a punto para sostener el rendimiento del equipo y evitar fallas.",
+    image: site.media.services.mantenimiento,
+    alt: "Mantenimiento preventivo de aire acondicionado",
+    accent: "bg-[#E43125]",
+    placeholderLabel: "Mantenimiento",
+  },
+  {
+    title: "Recarga de gas",
+    description:
+      "Hacemos carga y revisión del sistema para equipos con bajo rendimiento o problemas de refrigeración.",
+    image: site.media.services.recargaGas,
+    alt: "Recarga de gas para aire acondicionado",
+    accent: "bg-[#111111]",
+    placeholderLabel: "Gas",
+  },
+  {
     title: "Venta de equipos con instalación",
     description:
       "Ofrecemos venta de aires acondicionados con posibilidad de incluir instalación en el servicio.",
@@ -175,6 +198,24 @@ export const services = [
     placeholderLabel: "Equipos",
   },
   {
+    title: "Equipos piso techo y grandes ambientes",
+    description:
+      "Asesoramos y resolvemos equipos para espacios amplios, comercios y necesidades de mayor potencia.",
+    image: "/images/farias-aires/equipo-piso-techo.jpg",
+    alt: "Equipo piso techo para grandes ambientes",
+    accent: "bg-[#111111]",
+    placeholderLabel: "Piso techo",
+  },
+  {
+    title: "Trabajos en altura",
+    description:
+      "Realizamos instalaciones y tareas técnicas en altura con foco en seguridad y prolijidad.",
+    image: "/images/farias-aires/instalacion-altura.jpg",
+    alt: "Trabajo en altura para aire acondicionado",
+    accent: "bg-[#E43125]",
+    placeholderLabel: "Altura",
+  },
+  {
     title: "Calderas",
     description: "Realizamos service y mantenimiento de calderas durante temporada de invierno.",
     image: site.media.services.calderas,
@@ -182,53 +223,35 @@ export const services = [
     accent: "bg-[#111111]",
     placeholderLabel: "Calderas",
   },
-  {
-    title: "Recarga de gas",
-    description:
-      "Hacemos carga y revisión del sistema para equipos con bajo rendimiento o problemas de refrigeración.",
-    image: site.media.services.recargaGas,
-    alt: "Recarga de gas para aire acondicionado",
-    accent: "bg-[#E43125]",
-    placeholderLabel: "Gas",
-  },
-  {
-    title: "Diagnóstico técnico",
-    description:
-      "Revisamos fallas, pérdidas, bajo rendimiento o problemas de funcionamiento.",
-    image: site.media.services.mantenimiento,
-    alt: "Diagnóstico técnico de climatización",
-    accent: "bg-[#111111]",
-    placeholderLabel: "Diagnóstico",
-  },
 ] as const;
 
 export const gallery = [
   {
-    title: "Instalaciones",
-    description: "Montaje de equipos en hogares y comercios.",
+    title: "Instalaciones reales",
+    description: "Montaje prolijo de equipos en hogares y comercios.",
     image: site.media.gallery[0],
     alt: "Instalaciones realizadas por Farías Aires",
     span: "lg:col-span-2",
   },
   {
-    title: "Service",
-    description: "Revisión y solución de fallas.",
+    title: "Trabajo técnico",
+    description: "Resoluciones en campo con terminaciones cuidadas.",
     image: site.media.gallery[1],
-    alt: "Service de aire acondicionado",
+    alt: "Trabajo técnico realizado por Farías Aires",
     span: "",
   },
   {
-    title: "Mantenimiento",
-    description: "Limpieza y puesta a punto.",
+    title: "Mantenimiento y mejoras",
+    description: "Puesta a punto y mejoras sobre instalaciones existentes.",
     image: site.media.gallery[2],
     alt: "Mantenimiento de climatización",
     span: "",
   },
   {
-    title: "Equipos y calderas",
-    description: "Trabajos en climatización durante todo el año.",
+    title: "Trabajos finalizados",
+    description: "Equipos instalados y trabajos entregados en distintas zonas.",
     image: site.media.gallery[3],
-    alt: "Equipos y calderas Farías Aires",
+    alt: "Trabajos finalizados por Farías Aires",
     span: "lg:col-span-2",
   },
 ] as const;
