@@ -6,6 +6,10 @@
   color-scheme: light;
 }
 
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.25rem;
@@ -14,6 +18,7 @@ html {
 body {
   @apply text-[#111111] antialiased;
   background-color: #ffffff;
+  font-family: var(--font-body), sans-serif;
 }
 
 * {

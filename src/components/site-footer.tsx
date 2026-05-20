@@ -17,7 +17,9 @@ export function SiteFooter() {
                 className="h-14 w-14 rounded-xl bg-white object-contain"
               />
             ) : null}
-            <p className="text-base font-semibold text-white sm:text-lg">{site.brandName}</p>
+            <p className="text-base font-semibold tracking-[0.01em] text-white sm:text-lg">
+              {site.brandName}
+            </p>
           </div>
           <p className="mt-3 text-sm text-white/72">{site.footerDescription}</p>
           <p className="mt-4 text-sm text-white/72">{site.locationLabel}</p>

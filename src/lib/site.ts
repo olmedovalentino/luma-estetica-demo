@@ -9,8 +9,7 @@ export const site = {
   heroTitle: "Instalación, service y venta de aires acondicionados",
   heroSubtitle:
     "Soluciones en climatización para hogares y comercios: instalación de equipos, mantenimiento, recarga de gas, service y calderas.",
-  heroNote:
-    "Atendemos Córdoba Capital, Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
+  heroNote: "",
   heroCtaPrimary: "Pedir presupuesto",
   heroCtaSecondary: "Ver servicios",
   heroVisualLabel: "Climatización",
@@ -39,8 +38,8 @@ export const site = {
   zonesEyebrow: "Cobertura",
   zonesTitle: "Zonas de atención",
   zonesDescription:
-    "Realizamos trabajos en Córdoba Capital y alrededores, incluyendo Carlos Paz, Río Ceballos, Siquiman y zonas cercanas.",
-  zonesCtaLabel: "Consultar disponibilidad por WhatsApp",
+    "Trabajamos en Córdoba Capital y zonas cercanas. Consultanos por WhatsApp y te confirmamos disponibilidad según el servicio y la ubicación.",
+  zonesCtaLabel: "Consultar disponibilidad",
   faqEyebrow: "Preguntas frecuentes",
   faqTitle: "Preguntas frecuentes",
   faqDescription:
@@ -48,7 +47,7 @@ export const site = {
   contactEyebrow: "Contacto",
   contactTitle: "Pedí tu presupuesto por WhatsApp",
   contactDescription:
-    "Contanos qué servicio necesitás, en qué zona estás y te orientamos con la mejor opción.",
+    "Contanos qué servicio necesitás y en qué zona estás. Te respondemos con una orientación clara para coordinar instalación, service o mantenimiento.",
   contactCtaLabel: "Pedir presupuesto por WhatsApp",
   footerDescription: "Climatización · Service · Instalación",
   whatsappNumber: "5493517345516",
@@ -102,7 +101,7 @@ export const site = {
       href: "https://www.instagram.com/fariasairesac/",
     },
     {
-      label: "Zona de atención",
+      label: "Ubicación",
       value: "Córdoba, Argentina",
     },
     {
@@ -115,8 +114,7 @@ export const site = {
     "Villa Carlos Paz",
     "Río Ceballos",
     "Siquiman",
-    "Alrededores",
-    "Consultar otras zonas",
+    "Zonas cercanas",
   ],
   socialLinks: [
     {
@@ -151,6 +149,42 @@ export const site = {
   },
 } as const;
 
+export const mediaFrames = {
+  hero: {
+    image: site.media.hero,
+    variant: "cover",
+    objectPosition: "center 40%",
+  },
+  about: {
+    image: site.media.about,
+    variant: "contain",
+    objectPosition: "center center",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-4 sm:p-5",
+  },
+  equipment: {
+    image: "/images/farias-aires/equipo-piso-techo.jpg",
+    variant: "contain",
+    objectPosition: "center center",
+    background: "bg-[#F7F7F7]",
+    imageClassName: "p-5 sm:p-6",
+  },
+  promos: {
+    mudanza: {
+      image: "/images/farias-aires/promo-mudanza.jpg",
+      variant: "cover",
+      objectPosition: "center 46%",
+    },
+    flyer: {
+      image: "/images/farias-aires/flyer-promo.jpg",
+      variant: "contain",
+      objectPosition: "center center",
+      background: "bg-[#FAFAFA]",
+      imageClassName: "p-3 sm:p-4",
+    },
+  },
+} as const;
+
 export const services = [
   {
     title: "Instalación de aires acondicionados",
@@ -160,6 +194,7 @@ export const services = [
     alt: "Instalación de aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Instalaciones",
+    objectPosition: "center 46%",
   },
   {
     title: "Service y mantenimiento",
@@ -169,6 +204,7 @@ export const services = [
     alt: "Service y mantenimiento de aire acondicionado",
     accent: "bg-[#111111]",
     placeholderLabel: "Service",
+    objectPosition: "center 44%",
   },
   {
     title: "Mantenimiento preventivo",
@@ -178,6 +214,7 @@ export const services = [
     alt: "Mantenimiento preventivo de aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Mantenimiento",
+    objectPosition: "center 45%",
   },
   {
     title: "Recarga de gas",
@@ -187,6 +224,7 @@ export const services = [
     alt: "Recarga de gas para aire acondicionado",
     accent: "bg-[#111111]",
     placeholderLabel: "Gas",
+    objectPosition: "center 48%",
   },
   {
     title: "Venta de equipos con instalación",
@@ -196,15 +234,17 @@ export const services = [
     alt: "Venta de equipos de aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Equipos",
+    objectPosition: "center 42%",
   },
   {
     title: "Equipos piso techo y grandes ambientes",
     description:
       "Asesoramos y resolvemos equipos para espacios amplios, comercios y necesidades de mayor potencia.",
-    image: "/images/farias-aires/equipo-piso-techo.jpg",
+    image: mediaFrames.equipment.image,
     alt: "Equipo piso techo para grandes ambientes",
     accent: "bg-[#111111]",
     placeholderLabel: "Piso techo",
+    objectPosition: "center 50%",
   },
   {
     title: "Trabajos en altura",
@@ -214,6 +254,7 @@ export const services = [
     alt: "Trabajo en altura para aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Altura",
+    objectPosition: "center 24%",
   },
   {
     title: "Calderas",
@@ -222,6 +263,7 @@ export const services = [
     alt: "Service de calderas",
     accent: "bg-[#111111]",
     placeholderLabel: "Calderas",
+    objectPosition: "center center",
   },
 ] as const;
 
@@ -231,28 +273,50 @@ export const gallery = [
     description: "Montaje prolijo de equipos en hogares y comercios.",
     image: site.media.gallery[0],
     alt: "Instalaciones realizadas por Farías Aires",
-    span: "lg:col-span-2",
+    objectPosition: "center 47%",
   },
   {
     title: "Trabajo técnico",
     description: "Resoluciones en campo con terminaciones cuidadas.",
     image: site.media.gallery[1],
     alt: "Trabajo técnico realizado por Farías Aires",
-    span: "",
+    objectPosition: "center 42%",
   },
   {
     title: "Mantenimiento y mejoras",
     description: "Puesta a punto y mejoras sobre instalaciones existentes.",
     image: site.media.gallery[2],
     alt: "Mantenimiento de climatización",
-    span: "",
+    objectPosition: "center 48%",
   },
   {
     title: "Trabajos finalizados",
     description: "Equipos instalados y trabajos entregados en distintas zonas.",
     image: site.media.gallery[3],
     alt: "Trabajos finalizados por Farías Aires",
-    span: "lg:col-span-2",
+    objectPosition: "center 44%",
+  },
+] as const;
+
+export const specialServices = [
+  {
+    title: "Promo mudanza",
+    description:
+      "Desinstalación, traslado y reconexión del equipo para que puedas mudarlo de forma segura y prolija.",
+    image: mediaFrames.promos.mudanza.image,
+    alt: "Promo mudanza de aire acondicionado",
+    variant: mediaFrames.promos.mudanza.variant,
+    objectPosition: mediaFrames.promos.mudanza.objectPosition,
+  },
+  {
+    title: "Equipos a la venta",
+    description: "Consultá por equipos disponibles con opción de instalación incluida.",
+    image: mediaFrames.promos.flyer.image,
+    alt: "Equipos de aire acondicionado a la venta",
+    variant: mediaFrames.promos.flyer.variant,
+    objectPosition: mediaFrames.promos.flyer.objectPosition,
+    background: mediaFrames.promos.flyer.background,
+    imageClassName: mediaFrames.promos.flyer.imageClassName,
   },
 ] as const;
 

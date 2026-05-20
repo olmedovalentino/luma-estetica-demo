@@ -26,12 +26,12 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
               FA
             </span>
           )}
-          <span className="truncate text-sm font-semibold tracking-[0.02em] text-[#111111] sm:text-base">
+          <span className="truncate text-sm font-semibold tracking-[0.01em] text-[#111111] sm:text-base">
             {site.brandName}
           </span>
         </a>
 
-        <nav className="hidden items-center gap-5 text-sm font-medium text-[#5F5F5F] lg:flex">
+        <nav className="hidden items-center gap-5 text-sm font-medium tracking-[0.01em] text-[#5F5F5F] lg:flex">
           {site.navigation.map((item) => (
             <a key={item.href} href={item.href} className="transition hover:text-[#111111]">
               {item.label}

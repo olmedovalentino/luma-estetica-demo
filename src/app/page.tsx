@@ -5,118 +5,16 @@ import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { faqs, gallery, services, site } from "@/lib/site";
+import { faqs, gallery, mediaFrames, services, site, specialServices } from "@/lib/site";
 
 type MediaVariant = "cover" | "contain";
 
-type MediaConfig = {
-  variant: MediaVariant;
-  position?: string;
+type MediaFrame = {
+  variant?: MediaVariant;
+  objectPosition?: string;
   background?: string;
   imageClassName?: string;
-  frameClassName?: string;
 };
-
-const mediaConfig: Record<string, MediaConfig> = {
-  "/images/farias-aires/hero.jpg": {
-    variant: "cover",
-    position: "center 42%",
-  },
-  "/images/farias-aires/instalacion-1.jpg": {
-    variant: "cover",
-    position: "center 46%",
-  },
-  "/images/farias-aires/service-1.jpg": {
-    variant: "cover",
-    position: "center 44%",
-  },
-  "/images/farias-aires/mantenimiento-1.jpg": {
-    variant: "cover",
-    position: "center 45%",
-  },
-  "/images/farias-aires/recarga-gas-1.jpg": {
-    variant: "cover",
-    position: "center 48%",
-  },
-  "/images/farias-aires/equipo-venta-1.jpg": {
-    variant: "cover",
-    position: "center 42%",
-  },
-  "/images/farias-aires/equipo-piso-techo.jpg": {
-    variant: "cover",
-    position: "center 50%",
-  },
-  "/images/farias-aires/instalacion-altura.jpg": {
-    variant: "cover",
-    position: "center 24%",
-  },
-  "/images/farias-aires/sobre-nosotros.jpg": {
-    variant: "contain",
-    background: "bg-[#F7F7F7]",
-    imageClassName: "p-4 sm:p-5",
-  },
-  "/images/farias-aires/promo-mudanza.jpg": {
-    variant: "cover",
-    position: "center 46%",
-  },
-  "/images/farias-aires/flyer-promo.jpg": {
-    variant: "contain",
-    background: "bg-[#FAFAFA]",
-    imageClassName: "p-2 sm:p-3",
-  },
-  "/images/farias-aires/trabajo-1.jpg": {
-    variant: "cover",
-    position: "center 47%",
-  },
-  "/images/farias-aires/trabajo-2.jpg": {
-    variant: "cover",
-    position: "center 42%",
-  },
-  "/images/farias-aires/trabajo-3.jpg": {
-    variant: "cover",
-    position: "center 48%",
-  },
-  "/images/farias-aires/trabajo-4.jpg": {
-    variant: "cover",
-    position: "center 44%",
-  },
-};
-
-const specialServices = [
-  {
-    title: "Promo mudanza",
-    description:
-      "Desinstalación, traslado y reconexión del equipo para que puedas mudarlo de forma segura y prolija.",
-    image: "/images/farias-aires/promo-mudanza.jpg",
-    alt: "Promo mudanza de aire acondicionado",
-  },
-  {
-    title: "Equipos a la venta",
-    description: "Consultá por equipos disponibles con opción de instalación incluida.",
-    image: "/images/farias-aires/flyer-promo.jpg",
-    alt: "Equipos de aire acondicionado a la venta",
-  },
-] as const;
-
-const coverageZones = [
-  "Córdoba Capital",
-  "Villa Carlos Paz",
-  "Río Ceballos",
-  "Siquiman",
-  "Zonas cercanas",
-] as const;
-
-function getMediaConfig(image: string | null, variant?: MediaVariant): MediaConfig {
-  const config = image ? mediaConfig[image] : undefined;
-
-  return {
-    variant: variant ?? config?.variant ?? "cover",
-    position: config?.position ?? "center",
-    background: config?.background ?? "bg-[#F4F4F4]",
-    imageClassName: config?.imageClassName ?? "",
-    frameClassName: config?.frameClassName ?? "",
-  };
-}
 
 function PlaceholderVisual({
   label,
@@ -139,7 +37,7 @@ function PlaceholderVisual({
       <div className="absolute bottom-6 left-6 right-6 h-px bg-white/10" />
       <div className="absolute left-6 top-6 h-10 w-10 rounded-2xl border border-white/15 bg-white/8" />
       <div className="relative flex h-full min-h-[220px] flex-col justify-between p-6 text-white">
-        <span className="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/80">
+        <span className="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-white/80">
           {label}
         </span>
         <p className="max-w-[17rem] text-lg font-semibold leading-tight text-white">{title}</p>
@@ -155,7 +53,7 @@ function MediaBlock({
   title,
   className = "",
   sizes,
-  variant,
+  frame,
 }: {
   image: string | null;
   alt: string;
@@ -163,29 +61,31 @@ function MediaBlock({
   title: string;
   className?: string;
   sizes: string;
-  variant?: MediaVariant;
+  frame?: MediaFrame;
 }) {
   if (!image) {
     return <PlaceholderVisual label={label} title={title} className={className} />;
   }
 
-  const config = getMediaConfig(image, variant);
-
   return (
-    <div className={["relative overflow-hidden", config.background, className].join(" ")}>
-      <div className={["absolute inset-0", config.frameClassName].join(" ")}>
-        <Image
-          src={image}
-          alt={alt}
-          fill
-          sizes={sizes}
-          className={[
-            config.variant === "contain" ? "object-contain" : "object-cover",
-            config.imageClassName,
-          ].join(" ")}
-          style={{ objectPosition: config.position }}
-        />
-      </div>
+    <div
+      className={[
+        "relative overflow-hidden",
+        frame?.background ?? "bg-[#F4F4F4]",
+        className,
+      ].join(" ")}
+    >
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        sizes={sizes}
+        className={[
+          frame?.variant === "contain" ? "object-contain" : "object-cover",
+          frame?.imageClassName ?? "",
+        ].join(" ")}
+        style={{ objectPosition: frame?.objectPosition ?? "center" }}
+      />
     </div>
   );
 }
@@ -198,26 +98,24 @@ export default function HomePage() {
       <SiteHeader whatsappUrl={whatsappUrl} />
 
       <main className="relative overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+        <section
+          id="inicio"
+          className="mx-auto max-w-7xl scroll-mt-20 px-4 pb-10 pt-6 sm:px-6 lg:px-8"
+        >
           <div className="relative overflow-hidden rounded-[2.25rem] border border-[#E8E8E8] bg-white shadow-soft">
             <div className="absolute inset-x-0 top-0 h-1 bg-[#E43125]" />
             <div className="relative grid items-stretch gap-8 px-5 py-8 lg:min-h-[500px] lg:grid-cols-[1fr_0.96fr] lg:px-8 lg:py-10">
-              <div className="flex min-h-[360px] flex-col justify-between lg:min-h-[420px]">
-                <div className="pt-2">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                    {site.heroEyebrow}
-                  </p>
-                </div>
+              <div className="flex min-h-[360px] flex-col justify-center lg:min-h-[420px]">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
+                  {site.heroEyebrow}
+                </p>
 
-                <div className="py-6 lg:py-8">
-                  <h1 className="max-w-2xl font-serif text-4xl font-semibold tracking-tight text-[#111111] sm:text-5xl">
-                    {site.heroTitle}
-                  </h1>
-                </div>
+                <h1 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight tracking-[-0.02em] text-[#111111] sm:text-5xl">
+                  {site.heroTitle}
+                </h1>
 
-                <div className="max-w-xl pb-2">
+                <div className="mt-6 max-w-xl">
                   <p className="text-base leading-7 text-[#5F5F5F]">{site.heroSubtitle}</p>
-                  <p className="mt-4 text-sm text-[#5F5F5F]">{site.heroNote}</p>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -238,7 +136,7 @@ export default function HomePage() {
                   title={site.heroVisualTitle}
                   className="h-[340px] sm:h-[400px] lg:h-full lg:min-h-[420px]"
                   sizes="(min-width: 1024px) 44vw, 100vw"
-                  variant="cover"
+                  frame={mediaFrames.hero}
                 />
               </div>
             </div>
@@ -246,18 +144,18 @@ export default function HomePage() {
         </section>
 
         <section id="servicios" className="scroll-mt-20 bg-[#F4F4F4]">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow={site.servicesEyebrow}
               title={site.servicesTitle}
               description={site.servicesIntro}
             />
 
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {services.map((service) => (
                 <article
                   key={service.title}
-                  className="group overflow-hidden rounded-[1.5rem] border border-[#E6E6E6] bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-32px_rgba(17,17,17,0.24)]"
+                  className="flex h-full flex-col overflow-hidden rounded-[1.55rem] border border-[#E6E6E6] bg-white shadow-soft"
                 >
                   {service.image ? (
                     <MediaBlock
@@ -265,20 +163,25 @@ export default function HomePage() {
                       alt={service.alt}
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[220px] border-b border-[#ECECEC] sm:h-[240px]"
-                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      variant="cover"
+                      className="h-[228px] border-b border-[#ECECEC]"
+                      sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      frame={{
+                        variant: "cover",
+                        objectPosition: service.objectPosition,
+                      }}
                     />
                   ) : (
                     <PlaceholderVisual
                       label={service.placeholderLabel}
                       title={service.title}
-                      className="h-[220px] sm:h-[240px]"
+                      className="h-[228px]"
                     />
                   )}
-                  <div className="px-4 pb-5 pt-4">
+                  <div className="flex flex-1 flex-col px-5 pb-6 pt-5">
                     <div className={`mb-3 h-1.5 w-12 rounded-full ${service.accent}`} />
-                    <h3 className="text-base font-semibold text-[#111111]">{service.title}</h3>
+                    <h3 className="text-[1.02rem] font-semibold leading-snug text-[#111111]">
+                      {service.title}
+                    </h3>
                     <p className="mt-2 text-sm leading-6 text-[#5F5F5F]">{service.description}</p>
                   </div>
                 </article>
@@ -287,30 +190,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Servicios especiales"
             title="Servicios especiales"
-            description="Opciones puntuales para mudanzas y equipos disponibles, con una presentación simple y clara."
+            description="Opciones puntuales para mudanzas y equipos disponibles, presentadas de forma clara y equilibrada."
           />
 
-          <div className="mt-7 grid gap-4 lg:grid-cols-2">
+          <div className="mt-8 grid gap-5 lg:grid-cols-2">
             {specialServices.map((item) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-[1.8rem] border border-[#E6E6E6] bg-white shadow-soft"
+                className="overflow-hidden rounded-[1.7rem] border border-[#E6E6E6] bg-white shadow-soft"
               >
                 <MediaBlock
                   image={item.image}
                   alt={item.alt}
                   label={item.title}
                   title={item.title}
-                  className="h-[220px] border-b border-[#ECECEC] sm:h-[240px]"
+                  className="h-[230px] border-b border-[#ECECEC] sm:h-[240px]"
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  variant={item.image.includes("flyer") ? "contain" : "cover"}
+                  frame={{
+                    variant: item.variant,
+                    objectPosition: item.objectPosition,
+                    background: "background" in item ? item.background : undefined,
+                    imageClassName: "imageClassName" in item ? item.imageClassName : undefined,
+                  }}
                 />
                 <div className="px-5 pb-6 pt-5">
-                  <h3 className="text-lg font-semibold text-[#111111]">{item.title}</h3>
+                  <h3 className="text-[1.02rem] font-semibold text-[#111111]">{item.title}</h3>
                   <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
                     {item.description}
                   </p>
@@ -320,7 +228,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
+        <section id="equipos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid gap-5 lg:grid-cols-[1.02fr_0.98fr]">
             <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
               <SectionHeading
@@ -349,20 +257,20 @@ export default function HomePage() {
 
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white shadow-soft">
               <MediaBlock
-                image="/images/farias-aires/equipo-piso-techo.jpg"
+                image={mediaFrames.equipment.image}
                 alt="Venta de equipos con instalación"
                 label={site.equipmentVisualLabel}
                 title={site.equipmentVisualTitle}
                 className="h-full min-h-[320px]"
                 sizes="(min-width: 1024px) 42vw, 100vw"
-                variant="contain"
+                frame={mediaFrames.equipment}
               />
             </div>
           </div>
         </section>
 
         <section id="sobre" className="scroll-mt-20 bg-[#F4F4F4]">
-          <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
             <div className="overflow-hidden rounded-[2rem] border border-[#E8E8E8] bg-white p-3 shadow-soft">
               <MediaBlock
                 image={site.media.about}
@@ -371,7 +279,7 @@ export default function HomePage() {
                 title={site.aboutVisualTitle}
                 className="h-[320px] rounded-[1.4rem] sm:h-[360px]"
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                variant="contain"
+                frame={mediaFrames.about}
               />
             </div>
 
@@ -396,35 +304,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="trabajos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
+        <section id="trabajos" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow={site.galleryEyebrow}
             title={site.galleryTitle}
             description={site.galleryDescription}
           />
 
-          <div className="mt-7 grid auto-rows-[250px] gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[260px]">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {gallery.map((item) => (
               <article
                 key={item.title}
-                className={[
-                  "group h-full overflow-hidden rounded-[1.8rem] border border-[#E8E8E8] bg-white shadow-soft",
-                  item.span,
-                ].join(" ")}
+                className="group overflow-hidden rounded-[1.7rem] border border-[#E8E8E8] bg-white shadow-soft"
               >
-                <div className="relative h-full min-h-[250px] overflow-hidden">
+                <div className="relative h-[290px] overflow-hidden">
                   <MediaBlock
                     image={item.image}
                     alt={item.alt}
                     label={item.title}
                     title={item.description}
                     className="h-full"
-                    sizes="(min-width: 1024px) 25vw, 100vw"
-                    variant="cover"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    frame={{ variant: "cover", objectPosition: item.objectPosition }}
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(17,17,17,0),rgba(17,17,17,0.72))] p-4 text-white">
-                    <h3 className="text-base font-semibold">{item.title}</h3>
-                    <p className="mt-1 max-w-xs text-sm text-white/85">{item.description}</p>
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.08),rgba(17,17,17,0.68))]" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                    <h3 className="text-[1.02rem] font-semibold">{item.title}</h3>
+                    <p className="mt-2 max-w-[18rem] text-sm leading-6 text-white/84">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </article>
@@ -433,34 +341,33 @@ export default function HomePage() {
         </section>
 
         <section id="zonas" className="scroll-mt-20 bg-[#F4F4F4]">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <div className="rounded-[2rem] border border-[#E5E5E5] bg-white p-6 shadow-soft sm:p-7">
               <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                 <div className="max-w-2xl">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                    Cobertura
+                    {site.zonesEyebrow}
                   </p>
-                  <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
+                  <h2 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-3xl">
                     Trabajamos en Córdoba y zonas cercanas
                   </h2>
                   <p className="mt-4 text-sm leading-6 text-[#5F5F5F] sm:text-base">
-                    Trabajamos en Córdoba Capital y distintas zonas cercanas. Consultanos por
-                    WhatsApp y te confirmamos disponibilidad según el servicio y la ubicación.
+                    {site.zonesDescription}
                   </p>
                 </div>
 
                 <div className="lg:justify-self-end">
                   <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    Consultar disponibilidad
+                    {site.zonesCtaLabel}
                   </ButtonLink>
                 </div>
               </div>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-                {coverageZones.map((zone) => (
+              <div className="mt-7 flex flex-wrap gap-3">
+                {site.zones.map((zone) => (
                   <div
                     key={zone}
-                    className="rounded-2xl border border-[#E6E6E6] bg-[#F7F7F7] px-4 py-4 text-sm font-semibold text-[#111111]"
+                    className="rounded-full border border-[#E2E2E2] bg-[#F7F7F7] px-4 py-2.5 text-sm font-semibold text-[#111111]"
                   >
                     {zone}
                   </div>
@@ -470,7 +377,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="faq" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8">
+        <section id="faq" className="mx-auto max-w-7xl scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[900px]">
             <SectionHeading
               eyebrow={site.faqEyebrow}
@@ -498,75 +405,50 @@ export default function HomePage() {
         </section>
 
         <section id="contacto" className="scroll-mt-20 bg-[#F4F4F4]">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <div className="overflow-hidden rounded-[2rem] border border-[#E5E5E5] bg-white shadow-soft">
               <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="border-b border-[#ECECEC] px-6 py-8 sm:px-8 lg:border-b-0 lg:border-r">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#E43125]">
-                    Contacto
+                    {site.contactEyebrow}
                   </p>
-                  <h2 className="mt-3 font-serif text-2xl font-semibold tracking-tight text-[#111111] sm:text-3xl">
-                    Pedí tu presupuesto por WhatsApp
+                  <h2 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-[#111111] sm:text-3xl">
+                    {site.contactTitle}
                   </h2>
                   <p className="mt-4 max-w-xl text-sm leading-6 text-[#5F5F5F] sm:text-base">
-                    Contanos qué servicio necesitás y en qué zona estás. Te respondemos con una
-                    orientación clara para coordinar instalación, service o mantenimiento.
+                    {site.contactDescription}
                   </p>
 
                   <div className="mt-7">
                     <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                      Pedir presupuesto por WhatsApp
+                      {site.contactCtaLabel}
                     </ButtonLink>
                   </div>
                 </div>
 
                 <div className="bg-[#FAFAFA] px-6 py-8 sm:px-8">
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
-                        WhatsApp
-                      </p>
-                      <a
-                        href={site.whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 block text-sm font-semibold text-[#111111] transition hover:text-[#E43125] sm:text-base"
-                      >
-                        {site.whatsappDisplay}
-                      </a>
-                    </div>
-
-                    <div>
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
-                        Instagram
-                      </p>
-                      <a
-                        href={site.instagramUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 block text-sm font-semibold text-[#111111] transition hover:text-[#E43125] sm:text-base"
-                      >
-                        {site.instagramHandle}
-                      </a>
-                    </div>
-
-                    <div>
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
-                        Ubicación
-                      </p>
-                      <p className="mt-2 text-sm font-semibold text-[#111111] sm:text-base">
-                        Córdoba, Argentina
-                      </p>
-                    </div>
-
-                    <div>
-                      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
-                        Horario
-                      </p>
-                      <p className="mt-2 text-sm font-semibold text-[#111111] sm:text-base">
-                        Horario comercial
-                      </p>
-                    </div>
+                    {site.contactDetails.map((item) => (
+                      <div key={item.label}>
+                        <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#E43125]">
+                          {item.label}
+                        </p>
+                        {"href" in item ? (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-2 block text-sm font-semibold text-[#111111] transition hover:text-[#E43125] sm:text-base"
+                          >
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="mt-2 text-sm font-semibold text-[#111111] sm:text-base">
+                            {item.value}
+                          </p>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
