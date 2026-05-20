@@ -204,19 +204,13 @@ export default function HomePage() {
                     alt={item.alt}
                     label={item.title}
                     title={item.title}
-                    className="h-[260px] border-b border-[#ECECEC] sm:h-[300px]"
+                    className="h-[320px] sm:h-[380px] lg:h-[420px]"
                     sizes="(min-width: 768px) 40vw, 100vw"
                     frame={{
                       variant: item.variant,
                       objectPosition: item.objectPosition,
                     }}
                   />
-                  <div className="px-5 pb-6 pt-5">
-                    <h3 className="text-[1.02rem] font-semibold text-[#111111]">{item.title}</h3>
-                    <p className="mt-2 max-w-xl text-sm leading-6 text-[#5F5F5F]">
-                      {item.description}
-                    </p>
-                  </div>
                 </article>
               ))}
             </div>
