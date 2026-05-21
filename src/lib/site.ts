@@ -163,7 +163,7 @@ export const mediaFrames = {
   equipment: {
     image: "/images/farias-aires/equipo-piso-techo.jpg",
     variant: "cover",
-    objectPosition: "center 52%",
+    objectPosition: "center 38%",
   },
   promos: {
     mudanza: {
