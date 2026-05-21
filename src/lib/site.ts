@@ -198,7 +198,7 @@ export const services = [
     alt: "Service y mantenimiento de aire acondicionado",
     accent: "bg-[#111111]",
     placeholderLabel: "Service",
-    objectPosition: "center 44%",
+    objectPosition: "center 18%",
   },
   {
     title: "Recarga de gas",
@@ -208,7 +208,7 @@ export const services = [
     alt: "Recarga de gas para aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Gas",
-    objectPosition: "center 24%",
+    objectPosition: "center 18%",
   },
   {
     title: "Venta de equipos con instalación",
@@ -228,7 +228,7 @@ export const services = [
     alt: "Reparación de equipos de aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Reparación",
-    objectPosition: "center 42%",
+    objectPosition: "center 18%",
   },
   {
     title: "Calderas, calefactores y calefones",
