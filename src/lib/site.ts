@@ -1,135 +1,210 @@
 export const site = {
-  businessName: "Luma Estética",
-  tagline: "Cuidado facial, corporal y belleza integral en Córdoba",
-  shortPitch:
-    "Un espacio cálido y profesional para regalarte un momento de bienestar. Reservá tu turno por WhatsApp de forma simple.",
-  whatsappNumber: "5493512345678",
-  whatsappMessage: "Hola Luma, quiero consultar por un turno.",
-  address: "Nueva Córdoba, Córdoba Capital",
-  city: "Córdoba Capital",
-  hours: "Lunes a viernes de 9:00 a 19:00 | Sábados de 9:00 a 13:00",
-  locationUrl:
-    "https://www.google.com/maps/search/?api=1&query=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
-  locationEmbedUrl:
-    "https://www.google.com/maps?q=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
+  businessName: "Norte Equipa",
+  tagline: "Equipamiento y muebles a medida en Cordoba",
+  shortDescription:
+    "Soluciones de mobiliario y equipamiento a medida para hogares y espacios comerciales.",
+  heroEyebrow: "Cordoba, Argentina · Equipamiento a medida",
+  heroTitle: "Mobiliario pensado para ordenar, equipar y potenciar cada espacio",
+  heroSubtitle:
+    "Desarrollamos cocinas, placares, vestidores, guardados y amoblamientos comerciales con una propuesta clara, funcional y profesional.",
+  primaryCta: "Consultar por WhatsApp",
+  secondaryCta: "Ver catalogo",
+  logoUrl: "/images/norte-equipa/logo.jpg",
+  whatsappNumber: "",
+  whatsappDisplay: "WhatsApp a confirmar",
+  whatsappMessage: "Hola, vengo desde la web y quiero consultar por un proyecto.",
+  whatsappUrl: "#",
+  instagramUrl: "#",
+  location: "Cordoba, Argentina",
   navigation: [
     { label: "Inicio", href: "#inicio" },
-    { label: "Servicios", href: "#servicios" },
-    { label: "Sobre Luma", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Ubicación", href: "#ubicacion" },
+    { label: "Productos", href: "#productos" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Sobre nosotros", href: "#sobre" },
+    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
-export const services = [
+export const productCategories = [
   {
-    title: "Limpieza facial profunda",
-    description: "Renová la piel con un tratamiento suave que limpia, equilibra e ilumina.",
-    accent: "bg-[#f5ebe4]",
+    title: "Cocinas a medida",
+    description: "Diseno funcional para el uso diario.",
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+    alt: "Cocina a medida moderna",
+    objectPosition: "center 52%",
   },
   {
-    title: "Depilación",
-    description: "Servicios prolijos y cómodos para una piel suave y cuidada.",
-    accent: "bg-[#efe5dc]",
+    title: "Placares",
+    description: "Guardado integrado y mejor aprovechamiento.",
     image:
-      "https://images.unsplash.com/photo-1620916566395-1fcb4b0a5f2f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+    alt: "Placard moderno de piso a techo",
+    objectPosition: "center 48%",
   },
   {
-    title: "Perfilado de cejas",
-    description: "Definí la mirada con un diseño natural que respeta tus facciones.",
-    accent: "bg-[#f7f1ec]",
+    title: "Vestidores",
+    description: "Orden visual y circulacion comoda.",
     image:
-      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
+    alt: "Vestidor con estantes y cajones",
+    objectPosition: "center 46%",
   },
   {
-    title: "Lifting de pestañas",
-    description: "Un efecto sutil y elegante para levantar la mirada sin maquillaje diario.",
-    accent: "bg-[#eadfd8]",
+    title: "Muebles de guardado",
+    description: "Soluciones para organizar mejor cada ambiente.",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+    alt: "Mueble de guardado en un interior contemporaneo",
+    objectPosition: "center 54%",
   },
   {
-    title: "Tratamientos corporales",
-    description: "Opciones para acompañar tu cuidado corporal con foco en bienestar.",
-    accent: "bg-[#f3e9e2]",
+    title: "Amoblamientos comerciales",
+    description: "Mobiliario pensado para exhibir y trabajar mejor.",
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
+    alt: "Equipamiento comercial de lineas modernas",
+    objectPosition: "center 50%",
   },
   {
-    title: "Belleza de manos",
-    description: "Manicuría prolija y delicada para un acabado cuidado y natural.",
-    accent: "bg-[#eee8e4]",
+    title: "Muebles personalizados",
+    description: "Piezas a medida para necesidades puntuales.",
     image:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-15",
+    alt: "Mueble personalizado de terminacion sobria",
+    objectPosition: "center 56%",
   },
 ] as const;
 
-export const aboutText =
-  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos atención personalizada, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
-
-export const confidencePoints = [
-  "Atención personalizada",
-  "Productos seleccionados",
-  "Ambiente privado",
-  "Resultados naturales",
+export const catalogFilters = [
+  "Cocinas",
+  "Placares",
+  "Vestidores",
+  "Guardado",
+  "Comercial",
+  "Personalizados",
 ] as const;
 
-export const gallery = [
+export const catalogHighlights = [
   {
-    title: "Cabina facial",
-    description: "Luz suave, orden y una atmósfera serena para el cuidado del rostro.",
+    title: "Linea hogar",
+    subtitle: "Cocinas, guardados y dormitorios",
     image:
-      "https://images.unsplash.com/photo-1560750588-0f3a8f8f8d0b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     span: "lg:col-span-2 lg:row-span-2",
+    objectPosition: "center 54%",
   },
   {
-    title: "Espacio de relajación",
-    description: "Un entorno cómodo y cuidado para bajar el ritmo.",
+    title: "Soluciones comerciales",
+    subtitle: "Exhibicion, atencion y orden visual",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
     span: "",
+    objectPosition: "center 50%",
   },
   {
-    title: "Detalles de cuidado",
-    description: "Productos, textura y pequeños gestos que acompañan la experiencia.",
+    title: "Diseno a medida",
+    subtitle: "Adaptado al espacio y al uso real",
     image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80",
     span: "",
+    objectPosition: "center 54%",
   },
   {
-    title: "Ambiente privado",
-    description: "Una estética suave y cálida que invita a sentirte cómoda desde que llegás.",
+    title: "Terminaciones",
+    subtitle: "Materiales, lineas limpias y detalle",
     image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
     span: "lg:col-span-2",
+    objectPosition: "center 50%",
   },
+] as const;
+
+export const projects = [
+  {
+    title: "Cocina integral",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+    objectPosition: "center 52%",
+  },
+  {
+    title: "Guardado de piso a techo",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    objectPosition: "center 48%",
+  },
+  {
+    title: "Vestidor funcional",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    objectPosition: "center 46%",
+  },
+  {
+    title: "Equipamiento comercial",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    objectPosition: "center 50%",
+  },
+] as const;
+
+export const processSteps = [
+  {
+    number: "01",
+    title: "Consulta inicial",
+    description: "Relevamos la necesidad, el espacio y el objetivo del proyecto.",
+  },
+  {
+    number: "02",
+    title: "Medidas y propuesta",
+    description: "Ordenamos distribucion, materiales y primera propuesta visual.",
+  },
+  {
+    number: "03",
+    title: "Diseno y fabricacion",
+    description: "Avanzamos con el desarrollo tecnico y la produccion a medida.",
+  },
+  {
+    number: "04",
+    title: "Instalacion final",
+    description: "Coordinamos la entrega para dejar el espacio listo para usar.",
+  },
+] as const;
+
+export const trustPoints = [
+  "Trabajo a medida",
+  "Diseno funcional",
+  "Acompanamiento en el proceso",
+  "Soluciones para hogares y comercios",
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Cómo reservo un turno?",
-    answer: "Escribinos por WhatsApp y te compartimos la disponibilidad para coordinar tu visita.",
-  },
-  {
-    question: "¿Dónde están ubicadas?",
+    question: "Que tipo de proyectos realizan?",
     answer:
-      "Estamos en Nueva Córdoba, Córdoba Capital. También podemos enviarte la ubicación exacta por WhatsApp.",
+      "Trabajamos cocinas, placares, vestidores, muebles de guardado, equipamiento comercial y desarrollos personalizados.",
   },
   {
-    question: "¿Qué tratamiento me conviene si es mi primera vez?",
+    question: "La web puede crecer con mas categorias o productos?",
     answer:
-      "Podemos orientarte por mensaje para recomendarte una opción según lo que quieras mejorar o cuidar.",
+      "Si. La estructura esta pensada como base para escalar luego a un catalogo mas amplio o a paginas por linea de producto.",
   },
   {
-    question: "¿Aceptan efectivo o transferencia?",
-    answer: "Sí, podés consultar por los medios de pago disponibles antes de reservar tu turno.",
+    question: "Trabajan solo para hogares?",
+    answer:
+      "No. La propuesta contempla tanto hogares como espacios comerciales que necesitan orden, exhibicion y funcionalidad.",
+  },
+  {
+    question: "Como se inicia una consulta?",
+    answer:
+      "La forma ideal es centralizar el primer contacto por WhatsApp para entender necesidad, medidas aproximadas y tipo de proyecto.",
   },
 ] as const;
 
 export function buildWhatsappUrl(message: string) {
-  const phone = site.whatsappNumber;
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  if (!site.whatsappNumber) {
+    return "#";
+  }
+
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

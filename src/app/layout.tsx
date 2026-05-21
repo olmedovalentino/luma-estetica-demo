@@ -1,11 +1,22 @@
+import { Manrope, Sora } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const headingFont = Sora({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
+
+const bodyFont = Manrope({
+  subsets: ["latin"],
+  variable: "--font-body",
+});
+
 export const metadata: Metadata = {
-  title: "Luma Estética | Córdoba Capital",
+  title: "Norte Equipa | Equipamiento y muebles a medida",
   description:
-    "Luma Estética en Córdoba Capital: tratamientos faciales, corporales, depilación, cejas, pestañas y belleza integral.",
+    "Norte Equipa desarrolla muebles y equipamiento a medida para hogares y comercios en Cordoba, con una propuesta visual mas clara, moderna y profesional.",
 };
 
 export default function RootLayout({
@@ -15,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className={`${headingFont.variable} ${bodyFont.variable}`}>{children}</body>
     </html>
   );
 }

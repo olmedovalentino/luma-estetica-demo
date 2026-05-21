@@ -7,6 +7,10 @@ export function FloatingWhatsAppButton({
   href,
   label,
 }: FloatingWhatsAppButtonProps) {
+  if (href === "#") {
+    return null;
+  }
+
   return (
     <a
       href={href}
