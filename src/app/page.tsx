@@ -16,37 +16,18 @@ export default function HomePage() {
       <SiteHeader />
 
       <main className="overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl px-4 pb-18 pt-6 sm:px-6 lg:px-8 lg:pb-24 lg:pt-8">
+        <section id="inicio" className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8 lg:pb-28 lg:pt-8">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
-            <div className="relative z-10 max-w-[34rem] lg:-mt-6 lg:py-10">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C] lg:-translate-y-2">
+            <div className="relative z-10 max-w-[33rem] lg:-mt-8 lg:py-10">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C] lg:-translate-y-3">
                 {site.locationLabel}
               </p>
-              <h1 className="mt-4 max-w-[34rem] font-editorial text-[2.9rem] leading-[1.02] tracking-[-0.03em] text-[#1F1A17] sm:text-[3.35rem] lg:text-[3.9rem]">
+              <h1 className="mt-3 max-w-[32rem] font-editorial text-[2.65rem] leading-[1.03] tracking-[-0.03em] text-[#1F1A17] sm:text-[3.1rem] lg:text-[3.55rem]">
                 {site.heroTitle}
               </h1>
-              <p className="mt-10 max-w-lg text-base leading-8 text-[#6D655E] sm:text-lg">
+              <p className="mt-14 max-w-lg text-base leading-8 text-[#6D655E] sm:text-lg">
                 {site.heroSubtitle}
               </p>
-
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#1F1A17] text-[#FFFDF8] hover:bg-[#342b26]"
-                >
-                  Consultar por WhatsApp
-                </ButtonLink>
-                <ButtonLink
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="secondary"
-                >
-                  Ver trabajos
-                </ButtonLink>
-              </div>
             </div>
 
             <div className="relative">
@@ -90,11 +71,11 @@ export default function HomePage() {
               <h2 className="mt-4 max-w-lg font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
                 Diseño funcional para vivir mejor cada ambiente
               </h2>
-              <p className="mt-7 max-w-xl text-base leading-8 text-[#6D655E]">
+              <p className="mt-8 max-w-xl text-base leading-8 text-[#6D655E]">
                 Trabajamos cocinas, placares, vestidores y muebles personalizados para hogares que buscan funcionalidad, buena terminación y una estética integrada al espacio.
               </p>
 
-              <div className="mt-9 space-y-3">
+              <div className="mt-10 space-y-3">
                 {[
                   "Cocinas a medida",
                   "Placares y vestidores personalizados",
@@ -167,21 +148,18 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <div className="mt-12 grid gap-4 lg:grid-cols-2 xl:grid-cols-4">
-              {processSteps.map((step, index) => (
+            <div className="mt-14 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+              {processSteps.map((step) => (
                 <article
                   key={step.number}
-                  className="relative rounded-[1.85rem] border border-[#E8DDD2] bg-[#FFFDF8] px-6 py-7"
+                  className="rounded-[1.9rem] border border-[#E8DDD2] bg-[#FFFDF8] px-6 py-7"
                 >
-                  {index < processSteps.length - 1 ? (
-                    <span className="absolute -bottom-2 left-6 h-px w-14 bg-[#D8C1A8] lg:hidden" />
-                  ) : null}
                   <div className="flex items-start gap-4">
                     <span className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-[#D8C1A8] text-[0.78rem] font-semibold tracking-[0.18em] text-[#8A5A3C]">
                       {step.number}
                     </span>
                     <div className="min-w-0">
-                      <h3 className="font-editorial text-[1.65rem] leading-none text-[#1F1A17]">
+                      <h3 className="font-editorial text-[1.6rem] leading-none text-[#1F1A17]">
                         {step.title}
                       </h3>
                       <p className="mt-3 max-w-[18rem] text-sm leading-6 text-[#6D655E]">
@@ -196,18 +174,13 @@ export default function HomePage() {
         </section>
 
         <section id="trabajos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-            <div>
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-                Portfolio visual
-              </p>
-              <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-                Proyectos pensados para cada ambiente
-              </h2>
-            </div>
-            <p className="max-w-lg text-base leading-7 text-[#6D655E]">
-              Cocinas, placares, vestidores y muebles personalizados para distintos espacios.
+          <div className="max-w-2xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
+              Portfolio visual
             </p>
+            <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
+              Proyectos pensados para cada ambiente
+            </h2>
           </div>
 
           <div className="mt-10 grid auto-rows-[220px] gap-4 md:grid-cols-3 md:auto-rows-[240px]">
@@ -221,15 +194,12 @@ export default function HomePage() {
                   alt={item.alt}
                   fill
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
                   style={{ objectPosition: item.objectPosition }}
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(31,26,23,0.02),rgba(31,26,23,0.46))]" />
                 <div className="absolute inset-x-0 bottom-0 p-5 text-[#FFFDF8]">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#F3D9C8]">
-                    Proyecto
-                  </p>
-                  <h3 className="mt-2 font-editorial text-[2rem] leading-none">{item.title}</h3>
+                  <h3 className="font-editorial text-[1.9rem] leading-none">{item.title}</h3>
                 </div>
               </article>
             ))}
@@ -272,25 +242,25 @@ export default function HomePage() {
               <h2 className="mt-4 max-w-xl font-editorial text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">
                 Contanos qué espacio querés resolver
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-7 text-[#E9DDD1]">
+              <p className="mt-6 max-w-xl text-base leading-7 text-[#E9DDD1]">
                 Escribinos y contanos qué mueble o ambiente tenés en mente. Podemos orientarte con ideas, medidas y próximos pasos.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#FFFDF8] text-[#1F1A17] hover:bg-[#F3ECE2]"
+                  className="border border-[#D8C1A8] bg-[#D8C1A8] text-[#1F1A17] hover:bg-[#e4cfb8]"
                 >
-                  Consultar por WhatsApp
+                  Consultar por proyecto
                 </ButtonLink>
                 <ButtonLink
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="secondary"
-                  className="border-[#6D655E] bg-transparent text-[#FFFDF8] hover:border-[#D8C1A8] hover:bg-white/5"
+                  className="border-[#D8C1A8] bg-transparent text-[#FFFDF8] hover:border-[#FFFDF8] hover:bg-white/5"
                 >
                   Pedir presupuesto
                 </ButtonLink>
