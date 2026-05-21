@@ -117,9 +117,9 @@ export const portfolioItems = [
     objectPosition: "center 52%",
   },
   {
-    title: "Vestidor",
+    title: "Proyecto terminado",
     image: "/images/creativo-muebles/proyecto-5.jpg",
-    alt: "Proyecto de vestidor de Creativo Muebles",
+    alt: "Proyecto terminado de Creativo Muebles",
     span: "md:col-span-2",
     objectPosition: "center 54%",
   },
