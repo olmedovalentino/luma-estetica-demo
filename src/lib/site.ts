@@ -1,20 +1,22 @@
 export const site = {
   businessName: "Creativo Muebles",
-  tagline: "Muebles a medida en Cordoba",
+  tagline: "Muebles a medida en Córdoba",
   shortDescription:
-    "Disenamos y fabricamos cocinas, placares, vestidores y muebles personalizados en Cordoba.",
-  location: "Cordoba, Argentina",
-  locationLabel: "Cordoba, Argentina · Muebles a medida",
-  heroTitle: "Muebles disenados para transformar tus espacios",
+    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados en Córdoba.",
+  location: "Córdoba, Argentina",
+  locationLabel: "Córdoba, Argentina · Muebles a medida",
+  heroTitle: "Muebles a medida para transformar tus espacios",
   heroSubtitle:
-    "Disenamos y fabricamos cocinas, placares, vestidores y muebles personalizados para espacios funcionales, calidos y con identidad propia.",
-  primaryCta: "Consultar proyecto",
+    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados, pensados para aprovechar cada espacio con diseño, funcionalidad y buena terminación.",
+  primaryCta: "Consultar por WhatsApp",
   secondaryCta: "Ver trabajos",
   logoUrl: "/images/creativo-muebles/logo.jpg",
-  whatsappNumber: "",
-  whatsappDisplay: "",
-  whatsappMessage: "Hola, quiero consultar por un proyecto.",
-  whatsappUrl: "#",
+  whatsappNumber: "543515590818",
+  whatsappDisplay: "+54 351 559-0818",
+  whatsappMessage:
+    "Hola, vengo desde la página web. Quería consultar por un proyecto de muebles a medida.",
+  whatsappUrl:
+    "https://wa.me/543515590818?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web.%20Quer%C3%ADa%20consultar%20por%20un%20proyecto%20de%20muebles%20a%20medida.",
   instagramUrl: "https://www.instagram.com/creativomuebles/",
   navigation: [
     { label: "Inicio", href: "#inicio" },
@@ -34,14 +36,14 @@ export const site = {
 export const categoryProjects = [
   {
     title: "Cocinas a medida",
-    description: "Disenos funcionales para aprovechar cada espacio.",
+    description: "Diseños funcionales para aprovechar cada espacio.",
     image: "/images/creativo-muebles/cocina.jpg",
     alt: "Cocina a medida de Creativo Muebles",
     objectPosition: "center 52%",
   },
   {
     title: "Placares",
-    description: "Guardado a medida con distribucion personalizada.",
+    description: "Guardado a medida con distribución personalizada.",
     image: "/images/creativo-muebles/placard.jpg",
     alt: "Placard a medida de Creativo Muebles",
     objectPosition: "center 48%",
@@ -55,7 +57,7 @@ export const categoryProjects = [
   },
   {
     title: "Muebles personalizados",
-    description: "Soluciones para rincones y necesidades especificas.",
+    description: "Soluciones para rincones y necesidades específicas.",
     image: "/images/creativo-muebles/mueble-personalizado.jpg",
     alt: "Mueble personalizado de Creativo Muebles",
     objectPosition: "center 55%",
@@ -65,23 +67,23 @@ export const categoryProjects = [
 export const processSteps = [
   {
     number: "01",
-    title: "Consulta",
-    description: "Escuchamos la idea y el espacio a resolver.",
+    title: "Consulta inicial",
+    description: "Escuchamos tu idea y el espacio a resolver.",
   },
   {
     number: "02",
-    title: "Medidas",
-    description: "Definimos dimensiones, distribucion y detalles.",
+    title: "Medidas y diseño",
+    description: "Definimos medidas, distribución y materiales.",
   },
   {
     number: "03",
-    title: "Fabricacion",
-    description: "Trabajamos cada pieza en taller propio.",
+    title: "Presupuesto",
+    description: "Ordenamos la propuesta y el alcance del proyecto.",
   },
   {
     number: "04",
-    title: "Instalacion",
-    description: "Dejamos el ambiente listo para usar.",
+    title: "Fabricación e instalación",
+    description: "Fabricamos e instalamos para dejar todo listo.",
   },
 ] as const;
 
@@ -115,16 +117,16 @@ export const portfolioItems = [
     objectPosition: "center 54%",
   },
   {
-    title: "Diseno para hogar",
+    title: "Diseño para hogar",
     image: "/images/creativo-muebles/proyecto-5.jpg",
     alt: "Proyecto integral para hogar de Creativo Muebles",
     span: "md:col-span-2",
     objectPosition: "center 54%",
   },
   {
-    title: "Detalles de terminacion",
+    title: "Detalles de terminación",
     image: "/images/creativo-muebles/proyecto-6.jpg",
-    alt: "Detalle de terminacion de Creativo Muebles",
+    alt: "Detalle de terminación de Creativo Muebles",
     span: "",
     objectPosition: "center 50%",
   },
@@ -132,29 +134,29 @@ export const portfolioItems = [
 
 export const benefits = [
   "Mejor aprovechamiento del espacio",
-  "Diseno adaptado a tu necesidad",
+  "Diseño adaptado a tu necesidad",
   "Terminaciones pensadas para tu hogar",
-  "Fabricacion a medida",
+  "Fabricación a medida",
 ] as const;
 
 export const faqs = [
   {
-    question: "Hacen muebles a medida?",
+    question: "¿Hacen muebles a medida?",
     answer:
-      "Si, trabajamos proyectos personalizados segun el espacio, la necesidad y el estilo buscado.",
+      "Sí, trabajamos proyectos personalizados según el espacio, la necesidad y el estilo buscado.",
   },
   {
-    question: "Que tipo de muebles realizan?",
+    question: "¿Qué tipo de muebles realizan?",
     answer:
       "Cocinas, placares, vestidores y muebles personalizados para distintos ambientes del hogar.",
   },
   {
-    question: "Como puedo pedir un presupuesto?",
+    question: "¿Cómo puedo pedir un presupuesto?",
     answer:
-      "Podes escribir por WhatsApp o Instagram con fotos, ideas o medidas aproximadas del espacio.",
+      "Podés escribir por WhatsApp o Instagram con fotos, ideas o medidas aproximadas del espacio.",
   },
   {
-    question: "Trabajan en Cordoba?",
-    answer: "Si, Creativo Muebles trabaja en Cordoba, Argentina.",
+    question: "¿Trabajan en Córdoba?",
+    answer: "Sí, Creativo Muebles trabaja en Córdoba, Argentina.",
   },
 ] as const;

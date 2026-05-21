@@ -7,12 +7,7 @@ type SiteHeaderProps = {
   whatsappUrl: string;
 };
 
-const isWhatsAppAvailable = (url: string) => url !== "#";
-
 export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
-  const contactHref = isWhatsAppAvailable(whatsappUrl) ? whatsappUrl : site.instagramUrl;
-  const contactLabel = isWhatsAppAvailable(whatsappUrl) ? "Consultar" : "Instagram";
-
   return (
     <header className="sticky top-0 z-40 border-b border-[#E8DDD2]/90 bg-[#FFFDF8]/88 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
@@ -41,11 +36,11 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
 
         <div className="hidden lg:block">
           <ButtonLink
-            href={contactHref}
-            target={contactHref.startsWith("http") ? "_blank" : undefined}
-            rel={contactHref.startsWith("http") ? "noopener noreferrer" : undefined}
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {contactLabel}
+            Consultar por WhatsApp
           </ButtonLink>
         </div>
 
@@ -67,12 +62,12 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
             </div>
             <div className="mt-4">
               <ButtonLink
-                href={contactHref}
-                target={contactHref.startsWith("http") ? "_blank" : undefined}
-                rel={contactHref.startsWith("http") ? "noopener noreferrer" : undefined}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full"
               >
-                {contactLabel}
+                Consultar por WhatsApp
               </ButtonLink>
             </div>
           </div>

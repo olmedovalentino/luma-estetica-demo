@@ -15,9 +15,9 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Creativo Muebles | Muebles a medida en Cordoba",
+  title: "Creativo Muebles | Muebles a medida en Córdoba",
   description:
-    "Creativo Muebles disena y fabrica cocinas, placares, vestidores y muebles personalizados para hogares en Cordoba, Argentina.",
+    "Creativo Muebles diseña y fabrica cocinas, placares, vestidores y muebles personalizados para hogares en Córdoba, Argentina.",
 };
 
 export default function RootLayout({
