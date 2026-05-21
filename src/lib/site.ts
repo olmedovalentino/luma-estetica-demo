@@ -224,7 +224,7 @@ export const services = [
     title: "Reparación de equipos",
     description:
       "Diagnóstico y reparación de fallas en equipos de aire acondicionado para recuperar su funcionamiento correctamente.",
-    image: site.media.gallery[1],
+    image: "/images/farias-aires/reparacion-1.jpg",
     alt: "Reparación de equipos de aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Reparación",
