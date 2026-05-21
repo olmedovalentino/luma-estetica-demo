@@ -163,7 +163,7 @@ export const mediaFrames = {
   equipment: {
     image: "/images/farias-aires/equipo-piso-techo.jpg",
     variant: "cover",
-    objectPosition: "center 44%",
+    objectPosition: "center 52%",
   },
   promos: {
     mudanza: {
@@ -208,7 +208,7 @@ export const services = [
     alt: "Recarga de gas para aire acondicionado",
     accent: "bg-[#E43125]",
     placeholderLabel: "Gas",
-    objectPosition: "center 48%",
+    objectPosition: "center 56%",
   },
   {
     title: "Venta de equipos con instalación",
@@ -218,7 +218,7 @@ export const services = [
     alt: "Venta de equipos de aire acondicionado",
     accent: "bg-[#111111]",
     placeholderLabel: "Equipos",
-    objectPosition: "center 42%",
+    objectPosition: "center 52%",
   },
   {
     title: "Reparación de equipos",
