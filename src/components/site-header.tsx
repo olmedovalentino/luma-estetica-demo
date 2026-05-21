@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { ButtonLink } from "@/components/button-link";
 import { site } from "@/lib/site";
 
@@ -14,7 +16,16 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-[#E8DDD2]/90 bg-[#FFFDF8]/88 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="text-[#1F1A17]">
+        <a href="#inicio" className="flex items-center gap-3 text-[#1F1A17]">
+          <span className="relative h-11 w-11 overflow-hidden rounded-full border border-[#E8DDD2] bg-white">
+            <Image
+              src={site.logoUrl}
+              alt="Logo de Creativo Muebles"
+              fill
+              sizes="44px"
+              className="object-cover"
+            />
+          </span>
           <span className="font-editorial text-[1.8rem] leading-none tracking-[0.02em]">
             Creativo Muebles
           </span>

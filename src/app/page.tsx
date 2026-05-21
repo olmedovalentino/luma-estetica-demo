@@ -6,10 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { benefits, categoryProjects, faqs, portfolioItems, processSteps, site } from "@/lib/site";
 
-const heroImage =
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80";
-const introImage =
-  "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80";
+const heroImage = "/images/creativo-muebles/hero.jpg";
 
 const isExternalLink = (href: string) => href.startsWith("http");
 const isWhatsAppAvailable = site.whatsappUrl !== "#";
@@ -48,33 +45,6 @@ export default function HomePage() {
                   {site.secondaryCta}
                 </ButtonLink>
               </div>
-
-              <div className="mt-10 grid max-w-xl gap-4 border-t border-[#E8DDD2] pt-6 sm:grid-cols-3">
-                <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#8A5A3C]">
-                    Hecho a medida
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
-                    Proyectos pensados para cada ambiente del hogar.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#8A5A3C]">
-                    Fabricacion propia
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
-                    Taller y terminaciones cuidadas para uso real.
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-[#8A5A3C]">
-                    Cordoba
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
-                    Consultas por proyecto y presupuesto personalizado.
-                  </p>
-                </div>
-              </div>
             </div>
 
             <div className="relative">
@@ -91,15 +61,6 @@ export default function HomePage() {
                     style={{ objectPosition: "center 54%" }}
                   />
                 </div>
-
-                <div className="absolute bottom-8 left-8 max-w-[230px] rounded-[1.5rem] border border-white/70 bg-[#FFFDF8]/92 p-4 backdrop-blur">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#8A5A3C]">
-                    Diseno + oficio
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
-                    Cocinas, placares, vestidores y muebles personalizados con una mirada funcional y actual.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -110,12 +71,12 @@ export default function HomePage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative h-[360px] overflow-hidden rounded-[2.2rem] border border-[#E8DDD2] sm:h-[460px]">
                 <Image
-                  src={introImage}
+                  src="/images/creativo-muebles/proyecto-5.jpg"
                   alt="Espacio interior con mueble de guardado a medida"
                   fill
                   sizes="(min-width: 1024px) 48vw, 100vw"
                   className="object-cover"
-                  style={{ objectPosition: "center 52%" }}
+                  style={{ objectPosition: "center 54%" }}
                 />
               </div>
             </div>
@@ -128,18 +89,18 @@ export default function HomePage() {
                 Diseno funcional para vivir mejor cada ambiente
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-[#6D655E]">
-                Cada proyecto parte de una necesidad concreta: aprovechar mejor un ambiente, ordenar, sumar funcionalidad o renovar un espacio. En Creativo Muebles trabajamos soluciones a medida para hogares que buscan diseno, practicidad y buena terminacion.
+                Trabajamos cocinas, placares, vestidores y muebles personalizados para hogares que buscan funcionalidad, buena terminacion y una estetica integrada al espacio.
               </p>
 
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-3">
                 {[
-                  "Cocinas pensadas para el uso diario",
-                  "Placares y vestidores con distribucion personalizada",
-                  "Fabricacion propia para controlar cada detalle del proyecto",
+                  "Cocinas a medida",
+                  "Placares y vestidores personalizados",
+                  "Fabricacion propia en Cordoba",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-4 border-b border-[#E8DDD2] pb-4">
                     <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#8A5A3C]" />
-                    <p className="text-sm leading-7 text-[#6D655E]">{item}</p>
+                    <p className="text-sm leading-6 text-[#6D655E]">{item}</p>
                   </div>
                 ))}
               </div>
@@ -153,7 +114,7 @@ export default function HomePage() {
               Proyectos y categorias
             </p>
             <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-              Soluciones hechas a medida para distintas formas de habitar
+              Soluciones a medida para distintos ambientes
             </h2>
           </div>
 
@@ -180,7 +141,7 @@ export default function HomePage() {
                     <h3 className="font-editorial text-3xl leading-none text-[#1F1A17]">
                       {project.title}
                     </h3>
-                    <p className="mt-3 max-w-md text-sm leading-7 text-[#6D655E]">
+                    <p className="mt-3 max-w-md text-sm leading-6 text-[#6D655E]">
                       {project.description}
                     </p>
                   </div>
@@ -196,14 +157,14 @@ export default function HomePage() {
         <section id="proceso" className="border-y border-[#E8DDD2] bg-[#F3ECE2]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
             <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-              <div>
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-                  Proceso de trabajo
-                </p>
-                <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-                  Del espacio a la idea, y de la idea al mueble
-                </h2>
-              </div>
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
+                Proceso de trabajo
+              </p>
+              <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
+                Del espacio al mueble
+              </h2>
+            </div>
 
               <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {processSteps.map((step) => (
@@ -214,11 +175,11 @@ export default function HomePage() {
                     <span className="text-sm font-semibold tracking-[0.28em] text-[#8A5A3C]">
                       {step.number}
                     </span>
-                    <div className="mt-10">
-                      <h3 className="font-editorial text-[1.9rem] leading-none text-[#1F1A17]">
+                    <div className="mt-8">
+                      <h3 className="font-editorial text-[1.75rem] leading-none text-[#1F1A17]">
                         {step.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-7 text-[#6D655E]">{step.description}</p>
+                      <p className="mt-3 text-sm leading-6 text-[#6D655E]">{step.description}</p>
                     </div>
                   </article>
                 ))}
@@ -237,8 +198,8 @@ export default function HomePage() {
                 Proyectos pensados para cada ambiente
               </h2>
             </div>
-            <p className="max-w-xl text-base leading-8 text-[#6D655E]">
-              Cocinas, placares, vestidores y muebles disenados a medida para distintos espacios.
+            <p className="max-w-lg text-base leading-7 text-[#6D655E]">
+              Cocinas, placares, vestidores y muebles personalizados para distintos espacios.
             </p>
           </div>
 
@@ -285,7 +246,7 @@ export default function HomePage() {
                   key={benefit}
                   className="flex items-center justify-between gap-4 border-b border-[#E8DDD2] pb-4"
                 >
-                  <p className="text-base leading-7 text-[#1F1A17]">{benefit}</p>
+                  <p className="text-base leading-6 text-[#1F1A17]">{benefit}</p>
                   <span className="text-sm font-semibold tracking-[0.28em] text-[#8A5A3C]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
@@ -296,7 +257,7 @@ export default function HomePage() {
         </section>
 
         <section id="contacto" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-[2.2rem] border border-[#E8DDD2] bg-[#1F1A17] p-8 text-[#FFFDF8] sm:p-10">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#D8C1A8]">
                 Consulta por proyecto
@@ -304,8 +265,8 @@ export default function HomePage() {
               <h2 className="mt-4 max-w-xl font-editorial text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">
                 Contanos que espacio queres resolver
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[#E9DDD1]">
-                Escribinos por WhatsApp y contanos que mueble o ambiente tenes en mente. Podemos orientarte con ideas, medidas y proximos pasos para avanzar.
+              <p className="mt-5 max-w-xl text-base leading-7 text-[#E9DDD1]">
+                Escribinos y contanos que mueble o ambiente tenes en mente. Podemos orientarte con ideas, medidas y proximos pasos.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -330,13 +291,12 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-[2.2rem] border border-[#E8DDD2] bg-[#F3ECE2] p-8 sm:p-10">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-                Datos de contacto
-              </p>
-              <div className="mt-6 space-y-5">
+              <div className="space-y-5">
                 <div className="border-b border-[#D8C1A8] pb-5">
-                  <p className="text-sm font-semibold text-[#1F1A17]">Ubicacion</p>
-                  <p className="mt-2 text-sm leading-7 text-[#6D655E]">{site.location}</p>
+                  <p className="text-sm font-semibold text-[#1F1A17]">Cordoba, Argentina</p>
+                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
+                    Consultas por proyecto via WhatsApp o Instagram.
+                  </p>
                 </div>
                 <div className="border-b border-[#D8C1A8] pb-5">
                   <p className="text-sm font-semibold text-[#1F1A17]">Instagram</p>
@@ -344,17 +304,17 @@ export default function HomePage() {
                     href={site.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-block text-sm leading-7 text-[#6D655E] underline decoration-[#D8C1A8] underline-offset-4"
+                    className="mt-2 inline-block text-sm leading-6 text-[#6D655E] underline decoration-[#D8C1A8] underline-offset-4"
                   >
                     @creativomuebles
                   </a>
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#1F1A17]">WhatsApp</p>
-                  <p className="mt-2 text-sm leading-7 text-[#6D655E]">
+                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
                     {isWhatsAppAvailable
                       ? site.whatsappDisplay || "Disponible para consultas"
-                      : "Numero a confirmar. El acceso queda listo para sumar el contacto real cuando este disponible."}
+                      : "Numero a confirmar."}
                   </p>
                 </div>
               </div>
