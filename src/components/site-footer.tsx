@@ -57,7 +57,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="transition hover:text-[#1F1A17]"
             >
-              WhatsApp
+              {site.whatsappDisplay}
             </a>
           </div>
         </div>
