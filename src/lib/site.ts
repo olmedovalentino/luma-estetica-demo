@@ -1,204 +1,177 @@
 export const site = {
-  businessName: "Belleza Mediterránea",
-  logoLineOne: "Belleza",
-  logoLineTwo: "Mediterránea",
-  tagline: "Estética · Salud · Movimiento",
-  shortDescription: "Estética, salud y movimiento en el Centro de Córdoba.",
-  aboutText:
-    "En Belleza Mediterránea combinamos estética, masajes y trabajo corporal para acompañar el cuidado de tu piel y tu cuerpo con atención personalizada.",
-  heroEyebrow: "Centro de Córdoba · Obispo Trejo 179",
-  heroTitle: "Estética, salud y movimiento en Córdoba",
+  businessName: "Creativo Muebles",
+  tagline: "Muebles a medida en Cordoba",
+  shortDescription:
+    "Disenamos y fabricamos cocinas, placares, vestidores y muebles personalizados para hogares en Cordoba.",
+  location: "Cordoba, Argentina",
+  locationLabel: "Cordoba, Argentina · Muebles a medida",
+  heroTitle: "Muebles disenados para transformar tus espacios",
   heroSubtitle:
-    "Un espacio para cuidar tu piel, aliviar tensiones y reconectar con tu bienestar.",
-  heroNote: "Atención con turno previo · Ambos sexos",
-  heroCtaPrimary: "Consultar por WhatsApp",
-  heroCtaSecondary: "Ver servicios",
-  servicesEyebrow: "Servicios",
-  servicesTitle: "Tratamientos pensados para tu bienestar",
-  servicesIntro:
-    "Seis propuestas principales para acompañar el cuidado facial, corporal y el alivio de tensiones.",
-  servicesListTitle: "También podés consultar por",
-  aboutEyebrow: "Sobre la marca",
-  aboutTitle: "Un espacio integral para tu bienestar",
-  galleryEyebrow: "Galería",
-  galleryTitle: "Un espacio para cuidarte",
-  galleryDescription:
-    "Tratamientos, masajes y bienestar en un ambiente pensado para que te sientas cómoda desde que llegás.",
-  faqEyebrow: "Preguntas frecuentes",
-  faqTitle: "Preguntas frecuentes",
-  faqDescription: "Información clara para reservar y elegir tu tratamiento con tranquilidad.",
-  contactEyebrow: "Ubicación y contacto",
-  contactTitle: "Estamos en el Centro de Córdoba",
-  contactDescription:
-    "Obispo Trejo 179. Zona Manzana Jesuítica. Atención con turno previo.",
-  footerDescription: "Estética · Salud · Movimiento",
-  whatsappNumber: "543516698256",
-  whatsappDisplay: "+54 9 351 669 8256",
-  whatsappMessage: "Hola, quiero consultar por un turno.",
-  whatsappUrl:
-    "https://wa.me/543516698256?text=Hola%2C%20quiero%20consultar%20por%20un%20turno.",
-  instagramUrl: "https://www.instagram.com/esteticabellezamediterranea",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Obispo%20Trejo%20179%2C%20Centro%20de%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
-  mapsEmbedUrl:
-    "https://www.google.com/maps?q=Obispo%20Trejo%20179%2C%20Centro%20de%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
-  address: "Obispo Trejo 179, Centro de Córdoba, Córdoba Capital, Argentina.",
-  addressShort: "Obispo Trejo 179, Centro de Córdoba",
-  locationLabel: "Centro de Córdoba · Manzana Jesuítica",
-  availability: "Atención con turno previo",
-  serviceAudience: "Ambos sexos",
+    "Disenamos y fabricamos cocinas, placares, vestidores y muebles personalizados para que cada ambiente sea funcional, comodo y con identidad propia.",
+  primaryCta: "Consultar proyecto",
+  secondaryCta: "Ver trabajos",
+  whatsappNumber: "",
+  whatsappDisplay: "",
+  whatsappMessage: "Hola, quiero consultar por un proyecto.",
+  whatsappUrl: "#",
+  instagramUrl: "https://www.instagram.com/creativomuebles/",
   navigation: [
     { label: "Inicio", href: "#inicio" },
-    { label: "Servicios", href: "#servicios" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Contacto", href: "#ubicacion" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Contacto", href: "#contacto" },
   ],
   footerNavigation: [
-    { label: "Servicios", href: "#servicios" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Contacto", href: "#ubicacion" },
-  ],
-  trustPoints: [
-    "Estética facial y corporal",
-    "Masajes y bienestar",
-    "Terapia Postural Activa",
-    "Atención con turno previo",
-  ],
-  contactPoints: [
-    "Obispo Trejo 179",
-    "Zona Manzana Jesuítica",
-    "Atención con turno previo",
-  ],
-  socialLinks: [
-    { label: "WhatsApp", href: "https://wa.me/543516698256?text=Hola%2C%20quiero%20consultar%20por%20un%20turno.", icon: "whatsapp" },
-    { label: "Instagram", href: "https://www.instagram.com/esteticabellezamediterranea", icon: "instagram" },
+    { label: "Inicio", href: "#inicio" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Preguntas", href: "#preguntas" },
+    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
-export const services = [
+export const categoryProjects = [
   {
-    title: "Tratamientos faciales",
+    title: "Cocinas a medida",
     description:
-      "Limpiezas y tratamientos personalizados para cuidar la piel, mejorar su textura y recuperar luminosidad.",
-    image: "/images/belleza-mediterranea/servicio-faciales.jpg",
-    alt: "Tratamientos faciales en Belleza Mediterránea",
-    accent: "bg-[#B8795F]",
-    imagePosition: "object-center [object-position:center_34%]",
+      "Disenos funcionales pensados para aprovechar cada espacio y acompanar el uso diario.",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+    alt: "Cocina a medida con tonos de madera y luz natural",
+    objectPosition: "center 52%",
   },
   {
-    title: "Masajes",
+    title: "Placares",
     description:
-      "Masajes relajantes y terapéuticos para aliviar tensiones y regalarte una pausa de bienestar.",
-    image: "/images/belleza-mediterranea/servicio-masajes.jpg",
-    alt: "Masajes relajantes en Belleza Mediterránea",
-    accent: "bg-[#7E8768]",
-    imagePosition: "object-center [object-position:center_42%]",
+      "Soluciones de guardado a medida, con distribucion interior adaptada a cada necesidad.",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+    alt: "Placard contemporaneo integrado a un dormitorio",
+    objectPosition: "center 48%",
   },
   {
-    title: "Terapia Postural Activa",
+    title: "Vestidores",
     description:
-      "Trabajo corporal orientado a mejorar postura, movilidad y bienestar físico.",
-    image: "/images/belleza-mediterranea/servicio-tpa.jpg",
-    alt: "Terapia Postural Activa en Belleza Mediterránea",
-    accent: "bg-[#9BAA92]",
-    imagePosition: "object-center [object-position:center_26%]",
+      "Espacios organizados, comodos y visuales para ordenar ropa, accesorios y objetos personales.",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+    alt: "Vestidor luminoso con estantes y cajoneras a medida",
+    objectPosition: "center 45%",
   },
   {
-    title: "Depilación",
+    title: "Muebles personalizados",
     description:
-      "Opciones de depilación con cera y definitiva, pensadas para una experiencia cómoda y cuidada.",
-    image: "/images/belleza-mediterranea/servicio-depilacion.jpg",
-    alt: "Servicio de depilación en Belleza Mediterránea",
-    accent: "bg-[#C9987D]",
-    imagePosition: "object-center [object-position:center_32%]",
-  },
-  {
-    title: "Tratamientos corporales",
-    description:
-      "Tratamientos estéticos corporales para acompañar el cuidado del cuerpo y la piel.",
-    image: "/images/belleza-mediterranea/servicio-corporal.jpg",
-    alt: "Tratamientos corporales en Belleza Mediterránea",
-    accent: "bg-[#8D9578]",
-    imagePosition: "object-center [object-position:center_36%]",
-  },
-  {
-    title: "Bruxismo y ATM",
-    description:
-      "Abordajes orientados a aliviar molestias vinculadas a tensión mandibular, bruxismo y ATM.",
-    image: "/images/belleza-mediterranea/servicio-bruxismo-atm.jpg",
-    alt: "Abordaje de bruxismo y ATM en Belleza Mediterránea",
-    accent: "bg-[#B68A74]",
-    imagePosition: "object-center [object-position:center_28%]",
+      "Muebles pensados para resolver rincones, ambientes y necesidades especificas del hogar.",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80&sat=-10",
+    alt: "Mueble personalizado de guardado con madera clara",
+    objectPosition: "center 56%",
   },
 ] as const;
 
-export const secondaryServices = [
-  "Limpiezas faciales",
-  "Cosmetología",
-  "Cosmiatría",
-  "Depilación con cera",
-  "Depilación definitiva",
-  "Bienestar corporal",
+export const processSteps = [
+  {
+    number: "01",
+    title: "Consulta inicial",
+    description:
+      "Entendemos que necesitas, que espacio queres resolver y que estilo buscas.",
+  },
+  {
+    number: "02",
+    title: "Propuesta y medidas",
+    description:
+      "Definimos medidas, distribucion, materiales y detalles del proyecto.",
+  },
+  {
+    number: "03",
+    title: "Fabricacion",
+    description:
+      "Trabajamos el mueble en taller con terminaciones pensadas para cada ambiente.",
+  },
+  {
+    number: "04",
+    title: "Instalacion",
+    description:
+      "Coordinamos la colocacion para dejar el espacio listo para usar.",
+  },
 ] as const;
 
-export const gallery = [
+export const portfolioItems = [
   {
-    title: "Cabina de atención",
-    description: "Un ambiente prolijo y sereno para cada turno.",
-    image: "/images/belleza-mediterranea/galeria-cabina.jpg",
-    alt: "Cabina de atención de Belleza Mediterránea",
-    span: "lg:col-span-2 lg:row-span-2",
-    imagePosition: "object-center [object-position:center_50%]",
+    title: "Cocina a medida",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+    alt: "Cocina a medida con isla y terminaciones calidas",
+    span: "md:col-span-2 md:row-span-2",
+    objectPosition: "center 52%",
   },
   {
-    title: "Cuidado facial",
-    description: "Protocolos pensados para tu piel.",
-    image: "/images/belleza-mediterranea/servicio-faciales.jpg",
-    alt: "Cuidado facial en Belleza Mediterránea",
+    title: "Placard funcional",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    alt: "Placard funcional en dormitorio moderno",
     span: "",
-    imagePosition: "object-center [object-position:center_34%]",
+    objectPosition: "center 48%",
   },
   {
-    title: "Masajes",
-    description: "Pausa y alivio para bajar tensiones.",
-    image: "/images/belleza-mediterranea/galeria-relax.jpg",
-    alt: "Espacio de masajes en Belleza Mediterránea",
+    title: "Vestidor personalizado",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Vestidor personalizado con estanterias abiertas",
     span: "",
-    imagePosition: "object-center [object-position:center_46%]",
+    objectPosition: "center 45%",
   },
   {
-    title: "Bienestar corporal",
-    description: "Tratamientos y movimiento en un mismo espacio.",
-    image: "/images/belleza-mediterranea/galeria-espacio.jpg",
-    alt: "Bienestar corporal en Belleza Mediterránea",
-    span: "lg:col-span-2",
-    imagePosition: "object-center [object-position:center_48%]",
+    title: "Mueble de guardado",
+    image:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80",
+    alt: "Mueble de guardado en living con diseno minimalista",
+    span: "",
+    objectPosition: "center 54%",
   },
+  {
+    title: "Diseno para hogar",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80&sat=-20",
+    alt: "Interior de hogar con muebles integrados",
+    span: "md:col-span-2",
+    objectPosition: "center 56%",
+  },
+  {
+    title: "Detalles de terminacion",
+    image:
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
+    alt: "Detalle de terminacion en madera y herrajes",
+    span: "",
+    objectPosition: "center 50%",
+  },
+] as const;
+
+export const benefits = [
+  "Aprovechas mejor cada centimetro",
+  "Elegis distribucion, estilo y terminaciones",
+  "Adaptas el diseno a tu forma de vivir",
+  "Logras un resultado mas integrado al espacio",
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Cómo reservo un turno?",
+    question: "¿Hacen muebles a medida?",
     answer:
-      "Podés escribir por WhatsApp para consultar disponibilidad y coordinar el servicio que necesitás.",
+      "Si, trabajamos proyectos personalizados segun el espacio, la necesidad y el estilo buscado.",
   },
   {
-    question: "¿Dónde están ubicados?",
+    question: "¿Que tipo de muebles realizan?",
     answer:
-      "Estamos en Obispo Trejo 179, Centro de Córdoba, zona Manzana Jesuítica.",
+      "Principalmente cocinas, placares, vestidores y muebles personalizados para distintos ambientes del hogar.",
   },
   {
-    question: "¿La atención es con turno previo?",
+    question: "¿Como puedo pedir un presupuesto?",
     answer:
-      "Sí, trabajamos con turno previo para organizar cada atención de forma cómoda y personalizada.",
+      "Podes escribir por WhatsApp o Instagram contando que necesitas y, si tenes, enviar fotos o medidas aproximadas del espacio.",
   },
   {
-    question: "¿Cómo sé qué tratamiento me conviene?",
-    answer:
-      "Podés consultar por WhatsApp y te orientamos según lo que estés buscando: cuidado facial, masajes, depilación, TPA o bienestar corporal.",
+    question: "¿Trabajan en Cordoba?",
+    answer: "Si, Creativo Muebles trabaja en Cordoba, Argentina.",
   },
 ] as const;

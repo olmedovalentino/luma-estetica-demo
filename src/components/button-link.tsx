@@ -12,11 +12,11 @@ export function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   const base =
-    "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition will-change-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7E8768] focus-visible:ring-offset-2";
+    "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold tracking-[0.02em] transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8A5A3C] focus-visible:ring-offset-2";
   const styles =
     variant === "primary"
-      ? "bg-[#B8795F] text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#A4664D]"
-      : "border border-[#E7D6C3] bg-white/80 text-[#2C211B] hover:-translate-y-0.5 hover:border-[#B8795F] hover:bg-[#F8F3EC]";
+      ? "bg-[#1F1A17] text-[#FFFDF8] shadow-[0_20px_35px_-24px_rgba(31,26,23,0.65)] hover:-translate-y-0.5 hover:bg-[#342b26]"
+      : "border border-[#D8C1A8] bg-[#FFFDF8]/80 text-[#1F1A17] hover:-translate-y-0.5 hover:border-[#8A5A3C] hover:bg-[#F7F2EA]";
 
   return (
     <a className={`${base} ${styles} ${className}`} {...props}>
