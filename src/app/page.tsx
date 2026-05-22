@@ -9,7 +9,7 @@ import { buildWhatsappUrl, featuredProjects, site } from "@/lib/site";
 
 export default function HomePage() {
   const whatsappUrl = buildWhatsappUrl(site.whatsappMessage);
-  const heroImage = "/images/norte-equipa/hero.jpg";
+  const heroImage = "/images/norte-equipa/hero.png";
 
   return (
     <PageShell>

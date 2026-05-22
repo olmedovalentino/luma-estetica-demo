@@ -12,7 +12,7 @@ export const site = {
     "En Norte Equipa desarrollamos propuestas de equipamiento pensadas para aprovechar mejor cada ambiente, combinando funcionalidad, diseno y terminaciones prolijas.",
   primaryCta: "Consultar por WhatsApp",
   secondaryCta: "Ver proyectos",
-  logoUrl: "/images/norte-equipa/logo.jpg",
+  logoUrl: "/images/norte-equipa/logo.png",
   whatsappNumber: "",
   whatsappDisplay: "WhatsApp a confirmar",
   whatsappMessage: "Hola, vengo desde la web y quiero consultar por un proyecto.",
@@ -31,7 +31,7 @@ export const site = {
 export const featuredProjects = [
   {
     title: "Cocina equipada",
-    image: "/images/norte-equipa/proyecto-1.jpg",
+    image: "/images/norte-equipa/proyecto-1.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
     objectPosition: "center 52%",
@@ -39,7 +39,7 @@ export const featuredProjects = [
   },
   {
     title: "Espacio de guardado",
-    image: "/images/norte-equipa/proyecto-2.jpg",
+    image: "/images/norte-equipa/proyecto-2.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 48%",
@@ -47,7 +47,7 @@ export const featuredProjects = [
   },
   {
     title: "Proyecto comercial",
-    image: "/images/norte-equipa/proyecto-4.jpg",
+    image: "/images/norte-equipa/proyecto-4.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
@@ -60,7 +60,7 @@ export const lineCategories = [
     title: "Norte Equipa",
     description:
       "Soluciones funcionales de equipamiento para hogares, comercios y espacios de trabajo.",
-    image: "/images/norte-equipa/producto-1.jpg",
+    image: "/images/norte-equipa/linea-norte.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
     alt: "Línea Norte Equipa",
@@ -70,7 +70,7 @@ export const lineCategories = [
     title: "Premium",
     description:
       "Diseños con terminaciones cuidadas y una presencia más destacada para ambientes especiales.",
-    image: "/images/norte-equipa/producto-2.jpg",
+    image: "/images/norte-equipa/linea-premium.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     alt: "Línea Premium",
@@ -79,7 +79,7 @@ export const lineCategories = [
   {
     title: "Farm",
     description: "Equipamiento pensado para locales, farmacias y espacios comerciales.",
-    image: "/images/norte-equipa/producto-3.jpg",
+    image: "/images/norte-equipa/linea-farm.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
     alt: "Línea Farm",
@@ -88,7 +88,7 @@ export const lineCategories = [
   {
     title: "Placards",
     description: "Guardado a medida para aprovechar mejor cada ambiente.",
-    image: "/images/norte-equipa/producto-4.jpg",
+    image: "/images/norte-equipa/placard.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
     alt: "Línea Placards",
@@ -97,7 +97,7 @@ export const lineCategories = [
   {
     title: "Vestidores",
     description: "Diseño y organización para espacios de guardado personalizados.",
-    image: "/images/norte-equipa/producto-5.jpg",
+    image: "/images/norte-equipa/vestidor.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     alt: "Línea Vestidores",
@@ -108,7 +108,7 @@ export const lineCategories = [
 export const projects = [
   {
     title: "Cocina a medida",
-    image: "/images/norte-equipa/proyecto-1.jpg",
+    image: "/images/norte-equipa/proyecto-1.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
     objectPosition: "center 52%",
@@ -116,7 +116,7 @@ export const projects = [
   },
   {
     title: "Placard funcional",
-    image: "/images/norte-equipa/proyecto-2.jpg",
+    image: "/images/norte-equipa/proyecto-2.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 48%",
@@ -124,7 +124,7 @@ export const projects = [
   },
   {
     title: "Vestidor",
-    image: "/images/norte-equipa/proyecto-3.jpg",
+    image: "/images/norte-equipa/proyecto-3.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 46%",
@@ -132,7 +132,7 @@ export const projects = [
   },
   {
     title: "Amoblamiento comercial",
-    image: "/images/norte-equipa/proyecto-4.jpg",
+    image: "/images/norte-equipa/proyecto-4.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
@@ -140,7 +140,7 @@ export const projects = [
   },
   {
     title: "Espacio de guardado",
-    image: "/images/norte-equipa/proyecto-5.jpg",
+    image: "/images/norte-equipa/proyecto-5.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 54%",
@@ -148,7 +148,7 @@ export const projects = [
   },
   {
     title: "Proyecto personalizado",
-    image: "/images/norte-equipa/proyecto-6.jpg",
+    image: "/images/norte-equipa/proyecto-6.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
@@ -190,7 +190,7 @@ export const aboutSection = {
   title: "Diseno, funcionalidad y soluciones a medida",
   text:
     "Trabajamos cada proyecto pensando en el uso real del espacio, buscando soluciones practicas, duraderas y visualmente cuidadas para hogares, comercios y ambientes de trabajo.",
-  image: "/images/norte-equipa/sobre-nosotros.jpg",
+  image: "/images/norte-equipa/linea-norte.png",
   fallbackImage:
     "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
   alt: "Interior con equipamiento a medida",

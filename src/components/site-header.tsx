@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,8 +13,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/70 bg-[rgba(248,250,251,0.88)] backdrop-blur-xl">
       <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
         <Link href="/" className="flex items-center gap-3 text-[#18212b]">
-          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-[#dbe3e8] bg-white text-sm font-semibold text-[#18212b]">
-            NE
+          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-[#dbe3e8] bg-white">
+            <Image
+              src={site.logoUrl}
+              alt={`${site.businessName} logo`}
+              width={44}
+              height={44}
+              className="h-full w-full object-cover"
+            />
           </span>
           <span className="font-heading text-[1.35rem] font-semibold tracking-[-0.03em]">
             Norte Equipa
