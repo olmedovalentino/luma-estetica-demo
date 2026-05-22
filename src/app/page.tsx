@@ -2,14 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ButtonLink } from "@/components/button-link";
-import { CatalogCard } from "@/components/catalog-card";
 import { PageShell } from "@/components/page-shell";
 import { ProjectCard } from "@/components/project-card";
 import { resolvePublicImage } from "@/lib/asset";
 import {
   buildWhatsappUrl,
   featuredProjects,
-  productCategories,
   site,
 } from "@/lib/site";
 
@@ -116,46 +114,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#6c7a86]">
-              Categorias principales
-            </p>
-            <h2 className="mt-4 font-heading text-[2.15rem] font-semibold leading-tight tracking-[-0.04em] text-[#18212b] sm:text-[2.7rem]">
-              Un recorte visual para mostrar productos sin convertir la web en ecommerce
-            </h2>
-          </div>
-          <div className="flex justify-start lg:justify-end">
-            <ButtonLink href="/productos" variant="secondary">
-              Ver catalogo completo
-            </ButtonLink>
-          </div>
-        </div>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {productCategories.slice(0, 3).map((category) => (
-            <CatalogCard
-              key={category.title}
-              title={category.title}
-              description={category.description}
-              image={resolvePublicImage(category.image, category.fallbackImage)}
-              alt={category.alt}
-              objectPosition={category.objectPosition}
-            />
-          ))}
-        </div>
-      </section>
-
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
         <div className="rounded-[2.5rem] border border-[#dbe3e8] bg-[#18212b] p-8 text-white shadow-[0_30px_80px_-48px_rgba(24,33,43,0.34)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#d0b18a]">
-                Contacto comercial
+                Consulta inicial
               </p>
               <h2 className="mt-4 max-w-2xl font-heading text-[2.2rem] font-semibold leading-tight tracking-[-0.04em] sm:text-[2.8rem]">
-                Contanos que necesitas y te asesoramos
+                Si queres avanzar con un proyecto, podemos ayudarte a ordenarlo desde el primer contacto
               </h2>
             </div>
             <div>

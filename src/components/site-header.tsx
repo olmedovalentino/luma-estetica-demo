@@ -3,16 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { ButtonLink } from "@/components/button-link";
 import { site } from "@/lib/site";
 
-type SiteHeaderProps = {
-  whatsappUrl: string;
-};
-
-export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
+export function SiteHeader() {
   const pathname = usePathname();
-  const isWhatsAppAvailable = whatsappUrl !== "#";
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/70 bg-[rgba(248,250,251,0.88)] backdrop-blur-xl">
@@ -42,16 +36,7 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
           })}
         </nav>
 
-        <div className="hidden justify-self-end lg:block">
-          <ButtonLink
-            href={whatsappUrl}
-            target={isWhatsAppAvailable ? "_blank" : undefined}
-            rel={isWhatsAppAvailable ? "noopener noreferrer" : undefined}
-            className="bg-[#18212b] text-white hover:bg-[#24303d]"
-          >
-            Consultar por WhatsApp
-          </ButtonLink>
-        </div>
+        <div className="hidden lg:block" />
 
         <details className="relative justify-self-end lg:hidden">
           <summary className="flex cursor-pointer list-none items-center gap-2 rounded-full border border-[#d6dde2] bg-white px-4 py-2 text-sm font-semibold text-[#18212b]">
@@ -74,16 +59,6 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
                   </Link>
                 );
               })}
-            </div>
-            <div className="mt-4">
-              <ButtonLink
-                href={whatsappUrl}
-                target={isWhatsAppAvailable ? "_blank" : undefined}
-                rel={isWhatsAppAvailable ? "noopener noreferrer" : undefined}
-                className="w-full bg-[#18212b] text-white hover:bg-[#24303d]"
-              >
-                Consultar por WhatsApp
-              </ButtonLink>
             </div>
           </div>
         </details>

@@ -14,7 +14,7 @@ export function PageShell({ children }: PageShellProps) {
 
   return (
     <>
-      <SiteHeader whatsappUrl={whatsappUrl} />
+      <SiteHeader />
       <main className="overflow-hidden">{children}</main>
       <SiteFooter whatsappUrl={whatsappUrl} />
       <FloatingWhatsAppButton href={whatsappUrl} label="WhatsApp" />
