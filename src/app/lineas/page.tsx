@@ -1,4 +1,3 @@
-import { ButtonLink } from "@/components/button-link";
 import { CatalogCard } from "@/components/catalog-card";
 import { PageShell } from "@/components/page-shell";
 import { resolvePublicImage } from "@/lib/asset";
@@ -31,17 +30,6 @@ export default function LineasPage() {
               ctaHref={whatsappUrl}
             />
           ))}
-        </div>
-
-        <div className="mt-10 flex justify-center">
-          <ButtonLink
-            href={whatsappUrl}
-            target={whatsappUrl !== "#" ? "_blank" : undefined}
-            rel={whatsappUrl !== "#" ? "noopener noreferrer" : undefined}
-            className="bg-[#18212b] text-white hover:bg-[#24303d]"
-          >
-            Consultar por WhatsApp
-          </ButtonLink>
         </div>
       </section>
     </PageShell>

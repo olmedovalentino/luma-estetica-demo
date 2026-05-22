@@ -30,28 +30,28 @@ export const site = {
 
 export const featuredProjects = [
   {
-    title: "Cocina equipada",
+    title: "Villa Allende",
     image: "/images/norte-equipa/proyecto-1.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
     objectPosition: "center 52%",
-    alt: "Cocina equipada",
+    alt: "Proyecto en Villa Allende",
   },
   {
-    title: "Espacio de guardado",
+    title: "Mendiolaza",
     image: "/images/norte-equipa/proyecto-2.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 48%",
-    alt: "Espacio de guardado",
+    alt: "Proyecto en Mendiolaza",
   },
   {
-    title: "Proyecto comercial",
+    title: "Carlos Paz",
     image: "/images/norte-equipa/proyecto-4.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
-    alt: "Proyecto comercial",
+    alt: "Proyecto en Carlos Paz",
   },
 ] as const;
 
@@ -107,52 +107,52 @@ export const lineCategories = [
 
 export const projects = [
   {
-    title: "Cocina a medida",
+    title: "Villa Allende",
     image: "/images/norte-equipa/proyecto-1.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
     objectPosition: "center 52%",
-    alt: "Cocina a medida",
+    alt: "Proyecto en Villa Allende",
   },
   {
-    title: "Placard funcional",
+    title: "Mendiolaza",
     image: "/images/norte-equipa/proyecto-2.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 48%",
-    alt: "Placard funcional",
+    alt: "Proyecto en Mendiolaza",
   },
   {
-    title: "Vestidor",
+    title: "Carlos Paz",
     image: "/images/norte-equipa/proyecto-3.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 46%",
-    alt: "Vestidor",
+    alt: "Proyecto en Carlos Paz",
   },
   {
-    title: "Amoblamiento comercial",
+    title: "Valle Escondido",
     image: "/images/norte-equipa/proyecto-4.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
-    alt: "Amoblamiento comercial",
+    alt: "Proyecto en Valle Escondido",
   },
   {
-    title: "Espacio de guardado",
+    title: "Unquillo",
     image: "/images/norte-equipa/proyecto-5.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 54%",
-    alt: "Espacio de guardado",
+    alt: "Proyecto en Unquillo",
   },
   {
-    title: "Proyecto personalizado",
+    title: "Rio Ceballos",
     image: "/images/norte-equipa/proyecto-6.png",
     fallbackImage:
       "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
-    alt: "Proyecto personalizado",
+    alt: "Proyecto en Rio Ceballos",
   },
 ] as const;
 

@@ -1,4 +1,3 @@
-import { ButtonLink } from "@/components/button-link";
 import { PageShell } from "@/components/page-shell";
 import { buildWhatsappUrl, site } from "@/lib/site";
 
@@ -22,26 +21,6 @@ export default function ContactoPage() {
               Escribinos por WhatsApp y contanos que necesitas. Podemos orientarte segun el tipo de mueble, ambiente o proyecto que tengas en mente.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <ButtonLink
-                href={whatsappUrl}
-                target={isWhatsAppAvailable ? "_blank" : undefined}
-                rel={isWhatsAppAvailable ? "noopener noreferrer" : undefined}
-                className="border border-[#d0b18a] bg-[#d0b18a] text-[#18212b] hover:bg-[#dcc2a3]"
-              >
-                Consultar por WhatsApp
-              </ButtonLink>
-              {hasInstagram ? (
-                <a
-                  href={site.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold text-white/84 transition hover:text-white"
-                >
-                  Ver Instagram
-                </a>
-              ) : null}
-            </div>
           </div>
 
           <div className="rounded-[2.35rem] border border-[#d6dde2] bg-white p-8 shadow-[0_24px_60px_-44px_rgba(24,33,43,0.18)] sm:p-10">

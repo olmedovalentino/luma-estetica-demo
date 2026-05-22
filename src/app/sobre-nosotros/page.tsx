@@ -17,7 +17,7 @@ export default function SobreNosotrosPage() {
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 className="object-cover"
-                style={{ objectPosition: "center 54%" }}
+                style={{ objectPosition: "center 16%" }}
               />
             </div>
           </div>
