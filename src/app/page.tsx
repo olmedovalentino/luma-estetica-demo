@@ -22,7 +22,7 @@ export default function HomePage() {
                 <p className="pb-1 pt-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86] lg:pt-3">
                   {site.heroEyebrow}
                 </p>
-                <h1 className="mt-6 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
+                <h1 className="mt-10 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
                   Equipamiento a medida para cada espacio
                 </h1>
               </div>
