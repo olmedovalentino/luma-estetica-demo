@@ -23,13 +23,13 @@ export default function SobreNosotrosPage() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#6c7a86]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
               Sobre nosotros
             </p>
-            <h1 className="mt-4 font-heading text-[2.6rem] font-semibold leading-tight tracking-[-0.04em] text-[#18212b] sm:text-[3.1rem]">
+            <h1 className="mt-4 font-heading text-[2rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.3rem]">
               {aboutSection.title}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#51606d]">{aboutSection.text}</p>
+            <p className="mt-6 max-w-2xl text-[0.98rem] leading-8 text-[#51606d]">{aboutSection.text}</p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {trustPoints.map((point) => (

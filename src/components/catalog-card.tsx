@@ -20,8 +20,8 @@ export function CatalogCard({
   ctaLabel = "Consultar",
 }: CatalogCardProps) {
   return (
-    <article className="group overflow-hidden rounded-[2rem] border border-[#dde4e8] bg-white shadow-[0_24px_60px_-42px_rgba(24,33,43,0.28)]">
-      <div className="relative h-[250px] overflow-hidden">
+    <article className="group overflow-hidden rounded-[1.8rem] border border-[#dde4e8] bg-white shadow-[0_24px_60px_-42px_rgba(24,33,43,0.24)]">
+      <div className="relative h-[240px] overflow-hidden">
         <Image
           src={image}
           alt={alt}
@@ -31,8 +31,8 @@ export function CatalogCard({
           style={{ objectPosition }}
         />
       </div>
-      <div className="p-6">
-        <h3 className="font-heading text-[1.35rem] font-semibold tracking-[-0.03em] text-[#18212b]">
+      <div className="p-5">
+        <h3 className="font-heading text-[1.1rem] font-semibold tracking-[-0.02em] text-[#18212b]">
           {title}
         </h3>
         <p className="mt-2 text-sm leading-6 text-[#51606d]">{description}</p>
@@ -41,7 +41,7 @@ export function CatalogCard({
             href={ctaHref}
             target={ctaHref !== "#" ? "_blank" : undefined}
             rel={ctaHref !== "#" ? "noopener noreferrer" : undefined}
-            className="mt-5 inline-flex items-center text-sm font-semibold text-[#18212b] transition hover:text-[#43515d]"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-[#18212b] transition hover:text-[#43515d]"
           >
             {ctaLabel}
           </a>

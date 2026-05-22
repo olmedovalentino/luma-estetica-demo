@@ -1,16 +1,11 @@
-import { Manrope, Sora } from "next/font/google";
+import { Manrope } from "next/font/google";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
-const headingFont = Sora({
+const primaryFont = Manrope({
   subsets: ["latin"],
-  variable: "--font-heading",
-});
-
-const bodyFont = Manrope({
-  subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-primary",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${headingFont.variable} ${bodyFont.variable}`}>{children}</body>
+      <body className={primaryFont.variable}>{children}</body>
     </html>
   );
 }

@@ -14,8 +14,8 @@ export function ProjectCard({
   alt,
 }: ProjectCardProps) {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-[#dde4e8] bg-white shadow-[0_24px_60px_-44px_rgba(24,33,43,0.26)]">
-      <div className="relative h-[280px] sm:h-[340px]">
+    <article className="overflow-hidden rounded-[1.8rem] border border-[#dde4e8] bg-white shadow-[0_24px_60px_-44px_rgba(24,33,43,0.22)]">
+      <div className="relative h-[260px] sm:h-[320px]">
         <Image
           src={image}
           alt={alt}
@@ -25,8 +25,8 @@ export function ProjectCard({
           style={{ objectPosition }}
         />
       </div>
-      <div className="px-6 py-5">
-        <h3 className="font-heading text-[1.3rem] font-semibold tracking-[-0.03em] text-[#18212b]">
+      <div className="px-5 py-4">
+        <h3 className="font-heading text-[1.05rem] font-semibold tracking-[-0.02em] text-[#18212b]">
           {title}
         </h3>
       </div>

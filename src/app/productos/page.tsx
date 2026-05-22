@@ -12,11 +12,11 @@ export default function ProductosPage() {
       <section className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#6c7a86]">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
               Productos
             </p>
-            <h1 className="mt-4 font-heading text-[2.6rem] font-semibold leading-tight tracking-[-0.04em] text-[#18212b] sm:text-[3.2rem]">
-              Categorias pensadas como catalogo visual, claro y profesional
+            <h1 className="mt-4 font-heading text-[2rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.3rem]">
+              Productos
             </h1>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
@@ -31,7 +31,7 @@ export default function ProductosPage() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {productCategories.map((category) => (
             <CatalogCard
               key={category.title}
@@ -45,7 +45,7 @@ export default function ProductosPage() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <ButtonLink
             href={whatsappUrl}
             target={whatsappUrl !== "#" ? "_blank" : undefined}

@@ -16,7 +16,7 @@ body {
     radial-gradient(circle at bottom right, rgba(208, 177, 138, 0.14), transparent 25%),
     linear-gradient(180deg, #f5f7f8 0%, #f8fafb 100%);
   color: #18212b;
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   text-rendering: optimizeLegibility;
 }
 
@@ -25,7 +25,7 @@ h2,
 h3,
 h4,
 .font-heading {
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
 
 * {
