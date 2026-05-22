@@ -8,6 +8,7 @@ type SiteFooterProps = {
 
 export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
   const isWhatsAppAvailable = whatsappUrl !== "#";
+  const hasInstagram = site.instagramUrl.startsWith("http");
 
   return (
     <footer className="border-t border-[#d9e1e5] bg-[#18212b] text-white">
@@ -45,7 +46,7 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
             ) : (
               <p>{site.whatsappDisplay}</p>
             )}
-            {site.instagramUrl !== "#" ? (
+            {hasInstagram ? (
               <a href={site.instagramUrl} target="_blank" rel="noopener noreferrer" className="block">
                 Instagram
               </a>

@@ -13,11 +13,11 @@ export const site = {
   primaryCta: "Consultar por WhatsApp",
   secondaryCta: "Ver proyectos",
   logoUrl: "/images/norte-equipa/logo.png",
-  whatsappNumber: "",
-  whatsappDisplay: "WhatsApp a confirmar",
+  whatsappNumber: "5493515224263",
+  whatsappDisplay: "+54 9 3515 22-4263",
   whatsappMessage: "Hola, vengo desde la web y quiero consultar por un proyecto.",
-  whatsappUrl: "#",
-  instagramUrl: "#",
+  whatsappUrl: "https://wa.me/5493515224263",
+  instagramUrl: "https://www.instagram.com/norteequipa/?hl=es",
   location: "Cordoba, Argentina",
   navigation: [
     { label: "Inicio", href: "/" },
@@ -179,18 +179,11 @@ export const processSteps = [
   },
 ] as const;
 
-export const trustPoints = [
-  "Diseno funcional",
-  "Proyectos a medida",
-  "Terminaciones prolijas",
-  "Acompanamiento en el proceso",
-] as const;
-
 export const aboutSection = {
   title: "Diseno, funcionalidad y soluciones a medida",
   text:
     "Trabajamos cada proyecto pensando en el uso real del espacio, buscando soluciones practicas, duraderas y visualmente cuidadas para hogares, comercios y ambientes de trabajo.",
-  image: "/images/norte-equipa/linea-norte.png",
+  image: "/images/norte-equipa/sobre-nosotros.png",
   fallbackImage:
     "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
   alt: "Interior con equipamiento a medida",
