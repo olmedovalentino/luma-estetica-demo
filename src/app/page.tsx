@@ -82,7 +82,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
+      <section className="mx-auto max-w-7xl px-4 pb-16 pt-16 sm:px-6 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-24">
         <div className="rounded-[2.5rem] border border-[#dbe3e8] bg-[#18212b] p-8 text-white shadow-[0_30px_80px_-48px_rgba(24,33,43,0.34)] sm:p-10">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
