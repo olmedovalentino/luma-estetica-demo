@@ -21,7 +21,7 @@ export const site = {
   location: "Cordoba, Argentina",
   navigation: [
     { label: "Inicio", href: "/" },
-    { label: "Productos", href: "/productos" },
+    { label: "Líneas", href: "/lineas" },
     { label: "Proyectos", href: "/proyectos" },
     { label: "Sobre nosotros", href: "/sobre-nosotros" },
     { label: "Contacto", href: "/contacto" },
@@ -55,70 +55,54 @@ export const featuredProjects = [
   },
 ] as const;
 
-export const productCategories = [
+export const lineCategories = [
   {
-    title: "Cocinas",
-    description: "Diseno funcional para el uso diario.",
+    title: "Norte Equipa",
+    description:
+      "Soluciones funcionales de equipamiento para hogares, comercios y espacios de trabajo.",
     image: "/images/norte-equipa/producto-1.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Cocinas",
+    alt: "Línea Norte Equipa",
     objectPosition: "center 52%",
   },
   {
-    title: "Placares",
-    description: "Guardado integrado y mejor aprovechamiento.",
+    title: "Premium",
+    description:
+      "Diseños con terminaciones cuidadas y una presencia más destacada para ambientes especiales.",
     image: "/images/norte-equipa/producto-2.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Placares",
+    alt: "Línea Premium",
     objectPosition: "center 48%",
   },
   {
-    title: "Vestidores",
-    description: "Orden visual y circulacion comoda.",
+    title: "Farm",
+    description: "Equipamiento pensado para locales, farmacias y espacios comerciales.",
     image: "/images/norte-equipa/producto-3.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Vestidores",
+    alt: "Línea Farm",
     objectPosition: "center 46%",
   },
   {
-    title: "Muebles de guardado",
-    description: "Soluciones para organizar mejor cada ambiente.",
+    title: "Placards",
+    description: "Guardado a medida para aprovechar mejor cada ambiente.",
     image: "/images/norte-equipa/producto-4.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Muebles de guardado",
+    alt: "Línea Placards",
     objectPosition: "center 54%",
   },
   {
-    title: "Equipamiento comercial",
-    description: "Mobiliario pensado para exhibir y trabajar mejor.",
+    title: "Vestidores",
+    description: "Diseño y organización para espacios de guardado personalizados.",
     image: "/images/norte-equipa/producto-5.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Equipamiento comercial",
+    alt: "Línea Vestidores",
     objectPosition: "center 50%",
   },
-  {
-    title: "Muebles personalizados",
-    description: "Piezas a medida para necesidades puntuales.",
-    image: "/images/norte-equipa/producto-6.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-15",
-    alt: "Muebles personalizados",
-    objectPosition: "center 56%",
-  },
-] as const;
-
-export const productHighlights = [
-  "Cocinas",
-  "Placares",
-  "Vestidores",
-  "Guardado",
-  "Comercial",
-  "Personalizados",
 ] as const;
 
 export const projects = [

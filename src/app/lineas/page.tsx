@@ -2,37 +2,25 @@ import { ButtonLink } from "@/components/button-link";
 import { CatalogCard } from "@/components/catalog-card";
 import { PageShell } from "@/components/page-shell";
 import { resolvePublicImage } from "@/lib/asset";
-import { buildWhatsappUrl, productCategories, productHighlights, site } from "@/lib/site";
+import { buildWhatsappUrl, lineCategories, site } from "@/lib/site";
 
-export default function ProductosPage() {
+export default function LineasPage() {
   const whatsappUrl = buildWhatsappUrl(site.whatsappMessage);
 
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-24">
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
-              Productos
-            </p>
-            <h1 className="mt-4 font-heading text-[2rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.3rem]">
-              Productos
-            </h1>
-          </div>
-          <div className="flex flex-wrap gap-3 lg:justify-end">
-            {productHighlights.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-[#c9d2d9] bg-white px-4 py-2 text-sm font-medium text-[#43515d]"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
+        <div className="max-w-2xl">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
+            Líneas
+          </p>
+          <h1 className="mt-4 font-heading text-[2rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.25rem]">
+            Líneas
+          </h1>
         </div>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {productCategories.map((category) => (
+          {lineCategories.map((category) => (
             <CatalogCard
               key={category.title}
               title={category.title}
