@@ -2,13 +2,16 @@ export const site = {
   businessName: "Norte Equipa",
   tagline: "Equipamiento y muebles a medida en Cordoba",
   shortDescription:
-    "Soluciones de mobiliario y equipamiento a medida para hogares y espacios comerciales.",
+    "Soluciones de mobiliario y equipamiento a medida para hogares, comercios y espacios de trabajo.",
   heroEyebrow: "Cordoba, Argentina · Equipamiento a medida",
-  heroTitle: "Mobiliario pensado para ordenar, equipar y potenciar cada espacio",
+  heroTitle: "Equipamiento pensado para hogares, comercios y espacios de trabajo",
   heroSubtitle:
-    "Desarrollamos cocinas, placares, vestidores, guardados y amoblamientos comerciales con una propuesta clara, funcional y profesional.",
+    "Disenamos soluciones funcionales y a medida para transformar ambientes con muebles, amoblamientos y equipamiento adaptado a cada necesidad.",
+  whoTitle: "Soluciones a medida para cada espacio",
+  whoText:
+    "En Norte Equipa desarrollamos propuestas de equipamiento pensadas para aprovechar mejor cada ambiente, combinando funcionalidad, diseno y terminaciones prolijas.",
   primaryCta: "Consultar por WhatsApp",
-  secondaryCta: "Ver catalogo",
+  secondaryCta: "Ver proyectos",
   logoUrl: "/images/norte-equipa/logo.jpg",
   whatsappNumber: "",
   whatsappDisplay: "WhatsApp a confirmar",
@@ -17,67 +20,99 @@ export const site = {
   instagramUrl: "#",
   location: "Cordoba, Argentina",
   navigation: [
-    { label: "Inicio", href: "#inicio" },
-    { label: "Productos", href: "#productos" },
-    { label: "Proyectos", href: "#proyectos" },
-    { label: "Proceso", href: "#proceso" },
-    { label: "Sobre nosotros", href: "#sobre" },
-    { label: "Contacto", href: "#contacto" },
+    { label: "Inicio", href: "/" },
+    { label: "Productos", href: "/productos" },
+    { label: "Proyectos", href: "/proyectos" },
+    { label: "Sobre nosotros", href: "/sobre-nosotros" },
+    { label: "Contacto", href: "/contacto" },
   ],
 } as const;
 
+export const featuredProjects = [
+  {
+    title: "Cocina equipada",
+    image: "/images/norte-equipa/proyecto-1.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+    objectPosition: "center 52%",
+    alt: "Cocina equipada",
+  },
+  {
+    title: "Espacio de guardado",
+    image: "/images/norte-equipa/proyecto-2.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+    objectPosition: "center 48%",
+    alt: "Espacio de guardado",
+  },
+  {
+    title: "Proyecto comercial",
+    image: "/images/norte-equipa/proyecto-4.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
+    objectPosition: "center 50%",
+    alt: "Proyecto comercial",
+  },
+] as const;
+
 export const productCategories = [
   {
-    title: "Cocinas a medida",
+    title: "Cocinas",
     description: "Diseno funcional para el uso diario.",
-    image:
+    image: "/images/norte-equipa/producto-1.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Cocina a medida moderna",
+    alt: "Cocinas",
     objectPosition: "center 52%",
   },
   {
     title: "Placares",
     description: "Guardado integrado y mejor aprovechamiento.",
-    image:
+    image: "/images/norte-equipa/producto-2.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Placard moderno de piso a techo",
+    alt: "Placares",
     objectPosition: "center 48%",
   },
   {
     title: "Vestidores",
     description: "Orden visual y circulacion comoda.",
-    image:
+    image: "/images/norte-equipa/producto-3.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Vestidor con estantes y cajones",
+    alt: "Vestidores",
     objectPosition: "center 46%",
   },
   {
     title: "Muebles de guardado",
     description: "Soluciones para organizar mejor cada ambiente.",
-    image:
+    image: "/images/norte-equipa/producto-4.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Mueble de guardado en un interior contemporaneo",
+    alt: "Muebles de guardado",
     objectPosition: "center 54%",
   },
   {
-    title: "Amoblamientos comerciales",
+    title: "Equipamiento comercial",
     description: "Mobiliario pensado para exhibir y trabajar mejor.",
-    image:
+    image: "/images/norte-equipa/producto-5.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Equipamiento comercial de lineas modernas",
+    alt: "Equipamiento comercial",
     objectPosition: "center 50%",
   },
   {
     title: "Muebles personalizados",
     description: "Piezas a medida para necesidades puntuales.",
-    image:
+    image: "/images/norte-equipa/producto-6.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-15",
-    alt: "Mueble personalizado de terminacion sobria",
+    alt: "Muebles personalizados",
     objectPosition: "center 56%",
   },
 ] as const;
 
-export const catalogFilters = [
+export const productHighlights = [
   "Cocinas",
   "Placares",
   "Vestidores",
@@ -86,65 +121,54 @@ export const catalogFilters = [
   "Personalizados",
 ] as const;
 
-export const catalogHighlights = [
-  {
-    title: "Linea hogar",
-    subtitle: "Cocinas, guardados y dormitorios",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    span: "lg:col-span-2 lg:row-span-2",
-    objectPosition: "center 54%",
-  },
-  {
-    title: "Soluciones comerciales",
-    subtitle: "Exhibicion, atencion y orden visual",
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
-    span: "",
-    objectPosition: "center 50%",
-  },
-  {
-    title: "Diseno a medida",
-    subtitle: "Adaptado al espacio y al uso real",
-    image:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80",
-    span: "",
-    objectPosition: "center 54%",
-  },
-  {
-    title: "Terminaciones",
-    subtitle: "Materiales, lineas limpias y detalle",
-    image:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
-    span: "lg:col-span-2",
-    objectPosition: "center 50%",
-  },
-] as const;
-
 export const projects = [
   {
-    title: "Cocina integral",
-    image:
+    title: "Cocina a medida",
+    image: "/images/norte-equipa/proyecto-1.jpg",
+    fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
     objectPosition: "center 52%",
+    alt: "Cocina a medida",
   },
   {
-    title: "Guardado de piso a techo",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    title: "Placard funcional",
+    image: "/images/norte-equipa/proyecto-2.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 48%",
+    alt: "Placard funcional",
   },
   {
-    title: "Vestidor funcional",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    title: "Vestidor",
+    image: "/images/norte-equipa/proyecto-3.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 46%",
+    alt: "Vestidor",
   },
   {
-    title: "Equipamiento comercial",
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
+    title: "Amoblamiento comercial",
+    image: "/images/norte-equipa/proyecto-4.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
     objectPosition: "center 50%",
+    alt: "Amoblamiento comercial",
+  },
+  {
+    title: "Espacio de guardado",
+    image: "/images/norte-equipa/proyecto-5.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+    objectPosition: "center 54%",
+    alt: "Espacio de guardado",
+  },
+  {
+    title: "Proyecto personalizado",
+    image: "/images/norte-equipa/proyecto-6.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
+    objectPosition: "center 50%",
+    alt: "Proyecto personalizado",
   },
 ] as const;
 
@@ -161,7 +185,7 @@ export const processSteps = [
   },
   {
     number: "03",
-    title: "Diseno y fabricacion",
+    title: "Diseno / fabricacion",
     description: "Avanzamos con el desarrollo tecnico y la produccion a medida.",
   },
   {
@@ -172,34 +196,21 @@ export const processSteps = [
 ] as const;
 
 export const trustPoints = [
-  "Trabajo a medida",
   "Diseno funcional",
+  "Proyectos a medida",
+  "Terminaciones prolijas",
   "Acompanamiento en el proceso",
-  "Soluciones para hogares y comercios",
 ] as const;
 
-export const faqs = [
-  {
-    question: "Que tipo de proyectos realizan?",
-    answer:
-      "Trabajamos cocinas, placares, vestidores, muebles de guardado, equipamiento comercial y desarrollos personalizados.",
-  },
-  {
-    question: "La web puede crecer con mas categorias o productos?",
-    answer:
-      "Si. La estructura esta pensada como base para escalar luego a un catalogo mas amplio o a paginas por linea de producto.",
-  },
-  {
-    question: "Trabajan solo para hogares?",
-    answer:
-      "No. La propuesta contempla tanto hogares como espacios comerciales que necesitan orden, exhibicion y funcionalidad.",
-  },
-  {
-    question: "Como se inicia una consulta?",
-    answer:
-      "La forma ideal es centralizar el primer contacto por WhatsApp para entender necesidad, medidas aproximadas y tipo de proyecto.",
-  },
-] as const;
+export const aboutSection = {
+  title: "Diseno, funcionalidad y soluciones a medida",
+  text:
+    "Trabajamos cada proyecto pensando en el uso real del espacio, buscando soluciones practicas, duraderas y visualmente cuidadas para hogares, comercios y ambientes de trabajo.",
+  image: "/images/norte-equipa/sobre-nosotros.jpg",
+  fallbackImage:
+    "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+  alt: "Interior con equipamiento a medida",
+} as const;
 
 export function buildWhatsappUrl(message: string) {
   if (!site.whatsappNumber) {

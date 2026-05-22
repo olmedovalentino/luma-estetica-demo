@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { site } from "@/lib/site";
 
 type SiteFooterProps = {
@@ -23,9 +25,9 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
           </p>
           <div className="mt-4 flex flex-col gap-3 text-sm text-white/72">
             {site.navigation.map((item) => (
-              <a key={item.href} href={item.href} className="transition hover:text-white">
+              <Link key={item.href} href={item.href} className="transition hover:text-white">
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
