@@ -17,14 +17,16 @@ export default function HomePage() {
         <div className="relative overflow-hidden rounded-[2.2rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,247,248,0.96))] shadow-[0_36px_80px_-54px_rgba(24,33,43,0.24)]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(95,111,128,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(208,177,138,0.14),transparent_26%)]" />
           <div className="relative grid gap-10 px-6 py-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10 lg:py-11">
-            <div className="max-w-[30rem]">
-              <p className="pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
-                {site.heroEyebrow}
-              </p>
-              <h1 className="mt-4 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
-                Equipamiento a medida para cada espacio
-              </h1>
-              <p className="mt-12 max-w-xl text-[0.98rem] leading-8 text-[#51606d]">
+            <div className="max-w-[30rem] lg:flex lg:min-h-[500px] lg:flex-col lg:justify-between">
+              <div>
+                <p className="pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86] lg:-translate-y-1">
+                  {site.heroEyebrow}
+                </p>
+                <h1 className="mt-4 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
+                  Equipamiento a medida para cada espacio
+                </h1>
+              </div>
+              <p className="mt-12 max-w-xl text-[0.98rem] leading-8 text-[#51606d] lg:mt-0">
                 Diseñamos soluciones funcionales y a medida para transformar ambientes con muebles, amoblamientos y equipamiento adaptado a cada necesidad.
               </p>
             </div>
