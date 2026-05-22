@@ -19,10 +19,10 @@ export default function HomePage() {
           <div className="relative grid gap-10 px-6 py-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10 lg:py-11">
             <div className="max-w-[30rem] lg:flex lg:min-h-[500px] lg:flex-col lg:justify-between">
               <div>
-                <p className="pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86] lg:-translate-y-1">
+                <p className="pb-1 pt-2 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86] lg:pt-3">
                   {site.heroEyebrow}
                 </p>
-                <h1 className="mt-4 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
+                <h1 className="mt-6 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
                   Equipamiento a medida para cada espacio
                 </h1>
               </div>
@@ -48,34 +48,6 @@ export default function HomePage() {
                     style={{ objectPosition: "center 54%" }}
                   />
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-[#dde4e8] bg-[linear-gradient(180deg,#ffffff,#f7fafb)] px-6 py-10 shadow-[0_24px_60px_-46px_rgba(24,33,43,0.2)] sm:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr] lg:items-center">
-            <div className="lg:pr-6">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
-                Quienes somos
-              </p>
-              <h2 className="mt-4 font-heading text-[1.85rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.15rem]">
-                {site.whoTitle}
-              </h2>
-            </div>
-            <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
-              <p className="max-w-2xl text-[0.98rem] leading-8 text-[#51606d]">{site.whoText}</p>
-              <div className="flex flex-wrap gap-3 lg:max-w-[260px] lg:justify-end">
-                {["Diseno funcional", "Equipamiento a medida", "Terminaciones prolijas"].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-[#d7dfe4] bg-white px-4 py-2 text-sm font-medium text-[#43515d]"
-                  >
-                    {item}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
