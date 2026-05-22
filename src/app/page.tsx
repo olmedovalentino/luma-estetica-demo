@@ -5,11 +5,7 @@ import { ButtonLink } from "@/components/button-link";
 import { PageShell } from "@/components/page-shell";
 import { ProjectCard } from "@/components/project-card";
 import { resolvePublicImage } from "@/lib/asset";
-import {
-  buildWhatsappUrl,
-  featuredProjects,
-  site,
-} from "@/lib/site";
+import { buildWhatsappUrl, featuredProjects, site } from "@/lib/site";
 
 export default function HomePage() {
   const whatsappUrl = buildWhatsappUrl(site.whatsappMessage);
@@ -22,13 +18,13 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(95,111,128,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(208,177,138,0.14),transparent_26%)]" />
           <div className="relative grid gap-10 px-6 py-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-10 lg:py-11">
             <div className="max-w-[30rem]">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
+              <p className="pb-1 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
                 {site.heroEyebrow}
               </p>
               <h1 className="mt-4 max-w-2xl font-heading text-[2.2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-[#18212b] sm:text-[2.6rem] lg:text-[3rem]">
                 Equipamiento a medida para cada espacio
               </h1>
-              <p className="mt-9 max-w-xl text-[0.98rem] leading-8 text-[#51606d]">
+              <p className="mt-12 max-w-xl text-[0.98rem] leading-8 text-[#51606d]">
                 Diseñamos soluciones funcionales y a medida para transformar ambientes con muebles, amoblamientos y equipamiento adaptado a cada necesidad.
               </p>
             </div>
@@ -57,23 +53,23 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-[#dde4e8] bg-white px-6 py-8 shadow-[0_24px_60px_-46px_rgba(24,33,43,0.2)] sm:px-8">
-          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-            <div>
+        <div className="rounded-[2rem] border border-[#dde4e8] bg-[linear-gradient(180deg,#ffffff,#f7fafb)] px-6 py-10 shadow-[0_24px_60px_-46px_rgba(24,33,43,0.2)] sm:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.68fr_1.32fr] lg:items-center">
+            <div className="lg:pr-6">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
                 Quienes somos
               </p>
-              <h2 className="mt-4 font-heading text-[1.9rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.2rem]">
+              <h2 className="mt-4 font-heading text-[1.85rem] font-semibold leading-tight tracking-[-0.03em] text-[#18212b] sm:text-[2.15rem]">
                 {site.whoTitle}
               </h2>
             </div>
-            <div>
+            <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
               <p className="max-w-2xl text-[0.98rem] leading-8 text-[#51606d]">{site.whoText}</p>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 lg:max-w-[260px] lg:justify-end">
                 {["Diseno funcional", "Equipamiento a medida", "Terminaciones prolijas"].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-[#d7dfe4] bg-[#f8fafb] px-4 py-2 text-sm font-medium text-[#43515d]"
+                    className="rounded-full border border-[#d7dfe4] bg-white px-4 py-2 text-sm font-medium text-[#43515d]"
                   >
                     {item}
                   </span>
@@ -86,15 +82,10 @@ export default function HomePage() {
 
       <section className="border-y border-[#dbe3e8] bg-[#eef2f5]">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="flex items-end justify-between gap-6">
-            <div className="max-w-3xl">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
-                Proyectos destacados
-              </p>
-            </div>
-            <Link href="/proyectos" className="hidden text-sm font-semibold text-[#18212b] lg:block">
-              Ver todos
-            </Link>
+          <div className="max-w-3xl">
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#6c7a86]">
+              Proyectos destacados
+            </p>
           </div>
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -107,6 +98,12 @@ export default function HomePage() {
                 objectPosition={project.objectPosition}
               />
             ))}
+          </div>
+
+          <div className="mt-8 flex justify-start">
+            <Link href="/proyectos" className="text-sm font-semibold text-[#18212b] transition hover:text-[#43515d]">
+              Ver todos los proyectos
+            </Link>
           </div>
         </div>
       </section>
@@ -127,7 +124,7 @@ export default function HomePage() {
                 href={whatsappUrl}
                 target={whatsappUrl !== "#" ? "_blank" : undefined}
                 rel={whatsappUrl !== "#" ? "noopener noreferrer" : undefined}
-                className="bg-white text-[#18212b] hover:bg-[#eef2f5]"
+                className="border border-[#d0b18a] bg-[#d0b18a] text-[#18212b] hover:bg-[#dcc2a3]"
               >
                 Consultar por WhatsApp
               </ButtonLink>
