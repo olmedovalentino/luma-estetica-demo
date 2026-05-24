@@ -13,9 +13,9 @@ html {
 body {
   @apply bg-sand-50 text-ink-800 antialiased;
   background-image:
-    radial-gradient(circle at top, rgba(242, 204, 172, 0.28), transparent 34%),
-    radial-gradient(circle at right, rgba(201, 138, 91, 0.12), transparent 24%),
-    linear-gradient(180deg, #fdf9f4 0%, #fbf6f1 100%);
+    radial-gradient(circle at top, rgba(193, 157, 116, 0.16), transparent 34%),
+    radial-gradient(circle at right, rgba(126, 100, 78, 0.1), transparent 24%),
+    linear-gradient(180deg, #fbf8f2 0%, #f5efe8 100%);
 }
 
 * {
@@ -23,7 +23,7 @@ body {
 }
 
 ::selection {
-  background: rgba(201, 138, 91, 0.22);
+  background: rgba(155, 123, 91, 0.22);
 }
 
 details > summary {

@@ -1,135 +1,195 @@
 export const site = {
-  businessName: "Luma Estética",
-  tagline: "Cuidado facial, corporal y belleza integral en Córdoba",
+  businessName: "Diseño Amoblamientos",
+  tagline: "Amoblamientos a medida en Córdoba",
   shortPitch:
-    "Un espacio cálido y profesional para regalarte un momento de bienestar. Reservá tu turno por WhatsApp de forma simple.",
-  whatsappNumber: "5493512345678",
-  whatsappMessage: "Hola Luma, quiero consultar por un turno.",
-  address: "Nueva Córdoba, Córdoba Capital",
-  city: "Córdoba Capital",
-  hours: "Lunes a viernes de 9:00 a 19:00 | Sábados de 9:00 a 13:00",
-  locationUrl:
-    "https://www.google.com/maps/search/?api=1&query=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
-  locationEmbedUrl:
-    "https://www.google.com/maps?q=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
+    "Diseñamos y fabricamos amoblamientos a medida para hogares y espacios funcionales, con una mirada cálida, prolija y pensada para durar.",
+  whatsappNumber: "5493513082515",
+  whatsappMessage:
+    "Hola, vengo desde la web y queria consultar por un proyecto de amoblamientos a medida.",
+  instagramUrl: "https://www.instagram.com/disenoamoblamientos/",
+  location: "Córdoba, Argentina",
   navigation: [
     { label: "Inicio", href: "#inicio" },
+    { label: "Amoblamientos", href: "#amoblamientos" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Sobre Luma", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Ubicación", href: "#ubicacion" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
-export const services = [
+export const hero = {
+  eyebrow: "Córdoba, Argentina · Amoblamientos a medida",
+  title: "Diseño y funcionalidad para cada ambiente",
+  description:
+    "Creamos cocinas, placares, vestidores y muebles personalizados pensados para aprovechar mejor el espacio y acompañar el uso diario.",
+  image: "/images/diseno-amoblamientos/hero.jpg",
+  fallbackImage:
+    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+  alt: "Interior cálido con amoblamientos a medida",
+} as const;
+
+export const intro = {
+  eyebrow: "Amoblamientos a medida",
+  title: "Soluciones pensadas para vivir mejor cada espacio",
+  description:
+    "Trabajamos propuestas a medida para optimizar guardado, circulación y estética, con materiales nobles y terminaciones cuidadas.",
+} as const;
+
+export const categories = [
   {
-    title: "Limpieza facial profunda",
-    description: "Renová la piel con un tratamiento suave que limpia, equilibra e ilumina.",
-    accent: "bg-[#f5ebe4]",
-    image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+    title: "Cocinas",
+    description: "Diseños funcionales para cocinar, ordenar y disfrutar el dia a dia.",
+    image: "/images/diseno-amoblamientos/cocina.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+    alt: "Cocina a medida",
+    objectPosition: "center 54%",
   },
   {
-    title: "Depilación",
-    description: "Servicios prolijos y cómodos para una piel suave y cuidada.",
-    accent: "bg-[#efe5dc]",
-    image:
-      "https://images.unsplash.com/photo-1620916566395-1fcb4b0a5f2f?auto=format&fit=crop&w=900&q=80",
+    title: "Placares",
+    description: "Guardado integrado con distribuciones pensadas para cada ambiente.",
+    image: "/images/diseno-amoblamientos/placard.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+    alt: "Placard a medida",
+    objectPosition: "center 50%",
   },
   {
-    title: "Perfilado de cejas",
-    description: "Definí la mirada con un diseño natural que respeta tus facciones.",
-    accent: "bg-[#f7f1ec]",
-    image:
-      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80",
+    title: "Vestidores",
+    description: "Organizacion visual y comodidad para rutinas mas simples.",
+    image: "/images/diseno-amoblamientos/vestidor.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
+    alt: "Vestidor personalizado",
+    objectPosition: "center 48%",
   },
   {
-    title: "Lifting de pestañas",
-    description: "Un efecto sutil y elegante para levantar la mirada sin maquillaje diario.",
-    accent: "bg-[#eadfd8]",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+    title: "Muebles personalizados",
+    description: "Piezas a medida para resolver rincones, interiores y usos puntuales.",
+    image: "/images/diseno-amoblamientos/mueble-personalizado.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+    alt: "Mueble personalizado",
+    objectPosition: "center 52%",
   },
   {
-    title: "Tratamientos corporales",
-    description: "Opciones para acompañar tu cuidado corporal con foco en bienestar.",
-    accent: "bg-[#f3e9e2]",
-    image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+    title: "Bajo mesada",
+    description: "Equipamiento practico y prolijo para ordenar y aprovechar mejor.",
+    image: "/images/diseno-amoblamientos/cocina.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=80",
+    alt: "Bajo mesada a medida",
+    objectPosition: "center 58%",
   },
   {
-    title: "Belleza de manos",
-    description: "Manicuría prolija y delicada para un acabado cuidado y natural.",
-    accent: "bg-[#eee8e4]",
-    image:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+    title: "Interiores",
+    description: "Soluciones internas para guardar con logica, orden y accesibilidad.",
+    image: "/images/diseno-amoblamientos/placard.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-25",
+    alt: "Interior de placard",
+    objectPosition: "center 44%",
   },
 ] as const;
 
-export const aboutText =
-  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos atención personalizada, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
-
-export const confidencePoints = [
-  "Atención personalizada",
-  "Productos seleccionados",
-  "Ambiente privado",
-  "Resultados naturales",
-] as const;
-
-export const gallery = [
+export const projects = [
   {
-    title: "Cabina facial",
-    description: "Luz suave, orden y una atmósfera serena para el cuidado del rostro.",
-    image:
-      "https://images.unsplash.com/photo-1560750588-0f3a8f8f8d0b?auto=format&fit=crop&w=1200&q=80",
-    span: "lg:col-span-2 lg:row-span-2",
+    title: "Cocina integral",
+    image: "/images/diseno-amoblamientos/proyecto-1.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto de cocina integral",
+    objectPosition: "center 54%",
+    span: "lg:col-span-2",
   },
   {
-    title: "Espacio de relajación",
-    description: "Un entorno cómodo y cuidado para bajar el ritmo.",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    title: "Placard funcional",
+    image: "/images/diseno-amoblamientos/proyecto-2.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+    alt: "Placard funcional",
+    objectPosition: "center 50%",
     span: "",
   },
   {
-    title: "Detalles de cuidado",
-    description: "Productos, textura y pequeños gestos que acompañan la experiencia.",
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
+    title: "Vestidor a medida",
+    image: "/images/diseno-amoblamientos/proyecto-3.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
+    alt: "Vestidor a medida",
+    objectPosition: "center 48%",
     span: "",
   },
   {
-    title: "Ambiente privado",
-    description: "Una estética suave y cálida que invita a sentirte cómoda desde que llegás.",
-    image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
+    title: "Detalles de terminacion",
+    image: "/images/diseno-amoblamientos/proyecto-4.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+    alt: "Detalles de terminacion",
+    objectPosition: "center 52%",
+    span: "",
+  },
+  {
+    title: "Mueble de guardado",
+    image: "/images/diseno-amoblamientos/proyecto-5.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
+    alt: "Mueble de guardado",
+    objectPosition: "center 52%",
+    span: "",
+  },
+  {
+    title: "Proyecto personalizado",
+    image: "/images/diseno-amoblamientos/proyecto-6.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto personalizado",
+    objectPosition: "center 50%",
     span: "lg:col-span-2",
   },
 ] as const;
 
-export const faqs = [
+export const processSteps = [
   {
-    question: "¿Cómo reservo un turno?",
-    answer: "Escribinos por WhatsApp y te compartimos la disponibilidad para coordinar tu visita.",
+    number: "01",
+    title: "Consulta",
+    description: "Escuchamos la idea, el espacio y lo que queres resolver.",
   },
   {
-    question: "¿Dónde están ubicadas?",
-    answer:
-      "Estamos en Nueva Córdoba, Córdoba Capital. También podemos enviarte la ubicación exacta por WhatsApp.",
+    number: "02",
+    title: "Medidas y propuesta",
+    description: "Ordenamos distribucion, materiales y lineas generales del proyecto.",
   },
   {
-    question: "¿Qué tratamiento me conviene si es mi primera vez?",
-    answer:
-      "Podemos orientarte por mensaje para recomendarte una opción según lo que quieras mejorar o cuidar.",
+    number: "03",
+    title: "Fabricacion",
+    description: "Trabajamos cada pieza con foco en ajuste, prolijidad y terminacion.",
   },
   {
-    question: "¿Aceptan efectivo o transferencia?",
-    answer: "Sí, podés consultar por los medios de pago disponibles antes de reservar tu turno.",
+    number: "04",
+    title: "Colocacion final",
+    description: "Instalamos para que el espacio quede listo para usar.",
+  },
+] as const;
+
+export const contactCards = [
+  {
+    label: "WhatsApp",
+    value: "+54 9 351 308 2515",
+    href: "https://wa.me/5493513082515",
+  },
+  {
+    label: "Instagram",
+    value: "@disenoamoblamientos",
+    href: "https://www.instagram.com/disenoamoblamientos/",
+  },
+  {
+    label: "Zona de trabajo",
+    value: "Córdoba, Argentina",
   },
 ] as const;
 
 export function buildWhatsappUrl(message: string) {
-  const phone = site.whatsappNumber;
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
