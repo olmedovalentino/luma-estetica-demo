@@ -1,195 +1,164 @@
 export const site = {
   businessName: "Diseño Amoblamientos",
   tagline: "Amoblamientos a medida en Córdoba",
-  shortPitch:
-    "Diseñamos y fabricamos amoblamientos a medida para hogares y espacios funcionales, con una mirada cálida, prolija y pensada para durar.",
-  whatsappNumber: "5493513082515",
-  whatsappMessage:
-    "Hola, vengo desde la web y queria consultar por un proyecto de amoblamientos a medida.",
-  instagramUrl: "https://www.instagram.com/disenoamoblamientos/",
+  shortDescription:
+    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados en Córdoba.",
   location: "Córdoba, Argentina",
+  locationLabel: "Córdoba, Argentina · Amoblamientos a medida",
+  heroTitle: "Amoblamientos a medida para transformar tus espacios",
+  heroSubtitle:
+    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados, pensados para aprovechar cada espacio con diseño, funcionalidad y buena terminación.",
+  primaryCta: "Consultar por WhatsApp",
+  secondaryCta: "Ver trabajos",
+  logoUrl: "/images/diseno-amoblamientos/logo.jpg",
+  instagramHandle: "@disenoamoblamientos",
+  whatsappNumber: "5493513082515",
+  whatsappDisplay: "+54 9 351 308 2515",
+  whatsappMessage:
+    "Hola, vengo desde la página web. Quería consultar por un proyecto de amoblamientos a medida.",
+  whatsappUrl:
+    "https://wa.me/5493513082515?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web.%20Quer%C3%ADa%20consultar%20por%20un%20proyecto%20de%20amoblamientos%20a%20medida.",
+  instagramUrl: "https://www.instagram.com/disenoamoblamientos/",
   navigation: [
     { label: "Inicio", href: "#inicio" },
-    { label: "Amoblamientos", href: "#amoblamientos" },
-    { label: "Servicios", href: "#servicios" },
+    { label: "Proyectos", href: "#proyectos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Contacto", href: "#contacto" },
+  ],
+  footerNavigation: [
+    { label: "Inicio", href: "#inicio" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Proceso", href: "#proceso" },
     { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
-export const hero = {
-  eyebrow: "Córdoba, Argentina · Amoblamientos a medida",
-  title: "Diseño y funcionalidad para cada ambiente",
+export const introSection = {
+  eyebrow: "Amoblamientos a medida para espacios reales",
+  title: "Diseño funcional para vivir mejor cada ambiente",
   description:
-    "Creamos cocinas, placares, vestidores y muebles personalizados pensados para aprovechar mejor el espacio y acompañar el uso diario.",
-  image: "/images/diseno-amoblamientos/hero.jpg",
+    "Trabajamos cocinas, placares, vestidores y muebles personalizados para hogares que buscan funcionalidad, buena terminación y una estética integrada al espacio.",
+  image: "/images/diseno-amoblamientos/proyecto-5.jpg",
   fallbackImage:
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
-  alt: "Interior cálido con amoblamientos a medida",
+    "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+  alt: "Espacio interior con mueble de guardado a medida",
 } as const;
 
-export const intro = {
-  eyebrow: "Amoblamientos a medida",
-  title: "Soluciones pensadas para vivir mejor cada espacio",
-  description:
-    "Trabajamos propuestas a medida para optimizar guardado, circulación y estética, con materiales nobles y terminaciones cuidadas.",
-} as const;
-
-export const categories = [
+export const categoryProjects = [
   {
-    title: "Cocinas",
-    description: "Diseños funcionales para cocinar, ordenar y disfrutar el dia a dia.",
+    title: "Cocinas a medida",
+    description: "Diseños funcionales para aprovechar cada espacio.",
     image: "/images/diseno-amoblamientos/cocina.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Cocina a medida",
-    objectPosition: "center 54%",
+    alt: "Cocina a medida de Diseño Amoblamientos",
+    objectPosition: "center 52%",
   },
   {
     title: "Placares",
-    description: "Guardado integrado con distribuciones pensadas para cada ambiente.",
+    description: "Guardado a medida con distribución personalizada.",
     image: "/images/diseno-amoblamientos/placard.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Placard a medida",
-    objectPosition: "center 50%",
+    alt: "Placard a medida de Diseño Amoblamientos",
+    objectPosition: "center 48%",
   },
   {
     title: "Vestidores",
-    description: "Organizacion visual y comodidad para rutinas mas simples.",
+    description: "Orden, comodidad y visual limpia para tu hogar.",
     image: "/images/diseno-amoblamientos/vestidor.jpg",
     fallbackImage:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Vestidor personalizado",
-    objectPosition: "center 48%",
+    alt: "Vestidor a medida de Diseño Amoblamientos",
+    objectPosition: "center 46%",
   },
   {
     title: "Muebles personalizados",
-    description: "Piezas a medida para resolver rincones, interiores y usos puntuales.",
+    description: "Soluciones para rincones y necesidades específicas.",
     image: "/images/diseno-amoblamientos/mueble-personalizado.jpg",
     fallbackImage:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Mueble personalizado",
-    objectPosition: "center 52%",
-  },
-  {
-    title: "Bajo mesada",
-    description: "Equipamiento practico y prolijo para ordenar y aprovechar mejor.",
-    image: "/images/diseno-amoblamientos/cocina.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=80",
-    alt: "Bajo mesada a medida",
-    objectPosition: "center 58%",
-  },
-  {
-    title: "Interiores",
-    description: "Soluciones internas para guardar con logica, orden y accesibilidad.",
-    image: "/images/diseno-amoblamientos/placard.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80&sat=-25",
-    alt: "Interior de placard",
-    objectPosition: "center 44%",
-  },
-] as const;
-
-export const projects = [
-  {
-    title: "Cocina integral",
-    image: "/images/diseno-amoblamientos/proyecto-1.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto de cocina integral",
-    objectPosition: "center 54%",
-    span: "lg:col-span-2",
-  },
-  {
-    title: "Placard funcional",
-    image: "/images/diseno-amoblamientos/proyecto-2.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Placard funcional",
-    objectPosition: "center 50%",
-    span: "",
-  },
-  {
-    title: "Vestidor a medida",
-    image: "/images/diseno-amoblamientos/proyecto-3.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Vestidor a medida",
-    objectPosition: "center 48%",
-    span: "",
-  },
-  {
-    title: "Detalles de terminacion",
-    image: "/images/diseno-amoblamientos/proyecto-4.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Detalles de terminacion",
-    objectPosition: "center 52%",
-    span: "",
-  },
-  {
-    title: "Mueble de guardado",
-    image: "/images/diseno-amoblamientos/proyecto-5.jpg",
-    fallbackImage:
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Mueble de guardado",
-    objectPosition: "center 52%",
-    span: "",
-  },
-  {
-    title: "Proyecto personalizado",
-    image: "/images/diseno-amoblamientos/proyecto-6.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto personalizado",
-    objectPosition: "center 50%",
-    span: "lg:col-span-2",
+    alt: "Mueble personalizado de Diseño Amoblamientos",
+    objectPosition: "center 55%",
   },
 ] as const;
 
 export const processSteps = [
   {
     number: "01",
-    title: "Consulta",
-    description: "Escuchamos la idea, el espacio y lo que queres resolver.",
+    title: "Consulta inicial",
+    description: "Escuchamos tu idea y el espacio a resolver.",
   },
   {
     number: "02",
     title: "Medidas y propuesta",
-    description: "Ordenamos distribucion, materiales y lineas generales del proyecto.",
+    description: "Definimos medidas, distribución y materiales.",
   },
   {
     number: "03",
-    title: "Fabricacion",
-    description: "Trabajamos cada pieza con foco en ajuste, prolijidad y terminacion.",
+    title: "Fabricación",
+    description: "Ordenamos la propuesta y avanzamos con la fabricación.",
   },
   {
     number: "04",
-    title: "Colocacion final",
-    description: "Instalamos para que el espacio quede listo para usar.",
+    title: "Instalación",
+    description: "Colocamos para dejar todo listo para usar.",
   },
 ] as const;
 
-export const contactCards = [
+export const portfolioItems = [
   {
-    label: "WhatsApp",
-    value: "+54 9 351 308 2515",
-    href: "https://wa.me/5493513082515",
+    title: "Cocina a medida",
+    image: "/images/diseno-amoblamientos/proyecto-1.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto de cocina a medida de Diseño Amoblamientos",
+    span: "md:col-span-2 md:row-span-2",
+    objectPosition: "center 50%",
   },
   {
-    label: "Instagram",
-    value: "@disenoamoblamientos",
-    href: "https://www.instagram.com/disenoamoblamientos/",
+    title: "Placard",
+    image: "/images/diseno-amoblamientos/proyecto-2.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto de placard de Diseño Amoblamientos",
+    span: "",
+    objectPosition: "center 50%",
   },
   {
-    label: "Zona de trabajo",
-    value: "Córdoba, Argentina",
+    title: "Vestidor",
+    image: "/images/diseno-amoblamientos/proyecto-3.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto de vestidor de Diseño Amoblamientos",
+    span: "",
+    objectPosition: "center 48%",
+  },
+  {
+    title: "Mueble personalizado",
+    image: "/images/diseno-amoblamientos/proyecto-4.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
+    alt: "Mueble personalizado de Diseño Amoblamientos",
+    span: "",
+    objectPosition: "center 52%",
+  },
+  {
+    title: "Amoblamiento integral",
+    image: "/images/diseno-amoblamientos/proyecto-5.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
+    alt: "Amoblamiento integral de Diseño Amoblamientos",
+    span: "",
+    objectPosition: "center 52%",
+  },
+  {
+    title: "Proyecto terminado",
+    image: "/images/diseno-amoblamientos/proyecto-6.jpg",
+    fallbackImage:
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
+    alt: "Proyecto terminado de Diseño Amoblamientos",
+    span: "md:col-span-2",
+    objectPosition: "center 50%",
   },
 ] as const;
-
-export function buildWhatsappUrl(message: string) {
-  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
