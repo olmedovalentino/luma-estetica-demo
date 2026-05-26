@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Luma Estética | Córdoba Capital",
+  title: "Paredes Aire | Cordoba",
   description:
-    "Luma Estética en Córdoba Capital: tratamientos faciales, corporales, depilación, cejas, pestañas y belleza integral.",
+    "Instalacion, service, mantenimiento y diagnostico tecnico de aires acondicionados en Cordoba.",
 };
 
 export default function RootLayout({
@@ -15,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

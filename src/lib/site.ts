@@ -1,135 +1,188 @@
 export const site = {
-  businessName: "Luma Estética",
-  tagline: "Cuidado facial, corporal y belleza integral en Córdoba",
+  businessName: "Paredes Aire",
+  shortName: "Paredes",
+  tagline: "Instalacion y service de aires acondicionados",
   shortPitch:
-    "Un espacio cálido y profesional para regalarte un momento de bienestar. Reservá tu turno por WhatsApp de forma simple.",
-  whatsappNumber: "5493512345678",
-  whatsappMessage: "Hola Luma, quiero consultar por un turno.",
-  address: "Nueva Córdoba, Córdoba Capital",
-  city: "Córdoba Capital",
-  hours: "Lunes a viernes de 9:00 a 19:00 | Sábados de 9:00 a 13:00",
+    "Soluciones para hogares, comercios y espacios de trabajo: instalacion, mantenimiento, reparacion y carga de gas.",
+  whatsappNumber: "5493510000000",
+  whatsappMessage:
+    "Hola Paredes Aire, quiero consultar por instalacion o service de aire acondicionado.",
+  locationLabel: "Cordoba, Argentina",
+  coverageSummary: "Cordoba Capital y zonas cercanas",
+  hours: "Atencion coordinada por WhatsApp de lunes a sabado",
   locationUrl:
-    "https://www.google.com/maps/search/?api=1&query=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
-  locationEmbedUrl:
-    "https://www.google.com/maps?q=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
+    "https://www.google.com/maps/search/?api=1&query=Cordoba%20Capital%2C%20Cordoba%2C%20Argentina",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Sobre Luma", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Ubicación", href: "#ubicacion" },
+    { label: "Trabajos", href: "#trabajos" },
+    { label: "Zonas", href: "#zonas" },
+    { label: "Preguntas", href: "#preguntas" },
+    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
+export const hero = {
+  eyebrow: "Cordoba, Argentina - Climatizacion profesional",
+  title: "Instalacion y service de aires acondicionados",
+  description: site.shortPitch,
+  primaryCta: "Pedir presupuesto",
+  secondaryCta: "Ver servicios",
+  image:
+    "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80",
+  imageAlt: "Tecnico trabajando en una instalacion de aire acondicionado",
+  notes: [
+    "Atencion para hogares y comercios",
+    "Diagnostico tecnico claro",
+    "Coordinacion rapida por WhatsApp",
+  ],
+} as const;
+
+export const serviceHighlights = [
+  "Instalacion prolija",
+  "Mantenimiento preventivo",
+  "Asistencia para equipos split",
+] as const;
+
 export const services = [
   {
-    title: "Limpieza facial profunda",
-    description: "Renová la piel con un tratamiento suave que limpia, equilibra e ilumina.",
-    accent: "bg-[#f5ebe4]",
+    title: "Instalacion de aires acondicionados",
+    description: "Montaje seguro, nivelacion, pruebas y puesta en marcha.",
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Depilación",
-    description: "Servicios prolijos y cómodos para una piel suave y cuidada.",
-    accent: "bg-[#efe5dc]",
+    title: "Service y mantenimiento",
+    description: "Limpieza, control general y revision para sostener el rendimiento.",
     image:
-      "https://images.unsplash.com/photo-1620916566395-1fcb4b0a5f2f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Perfilado de cejas",
-    description: "Definí la mirada con un diseño natural que respeta tus facciones.",
-    accent: "bg-[#f7f1ec]",
+    title: "Recarga de gas",
+    description: "Chequeo de presion y carga cuando el equipo realmente lo necesita.",
     image:
-      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf1?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Lifting de pestañas",
-    description: "Un efecto sutil y elegante para levantar la mirada sin maquillaje diario.",
-    accent: "bg-[#eadfd8]",
+    title: "Reparacion de equipos",
+    description: "Deteccion de fallas y solucion tecnica para equipos residenciales o comerciales.",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Tratamientos corporales",
-    description: "Opciones para acompañar tu cuidado corporal con foco en bienestar.",
-    accent: "bg-[#f3e9e2]",
+    title: "Venta con instalacion",
+    description: "Asesoramiento para elegir equipo y dejarlo funcionando en el mismo servicio.",
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Belleza de manos",
-    description: "Manicuría prolija y delicada para un acabado cuidado y natural.",
-    accent: "bg-[#eee8e4]",
+    title: "Diagnostico tecnico",
+    description: "Evaluacion inicial para cotizar con datos concretos y sin vueltas.",
     image:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
   },
 ] as const;
 
-export const aboutText =
-  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos atención personalizada, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
-
-export const confidencePoints = [
-  "Atención personalizada",
-  "Productos seleccionados",
-  "Ambiente privado",
-  "Resultados naturales",
+export const projects = [
+  {
+    title: "Instalacion domiciliaria",
+    image:
+      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Service tecnico",
+    image:
+      "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Mantenimiento",
+    image:
+      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Equipo instalado",
+    image:
+      "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf1?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Trabajo comercial",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Revision tecnica",
+    image:
+      "https://images.unsplash.com/photo-1581092160607-ee22731a27f4?auto=format&fit=crop&w=1200&q=80",
+  },
 ] as const;
 
-export const gallery = [
+export const coverageZones = [
+  "Cordoba Capital",
+  "Nueva Cordoba",
+  "Zona Norte",
+  "Zona Sur",
+  "Villa Allende",
+  "Mendiolaza",
+] as const;
+
+export const coverageCards = [
   {
-    title: "Cabina facial",
-    description: "Luz suave, orden y una atmósfera serena para el cuidado del rostro.",
-    image:
-      "https://images.unsplash.com/photo-1560750588-0f3a8f8f8d0b?auto=format&fit=crop&w=1200&q=80",
-    span: "lg:col-span-2 lg:row-span-2",
+    title: "Visitas coordinadas",
+    description: "Organizamos turnos para responder rapido y con mejor precision.",
   },
   {
-    title: "Espacio de relajación",
-    description: "Un entorno cómodo y cuidado para bajar el ritmo.",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-    span: "",
+    title: "Atencion residencial y comercial",
+    description: "Trabajos para casas, locales, oficinas y espacios de trabajo.",
   },
   {
-    title: "Detalles de cuidado",
-    description: "Productos, textura y pequeños gestos que acompañan la experiencia.",
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
-    span: "",
-  },
-  {
-    title: "Ambiente privado",
-    description: "Una estética suave y cálida que invita a sentirte cómoda desde que llegás.",
-    image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
-    span: "lg:col-span-2",
+    title: "Cotizacion por WhatsApp",
+    description: "Podemos orientarte con fotos, ubicacion y datos basicos del equipo.",
   },
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Cómo reservo un turno?",
-    answer: "Escribinos por WhatsApp y te compartimos la disponibilidad para coordinar tu visita.",
-  },
-  {
-    question: "¿Dónde están ubicadas?",
+    question: "Hacen presupuesto por WhatsApp?",
     answer:
-      "Estamos en Nueva Córdoba, Córdoba Capital. También podemos enviarte la ubicación exacta por WhatsApp.",
+      "Si. Con fotos del equipo, ubicacion y tipo de trabajo podemos darte una orientacion inicial y coordinar visita si hace falta.",
   },
   {
-    question: "¿Qué tratamiento me conviene si es mi primera vez?",
+    question: "Instalan equipos nuevos?",
     answer:
-      "Podemos orientarte por mensaje para recomendarte una opción según lo que quieras mejorar o cuidar.",
+      "Si, realizamos instalaciones nuevas y tambien podemos asesorarte si todavia no elegiste el equipo.",
   },
   {
-    question: "¿Aceptan efectivo o transferencia?",
-    answer: "Sí, podés consultar por los medios de pago disponibles antes de reservar tu turno.",
+    question: "Realizan recarga de gas?",
+    answer:
+      "Si, pero primero revisamos el estado general del equipo para confirmar si corresponde hacer la carga.",
+  },
+  {
+    question: "Atienden comercios?",
+    answer:
+      "Si, trabajamos en viviendas, oficinas, locales y otros espacios comerciales de Cordoba y alrededores.",
+  },
+  {
+    question: "Que datos necesitan para cotizar?",
+    answer:
+      "Nos sirve saber la zona, el tipo de equipo, si es instalacion o service y sumar fotos del lugar o del aire acondicionado.",
+  },
+] as const;
+
+export const contactCards = [
+  {
+    label: "WhatsApp",
+    value: "Numero a confirmar",
+  },
+  {
+    label: "Cobertura",
+    value: site.coverageSummary,
+  },
+  {
+    label: "Modalidad",
+    value: "Coordinacion directa por mensaje",
   },
 ] as const;
 
 export function buildWhatsappUrl(message: string) {
-  const phone = site.whatsappNumber;
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
