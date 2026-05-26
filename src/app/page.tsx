@@ -15,51 +15,25 @@ export default function HomePage() {
         <section id="inicio" className="border-b border-[#DDD4C8] bg-[#F6F2EB]">
           <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14 lg:px-8 lg:py-20">
             <div className="flex flex-col justify-center">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
+              <p className="mb-8 text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
                 Diseño Amoblamientos · Córdoba, Argentina
               </p>
-              <h1 className="mt-6 max-w-[12ch] text-[2.7rem] font-semibold leading-[1.02] tracking-[-0.05em] text-[#151515] sm:text-[3.5rem] lg:text-[4.4rem]">
+              <h1 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.05em] text-[#151515] sm:text-[2.9rem] lg:text-[3.6rem]">
                 {site.heroTitle}
               </h1>
-              <p className="mt-6 max-w-xl text-[1rem] leading-7 text-[#4F4A44] sm:text-[1.05rem]">
+              <p className="mt-10 max-w-xl text-[1rem] leading-7 text-[#4F4A44] sm:text-[1.05rem]">
                 {site.heroSubtitle}
               </p>
-
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
-              <LocalImageFrame
-                src="/images/diseno-amoblamientos/hero.jpg"
-                alt="Proyecto destacado de Diseño Amoblamientos"
-                sizes="(min-width: 1024px) 42vw, 100vw"
-                priority
-                label="Hero"
-                className="min-h-[420px] border border-[#DDD4C8] lg:min-h-[620px]"
-              />
-              <div className="grid gap-4">
-                <div className="border border-[#DDD4C8] bg-[#EFE8DD] p-6 sm:p-8">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#7A6A57]">
-                    Qué hacemos
-                  </p>
-                  <p className="mt-4 max-w-xs text-lg leading-7 text-[#151515]">
-                    Cocinas, placares, vestidores y muebles personalizados.
-                  </p>
-                </div>
-                <div className="border border-[#DDD4C8] bg-[#FBF8F3] p-6 sm:p-8">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#7A6A57]">
-                    Consulta directa
-                  </p>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-2xl font-semibold leading-tight tracking-[-0.04em] text-[#151515] transition hover:text-[#128C4A]"
-                  >
-                    {site.whatsappDisplay}
-                  </a>
-                </div>
-              </div>
-            </div>
+            <LocalImageFrame
+              src="/images/diseno-amoblamientos/hero.jpg"
+              alt="Proyecto destacado de Diseño Amoblamientos"
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              priority
+              label="Hero"
+              className="min-h-[420px] border border-[#DDD4C8] lg:min-h-[620px]"
+            />
           </div>
         </section>
 
