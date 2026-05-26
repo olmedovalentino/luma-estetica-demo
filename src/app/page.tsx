@@ -4,268 +4,71 @@ import { ButtonLink } from "@/components/button-link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
-import { resolvePublicImage } from "@/lib/asset";
-import { categoryProjects, introSection, portfolioItems, processSteps, site } from "@/lib/site";
+import { categories, faqs, processSteps, projects, reasons, site } from "@/lib/site";
 
 export default function HomePage() {
   const whatsappUrl = site.whatsappUrl;
-  const heroImage = resolvePublicImage(
-    "/images/diseno-amoblamientos/hero.jpg",
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
-  );
 
   return (
     <>
       <SiteHeader />
 
       <main className="overflow-hidden">
-        <section id="inicio" className="mx-auto max-w-7xl px-4 pb-20 pt-6 sm:px-6 lg:px-8 lg:pb-28 lg:pt-8">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
-            <div className="relative z-10 max-w-[33rem] lg:-mt-8 lg:py-10">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C] lg:-translate-y-3">
-                {site.locationLabel}
-              </p>
-              <h1 className="mt-3 max-w-[32rem] font-editorial text-[2.65rem] leading-[1.03] tracking-[-0.03em] text-[#1F1A17] sm:text-[3.1rem] lg:text-[3.55rem]">
-                {site.heroTitle}
-              </h1>
-              <p className="mt-14 max-w-lg text-base leading-8 text-[#6D655E] sm:text-lg">
-                {site.heroSubtitle}
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <section id="inicio" className="border-b border-[#D8D2C8] bg-[#F6F3EE]">
+          <div className="mx-auto grid min-h-[calc(100svh-73px)] max-w-[1440px] gap-10 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-12 lg:px-8 lg:py-8">
+            <div className="flex flex-col justify-between py-8 lg:py-14">
+              <div>
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.34em] text-[#5F5A53]">
+                  Diseño Amoblamientos · Córdoba, Argentina
+                </p>
+                <h1 className="mt-8 max-w-[11ch] font-editorial text-[3.4rem] leading-[0.94] tracking-[-0.05em] text-[#151515] sm:text-[4.5rem] lg:text-[6.2rem]">
+                  {site.heroTitle}
+                </h1>
+                <p className="mt-8 max-w-xl text-base leading-8 text-[#4F4A44] sm:text-lg">
+                  {site.heroSubtitle}
+                </p>
+              </div>
+
+              <div className="mt-12 flex flex-col gap-5 border-t border-[#D8D2C8] pt-6 sm:flex-row sm:items-end sm:justify-between">
                 <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  Consultar por WhatsApp
+                  {site.primaryCta}
                 </ButtonLink>
-                <ButtonLink href="#trabajos" variant="secondary">
-                  Ver trabajos
-                </ButtonLink>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -left-6 top-8 hidden h-[72%] w-[40%] rounded-[2rem] border border-[#E8DDD2] bg-[#F3ECE2] lg:block" />
-              <div className="relative overflow-hidden rounded-[2.4rem] border border-[#E8DDD2] bg-[#FFFDF8] p-3 shadow-[0_40px_90px_-52px_rgba(31,26,23,0.4)]">
-                <div className="relative h-[420px] overflow-hidden rounded-[1.9rem] sm:h-[520px]">
-                  <Image
-                    src={heroImage}
-                    alt="Interior cálido con amoblamientos a medida y madera natural"
-                    fill
-                    priority
-                    sizes="(min-width: 1024px) 54vw, 100vw"
-                    className="object-cover"
-                    style={{ objectPosition: "center 54%" }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-[#E8DDD2] bg-[#FFFDF8]">
-          <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
-            <div className="relative order-2 lg:order-1">
-              <div className="relative h-[360px] overflow-hidden rounded-[2.2rem] border border-[#E8DDD2] sm:h-[460px]">
-                <Image
-                  src={resolvePublicImage(introSection.image, introSection.fallbackImage)}
-                  alt={introSection.alt}
-                  fill
-                  sizes="(min-width: 1024px) 48vw, 100vw"
-                  className="object-cover"
-                  style={{ objectPosition: "center 54%" }}
-                />
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2 lg:pl-8">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-                {introSection.eyebrow}
-              </p>
-              <h2 className="mt-4 max-w-lg font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-                {introSection.title}
-              </h2>
-              <p className="mt-8 max-w-xl text-base leading-8 text-[#6D655E]">{introSection.description}</p>
-
-              <div className="mt-10 space-y-3">
-                {[
-                  "Cocinas a medida",
-                  "Placares y vestidores personalizados",
-                  "Fabricación propia en Córdoba",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-4 border-b border-[#E8DDD2] pb-4">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#8A5A3C]" />
-                    <p className="text-sm leading-6 text-[#6D655E]">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="proyectos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="max-w-2xl">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-              Proyectos y categorías
-            </p>
-            <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-              Soluciones a medida para distintos ambientes
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {categoryProjects.map((project, index) => (
-              <article
-                key={project.title}
-                className={`overflow-hidden rounded-[2rem] border border-[#E8DDD2] ${
-                  index % 2 === 0 ? "bg-[#F3ECE2]" : "bg-[#FFFDF8]"
-                }`}
-              >
-                <div className="relative h-[290px] overflow-hidden sm:h-[340px]">
-                  <Image
-                    src={resolvePublicImage(project.image, project.fallbackImage)}
-                    alt={project.alt}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover transition duration-500 hover:scale-[1.02]"
-                    style={{ objectPosition: project.objectPosition }}
-                  />
-                </div>
-                <div className="grid gap-5 px-6 py-6 sm:grid-cols-[1fr_auto] sm:items-end">
-                  <div>
-                    <h3 className="font-editorial text-3xl leading-none text-[#1F1A17]">
-                      {project.title}
-                    </h3>
-                    <p className="mt-3 max-w-md text-sm leading-6 text-[#6D655E]">
-                      {project.description}
-                    </p>
-                  </div>
-                  <span className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#8A5A3C]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="proceso" className="border-y border-[#E8DDD2] bg-[#F3ECE2]">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-            <div className="max-w-2xl">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-                Proceso de trabajo
-              </p>
-              <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-                Un proceso claro, simple y a medida
-              </h2>
-            </div>
-
-            <div className="mt-14 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
-              {processSteps.map((step) => (
-                <article
-                  key={step.number}
-                  className="rounded-[1.9rem] border border-[#E8DDD2] bg-[#FFFDF8] px-6 py-7"
+                <a
+                  href="#proyectos"
+                  className="text-sm uppercase tracking-[0.28em] text-[#151515] transition hover:text-[#7A6A57]"
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-[#D8C1A8] text-[0.78rem] font-semibold tracking-[0.18em] text-[#8A5A3C]">
-                      {step.number}
-                    </span>
-                    <div className="min-w-0">
-                      <h3 className="font-editorial text-[1.6rem] leading-none text-[#1F1A17]">
-                        {step.title}
-                      </h3>
-                      <p className="mt-3 max-w-[18rem] text-sm leading-6 text-[#6D655E]">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="trabajos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="max-w-2xl">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#8A5A3C]">
-              Portfolio visual
-            </p>
-            <h2 className="mt-4 font-editorial text-4xl leading-tight tracking-[-0.03em] text-[#1F1A17] sm:text-5xl">
-              Proyectos pensados para cada ambiente
-            </h2>
-          </div>
-
-          <div className="mt-10 grid auto-rows-[220px] gap-4 md:grid-cols-3 md:auto-rows-[240px]">
-            {portfolioItems.map((item) => (
-              <article
-                key={item.title}
-                className={`group relative overflow-hidden rounded-[1.9rem] border border-[#E8DDD2] ${item.span}`}
-              >
-                <Image
-                  src={resolvePublicImage(item.image, item.fallbackImage)}
-                  alt={item.alt}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
-                  style={{ objectPosition: item.objectPosition }}
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(31,26,23,0.02),rgba(31,26,23,0.46))]" />
-                <div className="absolute inset-x-0 bottom-0 p-5 text-[#FFFDF8]">
-                  <h3 className="font-editorial text-[1.9rem] leading-none">{item.title}</h3>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contacto" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[2.2rem] border border-[#E8DDD2] bg-[#1F1A17] p-8 text-[#FFFDF8] sm:p-10">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#D8C1A8]">
-                Contacto
-              </p>
-              <h2 className="mt-4 max-w-xl font-editorial text-4xl leading-tight tracking-[-0.03em] sm:text-5xl">
-                Contanos qué espacio querés resolver
-              </h2>
-              <p className="mt-6 max-w-xl text-base leading-7 text-[#E9DDD1]">
-                Escribinos por WhatsApp y contanos qué mueble o ambiente tenés en mente. Podemos orientarte con ideas, medidas y próximos pasos.
-              </p>
-
-              <div className="mt-9">
-                <ButtonLink
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-[#D8C1A8] bg-[#D8C1A8] text-[#1F1A17] hover:bg-[#e4cfb8]"
-                >
-                  Consultar por WhatsApp
-                </ButtonLink>
+                  Explorar proyectos
+                </a>
               </div>
             </div>
 
-            <div className="rounded-[2.2rem] border border-[#E8DDD2] bg-[#F3ECE2] p-8 sm:p-10">
-              <div className="space-y-5">
-                <div className="border-b border-[#D8C1A8] pb-5">
-                  <p className="text-sm font-semibold text-[#1F1A17]">Córdoba, Argentina</p>
-                  <p className="mt-2 text-sm leading-6 text-[#6D655E]">
-                    Consultas por proyecto por WhatsApp o Instagram.
+            <div className="relative min-h-[520px] border border-[#D8D2C8] bg-[#ECE7DF] sm:min-h-[620px]">
+              <Image
+                src="/images/diseno-amoblamientos/hero.svg"
+                alt="Composición visual editorial de Diseño Amoblamientos"
+                fill
+                priority
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 flex justify-between gap-6 border-t border-[#D8D2C8] bg-[rgba(246,243,238,0.88)] px-5 py-4 backdrop-blur-sm sm:px-8">
+                <div>
+                  <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#5F5A53]">
+                    Rubro
+                  </p>
+                  <p className="mt-2 text-sm text-[#151515]">
+                    Cocinas, placares, vestidores y muebles a medida
                   </p>
                 </div>
-                <div className="border-b border-[#D8C1A8] pb-5">
-                  <p className="text-sm font-semibold text-[#1F1A17]">Instagram</p>
-                  <a
-                    href={site.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-block text-sm leading-6 text-[#6D655E] underline decoration-[#D8C1A8] underline-offset-4"
-                  >
-                    {site.instagramHandle}
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#1F1A17]">WhatsApp</p>
+                <div className="hidden text-right sm:block">
+                  <p className="text-[0.68rem] uppercase tracking-[0.28em] text-[#5F5A53]">
+                    Contacto
+                  </p>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-block text-sm leading-6 text-[#6D655E] underline decoration-[#D8C1A8] underline-offset-4 transition hover:text-[#1F1A17]"
+                    className="mt-2 inline-block text-sm text-[#151515] transition hover:text-[#7A6A57]"
                   >
                     {site.whatsappDisplay}
                   </a>
@@ -274,10 +77,255 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <section id="categorias" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="grid gap-10 border-t border-[#D8D2C8] pt-6 lg:grid-cols-[0.4fr_1fr] lg:pt-8">
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                Categorías
+              </p>
+              <h2 className="mt-4 max-w-xs font-editorial text-4xl leading-[1] tracking-[-0.04em] text-[#151515] sm:text-5xl">
+                Tipologías que resolvemos a medida.
+              </h2>
+            </div>
+
+            <div className="grid gap-px bg-[#D8D2C8] md:grid-cols-2">
+              {categories.map((category) => (
+                <article key={category.title} className="group bg-[#F8F6F1]">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={category.image}
+                      alt={category.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.015]"
+                    />
+                  </div>
+                  <div className="grid gap-3 px-5 py-5 sm:px-6 sm:py-6">
+                    <h3 className="font-editorial text-[2rem] leading-none tracking-[-0.03em] text-[#151515]">
+                      {category.title}
+                    </h3>
+                    <p className="max-w-md text-sm leading-6 text-[#4F4A44]">
+                      {category.description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="proyectos" className="border-y border-[#D8D2C8] bg-[#F1EEE8]">
+          <div className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+            <div className="grid gap-8 lg:grid-cols-[0.42fr_1fr]">
+              <div>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                  Proyectos
+                </p>
+                <h2 className="mt-4 max-w-sm font-editorial text-4xl leading-[1] tracking-[-0.04em] text-[#151515] sm:text-5xl">
+                  Un portfolio visual más cercano a catálogo que a plantilla.
+                </h2>
+              </div>
+
+              <div className="grid gap-px bg-[#D8D2C8] md:grid-cols-12">
+                {projects.map((project) => (
+                  <article
+                    key={project.title}
+                    className={`group relative min-h-[320px] bg-[#F8F6F1] ${project.className}`}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.alt}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(21,21,21,0.04),rgba(21,21,21,0.62))]" />
+                    <div className="absolute inset-x-0 bottom-0 border-t border-white/20 px-5 py-4 text-[#F8F6F1] sm:px-6">
+                      <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#DDD5CA]">
+                        {project.category}
+                      </p>
+                      <h3 className="mt-2 font-editorial text-[1.8rem] leading-none tracking-[-0.03em]">
+                        {project.title}
+                      </h3>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="proceso" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="border-t border-[#D8D2C8] pt-6 lg:pt-8">
+            <div className="grid gap-10 lg:grid-cols-[0.38fr_1fr]">
+              <div>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                  Proceso
+                </p>
+                <h2 className="mt-4 max-w-xs font-editorial text-4xl leading-[1] tracking-[-0.04em] text-[#151515] sm:text-5xl">
+                  Un recorrido claro, sobrio y ordenado.
+                </h2>
+              </div>
+
+              <div className="grid gap-8 md:grid-cols-4 md:gap-0">
+                {processSteps.map((step, index) => (
+                  <article key={step.number} className="relative md:px-6">
+                    <div className="flex items-end justify-between gap-4 border-b border-[#D8D2C8] pb-5">
+                      <span className="font-editorial text-[3.2rem] leading-none tracking-[-0.05em] text-[#151515] sm:text-[4rem]">
+                        {step.number}
+                      </span>
+                      {index < processSteps.length - 1 ? (
+                        <span className="hidden h-px flex-1 bg-[#D8D2C8] md:block" />
+                      ) : null}
+                    </div>
+                    <h3 className="mt-5 font-editorial text-[1.9rem] leading-none tracking-[-0.03em] text-[#151515]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 max-w-[18rem] text-sm leading-6 text-[#4F4A44]">
+                      {step.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-[#D8D2C8] bg-[#FBFAF7]">
+          <div className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+            <div className="grid gap-10 lg:grid-cols-[0.44fr_1fr]">
+              <div>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                  Por qué elegirnos
+                </p>
+                <h2 className="mt-4 max-w-xs font-editorial text-4xl leading-[1] tracking-[-0.04em] text-[#151515] sm:text-5xl">
+                  Beneficios expresados con claridad.
+                </h2>
+              </div>
+
+              <div className="grid gap-px bg-[#D8D2C8] sm:grid-cols-2">
+                {reasons.map((reason) => (
+                  <div key={reason} className="bg-[#FBFAF7] px-5 py-8 sm:px-7">
+                    <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7A6A57]">
+                      Diseño Amoblamientos
+                    </p>
+                    <p className="mt-4 font-editorial text-[2rem] leading-none tracking-[-0.03em] text-[#151515]">
+                      {reason}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+          <div className="grid gap-8 border-y border-[#D8D2C8] py-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                Consulta
+              </p>
+              <h2 className="mt-4 max-w-3xl font-editorial text-4xl leading-[0.98] tracking-[-0.04em] text-[#151515] sm:text-5xl lg:text-[4.3rem]">
+                Si ya tenés una idea, podemos convertirla en un proyecto posible.
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[#4F4A44]">
+                Escribinos por WhatsApp para contarnos medidas, necesidades y el tipo de ambiente que querés resolver.
+              </p>
+            </div>
+
+            <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              Pedir información
+            </ButtonLink>
+          </div>
+        </section>
+
+        <section id="faq" className="border-y border-[#D8D2C8] bg-[#F6F3EE]">
+          <div className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+            <div className="grid gap-10 lg:grid-cols-[0.38fr_1fr]">
+              <div>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                  Preguntas frecuentes
+                </p>
+                <h2 className="mt-4 max-w-xs font-editorial text-4xl leading-[1] tracking-[-0.04em] text-[#151515] sm:text-5xl">
+                  Respuestas simples para consultas habituales.
+                </h2>
+              </div>
+
+              <div className="border-t border-[#D8D2C8]">
+                {faqs.map((faq) => (
+                  <details key={faq.question} className="border-b border-[#D8D2C8] py-5">
+                    <summary className="flex cursor-pointer items-center justify-between gap-6 text-left">
+                      <span className="font-editorial text-[1.6rem] leading-none tracking-[-0.03em] text-[#151515]">
+                        {faq.question}
+                      </span>
+                      <span className="text-xs uppercase tracking-[0.28em] text-[#7A6A57]">
+                        Abrir
+                      </span>
+                    </summary>
+                    <p className="max-w-2xl pt-4 text-sm leading-7 text-[#4F4A44]">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contacto" className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="grid gap-10 border-t border-[#D8D2C8] pt-6 lg:grid-cols-[1fr_0.72fr] lg:pt-8">
+            <div>
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#5F5A53]">
+                Contacto
+              </p>
+              <h2 className="mt-4 max-w-xl font-editorial text-4xl leading-[0.98] tracking-[-0.04em] text-[#151515] sm:text-5xl lg:text-[4.2rem]">
+                Hablemos sobre el espacio que querés transformar.
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[#4F4A44]">
+                Diseño Amoblamientos trabaja en Córdoba, Argentina, desarrollando cocinas, placares, vestidores y muebles personalizados.
+              </p>
+              <div className="mt-8">
+                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  Consultar por WhatsApp
+                </ButtonLink>
+              </div>
+            </div>
+
+            <div className="grid gap-px bg-[#D8D2C8]">
+              <div className="bg-[#FBFAF7] px-5 py-6 sm:px-7">
+                <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7A6A57]">WhatsApp</p>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block font-editorial text-[2rem] leading-none tracking-[-0.03em] text-[#151515] transition hover:text-[#7A6A57]"
+                >
+                  {site.whatsappDisplay}
+                </a>
+              </div>
+              <div className="bg-[#FBFAF7] px-5 py-6 sm:px-7">
+                <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7A6A57]">Instagram</p>
+                <a
+                  href={site.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block font-editorial text-[2rem] leading-none tracking-[-0.03em] text-[#151515] transition hover:text-[#7A6A57]"
+                >
+                  {site.instagramHandle}
+                </a>
+              </div>
+              <div className="bg-[#FBFAF7] px-5 py-6 sm:px-7">
+                <p className="text-[0.68rem] uppercase tracking-[0.3em] text-[#7A6A57]">Ubicación</p>
+                <p className="mt-3 font-editorial text-[2rem] leading-none tracking-[-0.03em] text-[#151515]">
+                  {site.location}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />
-      <FloatingWhatsAppButton href={whatsappUrl} label="Consultar por WhatsApp" />
+      <FloatingWhatsAppButton href={whatsappUrl} label="WhatsApp" />
     </>
   );
 }

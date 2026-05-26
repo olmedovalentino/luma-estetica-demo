@@ -2,163 +2,166 @@ export const site = {
   businessName: "Diseño Amoblamientos",
   tagline: "Amoblamientos a medida en Córdoba",
   shortDescription:
-    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados en Córdoba.",
+    "Diseño y fabricación de cocinas, placares, vestidores y muebles a medida en Córdoba, Argentina.",
   location: "Córdoba, Argentina",
-  locationLabel: "Córdoba, Argentina · Amoblamientos a medida",
-  heroTitle: "Amoblamientos a medida para transformar tus espacios",
+  locationLabel: "Córdoba, Argentina",
+  heroTitle: "Diseño y fabricación de amoblamientos a medida",
   heroSubtitle:
-    "Diseñamos y fabricamos cocinas, placares, vestidores y muebles personalizados, pensados para aprovechar cada espacio con diseño, funcionalidad y buena terminación.",
-  primaryCta: "Consultar por WhatsApp",
-  secondaryCta: "Ver trabajos",
-  logoUrl: "/images/diseno-amoblamientos/logo.jpg",
+    "Creamos cocinas, placares, vestidores y muebles personalizados pensados para aprovechar mejor cada espacio.",
+  primaryCta: "Escribir por WhatsApp",
+  secondaryCta: "Ver proyectos",
+  logoUrl: "/images/diseno-amoblamientos/logo.svg",
   instagramHandle: "@disenoamoblamientos",
   whatsappNumber: "5493513082515",
-  whatsappDisplay: "+54 9 351 308 2515",
+  whatsappDisplay: "+54 9 351 308-2515",
   whatsappMessage:
-    "Hola, vengo desde la página web. Quería consultar por un proyecto de amoblamientos a medida.",
+    "Hola, vengo desde la página web. Quisiera consultar por un proyecto de amoblamientos a medida.",
   whatsappUrl:
-    "https://wa.me/5493513082515?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web.%20Quer%C3%ADa%20consultar%20por%20un%20proyecto%20de%20amoblamientos%20a%20medida.",
+    "https://wa.me/5493513082515?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web.%20Quisiera%20consultar%20por%20un%20proyecto%20de%20amoblamientos%20a%20medida.",
   instagramUrl: "https://www.instagram.com/disenoamoblamientos/",
   navigation: [
     { label: "Inicio", href: "#inicio" },
+    { label: "Categorías", href: "#categorias" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Proceso", href: "#proceso" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contacto", href: "#contacto" },
   ],
   footerNavigation: [
-    { label: "Inicio", href: "#inicio" },
+    { label: "Categorías", href: "#categorias" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Proceso", href: "#proceso" },
     { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
-export const introSection = {
-  eyebrow: "Amoblamientos a medida para espacios reales",
-  title: "Diseño funcional para vivir mejor cada ambiente",
-  description:
-    "Trabajamos cocinas, placares, vestidores y muebles personalizados para hogares que buscan funcionalidad, buena terminación y una estética integrada al espacio.",
-  image: "/images/diseno-amoblamientos/proyecto-5.jpg",
-  fallbackImage:
-    "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-  alt: "Espacio interior con mueble de guardado a medida",
-} as const;
-
-export const categoryProjects = [
+export const categories = [
   {
-    title: "Cocinas a medida",
-    description: "Diseños funcionales para aprovechar cada espacio.",
-    image: "/images/diseno-amoblamientos/cocina.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Cocina a medida de Diseño Amoblamientos",
-    objectPosition: "center 52%",
+    title: "Cocinas",
+    description: "Diseño funcional y presencia limpia para el uso diario.",
+    image: "/images/diseno-amoblamientos/categoria-cocinas.svg",
+    alt: "Visual de cocinas a medida de Diseño Amoblamientos",
   },
   {
     title: "Placares",
-    description: "Guardado a medida con distribución personalizada.",
-    image: "/images/diseno-amoblamientos/placard.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Placard a medida de Diseño Amoblamientos",
-    objectPosition: "center 48%",
+    description: "Guardado resuelto con estructura, orden y proporción.",
+    image: "/images/diseno-amoblamientos/categoria-placares.svg",
+    alt: "Visual de placares a medida de Diseño Amoblamientos",
   },
   {
     title: "Vestidores",
-    description: "Orden, comodidad y visual limpia para tu hogar.",
-    image: "/images/diseno-amoblamientos/vestidor.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Vestidor a medida de Diseño Amoblamientos",
-    objectPosition: "center 46%",
+    description: "Recorridos claros y distribución pensada para cada espacio.",
+    image: "/images/diseno-amoblamientos/categoria-vestidores.svg",
+    alt: "Visual de vestidores de Diseño Amoblamientos",
   },
   {
-    title: "Muebles personalizados",
-    description: "Soluciones para rincones y necesidades específicas.",
-    image: "/images/diseno-amoblamientos/mueble-personalizado.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Mueble personalizado de Diseño Amoblamientos",
-    objectPosition: "center 55%",
+    title: "Muebles a medida",
+    description: "Piezas diseñadas para integrarse con naturalidad al ambiente.",
+    image: "/images/diseno-amoblamientos/categoria-muebles.svg",
+    alt: "Visual de muebles a medida de Diseño Amoblamientos",
+  },
+] as const;
+
+export const projects = [
+  {
+    title: "Cocina integral",
+    category: "Cocinas",
+    image: "/images/diseno-amoblamientos/proyecto-1.svg",
+    alt: "Proyecto de cocina integral de Diseño Amoblamientos",
+    className: "md:col-span-8 md:row-span-2",
+  },
+  {
+    title: "Placard lineal",
+    category: "Placares",
+    image: "/images/diseno-amoblamientos/proyecto-2.svg",
+    alt: "Proyecto de placard lineal de Diseño Amoblamientos",
+    className: "md:col-span-4",
+  },
+  {
+    title: "Vestidor abierto",
+    category: "Vestidores",
+    image: "/images/diseno-amoblamientos/proyecto-3.svg",
+    alt: "Proyecto de vestidor abierto de Diseño Amoblamientos",
+    className: "md:col-span-4",
+  },
+  {
+    title: "Amoblamiento auxiliar",
+    category: "Muebles a medida",
+    image: "/images/diseno-amoblamientos/proyecto-4.svg",
+    alt: "Proyecto de mueble a medida de Diseño Amoblamientos",
+    className: "md:col-span-5",
+  },
+  {
+    title: "Frente de placard",
+    category: "Placares",
+    image: "/images/diseno-amoblamientos/proyecto-5.svg",
+    alt: "Proyecto de frente de placard de Diseño Amoblamientos",
+    className: "md:col-span-3",
+  },
+  {
+    title: "Composición a medida",
+    category: "Amoblamientos personalizados",
+    image: "/images/diseno-amoblamientos/proyecto-6.svg",
+    alt: "Proyecto de amoblamiento personalizado de Diseño Amoblamientos",
+    className: "md:col-span-4",
   },
 ] as const;
 
 export const processSteps = [
   {
     number: "01",
-    title: "Consulta inicial",
-    description: "Escuchamos tu idea y el espacio a resolver.",
+    title: "Consulta",
+    description: "Escuchamos la necesidad, el uso esperado y el tipo de ambiente.",
   },
   {
     number: "02",
-    title: "Medidas y propuesta",
-    description: "Definimos medidas, distribución y materiales.",
+    title: "Medidas",
+    description: "Relevamos el espacio para definir proporciones y posibilidades reales.",
   },
   {
     number: "03",
     title: "Fabricación",
-    description: "Ordenamos la propuesta y avanzamos con la fabricación.",
+    description: "Desarrollamos cada pieza con foco en estructura, terminación y ajuste.",
   },
   {
     number: "04",
     title: "Instalación",
-    description: "Colocamos para dejar todo listo para usar.",
+    description: "Montamos el proyecto final para que quede integrado al lugar.",
   },
 ] as const;
 
-export const portfolioItems = [
+export const reasons = [
+  "Diseño a medida",
+  "Optimización del espacio",
+  "Terminaciones cuidadas",
+  "Acompañamiento en el proceso",
+  "Fabricación e instalación",
+] as const;
+
+export const faqs = [
   {
-    title: "Cocina a medida",
-    image: "/images/diseno-amoblamientos/proyecto-1.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto de cocina a medida de Diseño Amoblamientos",
-    span: "md:col-span-2 md:row-span-2",
-    objectPosition: "center 50%",
+    question: "¿Hacen muebles a medida?",
+    answer:
+      "Sí. Cada proyecto se desarrolla según medidas, uso del espacio y necesidades reales de cada ambiente.",
   },
   {
-    title: "Placard",
-    image: "/images/diseno-amoblamientos/proyecto-2.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto de placard de Diseño Amoblamientos",
-    span: "",
-    objectPosition: "center 50%",
+    question: "¿Puedo pedir presupuesto por WhatsApp?",
+    answer:
+      "Sí. Podés escribir directamente por WhatsApp para contarnos tu idea y avanzar con una primera orientación.",
   },
   {
-    title: "Vestidor",
-    image: "/images/diseno-amoblamientos/proyecto-3.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto de vestidor de Diseño Amoblamientos",
-    span: "",
-    objectPosition: "center 48%",
+    question: "¿Trabajan cocinas, placares y vestidores?",
+    answer:
+      "Sí. Diseñamos y fabricamos cocinas, placares, vestidores y otros amoblamientos personalizados.",
   },
   {
-    title: "Mueble personalizado",
-    image: "/images/diseno-amoblamientos/proyecto-4.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1400&q=80",
-    alt: "Mueble personalizado de Diseño Amoblamientos",
-    span: "",
-    objectPosition: "center 52%",
+    question: "¿Hacen diseño e instalación?",
+    answer:
+      "Sí. Acompañamos el proceso desde la propuesta inicial hasta la instalación final del amoblamiento.",
   },
   {
-    title: "Amoblamiento integral",
-    image: "/images/diseno-amoblamientos/proyecto-5.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80",
-    alt: "Amoblamiento integral de Diseño Amoblamientos",
-    span: "",
-    objectPosition: "center 52%",
-  },
-  {
-    title: "Proyecto terminado",
-    image: "/images/diseno-amoblamientos/proyecto-6.jpg",
-    fallbackImage:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=80",
-    alt: "Proyecto terminado de Diseño Amoblamientos",
-    span: "md:col-span-2",
-    objectPosition: "center 50%",
+    question: "¿Se puede adaptar el proyecto al espacio disponible?",
+    answer:
+      "Sí. El objetivo es resolver cada ambiente con una propuesta funcional, proporcionada y adaptada al lugar.",
   },
 ] as const;
