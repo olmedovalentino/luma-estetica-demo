@@ -14,14 +14,16 @@ export default function HomePage() {
       <main className="overflow-hidden">
         <section id="inicio" className="border-b border-[#DDD4C8] bg-[#F6F2EB]">
           <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14 lg:px-8 lg:py-20">
-            <div className="flex flex-col justify-center">
-              <p className="mb-8 text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
+            <div className="flex flex-col lg:min-h-[620px] lg:justify-between">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
                 Diseño Amoblamientos · Córdoba, Argentina
               </p>
-              <h1 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.05em] text-[#151515] sm:text-[2.9rem] lg:text-[3.6rem]">
-                {site.heroTitle}
-              </h1>
-              <p className="mt-10 max-w-xl text-[1rem] leading-7 text-[#4F4A44] sm:text-[1.05rem]">
+              <div className="py-10 lg:py-14">
+                <h1 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.05em] text-[#151515] sm:text-[2.9rem] lg:text-[3.6rem]">
+                  {site.heroTitle}
+                </h1>
+              </div>
+              <p className="max-w-xl text-[1rem] leading-7 text-[#4F4A44] sm:text-[1.05rem]">
                 {site.heroSubtitle}
               </p>
             </div>
