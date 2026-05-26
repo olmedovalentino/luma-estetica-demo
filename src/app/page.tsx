@@ -144,26 +144,23 @@ export default function HomePage() {
 
               <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
-                  <article
-                    key={project.title}
-                    className="grid gap-4 border border-[#DDD4C8] bg-[#FBF8F3] p-4 sm:p-5"
-                  >
+                  <article key={project.title} className="group relative overflow-hidden bg-[#E7E0D5]">
                     <LocalImageFrame
                       src={project.image}
                       alt={project.alt}
                       sizes="(min-width: 1280px) 24vw, (min-width: 768px) 50vw, 100vw"
                       label={project.title}
-                      className="aspect-[4/3] border border-[#DDD4C8] bg-[#E7E0D5]"
+                      className="aspect-[4/3]"
+                      imageClassName="object-cover transition duration-500 group-hover:scale-[1.02]"
                     />
-                    <div className="grid gap-2 border-t border-[#DDD4C8] pt-4">
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(21,21,21,0.02),rgba(21,21,21,0.55))]" />
+                    <div className="absolute bottom-0 left-0 px-5 py-4 sm:px-6 sm:py-5">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#DDD5CA]">
                         {project.category}
                       </p>
-                      <div>
-                        <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-[#151515]">
-                          {project.title}
-                        </h3>
-                      </div>
+                      <h3 className="mt-2 text-[1.2rem] font-semibold tracking-[-0.03em] text-white">
+                        {project.title}
+                      </h3>
                     </div>
                   </article>
                 ))}
