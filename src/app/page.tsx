@@ -13,17 +13,17 @@ export default function HomePage() {
 
       <main className="overflow-hidden">
         <section id="inicio" className="border-b border-[#DDD4C8] bg-[#F6F2EB]">
-          <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-10 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-14 lg:px-8 lg:py-20">
-            <div className="flex flex-col lg:min-h-[620px] lg:justify-between">
+          <div className="mx-auto grid max-w-[1440px] gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-12 lg:px-8 lg:py-16">
+            <div className="flex flex-col lg:min-h-[560px] lg:justify-between">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
                 Diseño Amoblamientos · Córdoba, Argentina
               </p>
-              <div className="py-10 lg:py-14">
-                <h1 className="max-w-[12ch] text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.05em] text-[#151515] sm:text-[2.9rem] lg:text-[3.6rem]">
+              <div className="py-6 lg:py-10">
+                <h1 className="max-w-[12ch] text-[2.1rem] font-semibold leading-[1.02] tracking-[-0.05em] text-[#151515] sm:text-[2.7rem] lg:text-[3.3rem]">
                   {site.heroTitle}
                 </h1>
               </div>
-              <p className="max-w-xl text-[1rem] leading-7 text-[#4F4A44] sm:text-[1.05rem]">
+              <p className="max-w-lg text-[0.98rem] leading-7 text-[#4F4A44] sm:text-[1rem]">
                 {site.heroSubtitle}
               </p>
             </div>
@@ -34,7 +34,7 @@ export default function HomePage() {
               sizes="(min-width: 1024px) 58vw, 100vw"
               priority
               label="Hero"
-              className="min-h-[420px] border border-[#DDD4C8] lg:min-h-[620px]"
+              className="min-h-[380px] border border-[#DDD4C8] lg:min-h-[560px]"
             />
           </div>
         </section>
@@ -68,6 +68,36 @@ export default function HomePage() {
                       {service.description}
                     </p>
                   </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="por-que-elegirnos"
+          className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+        >
+          <div className="grid gap-12 lg:grid-cols-[0.34fr_1fr]">
+            <div className="space-y-4">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
+                Por qué elegirnos
+              </p>
+              <h2 className="max-w-xs text-[2rem] font-semibold leading-tight tracking-[-0.04em] text-[#151515] sm:text-[2.4rem]">
+                Menos promesa, más criterio.
+              </h2>
+            </div>
+
+            <div className="grid gap-px bg-[#DDD4C8] md:grid-cols-3">
+              {reasons.map((reason) => (
+                <article key={reason.title} className="bg-[#FBF8F3] p-6 sm:p-8">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
+                    Diseño Amoblamientos
+                  </p>
+                  <h3 className="mt-5 text-[1.4rem] font-semibold leading-tight tracking-[-0.03em] text-[#151515]">
+                    {reason.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[#4F4A44]">{reason.description}</p>
                 </article>
               ))}
             </div>
@@ -109,36 +139,6 @@ export default function HomePage() {
                   </article>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          id="por-que-elegirnos"
-          className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-        >
-          <div className="grid gap-12 lg:grid-cols-[0.34fr_1fr]">
-            <div className="space-y-4">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#6A645D]">
-                Por qué elegirnos
-              </p>
-              <h2 className="max-w-xs text-[2rem] font-semibold leading-tight tracking-[-0.04em] text-[#151515] sm:text-[2.4rem]">
-                Menos promesa, más criterio.
-              </h2>
-            </div>
-
-            <div className="grid gap-px bg-[#DDD4C8] md:grid-cols-3">
-              {reasons.map((reason) => (
-                <article key={reason.title} className="bg-[#FBF8F3] p-6 sm:p-8">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
-                    Diseño Amoblamientos
-                  </p>
-                  <h3 className="mt-5 text-[1.4rem] font-semibold leading-tight tracking-[-0.03em] text-[#151515]">
-                    {reason.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#4F4A44]">{reason.description}</p>
-                </article>
-              ))}
             </div>
           </div>
         </section>
