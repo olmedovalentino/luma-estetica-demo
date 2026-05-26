@@ -102,32 +102,31 @@ export default function HomePage() {
 
         <section
           id="por-que-elegirnos"
-          className="mx-auto max-w-[1440px] px-4 pb-16 pt-4 sm:px-6 sm:pb-18 sm:pt-6 lg:px-8 lg:pb-20 lg:pt-8"
+          className="border-y border-[#DDD4C8] bg-[#FBF8F3]"
         >
-          <div className="grid gap-8 lg:grid-cols-[0.34fr_1fr] lg:gap-10">
-            <div className="space-y-3">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#6A645D]">
-                Por qué elegirnos
-              </p>
-              <h2 className="max-w-[14rem] text-[1.45rem] font-semibold leading-[1.15] tracking-[-0.03em] text-[#151515] sm:text-[1.7rem]">
-                Menos promesa, más criterio.
-              </h2>
-            </div>
+          <div className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.34fr)_minmax(0,1fr)] lg:items-start lg:gap-12">
+              <div className="border-t border-[#DDD4C8] pt-5">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#6A645D]">
+                  Por qué elegirnos
+                </p>
+                <h2 className="mt-4 max-w-[13rem] text-[1.65rem] font-semibold leading-[1.08] tracking-[-0.04em] text-[#151515] sm:text-[2rem]">
+                  Menos promesa, más criterio.
+                </h2>
+              </div>
 
-            <div className="grid gap-px bg-[#DDD4C8] md:grid-cols-3">
-              {reasons.map((reason) => (
-                <article key={reason.title} className="bg-[#FBF8F3] p-5 sm:p-6">
-                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-[#7A6A57]">
-                    Diseño Amoblamientos
-                  </p>
-                  <h3 className="mt-4 text-[1.05rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#151515]">
-                    {reason.title}
-                  </h3>
-                  <p className="mt-2 max-w-[16rem] text-[0.92rem] leading-6 text-[#4F4A44]">
-                    {reason.description}
-                  </p>
-                </article>
-              ))}
+              <div className="grid gap-px bg-[#DDD4C8] md:grid-cols-3">
+                {reasons.map((reason) => (
+                  <article key={reason.title} className="bg-[#FBF8F3] px-5 py-6 sm:px-6 sm:py-7">
+                    <h3 className="text-[1rem] font-semibold leading-[1.2] tracking-[-0.02em] text-[#151515]">
+                      {reason.title}
+                    </h3>
+                    <p className="mt-3 max-w-[15rem] text-[0.92rem] leading-6 text-[#4F4A44]">
+                      {reason.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -157,7 +156,7 @@ export default function HomePage() {
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(21,21,21,0.02),rgba(21,21,21,0.55))]" />
                     <div className="absolute bottom-0 left-0 px-5 py-4 sm:px-6 sm:py-5">
-                      <h3 className="text-[1.1rem] font-semibold tracking-[-0.02em] text-white sm:text-[1.2rem]">
+                      <h3 className="text-[0.9rem] font-medium tracking-[0.01em] text-white/92 sm:text-[0.98rem]">
                         {project.title}
                       </h3>
                     </div>
