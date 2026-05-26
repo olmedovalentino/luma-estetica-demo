@@ -156,7 +156,7 @@ export default function HomePage() {
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(21,21,21,0.02),rgba(21,21,21,0.55))]" />
                     <div className="absolute bottom-0 left-0 px-5 py-4 sm:px-6 sm:py-5">
-                      <h3 className="text-[0.9rem] font-medium tracking-[0.01em] text-white/92 sm:text-[0.98rem]">
+                      <h3 className="text-[0.92rem] font-medium tracking-[0.02em] text-[#F7F3EC] sm:text-[1rem]">
                         {project.title}
                       </h3>
                     </div>
