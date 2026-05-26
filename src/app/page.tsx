@@ -102,7 +102,7 @@ export default function HomePage() {
 
         <section
           id="por-que-elegirnos"
-          className="mx-auto max-w-[1440px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+          className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8 lg:py-22"
         >
           <div className="grid gap-12 lg:grid-cols-[0.34fr_1fr]">
             <div className="space-y-4">
@@ -155,10 +155,7 @@ export default function HomePage() {
                     />
                     <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(21,21,21,0.02),rgba(21,21,21,0.55))]" />
                     <div className="absolute bottom-0 left-0 px-5 py-4 sm:px-6 sm:py-5">
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#DDD5CA]">
-                        {project.category}
-                      </p>
-                      <h3 className="mt-2 text-[1.2rem] font-semibold tracking-[-0.03em] text-white">
+                      <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-white">
                         {project.title}
                       </h3>
                     </div>
@@ -250,7 +247,7 @@ export default function HomePage() {
       </main>
 
       <SiteFooter />
-      <FloatingWhatsAppButton href={whatsappUrl} label="Consultar por WhatsApp" />
+      <FloatingWhatsAppButton href={whatsappUrl} label="WhatsApp" />
     </>
   );
 }
