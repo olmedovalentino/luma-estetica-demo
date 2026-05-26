@@ -50,26 +50,52 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <div className="grid gap-10 md:grid-cols-2">
-              {services.map((service) => (
-                <article key={service.title} className="grid gap-5">
-                  <LocalImageFrame
-                    src={service.image}
-                    alt={service.alt}
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    label={service.title}
-                    className="aspect-[4/3] border border-[#DDD4C8]"
-                  />
-                  <div className="border-t border-[#DDD4C8] pt-4">
-                    <h3 className="text-[1.4rem] font-semibold tracking-[-0.03em] text-[#151515]">
-                      {service.title}
-                    </h3>
-                    <p className="mt-3 max-w-sm text-sm leading-6 text-[#4F4A44]">
-                      {service.description}
-                    </p>
-                  </div>
-                </article>
-              ))}
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+              <article className="grid gap-5 border border-[#DDD4C8] bg-[#FBF8F3] p-4 sm:p-5">
+                <LocalImageFrame
+                  src={services[0].image}
+                  alt={services[0].alt}
+                  sizes="(min-width: 1024px) 38vw, 100vw"
+                  label={services[0].title}
+                  className="aspect-[5/4] border border-[#DDD4C8]"
+                />
+                <div className="grid gap-3 border-t border-[#DDD4C8] pt-4">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
+                    Servicio destacado
+                  </p>
+                  <h3 className="text-[1.75rem] font-semibold leading-tight tracking-[-0.04em] text-[#151515]">
+                    {services[0].title}
+                  </h3>
+                  <p className="max-w-md text-sm leading-6 text-[#4F4A44]">
+                    {services[0].description}
+                  </p>
+                </div>
+              </article>
+
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+                {services.slice(1).map((service) => (
+                  <article
+                    key={service.title}
+                    className="grid gap-4 border border-[#DDD4C8] bg-[#FBF8F3] p-4 sm:grid-cols-[140px_minmax(0,1fr)] sm:items-center"
+                  >
+                    <LocalImageFrame
+                      src={service.image}
+                      alt={service.alt}
+                      sizes="(min-width: 1024px) 18vw, 50vw"
+                      label={service.title}
+                      className="aspect-square border border-[#DDD4C8]"
+                    />
+                    <div className="grid gap-2 border-t border-[#DDD4C8] pt-4 sm:border-t-0 sm:border-l sm:border-[#DDD4C8] sm:pl-4 sm:pt-0">
+                      <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-[#151515]">
+                        {service.title}
+                      </h3>
+                      <p className="max-w-sm text-sm leading-6 text-[#4F4A44]">
+                        {service.description}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -116,22 +142,25 @@ export default function HomePage() {
                 </h2>
               </div>
 
-              <div className="grid gap-4 lg:grid-cols-12">
+              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
-                  <article key={project.title} className={`grid gap-4 ${project.className}`}>
+                  <article
+                    key={project.title}
+                    className="grid gap-4 border border-[#DDD4C8] bg-[#FBF8F3] p-4 sm:p-5"
+                  >
                     <LocalImageFrame
                       src={project.image}
                       alt={project.alt}
-                      sizes="(min-width: 1024px) 40vw, 100vw"
+                      sizes="(min-width: 1280px) 24vw, (min-width: 768px) 50vw, 100vw"
                       label={project.title}
                       className="aspect-[4/3] border border-[#DDD4C8] bg-[#E7E0D5]"
                     />
-                    <div className="flex items-start justify-between gap-4 border-t border-[#DDD4C8] pt-3">
+                    <div className="grid gap-2 border-t border-[#DDD4C8] pt-4">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
+                        {project.category}
+                      </p>
                       <div>
-                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
-                          {project.category}
-                        </p>
-                        <h3 className="mt-2 text-lg font-semibold tracking-[-0.03em] text-[#151515]">
+                        <h3 className="text-[1.2rem] font-semibold tracking-[-0.03em] text-[#151515]">
                           {project.title}
                         </h3>
                       </div>
