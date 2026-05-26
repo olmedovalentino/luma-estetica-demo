@@ -1,4 +1,3 @@
-import { ButtonLink } from "@/components/button-link";
 import { LocalImageFrame } from "@/components/local-image-frame";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -26,22 +25,6 @@ export default function HomePage() {
                 {site.heroSubtitle}
               </p>
 
-              <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                <ButtonLink
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="whatsapp"
-                >
-                  {site.primaryCta}
-                </ButtonLink>
-                <a
-                  href="#proyectos"
-                  className="text-sm font-semibold uppercase tracking-[0.18em] text-[#151515] transition hover:text-[#7A6A57]"
-                >
-                  {site.secondaryCta}
-                </a>
-              </div>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
@@ -199,13 +182,8 @@ export default function HomePage() {
               <div className="border-t border-[#DDD4C8]">
                 {faqs.map((faq) => (
                   <details key={faq.question} className="border-b border-[#DDD4C8] py-5">
-                    <summary className="flex cursor-pointer items-center justify-between gap-6 text-left">
-                      <span className="text-lg font-semibold tracking-[-0.02em] text-[#151515] sm:text-[1.2rem]">
-                        {faq.question}
-                      </span>
-                      <span className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
-                        Ver
-                      </span>
+                    <summary className="cursor-pointer text-left text-lg font-semibold tracking-[-0.02em] text-[#151515] sm:text-[1.2rem]">
+                      {faq.question}
                     </summary>
                     <p className="max-w-2xl pt-4 text-sm leading-7 text-[#4F4A44]">{faq.answer}</p>
                   </details>
@@ -227,16 +205,6 @@ export default function HomePage() {
               <p className="mt-5 max-w-lg text-base leading-7 text-[#4F4A44]">
                 Escribinos por WhatsApp para contarnos medidas, idea general y tipo de ambiente.
               </p>
-              <div className="mt-8">
-                <ButtonLink
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="whatsapp"
-                >
-                  Consultar por WhatsApp
-                </ButtonLink>
-              </div>
             </div>
 
             <div className="grid gap-px bg-[#DDD4C8]">
@@ -248,7 +216,7 @@ export default function HomePage() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block text-2xl font-semibold leading-tight tracking-[-0.04em] text-[#151515] transition hover:text-[#128C4A]"
+                  className="mt-3 inline-block text-xl font-semibold leading-tight tracking-[-0.03em] text-[#151515] transition hover:text-[#128C4A]"
                 >
                   {site.whatsappDisplay}
                 </a>
@@ -261,7 +229,7 @@ export default function HomePage() {
                   href={site.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-block text-lg font-semibold leading-tight tracking-[-0.03em] text-[#151515] transition hover:text-[#7A6A57]"
+                  className="mt-3 inline-block text-xl font-semibold leading-tight tracking-[-0.03em] text-[#151515] transition hover:text-[#7A6A57]"
                 >
                   {site.instagramHandle}
                 </a>
@@ -270,7 +238,7 @@ export default function HomePage() {
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[#7A6A57]">
                   Ubicación
                 </p>
-                <p className="mt-3 text-lg font-semibold leading-tight tracking-[-0.03em] text-[#151515]">
+                <p className="mt-3 text-xl font-semibold leading-tight tracking-[-0.03em] text-[#151515]">
                   {site.location}
                 </p>
               </div>
