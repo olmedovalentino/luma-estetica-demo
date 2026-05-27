@@ -26,16 +26,9 @@ export const hero = {
   eyebrow: "Cordoba, Argentina - Climatizacion profesional",
   title: "Instalacion y service de aires acondicionados",
   description: site.shortPitch,
-  primaryCta: "Pedir presupuesto",
-  secondaryCta: "Ver servicios",
   image:
     "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80",
   imageAlt: "Tecnico trabajando en una instalacion de aire acondicionado",
-  notes: [
-    "Atencion para hogares y comercios",
-    "Diagnostico tecnico claro",
-    "Coordinacion rapida por WhatsApp",
-  ],
 } as const;
 
 export const serviceHighlights = [
@@ -85,32 +78,32 @@ export const services = [
 
 export const projects = [
   {
-    title: "Instalacion domiciliaria",
+    title: "Villa Allende",
     image:
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Service tecnico",
+    title: "Mendiolaza",
     image:
       "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Mantenimiento",
+    title: "Nueva Cordoba",
     image:
       "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Equipo instalado",
+    title: "Zona Norte",
     image:
       "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf1?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Trabajo comercial",
+    title: "Cordoba Capital",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Revision tecnica",
+    title: "Zona Sur",
     image:
       "https://images.unsplash.com/photo-1581092160607-ee22731a27f4?auto=format&fit=crop&w=1200&q=80",
   },
@@ -127,16 +120,12 @@ export const coverageZones = [
 
 export const coverageCards = [
   {
-    title: "Visitas coordinadas",
-    description: "Organizamos turnos para responder rapido y con mejor precision.",
+    title: "Coordinacion simple",
+    description: "Nos escribis por WhatsApp, vemos la zona y coordinamos sin vueltas.",
   },
   {
-    title: "Atencion residencial y comercial",
-    description: "Trabajos para casas, locales, oficinas y espacios de trabajo.",
-  },
-  {
-    title: "Cotizacion por WhatsApp",
-    description: "Podemos orientarte con fotos, ubicacion y datos basicos del equipo.",
+    title: "Visitas en zonas cercanas",
+    description: "Atendemos Cordoba Capital y alrededores con agenda ordenada.",
   },
 ] as const;
 
@@ -178,7 +167,7 @@ export const contactCards = [
     value: site.coverageSummary,
   },
   {
-    label: "Modalidad",
+    label: "Respuesta",
     value: "Coordinacion directa por mensaje",
   },
 ] as const;
