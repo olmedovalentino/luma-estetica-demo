@@ -1,36 +1,42 @@
 export const site = {
-  businessName: "Diseño Amoblamientos",
-  tagline: "Amoblamientos a medida en Córdoba",
+  businessName: "Lima Limón Deco",
+  publicName: "Lima Limón Decoración Textil",
+  tagline: "Decoración textil, tapicería y diseño de interiores",
   shortDescription:
-    "Cocinas, placares, vestidores y muebles personalizados pensados para resolver mejor cada espacio.",
-  location: "Córdoba, Argentina",
-  locationLabel: "Córdoba, Argentina",
-  heroTitle: "Diseño y fabricación de amoblamientos a medida",
+    "Cortinas, tapicería, sillones a medida, alfombras y detalles deco pensados para cada ambiente.",
+  location: "11 de Septiembre 415, esquina Tucumán, Pilar, Buenos Aires",
+  locationLabel: "Pilar, Buenos Aires",
+  phoneDisplay: "0230 4422082",
+  email: "info@limalimondeco.com",
+  heroTitle: "Diseño textil y decoración para transformar tus espacios",
   heroSubtitle:
-    "Creamos cocinas, placares, vestidores y muebles personalizados pensados para aprovechar mejor cada espacio.",
+    "Cortinas, tapicería, sillones a medida, alfombras y detalles deco pensados para cada ambiente.",
   primaryCta: "Consultar por WhatsApp",
-  secondaryCta: "Ver proyectos",
-  logoUrl: "/images/diseno-amoblamientos/logo.jpg",
-  instagramHandle: "@disenoamoblamientos",
-  whatsappNumber: "5493513082515",
-  whatsappDisplay: "+54 9 351 308 2515",
+  secondaryCta: "Ver servicios",
+  logoUrl: "/images/lima-limon-deco/logo.jpg",
+  instagramHandle: "@limalimondeco",
+  whatsappNumber: "5491163974778",
+  whatsappDisplay: "11 6397 4778",
   whatsappMessage:
-    "Hola, vengo desde la página web. Quisiera consultar por un proyecto de amoblamientos a medida.",
+    "Hola Lima Limón, quería hacer una consulta por sus servicios",
   whatsappUrl:
-    "https://wa.me/5493513082515?text=Hola%2C%20vengo%20desde%20la%20p%C3%A1gina%20web.%20Quisiera%20consultar%20por%20un%20proyecto%20de%20amoblamientos%20a%20medida.",
-  instagramUrl: "https://www.instagram.com/disenoamoblamientos/",
+    "https://wa.me/5491163974778?text=Hola%20Lima%20Lim%C3%B3n%2C%20quer%C3%ADa%20hacer%20una%20consulta%20por%20sus%20servicios",
+  instagramUrl: "https://www.instagram.com/limalimondeco/",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=11%20de%20Septiembre%20415%20esquina%20Tucum%C3%A1n%20Pilar%20Buenos%20Aires",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Proyectos", href: "#proyectos" },
-    { label: "Por qué elegirnos", href: "#por-que-elegirnos" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Inspiración", href: "#inspiracion" },
+    { label: "Proceso", href: "#proceso" },
     { label: "FAQ", href: "#faq" },
     { label: "Contacto", href: "#contacto" },
   ],
   footerNavigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Proyectos", href: "#proyectos" },
+    { label: "Inspiración", href: "#inspiracion" },
     { label: "FAQ", href: "#faq" },
     { label: "Contacto", href: "#contacto" },
   ],
@@ -38,100 +44,111 @@ export const site = {
 
 export const services = [
   {
-    title: "Cocinas",
-    description: "Diseño funcional, buena circulación y terminaciones limpias.",
-    image: "/images/diseno-amoblamientos/cocina.jpg",
-    alt: "Cocina realizada por Diseño Amoblamientos",
+    title: "Cortinas a medida",
+    description: "Diseño, confección y asesoramiento para vestir cada ventana con la caída ideal.",
+    image: "/images/lima-limon-deco/cortinas-a-medida.jpg",
+    alt: "Cortinas a medida de Lima Limón Deco",
   },
   {
-    title: "Placares",
-    description: "Interiores pensados para ordenar mejor y aprovechar cada pared.",
-    image: "/images/diseno-amoblamientos/placard.jpg",
-    alt: "Placard realizado por Diseño Amoblamientos",
+    title: "Tapicería y retapizados",
+    description: "Renovamos sillones, sillas y piezas con telas elegidas para cada uso.",
+    image: "/images/lima-limon-deco/tapiceria-retapizados.jpg",
+    alt: "Tapicería y retapizados de Lima Limón Deco",
   },
   {
-    title: "Vestidores",
-    description: "Composición clara, guardado cómodo y diseño a medida.",
-    image: "/images/diseno-amoblamientos/vestidor.jpg",
-    alt: "Vestidor realizado por Diseño Amoblamientos",
+    title: "Sillones a medida",
+    description: "Sillones nuevos y personalizados para integrar comodidad, proporción y estilo.",
+    image: "/images/lima-limon-deco/sillones-a-medida.jpg",
+    alt: "Sillones a medida de Lima Limón Deco",
   },
   {
-    title: "Muebles personalizados",
-    description: "Piezas que se integran al ambiente con proporción y carácter.",
-    image: "/images/diseno-amoblamientos/mueble-personalizado.jpg",
-    alt: "Mueble personalizado realizado por Diseño Amoblamientos",
+    title: "Fundas y almohadones",
+    description: "Textiles simples y bien terminados para sumar textura, color y calidez.",
+    image: "/images/lima-limon-deco/fundas-almohadones.jpg",
+    alt: "Fundas y almohadones de Lima Limón Deco",
+  },
+  {
+    title: "Alfombras",
+    description: "Opciones para enmarcar ambientes, aportar abrigo y completar la decoración.",
+    image: "/images/lima-limon-deco/alfombras.jpg",
+    alt: "Alfombras de Lima Limón Deco",
+  },
+  {
+    title: "Limpieza de tapizados",
+    description: "Servicio para recuperar telas, sillones y superficies textiles del hogar.",
+    image: "/images/lima-limon-deco/limpieza-tapizados.jpg",
+    alt: "Limpieza de tapizados de Lima Limón Deco",
   },
 ] as const;
 
-export const projects = [
+export const inspiration = [
   {
-    title: "Villa Allende",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-1.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Villa Allende",
+    title: "Cortinas",
+    image: "/images/lima-limon-deco/inspiracion-cortinas.jpg",
+    alt: "Inspiración de cortinas de Lima Limón Deco",
   },
   {
-    title: "Mendiolaza",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-2.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Mendiolaza",
+    title: "Retapizados",
+    image: "/images/lima-limon-deco/inspiracion-retapizados.jpg",
+    alt: "Inspiración de retapizados de Lima Limón Deco",
   },
   {
-    title: "Río Ceballos",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-3.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Río Ceballos",
+    title: "Sillones",
+    image: "/images/lima-limon-deco/inspiracion-sillones.jpg",
+    alt: "Inspiración de sillones de Lima Limón Deco",
   },
   {
-    title: "Unquillo",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-4.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Unquillo",
+    title: "Almohadones",
+    image: "/images/lima-limon-deco/inspiracion-almohadones.jpg",
+    alt: "Inspiración de almohadones de Lima Limón Deco",
   },
   {
-    title: "Córdoba",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-5.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Córdoba",
-  },
-  {
-    title: "Salsipuedes",
-    category: "Ubicación",
-    image: "/images/diseno-amoblamientos/proyecto-6.jpg",
-    alt: "Proyecto de Diseño Amoblamientos en Salsipuedes",
+    title: "Alfombras",
+    image: "/images/lima-limon-deco/inspiracion-alfombras.jpg",
+    alt: "Inspiración de alfombras de Lima Limón Deco",
   },
 ] as const;
 
-export const reasons = [
-  {
-    title: "Diseño a medida",
-    description: "Cada propuesta se adapta al ambiente, al uso y a las medidas reales.",
-  },
-  {
-    title: "Mejor aprovechamiento",
-    description: "Buscamos orden, funcionalidad y una presencia visual equilibrada.",
-  },
-  {
-    title: "Proceso claro",
-    description: "Acompañamos desde la primera consulta hasta la instalación final.",
-  },
+export const workSteps = [
+  "Nos contás qué espacio querés renovar",
+  "Te asesoramos con opciones de telas, estilos y soluciones",
+  "Tomamos medidas o coordinamos el trabajo",
+  "Fabricamos, restauramos o instalamos",
+  "Dejamos tu espacio listo para disfrutar",
+] as const;
+
+export const trustItems = [
+  "Atención personalizada",
+  "Trabajos a medida",
+  "Géneros nacionales e importados",
+  "Experiencia en decoración textil",
+  "Presupuesto por WhatsApp",
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Hacen muebles a medida?",
-    answer: "Sí. Cada proyecto se diseña según el espacio y la necesidad de uso.",
+    question: "¿Hacen cortinas a medida?",
+    answer:
+      "Sí. Asesoramos en telas, sistemas y medidas para resolver cortinas según cada ambiente.",
+  },
+  {
+    question: "¿Trabajan con retapizado de sillones?",
+    answer:
+      "Sí. Realizamos tapicería, retapizados y restauración de sillones, sillas y otras piezas.",
   },
   {
     question: "¿Puedo consultar por WhatsApp?",
-    answer: "Sí. Podés escribirnos y contarnos tu idea para recibir una primera orientación.",
+    answer:
+      "Sí. Podés escribirnos por WhatsApp para contarnos qué necesitás y coordinar una orientación inicial.",
   },
   {
-    question: "¿Trabajan cocinas, placares y vestidores?",
-    answer: "Sí. Desarrollamos esos rubros y también muebles personalizados.",
+    question: "¿Hacen limpieza de tapizados?",
+    answer:
+      "Sí. Ofrecemos limpieza de tapizados para sillones, sillas y superficies textiles del hogar.",
   },
   {
-    question: "¿Incluyen instalación?",
-    answer: "Sí. El servicio contempla diseño, fabricación e instalación.",
+    question: "¿Dónde están ubicados?",
+    answer:
+      "Estamos en 11 de Septiembre 415, esquina Tucumán, Pilar, Buenos Aires.",
   },
 ] as const;

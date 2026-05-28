@@ -10,9 +10,9 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Diseño Amoblamientos | Amoblamientos a medida en Córdoba",
+  title: "Lima Limón Deco | Decoración textil y tapicería en Pilar",
   description:
-    "Diseño Amoblamientos diseña y fabrica cocinas, placares, vestidores y muebles personalizados para hogares en Córdoba, Argentina.",
+    "Lima Limón Deco realiza cortinas a medida, tapicería, sillones, alfombras, fundas, almohadones y limpieza de tapizados en Pilar, Buenos Aires.",
 };
 
 export default function RootLayout({
