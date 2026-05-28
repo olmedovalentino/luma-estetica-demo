@@ -40,7 +40,7 @@ export const services = [
   {
     title: "Cortinas a medida",
     description: "Diseño, confección y asesoramiento para vestir cada ventana con la caída ideal.",
-    image: "/images/lima-limon/cortina.png",
+    image: "/images/lima-limon/cortina-actualizada.png",
     alt: "Cortinas a medida de Lima Limón Deco",
   },
   {
