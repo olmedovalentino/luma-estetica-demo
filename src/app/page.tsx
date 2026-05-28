@@ -29,7 +29,7 @@ export default function HomePage() {
             </div>
 
             <LocalImageFrame
-              src="/images/diseno-amoblamientos/hero.jpg"
+              src="/images/lima-limon/hero.png"
               alt="Proyecto destacado de Lima Limón Deco"
               sizes="(min-width: 1024px) 58vw, 100vw"
               priority
