@@ -58,13 +58,11 @@ export default function HomePage() {
         </section>
 
         <section id="servicios" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Servicios"
-            title="Seis servicios claros y bien visibles"
-            description="Instalacion, mantenimiento y asistencia tecnica resueltos con foco en lo importante."
-          />
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-700">
+            Servicios
+          </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service) => (
                 <article
                   key={service.title}
@@ -135,12 +133,11 @@ export default function HomePage() {
 
         <section id="trabajos" className="bg-[linear-gradient(180deg,rgba(238,244,248,0.7),rgba(247,250,252,0.3))]">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Trabajos realizados"
-              title="Algunos trabajos recientes"
-            />
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-700">
+              Trabajos realizados
+            </p>
 
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {projects.map((project) => (
                 <article
                   key={project.title}
@@ -191,16 +188,25 @@ export default function HomePage() {
         </section>
 
         <section id="contacto" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-          <div className="rounded-[2.2rem] border border-white/80 bg-white/92 p-8 text-center shadow-soft sm:p-10">
-            <SectionHeading
-              eyebrow="Contacto"
-              title="Contacto simple y directo"
-              description="Escribinos por WhatsApp o Instagram y coordinamos segun la zona."
-            />
+          <div className="rounded-[2.2rem] border border-white/80 bg-white/92 p-8 shadow-soft sm:p-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-700">
+                Contacto
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                Escribinos y coordinamos
+              </h2>
+              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg">
+                WhatsApp e Instagram directos, con la cobertura bien clara en un solo lugar.
+              </p>
+            </div>
 
-            <div className="mx-auto mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
+            <div className="mx-auto mt-8 grid max-w-5xl gap-4 md:grid-cols-3">
               {contactCards.map((card) => (
-                <div key={card.label} className="rounded-2xl bg-sky-50 p-5 text-center">
+                <div
+                  key={card.label}
+                  className="flex min-h-[148px] flex-col justify-between rounded-[1.75rem] border border-sky-100 bg-sky-50 p-5 text-center"
+                >
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-700">
                     {card.label}
                   </p>
@@ -209,7 +215,7 @@ export default function HomePage() {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                      className="mt-4 block text-base font-semibold leading-7 text-slate-800 transition hover:text-slate-950"
                     >
                       {card.value}
                     </a>
@@ -218,22 +224,33 @@ export default function HomePage() {
                       href={site.instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                      className="mt-4 block text-base font-semibold leading-7 text-slate-800 transition hover:text-slate-950"
                     >
                       {card.value}
                     </a>
                   ) : (
-                    <p className="mt-3 text-sm leading-6 text-slate-700">{card.value}</p>
+                    <p className="mt-4 text-base font-semibold leading-7 text-slate-800">{card.value}</p>
                   )}
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <ButtonLink
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-[220px]"
+              >
                 Pedir presupuesto
               </ButtonLink>
-              <ButtonLink href={site.instagramUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
+              <ButtonLink
+                href={site.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                className="min-w-[220px]"
+              >
                 Ver Instagram
               </ButtonLink>
             </div>
