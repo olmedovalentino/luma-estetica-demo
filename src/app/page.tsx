@@ -199,13 +199,33 @@ export default function HomePage() {
                 description="Con la zona, el tipo de equipo y una foto ya se puede orientar mejor la consulta."
               />
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 {contactCards.map((card) => (
                   <div key={card.label} className="rounded-2xl bg-sky-50 p-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-700">
                       {card.label}
                     </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-700">{card.value}</p>
+                    {card.label === "WhatsApp" ? (
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                      >
+                        {card.value}
+                      </a>
+                    ) : card.label === "Instagram" ? (
+                      <a
+                        href={site.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                      >
+                        {card.value}
+                      </a>
+                    ) : (
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{card.value}</p>
+                    )}
                   </div>
                 ))}
               </div>

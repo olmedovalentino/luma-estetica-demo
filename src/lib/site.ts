@@ -4,9 +4,12 @@ export const site = {
   tagline: "Instalacion y service de aires acondicionados",
   shortPitch:
     "Soluciones para hogares, comercios y espacios de trabajo: instalacion, mantenimiento, reparacion y carga de gas.",
-  whatsappNumber: "5493510000000",
+  whatsappNumber: "5493515120474",
+  whatsappLabel: "+54 9 3515 12-0474",
   whatsappMessage:
     "Hola Paredes Aire, quiero consultar por instalacion o service de aire acondicionado.",
+  instagramUrl: "https://www.instagram.com/paredesclimatizacioncba/",
+  instagramLabel: "@paredesclimatizacioncba",
   locationLabel: "Cordoba, Argentina",
   coverageSummary: "Cordoba Capital y zonas cercanas",
   hours: "Atencion coordinada por WhatsApp de lunes a sabado",
@@ -27,7 +30,7 @@ export const hero = {
   title: "Instalacion y service de aires acondicionados",
   description: site.shortPitch,
   image:
-    "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80",
+    "https://images.pexels.com/photos/5463575/pexels-photo-5463575.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463575.jpg&fm=jpg",
   imageAlt: "Tecnico trabajando en una instalacion de aire acondicionado",
 } as const;
 
@@ -42,37 +45,37 @@ export const services = [
     title: "Instalacion de aires acondicionados",
     description: "Montaje seguro, nivelacion, pruebas y puesta en marcha.",
     image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463576/pexels-photo-5463576.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463576.jpg&fm=jpg",
   },
   {
     title: "Service y mantenimiento",
     description: "Limpieza, control general y revision para sostener el rendimiento.",
     image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463580/pexels-photo-5463580.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463580.jpg&fm=jpg",
   },
   {
     title: "Recarga de gas",
     description: "Chequeo de presion y carga cuando el equipo realmente lo necesita.",
     image:
-      "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/6471912/pexels-photo-6471912.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-6471912.jpg&fm=jpg",
   },
   {
     title: "Reparacion de equipos",
     description: "Deteccion de fallas y solucion tecnica para equipos residenciales o comerciales.",
     image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463581.jpg&fm=jpg",
   },
   {
     title: "Venta con instalacion",
     description: "Asesoramiento para elegir equipo y dejarlo funcionando en el mismo servicio.",
     image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/24828656/pexels-photo-24828656.jpeg?cs=srgb&dl=pexels-paolo-rossa-1121474291-24828656.jpg&fm=jpg",
   },
   {
     title: "Diagnostico tecnico",
     description: "Evaluacion inicial para cotizar con datos concretos y sin vueltas.",
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/6471914/pexels-photo-6471914.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-6471914.jpg&fm=jpg",
   },
 ] as const;
 
@@ -80,32 +83,32 @@ export const projects = [
   {
     title: "Villa Allende",
     image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463582/pexels-photo-5463582.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463582.jpg&fm=jpg",
   },
   {
     title: "Mendiolaza",
     image:
-      "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463583/pexels-photo-5463583.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463583.jpg&fm=jpg",
   },
   {
     title: "Nueva Cordoba",
     image:
-      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/5463585/pexels-photo-5463585.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463585.jpg&fm=jpg",
   },
   {
     title: "Zona Norte",
     image:
-      "https://images.unsplash.com/photo-1626885930974-4b69aa21bbf1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/6471911/pexels-photo-6471911.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-6471911.jpg&fm=jpg",
   },
   {
     title: "Cordoba Capital",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/19016904/pexels-photo-19016904.jpeg?cs=srgb&dl=pexels-tu-nguyen-477344610-19016904.jpg&fm=jpg",
   },
   {
     title: "Zona Sur",
     image:
-      "https://images.unsplash.com/photo-1581092160607-ee22731a27f4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/20046692/pexels-photo-20046692.jpeg?cs=srgb&dl=pexels-alpha-innotec-936418931-20046692.jpg&fm=jpg",
   },
 ] as const;
 
@@ -160,11 +163,15 @@ export const faqs = [
 export const contactCards = [
   {
     label: "WhatsApp",
-    value: "Numero a confirmar",
+    value: site.whatsappLabel,
   },
   {
     label: "Cobertura",
     value: site.coverageSummary,
+  },
+  {
+    label: "Instagram",
+    value: site.instagramLabel,
   },
   {
     label: "Respuesta",

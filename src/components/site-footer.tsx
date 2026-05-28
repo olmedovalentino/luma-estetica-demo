@@ -38,7 +38,15 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
             <p>{site.coverageSummary}</p>
             <p>{site.hours}</p>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block">
-              WhatsApp: Pedir presupuesto
+              WhatsApp: {site.whatsappLabel}
+            </a>
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              Instagram: {site.instagramLabel}
             </a>
           </div>
         </div>
