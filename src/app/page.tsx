@@ -90,40 +90,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="trabajos" className="bg-[linear-gradient(180deg,rgba(238,244,248,0.7),rgba(247,250,252,0.3))]">
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-            <SectionHeading
-              eyebrow="Trabajos realizados"
-              title="Algunos trabajos recientes"
-            />
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-              {projects.map((project) => (
-                <article
-                  key={project.title}
-                  className="group overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(min-width: 1280px) 30vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,29,46,0.04),rgba(11,29,46,0.4))]" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <h3 className="text-sm font-light uppercase tracking-[0.28em] text-white/92">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="zonas" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-[2.25rem] border border-white/80 bg-[linear-gradient(135deg,rgba(20,39,54,0.98),rgba(41,82,114,0.94))] p-8 text-white shadow-soft sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
@@ -167,6 +133,40 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section id="trabajos" className="bg-[linear-gradient(180deg,rgba(238,244,248,0.7),rgba(247,250,252,0.3))]">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="Trabajos realizados"
+              title="Algunos trabajos recientes"
+            />
+
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+              {projects.map((project) => (
+                <article
+                  key={project.title}
+                  className="group overflow-hidden rounded-[1.8rem] border border-white/80 bg-white/90 shadow-soft"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(min-width: 1280px) 30vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,29,46,0.04),rgba(11,29,46,0.4))]" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h3 className="text-sm font-light uppercase tracking-[0.28em] text-white/92">
+                        {project.title}
+                      </h3>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="preguntas" className="bg-[linear-gradient(180deg,rgba(244,248,251,0.3),rgba(230,239,245,0.8))]">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <SectionHeading eyebrow="Preguntas frecuentes" title="Preguntas frecuentes" />
@@ -191,82 +191,51 @@ export default function HomePage() {
         </section>
 
         <section id="contacto" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2.2rem] border border-white/80 bg-white/92 p-8 shadow-soft">
-              <SectionHeading
-                eyebrow="Contacto"
-                title="Coordina por WhatsApp en pocos pasos"
-                description="Con la zona, el tipo de equipo y una foto ya se puede orientar mejor la consulta."
-              />
+          <div className="rounded-[2.2rem] border border-white/80 bg-white/92 p-8 text-center shadow-soft sm:p-10">
+            <SectionHeading
+              eyebrow="Contacto"
+              title="Contacto simple y directo"
+              description="Escribinos por WhatsApp o Instagram y coordinamos segun la zona."
+            />
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                {contactCards.map((card) => (
-                  <div key={card.label} className="rounded-2xl bg-sky-50 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-700">
-                      {card.label}
-                    </p>
-                    {card.label === "WhatsApp" ? (
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
-                      >
-                        {card.value}
-                      </a>
-                    ) : card.label === "Instagram" ? (
-                      <a
-                        href={site.instagramUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
-                      >
-                        {card.value}
-                      </a>
-                    ) : (
-                      <p className="mt-2 text-sm leading-6 text-slate-700">{card.value}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  Pedir presupuesto
-                </ButtonLink>
-                <ButtonLink href="#zonas" variant="secondary">
-                  Ver zonas
-                </ButtonLink>
-              </div>
+            <div className="mx-auto mt-8 grid max-w-4xl gap-4 md:grid-cols-3">
+              {contactCards.map((card) => (
+                <div key={card.label} className="rounded-2xl bg-sky-50 p-5 text-center">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-700">
+                    {card.label}
+                  </p>
+                  {card.label === "WhatsApp" ? (
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                    >
+                      {card.value}
+                    </a>
+                  ) : card.label === "Instagram" ? (
+                    <a
+                      href={site.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 block text-sm leading-6 text-slate-700 transition hover:text-slate-950"
+                    >
+                      {card.value}
+                    </a>
+                  ) : (
+                    <p className="mt-3 text-sm leading-6 text-slate-700">{card.value}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
-            <div className="overflow-hidden rounded-[2.2rem] border border-white/80 bg-[linear-gradient(160deg,rgba(14,31,45,1),rgba(34,72,100,0.96))] p-8 text-white shadow-soft">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-200">
-                Mensaje sugerido
-              </p>
-              <h3 className="mt-4 text-3xl font-semibold tracking-tight">
-                Que conviene mandar
-              </h3>
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
-                {["Zona", "Tipo de equipo", "Fotos si tenes"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-white/10 bg-white/8 px-4 py-3 text-sm font-medium text-white/86"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 rounded-[1.8rem] border border-white/10 bg-white/10 p-5">
-                <p className="text-sm leading-7 text-white/84">
-                  Hola Paredes Aire, quiero consultar por un equipo split. Estoy en Cordoba Capital y necesito presupuesto para instalacion o service.
-                </p>
-              </div>
-
-              <p className="mt-6 text-sm leading-7 text-white/72">
-                Si ya sabes si es instalacion, mantenimiento o una falla puntual, sumarlo ayuda a responder mas rapido.
-              </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                Pedir presupuesto
+              </ButtonLink>
+              <ButtonLink href={site.instagramUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
+                Ver Instagram
+              </ButtonLink>
             </div>
           </div>
         </section>

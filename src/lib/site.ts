@@ -83,32 +83,32 @@ export const projects = [
   {
     title: "Villa Allende",
     image:
-      "https://images.pexels.com/photos/5463582/pexels-photo-5463582.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463582.jpg&fm=jpg",
+      "https://images.pexels.com/photos/7614543/pexels-photo-7614543.jpeg?cs=srgb&dl=pexels-artbovich-7614543.jpg&fm=jpg",
   },
   {
     title: "Mendiolaza",
     image:
-      "https://images.pexels.com/photos/5463583/pexels-photo-5463583.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463583.jpg&fm=jpg",
+      "https://images.pexels.com/photos/3302537/pexels-photo-3302537.jpeg?cs=srgb&dl=pexels-anytiffng-3302537.jpg&fm=jpg",
   },
   {
     title: "Nueva Cordoba",
     image:
-      "https://images.pexels.com/photos/5463585/pexels-photo-5463585.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-5463585.jpg&fm=jpg",
+      "https://images.pexels.com/photos/18495294/pexels-photo-18495294.jpeg?cs=srgb&dl=pexels-soulkidphotography-18495294.jpg&fm=jpg",
   },
   {
     title: "Zona Norte",
     image:
-      "https://images.pexels.com/photos/6471911/pexels-photo-6471911.jpeg?cs=srgb&dl=pexels-jose-andres-pacheco-cortes-3641213-6471911.jpg&fm=jpg",
+      "https://images.pexels.com/photos/19059039/pexels-photo-19059039.jpeg?cs=srgb&dl=pexels-armuxui-19059039.jpg&fm=jpg",
   },
   {
     title: "Cordoba Capital",
     image:
-      "https://images.pexels.com/photos/19016904/pexels-photo-19016904.jpeg?cs=srgb&dl=pexels-tu-nguyen-477344610-19016904.jpg&fm=jpg",
+      "https://images.pexels.com/photos/6316054/pexels-photo-6316054.jpeg?cs=srgb&dl=pexels-artbovich-6316054.jpg&fm=jpg",
   },
   {
     title: "Zona Sur",
     image:
-      "https://images.pexels.com/photos/20046692/pexels-photo-20046692.jpeg?cs=srgb&dl=pexels-alpha-innotec-936418931-20046692.jpg&fm=jpg",
+      "https://images.pexels.com/photos/7746094/pexels-photo-7746094.jpeg?cs=srgb&dl=pexels-artbovich-7746094.jpg&fm=jpg",
   },
 ] as const;
 
@@ -166,16 +166,12 @@ export const contactCards = [
     value: site.whatsappLabel,
   },
   {
-    label: "Cobertura",
-    value: site.coverageSummary,
-  },
-  {
     label: "Instagram",
     value: site.instagramLabel,
   },
   {
-    label: "Respuesta",
-    value: "Coordinacion directa por mensaje",
+    label: "Cobertura",
+    value: site.coverageSummary,
   },
 ] as const;
 
