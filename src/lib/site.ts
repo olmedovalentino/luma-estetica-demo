@@ -65,37 +65,37 @@ export const services = [
 
 export const projects = [
   {
-    title: "Cortinas",
+    title: "Pilar",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-1.png",
     alt: "Inspiración de cortinas de Lima Limón Deco",
   },
   {
-    title: "Retapizados",
+    title: "Del Viso",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-2.png",
     alt: "Inspiración de retapizados de Lima Limón Deco",
   },
   {
-    title: "Sillones",
+    title: "La Lonja",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-3.png",
     alt: "Inspiración de sillones de Lima Limón Deco",
   },
   {
-    title: "Almohadones",
+    title: "Presidente Derqui",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-4.png",
     alt: "Inspiración de almohadones de Lima Limón Deco",
   },
   {
-    title: "Alfombras",
+    title: "Villa Rosa",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-5.png",
     alt: "Inspiración de alfombras de Lima Limón Deco",
   },
   {
-    title: "Limpieza de tapizados",
+    title: "Manzanares",
     category: "Servicio",
     image: "/images/lima-limon/proyecto-6.png",
     alt: "Limpieza de tapizados de Lima Limón Deco",
