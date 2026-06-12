@@ -15,6 +15,7 @@ import {
 } from "@/lib/site";
 
 const neonLines = ["LETRAS", "NEON LED", "CARTELERIA"];
+const eyebrowClass = "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200";
 
 export default function HomePage() {
   const whatsappUrl = buildWhatsappUrl(site.whatsappMessage);
@@ -83,7 +84,9 @@ export default function HomePage() {
         </section>
 
         <section id="servicios" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <p className={eyebrowClass}>Servicios</p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <article
                 key={service.title}
@@ -111,7 +114,7 @@ export default function HomePage() {
 
         <section className="bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015))]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Negocios</h2>
+            <p className={eyebrowClass}>Negocios</p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               {businessTypes.map((type) => (
@@ -127,7 +130,9 @@ export default function HomePage() {
         </section>
 
         <section id="trabajos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <p className={eyebrowClass}>Trabajos</p>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {portfolio.map((item, index) => (
               <article
                 key={item}
@@ -160,7 +165,9 @@ export default function HomePage() {
 
         <section id="proceso" className="border-y border-white/10 bg-white/[0.03]">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="grid gap-4 lg:grid-cols-5">
+            <p className={eyebrowClass}>Proceso</p>
+
+            <div className="mt-8 grid gap-4 lg:grid-cols-5">
               {process.map((step, index) => (
                 <article key={step} className="rounded-3xl border border-white/10 bg-black/30 p-5">
                   <p className="text-3xl font-black text-cyan-200">{index + 1}</p>
