@@ -35,9 +35,8 @@ export default function HomePage() {
               <h1 className="mt-5 max-w-4xl text-5xl font-black tracking-tight text-white sm:text-7xl lg:text-8xl">
                 Hacemos que tu marca brille
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-white/72">
-                Diseno y fabricacion de letras corporeas, neon LED y carteleria personalizada para
-                negocios, locales y marcas.
+              <p className="mt-6 max-w-xl text-lg leading-8 text-white/72">
+                Letras corporeas, neon LED y carteleria personalizada para negocios que quieren destacar.
               </p>
               <p className="mt-3 text-base font-semibold text-lime-200">De Cordoba a todo el pais.</p>
 
@@ -71,9 +70,6 @@ export default function HomePage() {
                     {line}
                   </div>
                 ))}
-                <div className="mx-auto mt-4 w-fit rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
-                  mockup visual generado
-                </div>
               </div>
             </div>
           </div>
@@ -84,14 +80,13 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Impacto comercial"
               title="Tu cartel es la primera impresion de tu negocio"
-              description="Una buena carteleria no solo identifica tu marca: atrae miradas, transmite profesionalismo y hace que tu local se destaque de dia y de noche."
+              description="Mas presencia, mas reconocimiento y una imagen mas profesional desde la calle."
             />
             <div className="grid gap-4 sm:grid-cols-3">
               {benefits.map((benefit) => (
                 <article key={benefit.title} className="rounded-3xl border border-white/10 bg-black/32 p-5 shadow-glass">
-                  <div className="mb-5 h-1.5 w-14 rounded-full bg-[linear-gradient(90deg,#22d3ee,#ff2bd6,#f0f33a)]" />
+                  <div className="mb-4 h-1.5 w-14 rounded-full bg-[linear-gradient(90deg,#22d3ee,#ff2bd6,#f0f33a)]" />
                   <h3 className="text-lg font-semibold text-white">{benefit.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/62">{benefit.description}</p>
                 </article>
               ))}
             </div>
@@ -101,15 +96,15 @@ export default function HomePage() {
         <section id="servicios" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Servicios"
-            title="Carteles, letras y luz para marcas que necesitan hacerse ver"
-            description="Cada pieza se piensa segun el lugar, el material, la escala, la iluminacion y el impacto que tu negocio necesita generar."
+            title="Lo que fabricamos"
+            description="Soluciones visuales para fachadas, vidrieras, interiores y eventos."
           />
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <article
                 key={service.title}
-                className="group relative min-h-52 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
+                className="group relative min-h-40 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
               >
                 <div
                   className="absolute -right-10 -top-10 h-28 w-28 rounded-full blur-2xl transition group-hover:scale-125"
@@ -126,7 +121,6 @@ export default function HomePage() {
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-8 text-xl font-semibold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/62">{service.description}</p>
               </article>
             ))}
           </div>
@@ -136,8 +130,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Para que negocios"
-              title="Trabajamos con marcas que viven de ser vistas"
-              description="Locales, vidrieras, stands y espacios comerciales que necesitan comunicar rapido, verse mejor y quedar en la memoria."
+              title="Para locales, marcas y espacios comerciales"
+              description="Piezas hechas para verse bien en vivo, en vidriera y en redes."
             />
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -156,8 +150,8 @@ export default function HomePage() {
         <section id="trabajos" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Trabajos"
-            title="Portfolio visual de referencia"
-            description="Sin fotos reales cargadas en assets: usamos placeholders oscuros con estilo neon para mostrar como se veria la grilla de proyectos."
+            title="Estilo de trabajos"
+            description="Referencias visuales para mostrar formatos posibles sin inventar fotos reales."
           />
 
           <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -182,7 +176,7 @@ export default function HomePage() {
                 </div>
                 <div className="relative flex h-full min-h-60 flex-col justify-end">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
-                    Placeholder visual
+                    Referencia visual
                   </p>
                   <h3 className="mt-2 text-2xl font-semibold text-white">{item}</h3>
                 </div>
@@ -195,8 +189,8 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Como trabajamos"
-              title="De la idea inicial a una pieza lista para instalar"
-              description="Un proceso claro para transformar una referencia, logo o necesidad comercial en carteleria real, visible y bien terminada."
+              title="Simple y directo"
+              description="Del primer mensaje a la pieza terminada."
             />
 
             <div className="mt-9 grid gap-4 lg:grid-cols-5">
@@ -214,8 +208,8 @@ export default function HomePage() {
           <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_16%_20%,rgba(255,43,214,0.20),transparent_28%),radial-gradient(circle_at_80%_50%,rgba(34,211,238,0.18),transparent_32%),rgba(255,255,255,0.035)] p-6 shadow-neon sm:p-8 lg:grid-cols-[1fr_0.9fr]">
             <SectionHeading
               eyebrow="Diferencial"
-              title="Diseno, fabricacion y terminacion en un solo lugar"
-              description="En Effeflex acompanamos cada proyecto desde la idea inicial hasta la pieza terminada, cuidando el diseno, los materiales, la iluminacion y el impacto visual final."
+              title="Diseno y fabricacion en un solo lugar"
+              description="Materiales, luz y terminacion pensados para que el cartel se vea bien."
             />
             <div className="grid gap-3 sm:grid-cols-2">
               {differentiators.map((item) => (
@@ -237,10 +231,6 @@ export default function HomePage() {
                 <h2 className="mt-4 max-w-3xl text-3xl font-black tracking-tight sm:text-5xl">
                   Queres que tu marca se vea mas?
                 </h2>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-white/70">
-                  Escribinos por WhatsApp y contanos que tipo de cartel, letras o neon queres
-                  hacer. Te orientamos con la mejor opcion para tu negocio.
-                </p>
               </div>
               <ButtonLink href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 Consultar por WhatsApp
@@ -252,8 +242,8 @@ export default function HomePage() {
         <section id="faq" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Preguntas frecuentes"
-            title="Todo listo para pedir una cotizacion clara"
-            description="Respuestas rapidas para avanzar con medidas, referencias y materiales desde el primer mensaje."
+            title="Dudas rapidas"
+            description="Lo basico antes de pedir presupuesto."
           />
 
           <div className="mt-8 columns-1 gap-4 lg:columns-2">
@@ -279,7 +269,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Contacto"
               title="Hablemos de tu proximo cartel"
-              description="Mandanos tu logo, medidas aproximadas, referencias y fotos del espacio. Desde ahi te orientamos con materiales, escala e iluminacion."
+              description="Mandanos tu idea por WhatsApp y te orientamos."
             />
             <div className="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-6 shadow-glass">
               <div className="grid gap-4 text-sm text-white/74 sm:grid-cols-2">
