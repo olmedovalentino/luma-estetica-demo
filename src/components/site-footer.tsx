@@ -35,7 +35,9 @@ export function SiteFooter({ whatsappUrl }: SiteFooterProps) {
             Contacto
           </p>
           <div className="mt-4 space-y-3 text-sm text-white/68">
-            <p>WhatsApp: {site.whatsappLabel}</p>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block hover:text-white">
+              WhatsApp: {site.whatsappLabel}
+            </a>
             <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="block hover:text-white">
               Instagram: {site.instagramLabel}
             </a>

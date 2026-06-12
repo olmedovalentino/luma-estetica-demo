@@ -74,7 +74,7 @@ export default function HomePage() {
             />
             <div className="grid gap-4 sm:grid-cols-3">
               {benefits.map((benefit) => (
-                <article key={benefit.title} className="rounded-3xl border border-white/10 bg-black/32 p-5 shadow-glass">
+                <article key={benefit.title} className="flex min-h-32 flex-col items-center justify-center rounded-3xl border border-white/10 bg-black/32 p-5 text-center shadow-glass">
                   <div className="mb-4 h-1.5 w-14 rounded-full bg-[linear-gradient(90deg,#22d3ee,#ff2bd6,#f0f33a)]" />
                   <h3 className="text-lg font-semibold text-white">{benefit.title}</h3>
                 </article>
@@ -230,13 +230,7 @@ export default function HomePage() {
         </section>
 
         <section id="faq" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Preguntas frecuentes"
-            title="Dudas rapidas"
-            description="Lo basico antes de pedir presupuesto."
-          />
-
-          <div className="mt-8 columns-1 gap-4 lg:columns-2">
+          <div className="columns-1 gap-4 lg:columns-2">
             {faqs.map((faq) => (
               <details
                 key={faq.question}
@@ -265,7 +259,9 @@ export default function HomePage() {
               <div className="grid gap-4 text-sm text-white/74 sm:grid-cols-2">
                 <div>
                   <p className="font-semibold text-white">WhatsApp</p>
-                  <p className="mt-1">{site.whatsappLabel}</p>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-1 block hover:text-cyan-100">
+                    {site.whatsappLabel}
+                  </a>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Instagram</p>
