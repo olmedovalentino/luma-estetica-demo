@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Luma Estética | Córdoba Capital",
+  title: "Effeflex | Letras corporeas, neon LED y carteleria",
   description:
-    "Luma Estética en Córdoba Capital: tratamientos faciales, corporales, depilación, cejas, pestañas y belleza integral.",
+    "Effeflex en Cordoba: diseno y fabricacion de letras corporeas, neon LED, carteleria comercial y piezas visuales para marcas.",
 };
 
 export default function RootLayout({

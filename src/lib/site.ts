@@ -1,135 +1,147 @@
 export const site = {
-  businessName: "Luma Estética",
-  tagline: "Cuidado facial, corporal y belleza integral en Córdoba",
+  businessName: "Effeflex",
+  tagline: "Letras corporeas, neon LED y carteleria comercial",
   shortPitch:
-    "Un espacio cálido y profesional para regalarte un momento de bienestar. Reservá tu turno por WhatsApp de forma simple.",
-  whatsappNumber: "5493512345678",
-  whatsappMessage: "Hola Luma, quiero consultar por un turno.",
-  address: "Nueva Córdoba, Córdoba Capital",
-  city: "Córdoba Capital",
-  hours: "Lunes a viernes de 9:00 a 19:00 | Sábados de 9:00 a 13:00",
-  locationUrl:
-    "https://www.google.com/maps/search/?api=1&query=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina",
-  locationEmbedUrl:
-    "https://www.google.com/maps?q=Nueva%20C%C3%B3rdoba%2C%20C%C3%B3rdoba%2C%20Argentina&output=embed",
+    "Disenamos y fabricamos piezas visuales para que negocios, locales y marcas se vean mas profesionales y llamen mas la atencion.",
+  whatsappNumber: "5493512195377",
+  whatsappLabel: "+54 351 219-5377",
+  whatsappMessage: "Hola Effeflex, queria consultar por un presupuesto",
+  instagram: "https://www.instagram.com/effeflex/",
+  instagramLabel: "@effeflex",
+  address: "Cordoba, Argentina",
+  scope: "De Cordoba a todo el pais",
   navigation: [
     { label: "Inicio", href: "#inicio" },
     { label: "Servicios", href: "#servicios" },
-    { label: "Sobre Luma", href: "#sobre" },
-    { label: "Galería", href: "#galeria" },
-    { label: "Preguntas", href: "#faq" },
-    { label: "Ubicación", href: "#ubicacion" },
+    { label: "Trabajos", href: "#trabajos" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Contacto", href: "#contacto" },
   ],
 } as const;
 
+export const benefits = [
+  {
+    title: "Mayor visibilidad",
+    description: "Piezas pensadas para destacar tu local de dia y de noche.",
+  },
+  {
+    title: "Imagen mas profesional",
+    description: "Carteleria prolija, consistente y alineada a la identidad de tu marca.",
+  },
+  {
+    title: "Diseno personalizado",
+    description: "Materiales, iluminacion, escala y terminacion definidos para cada proyecto.",
+  },
+] as const;
+
 export const services = [
   {
-    title: "Limpieza facial profunda",
-    description: "Renová la piel con un tratamiento suave que limpia, equilibra e ilumina.",
-    accent: "bg-[#f5ebe4]",
-    image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+    title: "Letras corporeas",
+    description: "Volumen, presencia y terminaciones a medida para logos y nombres comerciales.",
   },
   {
-    title: "Depilación",
-    description: "Servicios prolijos y cómodos para una piel suave y cuidada.",
-    accent: "bg-[#efe5dc]",
-    image:
-      "https://images.unsplash.com/photo-1620916566395-1fcb4b0a5f2f?auto=format&fit=crop&w=900&q=80",
+    title: "Neon LED personalizado",
+    description: "Frases, isotipos y formas luminosas con alto impacto visual y bajo consumo.",
   },
   {
-    title: "Perfilado de cejas",
-    description: "Definí la mirada con un diseño natural que respeta tus facciones.",
-    accent: "bg-[#f7f1ec]",
-    image:
-      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80",
+    title: "Carteleria comercial",
+    description: "Soluciones para fachadas, interiores, vidrieras y comunicacion de marca.",
   },
   {
-    title: "Lifting de pestañas",
-    description: "Un efecto sutil y elegante para levantar la mirada sin maquillaje diario.",
-    accent: "bg-[#eadfd8]",
-    image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80",
+    title: "Carteles acrilicos",
+    description: "Piezas limpias, modernas y resistentes para marcas que buscan precision.",
   },
   {
-    title: "Tratamientos corporales",
-    description: "Opciones para acompañar tu cuidado corporal con foco en bienestar.",
-    accent: "bg-[#f3e9e2]",
-    image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+    title: "Carteleria en polifan",
+    description: "Opciones livianas, versatiles y visuales para interiores, stands y locales.",
   },
   {
-    title: "Belleza de manos",
-    description: "Manicuría prolija y delicada para un acabado cuidado y natural.",
-    accent: "bg-[#eee8e4]",
-    image:
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+    title: "Salientes boton y pastilla",
+    description: "Carteles salientes para ganar presencia desde la vereda y orientar clientes.",
+  },
+  {
+    title: "Carteles luminosos",
+    description: "Frentes y piezas con iluminacion LED para que tu negocio no pase desapercibido.",
+  },
+  {
+    title: "Diseno y fabricacion",
+    description: "Acompanamiento integral desde la idea hasta la pieza terminada.",
   },
 ] as const;
 
-export const aboutText =
-  "En Luma Estética creemos que cada tratamiento debe sentirse personal. Combinamos atención personalizada, productos seleccionados y un ambiente tranquilo para que disfrutes una experiencia de cuidado real, sin apuros.";
-
-export const confidencePoints = [
-  "Atención personalizada",
-  "Productos seleccionados",
-  "Ambiente privado",
-  "Resultados naturales",
+export const businessTypes = [
+  "Locales comerciales",
+  "Bares y restaurantes",
+  "Tiendas de ropa",
+  "Peluquerias y barberias",
+  "Gimnasios",
+  "Oficinas",
+  "Stands y eventos",
+  "Marcas personales",
 ] as const;
 
-export const gallery = [
-  {
-    title: "Cabina facial",
-    description: "Luz suave, orden y una atmósfera serena para el cuidado del rostro.",
-    image:
-      "https://images.unsplash.com/photo-1560750588-0f3a8f8f8d0b?auto=format&fit=crop&w=1200&q=80",
-    span: "lg:col-span-2 lg:row-span-2",
-  },
-  {
-    title: "Espacio de relajación",
-    description: "Un entorno cómodo y cuidado para bajar el ritmo.",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-    span: "",
-  },
-  {
-    title: "Detalles de cuidado",
-    description: "Productos, textura y pequeños gestos que acompañan la experiencia.",
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80",
-    span: "",
-  },
-  {
-    title: "Ambiente privado",
-    description: "Una estética suave y cálida que invita a sentirte cómoda desde que llegás.",
-    image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
-    span: "lg:col-span-2",
-  },
+export const portfolio = [
+  "Letras corporeas LED",
+  "Neon personalizado",
+  "Cartel luminoso exterior",
+  "Carteleria para local",
+  "Saliente comercial",
+  "Logo en acrilico",
+] as const;
+
+export const process = [
+  "Nos contas tu idea o necesidad",
+  "Te asesoramos con materiales y estilo",
+  "Preparamos una propuesta",
+  "Fabricamos tu cartel a medida",
+  "Coordinamos entrega o instalacion",
+] as const;
+
+export const differentiators = [
+  "Fabricacion personalizada",
+  "Tecnologia LED de bajo consumo",
+  "Materiales pensados para interior y exterior",
+  "Presupuesto gratuito por WhatsApp",
 ] as const;
 
 export const faqs = [
   {
-    question: "¿Cómo reservo un turno?",
-    answer: "Escribinos por WhatsApp y te compartimos la disponibilidad para coordinar tu visita.",
-  },
-  {
-    question: "¿Dónde están ubicadas?",
+    question: "Hacen letras corporeas personalizadas?",
     answer:
-      "Estamos en Nueva Córdoba, Córdoba Capital. También podemos enviarte la ubicación exacta por WhatsApp.",
+      "Si. Trabajamos letras corporeas a medida segun logo, tamano, material, terminacion e iluminacion necesaria.",
   },
   {
-    question: "¿Qué tratamiento me conviene si es mi primera vez?",
+    question: "Fabrican neon LED a medida?",
     answer:
-      "Podemos orientarte por mensaje para recomendarte una opción según lo que quieras mejorar o cuidar.",
+      "Si. Podemos producir neon LED personalizado para frases, logos, simbolos, interiores, vidrieras y eventos.",
   },
   {
-    question: "¿Aceptan efectivo o transferencia?",
-    answer: "Sí, podés consultar por los medios de pago disponibles antes de reservar tu turno.",
+    question: "Trabajan para locales comerciales?",
+    answer:
+      "Si. Realizamos carteleria para comercios, gastronomia, tiendas, oficinas, gimnasios, stands y marcas personales.",
+  },
+  {
+    question: "Hacen carteles para exterior?",
+    answer:
+      "Si. Te asesoramos con materiales e iluminacion segun la ubicacion, exposicion y objetivo del cartel.",
+  },
+  {
+    question: "Puedo pedir presupuesto por WhatsApp?",
+    answer:
+      "Si. Es el canal mas directo para enviar medidas, referencias, logo, fotos del espacio y recibir orientacion.",
+  },
+  {
+    question: "Trabajan solo en Cordoba?",
+    answer:
+      "Estamos en Cordoba y trabajamos proyectos con alcance a todo el pais, coordinando cada caso segun la pieza.",
+  },
+  {
+    question: "Que datos necesito enviar para pedir una cotizacion?",
+    answer:
+      "Idealmente logo o texto, medidas aproximadas, lugar de instalacion, tipo de uso, referencias visuales y fotos del espacio.",
   },
 ] as const;
 
 export function buildWhatsappUrl(message: string) {
-  const phone = site.whatsappNumber;
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

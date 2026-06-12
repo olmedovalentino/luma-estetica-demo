@@ -28,10 +28,13 @@ const config: Config = {
           700: "#2a2220",
           800: "#1e1817",
           900: "#120f0f",
+          950: "#05070d",
         },
       },
       boxShadow: {
         soft: "0 20px 60px -28px rgba(61, 38, 28, 0.35)",
+        neon: "0 26px 90px -38px rgba(34, 211, 238, 0.75)",
+        glass: "0 24px 80px -42px rgba(0, 0, 0, 0.9)",
       },
       backgroundImage: {
         "hero-glow":
