@@ -14,10 +14,6 @@ export function SiteHeader({ whatsappUrl }: SiteHeaderProps) {
             EF
           </span>
           <span className="text-[1.05rem] font-semibold tracking-[0.22em]">{site.businessName}</span>
-          <span className="hidden h-px w-7 bg-fuchsia-300/60 sm:block" aria-hidden="true" />
-          <span className="hidden text-xs font-medium tracking-[0.26em] text-white/50 sm:block">
-            LED SIGNS
-          </span>
         </a>
 
         <nav className="hidden items-center gap-5 text-sm font-medium text-white/66 lg:flex">

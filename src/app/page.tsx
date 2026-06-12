@@ -30,24 +30,14 @@ export default function HomePage() {
           <div className="grid min-h-[calc(100vh-92px)] items-center gap-10 lg:grid-cols-[0.98fr_1.02fr]">
             <div className="py-8">
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200">
-                {site.address} · {site.scope}
+                {site.address}
               </p>
-              <h1 className="mt-5 max-w-4xl text-5xl font-black tracking-tight text-white sm:text-7xl lg:text-8xl">
+              <h1 className="mt-5 max-w-3xl text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Hacemos que tu marca brille
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/72">
                 Letras corporeas, neon LED y carteleria personalizada para negocios que quieren destacar.
               </p>
-              <p className="mt-3 text-base font-semibold text-lime-200">De Cordoba a todo el pais.</p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href={whatsappUrl} target="_blank" rel="noreferrer">
-                  Pedir presupuesto por WhatsApp
-                </ButtonLink>
-                <ButtonLink href="#servicios" variant="secondary">
-                  Ver servicios
-                </ButtonLink>
-              </div>
             </div>
 
             <div className="relative min-h-[470px] overflow-hidden rounded-[2rem] border border-white/12 bg-white/[0.03] p-5 shadow-[0_0_90px_rgba(34,211,238,0.16)]">
