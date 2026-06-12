@@ -7,7 +7,6 @@ import {
   benefits,
   buildWhatsappUrl,
   businessTypes,
-  differentiators,
   faqs,
   portfolio,
   process,
@@ -194,23 +193,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_16%_20%,rgba(255,43,214,0.20),transparent_28%),radial-gradient(circle_at_80%_50%,rgba(34,211,238,0.18),transparent_32%),rgba(255,255,255,0.035)] p-6 shadow-neon sm:p-8 lg:grid-cols-[1fr_0.9fr]">
-            <SectionHeading
-              eyebrow="Diferencial"
-              title="Diseno y fabricacion en un solo lugar"
-              description="Materiales, luz y terminacion pensados para que el cartel se vea bien."
-            />
-            <div className="grid gap-3 sm:grid-cols-2">
-              {differentiators.map((item) => (
-                <div key={item} className="rounded-2xl border border-white/10 bg-black/30 p-4 text-sm font-semibold text-white/78">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <div className="rounded-[2rem] border border-lime-200/25 bg-[linear-gradient(135deg,#0c101d,#08151c_45%,#17101f)] p-8 text-white shadow-[0_0_80px_rgba(240,243,58,0.12)] sm:p-10">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
@@ -230,7 +212,12 @@ export default function HomePage() {
         </section>
 
         <section id="faq" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="columns-1 gap-4 lg:columns-2">
+          <SectionHeading
+            eyebrow="Preguntas frecuentes"
+            title="Preguntas frecuentes"
+          />
+
+          <div className="mt-8 columns-1 gap-4 lg:columns-2">
             {faqs.map((faq) => (
               <details
                 key={faq.question}

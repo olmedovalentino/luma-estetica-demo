@@ -97,13 +97,6 @@ export const process = [
   "Entrega",
 ] as const;
 
-export const differentiators = [
-  "Fabricacion personalizada",
-  "Tecnologia LED de bajo consumo",
-  "Materiales pensados para interior y exterior",
-  "Presupuesto gratuito por WhatsApp",
-] as const;
-
 export const faqs = [
   {
     question: "Hacen letras corporeas personalizadas?",
