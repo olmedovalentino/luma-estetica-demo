@@ -147,7 +147,7 @@ export default function HomePage() {
           <p className={eyebrowClass}>Trabajos</p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {portfolio.map((item, index) => (
+            {portfolio.map((item) => (
               <article
                 key={item.title}
                 className="group relative min-h-80 overflow-hidden rounded-[1.7rem] border border-white/10 bg-black/45 shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
@@ -159,27 +159,6 @@ export default function HomePage() {
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover object-center transition duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,13,0.08),rgba(5,7,13,0.82))]" />
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(34,211,238,0.20),transparent_34%),linear-gradient(315deg,rgba(255,43,214,0.18),transparent_34%)]" />
-                <div className="absolute left-8 right-8 top-1/2 h-px bg-white/30 shadow-[0_0_30px_rgba(255,255,255,0.85)]" />
-                <div
-                  className="absolute inset-x-10 top-12 rounded-full border py-6 text-center text-2xl font-black uppercase tracking-[0.15em] text-white"
-                  style={{
-                    borderColor: index % 2 === 0 ? "rgba(34,211,238,0.62)" : "rgba(255,43,214,0.62)",
-                    boxShadow:
-                      index % 2 === 0
-                        ? "0 0 34px rgba(34,211,238,0.38)"
-                        : "0 0 34px rgba(255,43,214,0.34)",
-                  }}
-                >
-                  EF
-                </div>
-                <div className="relative flex h-full min-h-60 flex-col justify-end">
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
-                    Referencia visual
-                  </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
-                </div>
               </article>
             ))}
           </div>
