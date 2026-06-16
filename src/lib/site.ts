@@ -38,34 +38,50 @@ export const services = [
   {
     title: "Letras corporeas",
     description: "Volumen e impacto para tu marca.",
+    image:
+      "https://images.unsplash.com/photo-1629119882643-804ea903f8db?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Neon LED personalizado",
     description: "Frases, logos y formas luminosas.",
+    image:
+      "https://images.unsplash.com/photo-1492037766660-2a56f9eb3fcb?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Carteleria comercial",
     description: "Fachadas, interiores y vidrieras.",
+    image:
+      "https://images.unsplash.com/photo-1675297656417-2eed7e3aaec1?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Carteles acrilicos",
     description: "Terminacion limpia y moderna.",
+    image:
+      "https://images.unsplash.com/photo-1750767303706-7d93c2d0f03f?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Carteleria en polifan",
     description: "Liviana, versatil y visual.",
+    image:
+      "https://images.unsplash.com/photo-1604066867775-43f48e3957d8?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Salientes boton y pastilla",
     description: "Presencia desde la vereda.",
+    image:
+      "https://images.unsplash.com/photo-1695189623052-b25432fd9886?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Carteles luminosos",
     description: "Luz LED para destacar.",
+    image:
+      "https://images.unsplash.com/photo-1571470804270-af65e8b3d106?auto=format&fit=crop&w=900&q=80",
   },
   {
     title: "Diseno y fabricacion",
     description: "De la idea a la pieza final.",
+    image:
+      "https://images.unsplash.com/photo-1661298889141-14da83db9821?auto=format&fit=crop&w=900&q=80",
   },
 ] as const;
 
@@ -81,12 +97,36 @@ export const businessTypes = [
 ] as const;
 
 export const portfolio = [
-  "Letras corporeas LED",
-  "Neon personalizado",
-  "Cartel luminoso exterior",
-  "Carteleria para local",
-  "Saliente comercial",
-  "Logo en acrilico",
+  {
+    title: "Letras corporeas LED",
+    image:
+      "https://images.unsplash.com/photo-1645911449646-c0fcb364b268?auto=format&fit=crop&w=1100&q=80",
+  },
+  {
+    title: "Neon personalizado",
+    image:
+      "https://images.unsplash.com/photo-1709316457778-7fdd7f84bf27?auto=format&fit=crop&w=1100&q=80",
+  },
+  {
+    title: "Cartel luminoso exterior",
+    image:
+      "https://images.unsplash.com/photo-1587018710457-e3dbc199bab3?auto=format&fit=crop&w=1100&q=80",
+  },
+  {
+    title: "Carteleria para local",
+    image:
+      "https://images.unsplash.com/photo-1550711273-843b73169f58?auto=format&fit=crop&w=1100&q=80",
+  },
+  {
+    title: "Saliente comercial",
+    image:
+      "https://images.unsplash.com/photo-1637666639858-e914177a9146?auto=format&fit=crop&w=1100&q=80",
+  },
+  {
+    title: "Logo en acrilico",
+    image:
+      "https://images.unsplash.com/photo-1760895223972-57b1d858d77e?auto=format&fit=crop&w=1100&q=80",
+  },
 ] as const;
 
 export const process = [

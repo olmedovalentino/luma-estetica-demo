@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { ButtonLink } from "@/components/button-link";
 import { FloatingWhatsAppButton } from "@/components/whatsapp-floating-button";
 import { SectionHeading } from "@/components/section-heading";
@@ -90,23 +92,35 @@ export default function HomePage() {
             {services.map((service, index) => (
               <article
                 key={service.title}
-                className="group relative min-h-40 overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-5 shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
+                className="group overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.04] shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
               >
-                <div
-                  className="absolute -right-10 -top-10 h-28 w-28 rounded-full blur-2xl transition group-hover:scale-125"
-                  style={{
-                    background:
-                      index % 3 === 0
-                        ? "rgba(34, 211, 238, 0.28)"
-                        : index % 3 === 1
-                          ? "rgba(255, 43, 214, 0.26)"
-                          : "rgba(240, 243, 58, 0.22)",
-                  }}
-                />
-                <p className="text-xs font-black uppercase tracking-[0.28em] text-white/38">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-8 text-xl font-semibold text-white">{service.title}</h3>
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={`Foto de referencia para ${service.title}`}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-center transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,13,0.05),rgba(5,7,13,0.68))]" />
+                  <div
+                    className="absolute -right-10 -top-10 h-28 w-28 rounded-full blur-2xl transition group-hover:scale-125"
+                    style={{
+                      background:
+                        index % 3 === 0
+                          ? "rgba(34, 211, 238, 0.34)"
+                          : index % 3 === 1
+                            ? "rgba(255, 43, 214, 0.30)"
+                            : "rgba(240, 243, 58, 0.24)",
+                    }}
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.28em] text-cyan-100/45">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-4 min-h-14 text-xl font-semibold leading-tight text-white">{service.title}</h3>
+                </div>
               </article>
             ))}
           </div>
@@ -135,10 +149,18 @@ export default function HomePage() {
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {portfolio.map((item, index) => (
               <article
-                key={item}
-                className="relative min-h-72 overflow-hidden rounded-[1.7rem] border border-white/10 bg-black/45 p-5 shadow-glass"
+                key={item.title}
+                className="group relative min-h-80 overflow-hidden rounded-[1.7rem] border border-white/10 bg-black/45 shadow-glass transition duration-300 hover:-translate-y-1 hover:border-cyan-200/45"
               >
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(34,211,238,0.22),transparent_34%),linear-gradient(315deg,rgba(255,43,214,0.20),transparent_34%)]" />
+                <Image
+                  src={item.image}
+                  alt={`Foto de referencia para ${item.title}`}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover object-center transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,13,0.08),rgba(5,7,13,0.82))]" />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(34,211,238,0.20),transparent_34%),linear-gradient(315deg,rgba(255,43,214,0.18),transparent_34%)]" />
                 <div className="absolute left-8 right-8 top-1/2 h-px bg-white/30 shadow-[0_0_30px_rgba(255,255,255,0.85)]" />
                 <div
                   className="absolute inset-x-10 top-12 rounded-full border py-6 text-center text-2xl font-black uppercase tracking-[0.15em] text-white"
@@ -156,7 +178,7 @@ export default function HomePage() {
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/70">
                     Referencia visual
                   </p>
-                  <h3 className="mt-2 text-2xl font-semibold text-white">{item}</h3>
+                  <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
                 </div>
               </article>
             ))}
